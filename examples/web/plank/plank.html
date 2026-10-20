@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Barofit · 플랭크 리플레이</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="plank.css"></head>
+<body><header class="top"><a class="brand" href="./"><span class="mark">b.</span> barofit <span class="lab">REPLAY LAB</span></a><label>운동 선택 <select id="exercise"><option value="pushup">푸시업</option><option value="plank" selected>플랭크</option></select></label><span class="private"><i></i> 브라우저 내 분석</span></header>
+<main><section class="intro"><div><p class="eyebrow">PLANK / MOVEMENT LAB</p><h1>버티는 동안,<br class="mobile"> 자세가 어떻게 달라지는지.</h1><p>측면 영상을 재생하며 골반·어깨·무릎을 확인하세요.</p></div></section>
+<div id="notice" class="notice" role="status" hidden></div>
+<section class="workspace"><div class="viewer-column"><div class="panel viewer">
+<div class="panel-head"><strong id="file-title">플랭크 테스트 영상</strong><span id="mode-label">READY</span></div>
+<div class="stage"><video id="video" playsinline muted preload="metadata" disablepictureinpicture></video><canvas id="overlay"></canvas><label class="empty" id="empty" for="file"><span class="upload-icon">↥</span><strong>플랭크 영상을 선택하세요</strong><span class="upload-pill">내 기기에서 영상 가져오기</span><small>영상은 서버에 업로드되지 않습니다.</small></label></div>
+<div class="transport"><span id="clock">0.0 / 0.0초</span><input id="seek" type="range" min="0" max="1" step="0.05" value="0" aria-label="영상 미리보기 위치" disabled><span class="speed">1×</span></div>
+<div class="toolbar"><button id="start" class="primary" disabled>▶ 분석 시작</button><button id="pause" disabled>일시정지</button><button id="finish" disabled>세트 종료</button><label for="file" class="button subtle" id="replace">영상 변경</label><input id="file" type="file" accept="video/*" hidden></div></div>
+<div class="panel settings"><div class="setting"><span><strong>분석할 구간</strong><small>준비 동작을 제외하고 플랭크를 하는 구간을 선택하세요.</small></span><div class="range-fields"><label>시작 <input id="from" type="number" min="0" step="0.1" value="0" disabled> 초</label><label>끝 <input id="to" type="number" min="0" step="0.1" value="0" disabled> 초</label></div></div>
+<div class="setting"><label for="voice"><strong>음성 코칭</strong><small>같은 오류는 10초, 안내 사이는 최소 6초 간격</small></label><input id="voice" type="checkbox" role="switch"></div>
+<div class="setting"><label for="voice-kind"><strong>코칭 음성</strong></label><select id="voice-kind"><option value="sunhi">선희 · 여성</option><option value="injoon">인준 · 남성</option></select></div>
+<div class="setting"><label for="record-full"><strong>전체 분석 영상도 저장</strong><small>선택 구간의 뼈대와 경고를 무음으로 기록</small></label><input id="record-full" type="checkbox" checked role="switch"></div>
+<div class="setting"><label for="bones"><strong>판정에 쓰는 한쪽 뼈대</strong></label><input id="bones" type="checkbox" checked role="switch"></div></div>
+<p class="privacy-note">결과는 이 탭에만 보관됩니다. 다른 운동으로 이동하기 전에 결과를 저장하세요.</p></div>
+<aside class="coach-column"><div class="panel count-panel"><p class="eyebrow">이번 세트 · 플랭크</p><div class="count"><span id="observed">0.0</span><small>초</small></div><span class="tracking" id="tracking">분석된 영상 시간</span><p class="muted">자동 운동 시작·종료 감지 전 단계입니다. 실제 버틴 시간과는 구분합니다.</p><div class="mini-stats"><div><span>분석 속도</span><strong id="fps">— FPS</strong></div><div><span>선택한 쪽</span><strong id="side">—</strong></div></div></div>
+<div class="panel coach"><div class="panel-head"><span>실시간 코칭</span><span id="sound">음성 꺼짐</span></div><h2 id="feedback-title">자세를 기다리고 있어요</h2><p id="feedback">영상을 선택하고 분석 시작을 누르세요.</p><div class="feedback-footer">팔꿈치 각도는 참고값으로만 기록합니다.</div></div>
+<div class="panel plank-items" id="live-items"></div>
+</aside></section>
+<section class="panel results" id="results" hidden><div class="results-head"><div><p class="eyebrow">SET REVIEW</p><h2>이번 세트의 기록</h2><p id="summary-copy"></p></div><div class="downloads"><button id="json">결과 JSON</button><button id="zip" class="primary">전체 결과 ZIP 저장</button></div></div>
+<p id="full-status" class="muted"></p><div id="item-cards" class="item-cards"></div><h3>검증 메모</h3><textarea id="memo" placeholder="영상에서 보인 자세와 경고가 달랐던 구간을 적어주세요. (선택)"></textarea>
+<details><summary>판정과 결과 저장 기준</summary><p>준수율 = 준수 시간 ÷ 평가 가능 시간. 좌표 누락·준비 중인 구간은 준수로 계산하지 않습니다. 0.25초를 넘는 분석 공백과 일시정지는 집계에서 제외합니다. 촬영 구도에 영향을 받는 2D 규칙이며, 팔뚝 플랭크의 측면 구도로 확인하세요.</p><p>ZIP에는 전체 분석 영상(선택), 전체 분석 프레임 좌표·지표·상태, 판정 변화, 음성 기록, 설정과 메모가 포함됩니다. 원본 영상은 포함하지 않습니다.</p></details></section>
+<footer><span>BAROFIT / MOVEMENT LAB</span><span id="model-state">분석 모델 준비 중…</span></footer></main><script type="module" src="plank-app.js"></script></body></html>

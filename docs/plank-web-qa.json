@@ -1,0 +1,280 @@
+[
+  {
+    "source": "01_normal_P2.mp4",
+    "frames": 177,
+    "codes": {},
+    "summary": {
+      "schemaVersion": "1.0",
+      "exercise": "plank",
+      "engineVersion": "plank-multi-0.2-js-1.0",
+      "count": null,
+      "holdSeconds": null,
+      "observedSeconds": 15.288588,
+      "gapSeconds": 0,
+      "items": {
+        "hip": {
+          "compliant_s": 14.805356,
+          "warning_s": 0,
+          "unknown_s": 0.48323200000000005,
+          "evaluable_s": 14.805356,
+          "compliance_pct": 100
+        },
+        "shoulder": {
+          "compliant_s": 14.805356,
+          "warning_s": 0,
+          "unknown_s": 0.48323200000000005,
+          "evaluable_s": 14.805356,
+          "compliance_pct": 100
+        },
+        "knee": {
+          "compliant_s": 14.805356,
+          "warning_s": 0,
+          "unknown_s": 0.48323200000000005,
+          "evaluable_s": 14.805356,
+          "compliance_pct": 100
+        }
+      }
+    },
+    "audio": [],
+    "controls": [
+      {
+        "type": "end",
+        "reason": "video_end",
+        "t": 15.366667
+      }
+    ],
+    "media": {
+      "status": "ready",
+      "file_name": "analysis_full.webm",
+      "size_bytes": 1477302,
+      "audio": false,
+      "scope": "selected_analysis_range",
+      "error": null
+    },
+    "decoded_video_frames": 307,
+    "files": [
+      "result.json",
+      "frames.jsonl",
+      "frames.csv",
+      "events.json",
+      "audio.json",
+      "controls.json",
+      "README.txt",
+      "analysis_full.webm"
+    ]
+  },
+  {
+    "source": "02_hip_changes_P1.mp4",
+    "frames": 177,
+    "codes": {
+      "SHOULDER_ELBOW_OFFSET": 82,
+      "HIP_DROP": 42,
+      "HIP_RAISE": 46
+    },
+    "summary": {
+      "schemaVersion": "1.0",
+      "exercise": "plank",
+      "engineVersion": "plank-multi-0.2-js-1.0",
+      "count": null,
+      "holdSeconds": null,
+      "observedSeconds": 15.161147000000001,
+      "gapSeconds": 0,
+      "items": {
+        "hip": {
+          "compliant_s": 5.933299000000001,
+          "warning_s": 7.633198,
+          "unknown_s": 1.59465,
+          "evaluable_s": 13.566497000000002,
+          "compliance_pct": 43.73493761875302
+        },
+        "shoulder": {
+          "compliant_s": 6.233189000000001,
+          "warning_s": 7.099951,
+          "unknown_s": 1.828007,
+          "evaluable_s": 13.33314,
+          "compliance_pct": 46.74959536913286
+        },
+        "knee": {
+          "compliant_s": 13.033179,
+          "warning_s": 0,
+          "unknown_s": 2.127968,
+          "evaluable_s": 13.033179,
+          "compliance_pct": 100
+        }
+      }
+    },
+    "audio": [
+      {
+        "video_s": 3.953393,
+        "action": "started",
+        "code": "SHOULDER_ELBOW_OFFSET",
+        "voice": "sunhi"
+      },
+      {
+        "video_s": 10.213675,
+        "action": "ended",
+        "code": "SHOULDER_ELBOW_OFFSET",
+        "voice": "sunhi"
+      },
+      {
+        "video_s": 10.304455,
+        "action": "started",
+        "code": "HIP_RAISE",
+        "voice": "sunhi"
+      },
+      {
+        "video_s": 15.333333,
+        "action": "cancelled",
+        "code": "HIP_RAISE"
+      }
+    ],
+    "controls": [
+      {
+        "type": "end",
+        "reason": "video_end",
+        "t": 15.333333
+      }
+    ],
+    "media": {
+      "status": "ready",
+      "file_name": "analysis_full.webm",
+      "size_bytes": 1802185,
+      "audio": false,
+      "scope": "selected_analysis_range",
+      "error": null
+    },
+    "decoded_video_frames": 306,
+    "files": [
+      "result.json",
+      "frames.jsonl",
+      "frames.csv",
+      "events.json",
+      "audio.json",
+      "controls.json",
+      "README.txt",
+      "analysis_full.webm"
+    ]
+  },
+  {
+    "source": "05_knee_bend_variant.mp4",
+    "frames": 301,
+    "codes": {
+      "KNEE_BENT": 70,
+      "HIP_RAISE": 143
+    },
+    "summary": {
+      "schemaVersion": "1.0",
+      "exercise": "plank",
+      "engineVersion": "plank-multi-0.2-js-1.0",
+      "count": null,
+      "holdSeconds": null,
+      "observedSeconds": 25.883489,
+      "gapSeconds": 0,
+      "items": {
+        "hip": {
+          "compliant_s": 12.510966999999999,
+          "warning_s": 12.266447000000001,
+          "unknown_s": 1.106075,
+          "evaluable_s": 24.777414,
+          "compliance_pct": 50.49343325336534
+        },
+        "shoulder": {
+          "compliant_s": 24.777414,
+          "warning_s": 0,
+          "unknown_s": 1.106075,
+          "evaluable_s": 24.777414,
+          "compliance_pct": 100
+        },
+        "knee": {
+          "compliant_s": 17.838786000000002,
+          "warning_s": 6.066465999999998,
+          "unknown_s": 1.9782369999999998,
+          "evaluable_s": 23.905252,
+          "compliance_pct": 74.62287366809603
+        }
+      }
+    },
+    "audio": [
+      {
+        "video_s": 2.524908,
+        "action": "started",
+        "code": "KNEE_BENT",
+        "voice": "sunhi"
+      },
+      {
+        "video_s": 4.619714,
+        "action": "cancelled",
+        "code": "KNEE_BENT"
+      },
+      {
+        "video_s": 5.814395,
+        "action": "started",
+        "code": "HIP_RAISE",
+        "voice": "sunhi"
+      },
+      {
+        "video_s": 12.276082,
+        "action": "ended",
+        "code": "HIP_RAISE",
+        "voice": "sunhi"
+      },
+      {
+        "video_s": 12.410088,
+        "action": "started",
+        "code": "KNEE_BENT",
+        "voice": "sunhi"
+      },
+      {
+        "video_s": 18.666186,
+        "action": "ended",
+        "code": "KNEE_BENT",
+        "voice": "sunhi"
+      },
+      {
+        "video_s": 19.72344,
+        "action": "started",
+        "code": "HIP_RAISE",
+        "voice": "sunhi"
+      },
+      {
+        "video_s": 26,
+        "action": "cancelled",
+        "code": "HIP_RAISE"
+      }
+    ],
+    "controls": [
+      {
+        "type": "pause",
+        "t": 4.619714
+      },
+      {
+        "type": "resume",
+        "t": 4.619728
+      },
+      {
+        "type": "end",
+        "reason": "video_end",
+        "t": 26
+      }
+    ],
+    "media": {
+      "status": "ready",
+      "file_name": "analysis_full.webm",
+      "size_bytes": 3075697,
+      "audio": false,
+      "scope": "selected_analysis_range",
+      "error": null
+    },
+    "decoded_video_frames": 521,
+    "files": [
+      "result.json",
+      "frames.jsonl",
+      "frames.csv",
+      "events.json",
+      "audio.json",
+      "controls.json",
+      "README.txt",
+      "analysis_full.webm"
+    ]
+  }
+]

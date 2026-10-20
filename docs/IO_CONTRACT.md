@@ -95,7 +95,13 @@
 거리 비율은 %, 각도는 도입니다. 팔꿈치 각도는 기록만 하고 판정하지 않습니다.
 `raw`에는 원본 v0.2 결과가 있습니다. 원본의 `HIP_HIGH`를 공통 `codes`에서만 `HIP_RAISE`로 표기합니다.
 `raw`의 `WARMUP/UNOBSERVABLE/NO_WARNING/NO_HIP_WARNING`은 어댑터에서 위 공통 상태로 변환합니다.
-Python 어댑터는 프레임 판정만 제공합니다. 세트 종료 집계·유지 시간·JS 구현은 추가 작업입니다.
+Python 어댑터는 프레임 판정만 제공합니다. JS `PlankAnalyzer`는 프레임 판정과 세트 종료 집계를 제공합니다.
+`count`, `holdSeconds`는 null입니다. 준비/운동/종료 자동 감지는 아직 없습니다.
+`observedSeconds`는 0.25초 이하로 연속된 샘플의 시간 합이며 실제 운동 유지 시간이 아닙니다.
+`gapSeconds`는 그보다 긴 샘플 공백의 합입니다. 명시적 일시정지는 두 값 모두에서 제외합니다.
+`summary().items`의 각 항목은 `compliant_s`, `warning_s`, `unknown_s`, `evaluable_s`, `compliance_pct`를 갖습니다.
+양 끝 프레임에서 같은 쪽으로 평가 가능할 때만 직전 프레임의 판정에 시간 간격을 배분합니다. 나머지는 unknown입니다.
+`compliance_pct = compliant_s / evaluable_s * 100`, 평가 시간 0이면 null입니다.
 
 ## 4. 생명주기와 앱 책임
 
@@ -108,7 +114,7 @@ Python 어댑터는 프레임 판정만 제공합니다. 세트 종료 집계·�
 → 세트 종료 처리 / 결과 저장
 ```
 
-- JS 푸시업: `pushFrame`, `breakContinuity(reason)`, `finish`. `finish()` 재호출은 빈 배열을 반환합니다.
+- JS 푸시업·플랭크: `pushFrame`, `breakContinuity(reason)`, `finish`. `finish()` 재호출은 빈 배열을 반환합니다.
 - Python 플랭크: `push_frame`, `break_continuity`. 새 영상은 새 인스턴스를 만듭니다.
 - 중복/역순 프레임은 JS에서 ignored, Python 플랭크에서 ValueError. 이 차이는 보존했습니다.
 - 카메라 프레임은 순서대로 처리하고 오래된 결과는 앱에서 버립니다. 준비 중 카운트 차단은 별도 상태 관리가 필요합니다.

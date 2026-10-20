@@ -18,8 +18,10 @@ export interface FrameResult {
   tracking: 'tracking' | 'selecting_side' | 'tracking_unavailable';
   side: 'left' | 'right' | null;
   count: number | null;
-  /** Reserved. Plank timer is not implemented in v0.1.0. */
+  /** Reserved. Automatic plank hold timer is not implemented. */
   holdSeconds: number | null;
+  /** Plank only: continuous sample time, not actual exercise hold time. */
+  observedSeconds?: number;
   codes: string[];
   items: Record<string, ItemStatus> | null;
   /** Existing push-up event timestamps t/start_s/bottom_s/end_s are in seconds. */
