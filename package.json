@@ -9,7 +9,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node --test tests/js/engine.test.mjs tests/js/live.test.mjs tests/js/plank.test.mjs",
+    "test": "node --test tests/js/engine.test.mjs tests/js/live.test.mjs tests/js/plank.test.mjs tests/js/squat.test.mjs tests/js/bird_dog.test.mjs",
     "demo": "node examples/pushup.mjs"
   }
 }
