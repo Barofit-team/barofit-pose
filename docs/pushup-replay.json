@@ -1,0 +1,130 @@
+[
+  {
+    "case": "3964e1e6efcda62970f9.json",
+    "frames": 306,
+    "expectedCount": 7,
+    "actualCount": 7,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "3cf595c03b9010b73d04.json",
+    "frames": 234,
+    "expectedCount": 7,
+    "actualCount": 7,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "3e6d665ed9e36dab3b26.json",
+    "frames": 184,
+    "expectedCount": 8,
+    "actualCount": 8,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "64a45f782f8b836cf1e1.json",
+    "frames": 328,
+    "expectedCount": 16,
+    "actualCount": 16,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "95d0bf311cd2126fb356.json",
+    "frames": 238,
+    "expectedCount": 8,
+    "actualCount": 8,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "a574a5d0c7a1c2b07d7f.json",
+    "frames": 299,
+    "expectedCount": 11,
+    "actualCount": 11,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "b09aaddac93cce2a7369.json",
+    "frames": 458,
+    "expectedCount": 11,
+    "actualCount": 11,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "bf86a3970943b2881ff2.json",
+    "frames": 272,
+    "expectedCount": 8,
+    "actualCount": 8,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "bf87586622942f62a049.json",
+    "frames": 256,
+    "expectedCount": 8,
+    "actualCount": 8,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "c259f1b241f378f0f832.json",
+    "frames": 295,
+    "expectedCount": 7,
+    "actualCount": 7,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "cf598a5bde51c498f20f.json",
+    "frames": 412,
+    "expectedCount": 9,
+    "actualCount": 9,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "e478399c212da7c6e829.json",
+    "frames": 450,
+    "expectedCount": 18,
+    "actualCount": 18,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "ef8efd89393d7839748a.json",
+    "frames": 468,
+    "expectedCount": 20,
+    "actualCount": 20,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "efdc16d4abcda22cb499.json",
+    "frames": 458,
+    "expectedCount": 17,
+    "actualCount": 17,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "f3b8bf31134df37d34d9.json",
+    "frames": 434,
+    "expectedCount": 10,
+    "actualCount": 10,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  },
+  {
+    "case": "fea314b53554dfbdafdf.json",
+    "frames": 378,
+    "expectedCount": 19,
+    "actualCount": 19,
+    "countMismatch": 0,
+    "ratingMismatch": 0
+  }
+]

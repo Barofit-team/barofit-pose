@@ -1,0 +1,1 @@
+"""Barofit analysis package."""

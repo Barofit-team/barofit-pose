@@ -1,0 +1,15 @@
+{
+  "name": "@barofit/pose",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Barofit on-device pose rules and research references",
+  "exports": "./runtime/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test tests/js/engine.test.mjs tests/js/live.test.mjs",
+    "demo": "node examples/pushup.mjs"
+  }
+}

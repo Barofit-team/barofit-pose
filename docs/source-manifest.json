@@ -1,0 +1,158 @@
+[
+  {
+    "source": "output/BarofitPoseTest/src/engine.js",
+    "target": "runtime/pushup/engine.js",
+    "sha256": "bb1f08834d93f28d1bb3bbab6a7bc6ff24d742fce9d94e8c05c3549f14e83140",
+    "note": "Unmodified source"
+  },
+  {
+    "source": "output/BarofitPoseTest/src/config.js",
+    "target": "runtime/pushup/config.js",
+    "sha256": "90daefb40917d3977c17626b12a1348bd2d6636280662db7c5a03efcbf09dedc",
+    "note": "Unmodified source"
+  },
+  {
+    "source": "output/BarofitPoseTest/src/liveEngine.js",
+    "target": "runtime/pushup/liveEngine.js",
+    "sha256": "048163aef7cabe9315e240c7883b3414432f9589fe42d05aad701ea334703b5a",
+    "note": "Unmodified source"
+  },
+  {
+    "source": "output/BarofitPoseTest/src/feedbackVoice.js",
+    "target": "runtime/pushup/feedbackVoice.js",
+    "sha256": "7c764734a0e0077e29a780a791b7166a90a9d1c47acc62b26b61fc6bf8ed5484",
+    "note": "Unmodified source"
+  },
+  {
+    "source": "output/푸시업_Mendeley_통합카운트_v3/unified_engine.py",
+    "target": "analysis/pushup/unified_engine.py",
+    "sha256": "a20c8f0e1613923aa6ac97dd369d65481b533670da8a7de51579a43bf6fade3e",
+    "note": "Unmodified source"
+  },
+  {
+    "source": "output/plank_multi_rule_v02/hip_rule.py",
+    "target": "analysis/plank/hip_rule.py",
+    "sha256": "3edee0224da4be825a4104ab709450df95ab411ec788a70d9aa9b8fc3eb5a79a",
+    "note": "Unmodified source"
+  },
+  {
+    "source": "output/plank_multi_rule_v02/multi_rule.py",
+    "target": "analysis/plank/multi_rule.py",
+    "sha256": "4c802acb0d65baaf1f18b54dba76afa6ef0c33be356c6bcd0b547fc9d7bf4154",
+    "note": "Only two imports changed to package-relative imports; rules unchanged"
+  },
+  {
+    "source": "output/plank_multi_rule_v02/observation_ui.py:metric",
+    "target": "analysis/plank/metrics.py",
+    "sha256": "7bc4299eca74b6246bf080e39b4a1ff4f516f21439c77bac53ddf1b5a1a65982",
+    "note": "metric function extracted unchanged; removed UI/OpenCV dependency from rules"
+  },
+  {
+    "source": "output/plank_multi_rule_v02/side_observation.py",
+    "target": "analysis/common/video.py",
+    "sha256": "18413f1017b9aeb4e0ee9d0be2f23aae69601e81525fb90f8fe409805f4bdf23",
+    "note": "Unmodified source"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/index.js",
+    "target": "examples/react-native/pose-native/index.js",
+    "sha256": "66ca53d04d0ddd8c8e10a02af506d4e1f8784faaa534bb1bb987df4b180ed27a",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/package.json",
+    "target": "examples/react-native/pose-native/package.json",
+    "sha256": "de7a3e2cfcc3496f2f28395ec04f4db33a0efcad0d9d93c97f750503306f3429",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/react-native.config.js",
+    "target": "examples/react-native/pose-native/react-native.config.js",
+    "sha256": "2eddd54f970187eee8d14450a941199aeda6b7c9fa6d514ed84a787314c3ebba",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/android/build.gradle",
+    "target": "examples/react-native/pose-native/android/build.gradle",
+    "sha256": "ac07fe1782556136ab75f2e5373f9053377c618b495f3b8427c0b369e74d2f1e",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/android/src/main/AndroidManifest.xml",
+    "target": "examples/react-native/pose-native/android/src/main/AndroidManifest.xml",
+    "sha256": "d5294bd86e2f97d395ac26caf1f3865f75f0453cbd87cbec5703ebf5cf673106",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/android/src/main/java/com/barofit/pose/DiagnosticStore.kt",
+    "target": "examples/react-native/pose-native/android/src/main/java/com/barofit/pose/DiagnosticStore.kt",
+    "sha256": "5423efce304e8d1938d578d76a6592bc2dfd42820b9ef5447dd4c0199841838f",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/android/src/main/java/com/barofit/pose/NativeCameraLayout.kt",
+    "target": "examples/react-native/pose-native/android/src/main/java/com/barofit/pose/NativeCameraLayout.kt",
+    "sha256": "10f52e4e5bb45c00c63fafbb844e276fbf396e47682fd745df87d59add262c3e",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/android/src/main/java/com/barofit/pose/PoseDiagnostics.kt",
+    "target": "examples/react-native/pose-native/android/src/main/java/com/barofit/pose/PoseDiagnostics.kt",
+    "sha256": "4dd83718b092ca38a6600cf356bb2b93c1c9373d22c80a085975bcefc735b58b",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/android/src/main/java/com/barofit/pose/PoseFileProvider.kt",
+    "target": "examples/react-native/pose-native/android/src/main/java/com/barofit/pose/PoseFileProvider.kt",
+    "sha256": "24aa479cb6d8b72ccdb884460732258b3d8bcb7233bd4b6242351ef2d94320db",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/android/src/main/java/com/barofit/pose/PoseMedia.kt",
+    "target": "examples/react-native/pose-native/android/src/main/java/com/barofit/pose/PoseMedia.kt",
+    "sha256": "d212ad03c86bd9674e51e5407d7da21b6ec93ca29c9a570b0346689c6f98de9b",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/android/src/main/java/com/barofit/pose/PosePackage.kt",
+    "target": "examples/react-native/pose-native/android/src/main/java/com/barofit/pose/PosePackage.kt",
+    "sha256": "aa1de90669504d647d2bff53c4e5930abc23543103aec9a7b7212f09a0476aad",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/android/src/main/java/com/barofit/pose/PoseView.kt",
+    "target": "examples/react-native/pose-native/android/src/main/java/com/barofit/pose/PoseView.kt",
+    "sha256": "c0d7e1364691d751195c56e61cc928a0dbb5513b852326ebf542e46f0bbbfd17",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/android/src/main/java/com/barofit/pose/VideoPoseView.kt",
+    "target": "examples/react-native/pose-native/android/src/main/java/com/barofit/pose/VideoPoseView.kt",
+    "sha256": "a9bb97651c2dc53f4e3eb29de5c260018053a84204fa49d7fdde04ecd860177f",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/android/src/main/res/xml/pose_export_paths.xml",
+    "target": "examples/react-native/pose-native/android/src/main/res/xml/pose_export_paths.xml",
+    "sha256": "2c5b11ea4a68bdcab53f09d2b58785ed920acc29653f81e30dd127c4f5a24565",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/android/src/test/java/com/barofit/pose/DiagnosticStoreTest.kt",
+    "target": "examples/react-native/pose-native/android/src/test/java/com/barofit/pose/DiagnosticStoreTest.kt",
+    "sha256": "9de01e1df997bcba91cb8f1ded96c5d7f2e4579f5544230a044de951dee6b0a6",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/BarofitPoseTest/vendor/pose-native/android/src/test/java/com/barofit/pose/NativeCameraLayoutTest.kt",
+    "target": "examples/react-native/pose-native/android/src/test/java/com/barofit/pose/NativeCameraLayoutTest.kt",
+    "sha256": "24d47060c906fea1db8df56d079c76ea3637182f27924c89243dfb60050b7bd8",
+    "note": "Unmodified APK v1.3 native integration example; model excluded"
+  },
+  {
+    "source": "output/푸시업_Mendeley_통합카운트_v3/common_posture_reference.json",
+    "target": "analysis/pushup/reference.json",
+    "sha256": "4a2432087c117fcb2b941f774e63a6242deac1e03177a837d374ea4b0dfebd1f",
+    "note": "Frozen reference with source review provenance; integrity hash preserved"
+  }
+]

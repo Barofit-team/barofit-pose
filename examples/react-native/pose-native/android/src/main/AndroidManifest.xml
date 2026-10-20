@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <queries>
+    <intent><action android:name="android.intent.action.TTS_SERVICE" /></intent>
+  </queries>
+  <uses-feature android:name="android.hardware.camera.any" android:required="true" />
+  <application>
+    <provider android:name="com.barofit.pose.PoseFileProvider" android:authorities="${applicationId}.poseexports" android:exported="false" android:grantUriPermissions="true">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/pose_export_paths" />
+    </provider>
+  </application>
+</manifest>

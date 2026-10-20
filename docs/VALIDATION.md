@@ -1,0 +1,51 @@
+# 저장소 정리 검증 — 2026-10-20
+
+이번 검증은 **정리 전후의 결과 보존** 확인입니다. 새 데이터 정답 대비 정확도나 모바일 성능 측정이 아닙니다.
+
+| 검증 | 결과 |
+|---|---|
+| JavaScript 자동 테스트 | 13개 통과 |
+| Python 자동 테스트 | 7개 통과 |
+| 기존 푸시업 16개 영상의 저장 관절 재생 | 최종/프레임별 카운트, 기존 회차별 항목 판정 모두 일치 |
+| 플랭크 개발 P1–P4 재생 | 상태, 선택 좌우, 경고 코드, 측정값 일치 |
+| 플랭크 추가 E1–E5 재생 | 상태, 선택 좌우, 경고 코드, 측정값 일치 |
+
+수치 상세: `pushup-replay.json`, `plank-development-replay.json`, `plank-additional-replay.json`.
+실제 사람의 관절 캐시는 저장소에 포함하지 않았습니다. 보고서는 원본 데이터 없이 결과 수치만 담았습니다.
+
+## 자동 테스트 범위
+
+- 자세 점수와 무관한 얕은 시도 카운트, 두 신호의 중복 제거
+- 정지·작은 흔들림·관절 누락·서 있는 자세에서 오카운트 방지
+- 한쪽 관절 선택과 지속 누락 시 반대쪽 재선택, 전환 시 미완성 움직임 초기화
+- 세트 종료 중복 호출, unknown 별도 집계
+- 음성 피드백 중복 간격
+- 플랭크 골반·어깨·무릎 경고 지속/회복, 단일 튀는 좌표 억제
+- 관절 누락/퇴화된 기하, 긴 프레임 공백, 어댑터 결과 보존
+- Python 푸시업 기준 JSON 무결성, 정지 입력의 배치 실행
+
+## 재현
+
+```sh
+npm test
+python -m unittest discover -s tests/python -v
+
+# 아래 세 명령은 기존 공유 검증 자료가 있을 때만 실행
+node tests/replay_pushup.mjs data/pushup-test-data results/pushup-replay.json
+python -m tests.replay_plank data/plank_multi_rule_v02 --report results/plank-development.json
+python -m tests.replay_plank data/plank_error_validation_v02 --report results/plank-additional.json
+```
+
+출력 폴더는 먼저 만듭니다. Python 모듈 실행은 저장소 루트에서 합니다.
+Node 24.19.0, Python 3.12.14 및 기존 로컬 분석 의존성으로 실행했습니다. CI는 Node 22 / Python 3.12로 설정했습니다.
+Python wheel 패키지 빌드와 두 운동의 분석 CLI, JavaScript 데모 실행도 확인했습니다.
+
+## 해석상의 제한
+
+- 푸시업 재생은 관절 쪽을 이전 결과와 같게 고정한 core 엔진 검증입니다. live 좌우 선택은 별도 합성 테스트로 확인했습니다.
+- Python 푸시업 배치와 JS live는 좌우 선택 방식이 다릅니다. 모든 실행 상황의 일치를 보장하지 않습니다.
+- 플랭크 E2 무릎 굽힘, E5 팔을 앞으로 둔 동작은 의도적인 변형 운동입니다. 일반 팔뚝 플랭크 기준의 기하 변화 검증용이며 정답 오류 라벨로 취급하지 않습니다.
+- E3는 상체가 잘려 판정 불가가 많았습니다. 이를 정상으로 집계하지 않았습니다.
+- E1 종료 시 무릎을 꿇는 동작에도 경고가 나타났습니다. 준비/운동/종료 상태를 앱에서 관리하는 작업이 남아 있습니다.
+- 네이티브 라이브러리는 기존 APK 소스를 보존했으며 이 저장소 정리에서 APK를 다시 빌드하거나 실기기 성능을 재측정하지 않았습니다.
+- 플랭크 앱 이식·유지 시간 집계·스쿼트 구현은 아직 없습니다.

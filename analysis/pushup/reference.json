@@ -1,0 +1,617 @@
+{
+  "pool_id": "f64d73752e88cf4b682e1140a4d684f029d1caef22a6f6fba4bcede09ba8ee42",
+  "view": "side",
+  "training_subjects": [
+    "subject_002",
+    "subject_006",
+    "subject_012",
+    "subject_015",
+    "subject_018"
+  ],
+  "source_hashes": [
+    "2f4780fbbe7c628051043d3cbc36b0b13c1ab29996d7c69fd9f90180c66181fa",
+    "53ffc16c2090adcab6ecf680c1561e80e3aaa387c3f20e2165d2943b851dea25",
+    "882e6a18b8a0b3c7692b99d7f78c5cfc08bb28f9644632cace9b5e9cd5272f28",
+    "8940613690fd0d031650f2a606f370642edc043d5dd9042c070b998e1144c702",
+    "c19242117db5201e438e6dd68ecbdae7258a6e3620a39d18341e342fa675f8a7"
+  ],
+  "limits": {
+    "hip_low": -8.001899881645222,
+    "hip_high": 5.4606967228896615,
+    "elbow_max": 113.50822549175545,
+    "chest_min": 0.14409963892013125,
+    "hand_low": -0.020965572387424178,
+    "hand_high": 0.28973163840029553
+  },
+  "config": {
+    "min_people": 3,
+    "min_reps_per_person": 2,
+    "coverage": 0.8,
+    "bottom_window_s": 0.15,
+    "hip_margin_pct": 2.5,
+    "elbow_margin_deg": 15.0,
+    "chest_fraction": 0.65,
+    "hand_margin_body": 0.075,
+    "low_quantile": 0.1,
+    "high_quantile": 0.9
+  },
+  "selections": [
+    {
+      "selection_id": "ad630da89e3bc94a",
+      "relative_path": "Dataset Exercise-wise/push_up/good/side/subject_006_push_up_good_side.mp4",
+      "source_sha256": "8940613690fd0d031650f2a606f370642edc043d5dd9042c070b998e1144c702",
+      "subject_id": "subject_006",
+      "view": "side",
+      "side": "left",
+      "start_s": 1.8,
+      "bottom_s": 2.4,
+      "end_s": 3.0,
+      "include": true,
+      "checks": {
+        "one_cycle": true,
+        "points": true,
+        "hip": true,
+        "elbow": true,
+        "chest": true,
+        "hand": true
+      },
+      "note": "",
+      "metrics": {
+        "body_scale": 0.6405851793707945,
+        "hip_low": -3.145819820916086,
+        "hip_high": 0.8017653195782601,
+        "elbow_bottom": 96.90465874575725,
+        "chest_range": 0.2231336691769838,
+        "hand_bottom": 0.17082049092779295
+      },
+      "coverage": {
+        "hip": 1.0,
+        "elbow": 1.0,
+        "chest": 1.0,
+        "hand": 1.0
+      }
+    },
+    {
+      "selection_id": "3e018e2eb7b65a63",
+      "relative_path": "Dataset Exercise-wise/push_up/good/side/subject_012_push_up_good_side.mp4",
+      "source_sha256": "53ffc16c2090adcab6ecf680c1561e80e3aaa387c3f20e2165d2943b851dea25",
+      "subject_id": "subject_012",
+      "view": "side",
+      "side": "left",
+      "start_s": 0.06666666666666667,
+      "bottom_s": 0.7333333333333333,
+      "end_s": 1.4,
+      "include": true,
+      "checks": {
+        "one_cycle": true,
+        "points": true,
+        "hip": true,
+        "elbow": true,
+        "chest": true,
+        "hand": true
+      },
+      "note": "",
+      "metrics": {
+        "body_scale": 0.6427317270089871,
+        "hip_low": -4.234433726213134,
+        "hip_high": 0.1288593040693358,
+        "elbow_bottom": 75.78132812930326,
+        "chest_range": 0.23933680297083115,
+        "hand_bottom": 0.054976329287016255
+      },
+      "coverage": {
+        "hip": 1.0,
+        "elbow": 1.0,
+        "chest": 1.0,
+        "hand": 1.0
+      }
+    },
+    {
+      "selection_id": "ee13bb65f785e7c6",
+      "relative_path": "Dataset Exercise-wise/push_up/good/side/subject_015_push_up_good_side.mp4",
+      "source_sha256": "882e6a18b8a0b3c7692b99d7f78c5cfc08bb28f9644632cace9b5e9cd5272f28",
+      "subject_id": "subject_015",
+      "view": "side",
+      "side": "left",
+      "start_s": 1.5333333333333334,
+      "bottom_s": 2.533333333333333,
+      "end_s": 3.733333333333333,
+      "include": true,
+      "checks": {
+        "one_cycle": true,
+        "points": true,
+        "hip": true,
+        "elbow": true,
+        "chest": true,
+        "hand": true
+      },
+      "note": "",
+      "metrics": {
+        "body_scale": 0.6694035334589985,
+        "hip_low": -5.074218733881179,
+        "hip_high": 0.8373456282260793,
+        "elbow_bottom": 69.11185185934983,
+        "chest_range": 0.2879944493217508,
+        "hand_bottom": 0.13988037947013018
+      },
+      "coverage": {
+        "hip": 1.0,
+        "elbow": 1.0,
+        "chest": 1.0,
+        "hand": 1.0
+      }
+    },
+    {
+      "selection_id": "e208b7a3e224635e",
+      "relative_path": "Dataset Exercise-wise/push_up/good/side/subject_015_push_up_good_side.mp4",
+      "source_sha256": "882e6a18b8a0b3c7692b99d7f78c5cfc08bb28f9644632cace9b5e9cd5272f28",
+      "subject_id": "subject_015",
+      "view": "side",
+      "side": "left",
+      "start_s": 3.8,
+      "bottom_s": 4.933333333333334,
+      "end_s": 6.266666666666667,
+      "include": true,
+      "checks": {
+        "one_cycle": true,
+        "points": true,
+        "hip": true,
+        "elbow": true,
+        "chest": true,
+        "hand": true
+      },
+      "note": "",
+      "metrics": {
+        "body_scale": 0.6635587007123404,
+        "hip_low": -5.929581029409268,
+        "hip_high": -1.5836291449081004,
+        "elbow_bottom": 61.5103578758687,
+        "chest_range": 0.3165694401430867,
+        "hand_bottom": 0.1281332269557115
+      },
+      "coverage": {
+        "hip": 1.0,
+        "elbow": 1.0,
+        "chest": 1.0,
+        "hand": 1.0
+      }
+    },
+    {
+      "selection_id": "f9a75ef7248fb5be",
+      "relative_path": "Dataset Exercise-wise/push_up/good/side/subject_002_push_up_good_side.mp4",
+      "source_sha256": "2f4780fbbe7c628051043d3cbc36b0b13c1ab29996d7c69fd9f90180c66181fa",
+      "subject_id": "subject_002",
+      "view": "side",
+      "side": "left",
+      "start_s": 1.8,
+      "bottom_s": 2.5333333333333337,
+      "end_s": 4.533333333333333,
+      "include": true,
+      "checks": {
+        "one_cycle": true,
+        "points": true,
+        "hip": true,
+        "elbow": true,
+        "chest": true,
+        "hand": true
+      },
+      "note": "",
+      "metrics": {
+        "body_scale": 0.39036176324460037,
+        "hip_low": -0.853524899121521,
+        "hip_high": 2.962676438493669,
+        "elbow_bottom": 83.15518212926418,
+        "chest_range": 0.28094954980216275,
+        "hand_bottom": 0.22526603296338
+      },
+      "coverage": {
+        "hip": 1.0,
+        "elbow": 1.0,
+        "chest": 1.0,
+        "hand": 1.0
+      }
+    },
+    {
+      "selection_id": "ba32db71b5a7851a",
+      "relative_path": "Dataset Exercise-wise/push_up/good/side/subject_002_push_up_good_side.mp4",
+      "source_sha256": "2f4780fbbe7c628051043d3cbc36b0b13c1ab29996d7c69fd9f90180c66181fa",
+      "subject_id": "subject_002",
+      "view": "side",
+      "side": "left",
+      "start_s": 4.6,
+      "bottom_s": 5.4,
+      "end_s": 6.6,
+      "include": true,
+      "checks": {
+        "one_cycle": true,
+        "points": true,
+        "hip": true,
+        "elbow": true,
+        "chest": true,
+        "hand": true
+      },
+      "note": "",
+      "metrics": {
+        "body_scale": 0.39241017766909053,
+        "hip_low": 0.6303108724030121,
+        "hip_high": 2.958717007285654,
+        "elbow_bottom": 68.80899512439602,
+        "chest_range": 0.2794379204004445,
+        "hand_bottom": 0.20419724383721105
+      },
+      "coverage": {
+        "hip": 1.0,
+        "elbow": 1.0,
+        "chest": 1.0,
+        "hand": 1.0
+      }
+    },
+    {
+      "selection_id": "d6057d738930c5af",
+      "relative_path": "Dataset Exercise-wise/push_up/good/side/subject_018_push_up_good_side.mp4",
+      "source_sha256": "c19242117db5201e438e6dd68ecbdae7258a6e3620a39d18341e342fa675f8a7",
+      "subject_id": "subject_018",
+      "view": "side",
+      "side": "left",
+      "start_s": 0.6000000000000001,
+      "bottom_s": 1.4666666666666668,
+      "end_s": 2.1333333333333333,
+      "include": true,
+      "checks": {
+        "one_cycle": true,
+        "points": true,
+        "hip": true,
+        "elbow": true,
+        "chest": true,
+        "hand": true
+      },
+      "note": "",
+      "metrics": {
+        "body_scale": 0.4366539252554327,
+        "hip_low": -2.552171766951529,
+        "hip_high": 1.7112796826848466,
+        "elbow_bottom": 71.3270651594286,
+        "chest_range": 0.2713267974685429,
+        "hand_bottom": 0.17267528936552493
+      },
+      "coverage": {
+        "hip": 1.0,
+        "elbow": 1.0,
+        "chest": 1.0,
+        "hand": 1.0
+      }
+    },
+    {
+      "selection_id": "ecfac1817eab0843",
+      "relative_path": "Dataset Exercise-wise/push_up/good/side/subject_018_push_up_good_side.mp4",
+      "source_sha256": "c19242117db5201e438e6dd68ecbdae7258a6e3620a39d18341e342fa675f8a7",
+      "subject_id": "subject_018",
+      "view": "side",
+      "side": "left",
+      "start_s": 2.2,
+      "bottom_s": 3.266666666666667,
+      "end_s": 4.000000000000001,
+      "include": true,
+      "checks": {
+        "one_cycle": true,
+        "points": true,
+        "hip": true,
+        "elbow": true,
+        "chest": true,
+        "hand": true
+      },
+      "note": "",
+      "metrics": {
+        "body_scale": 0.43654142445772015,
+        "hip_low": -3.2807208380792687,
+        "hip_high": 1.1689013229651632,
+        "elbow_bottom": 70.67356487872581,
+        "chest_range": 0.2920996594365183,
+        "hand_bottom": 0.17949872649245352
+      },
+      "coverage": {
+        "hip": 1.0,
+        "elbow": 1.0,
+        "chest": 1.0,
+        "hand": 1.0
+      }
+    },
+    {
+      "selection_id": "a546c24e71fc8872",
+      "relative_path": "Dataset Exercise-wise/push_up/good/side/subject_006_push_up_good_side.mp4",
+      "source_sha256": "8940613690fd0d031650f2a606f370642edc043d5dd9042c070b998e1144c702",
+      "subject_id": "subject_006",
+      "view": "side",
+      "side": "left",
+      "start_s": 5.466666666666666,
+      "bottom_s": 6.066666666666666,
+      "end_s": 6.8,
+      "include": true,
+      "checks": {
+        "one_cycle": true,
+        "points": true,
+        "hip": true,
+        "elbow": true,
+        "chest": true,
+        "hand": true
+      },
+      "note": "",
+      "metrics": {
+        "body_scale": 0.6290985807587162,
+        "hip_low": -0.8000815798172249,
+        "hip_high": 1.0688252512005465,
+        "elbow_bottom": 100.11179223775366,
+        "chest_range": 0.22024983519265082,
+        "hand_bottom": 0.173253743587042
+      },
+      "coverage": {
+        "hip": 1.0,
+        "elbow": 1.0,
+        "chest": 1.0,
+        "hand": 1.0
+      }
+    },
+    {
+      "selection_id": "ffc4a36115e8dff1",
+      "relative_path": "Dataset Exercise-wise/push_up/good/side/subject_012_push_up_good_side.mp4",
+      "source_sha256": "53ffc16c2090adcab6ecf680c1561e80e3aaa387c3f20e2165d2943b851dea25",
+      "subject_id": "subject_012",
+      "view": "side",
+      "side": "left",
+      "start_s": 1.4,
+      "bottom_s": 1.9999999999999998,
+      "end_s": 2.6,
+      "include": true,
+      "checks": {
+        "one_cycle": true,
+        "points": true,
+        "hip": true,
+        "elbow": true,
+        "chest": true,
+        "hand": true
+      },
+      "note": "",
+      "metrics": {
+        "body_scale": 0.6373531312460993,
+        "hip_low": -3.116255088830048,
+        "hip_high": -0.15883789584789465,
+        "elbow_bottom": 58.50800859384577,
+        "chest_range": 0.25812963906206754,
+        "hand_bottom": 0.053092525938135376
+      },
+      "coverage": {
+        "hip": 1.0,
+        "elbow": 1.0,
+        "chest": 1.0,
+        "hand": 1.0
+      }
+    }
+  ],
+  "training_metrics": [
+    {
+      "selection_id": "ad630da89e3bc94a",
+      "subject_id": "subject_006",
+      "body_scale": 0.6405851793707945,
+      "hip_low": -3.145819820916086,
+      "hip_high": 0.8017653195782601,
+      "elbow_bottom": 96.90465874575725,
+      "chest_range": 0.2231336691769838,
+      "hand_bottom": 0.17082049092779295
+    },
+    {
+      "selection_id": "3e018e2eb7b65a63",
+      "subject_id": "subject_012",
+      "body_scale": 0.6427317270089871,
+      "hip_low": -4.234433726213134,
+      "hip_high": 0.1288593040693358,
+      "elbow_bottom": 75.78132812930326,
+      "chest_range": 0.23933680297083115,
+      "hand_bottom": 0.054976329287016255
+    },
+    {
+      "selection_id": "ee13bb65f785e7c6",
+      "subject_id": "subject_015",
+      "body_scale": 0.6694035334589985,
+      "hip_low": -5.074218733881179,
+      "hip_high": 0.8373456282260793,
+      "elbow_bottom": 69.11185185934983,
+      "chest_range": 0.2879944493217508,
+      "hand_bottom": 0.13988037947013018
+    },
+    {
+      "selection_id": "e208b7a3e224635e",
+      "subject_id": "subject_015",
+      "body_scale": 0.6635587007123404,
+      "hip_low": -5.929581029409268,
+      "hip_high": -1.5836291449081004,
+      "elbow_bottom": 61.5103578758687,
+      "chest_range": 0.3165694401430867,
+      "hand_bottom": 0.1281332269557115
+    },
+    {
+      "selection_id": "f9a75ef7248fb5be",
+      "subject_id": "subject_002",
+      "body_scale": 0.39036176324460037,
+      "hip_low": -0.853524899121521,
+      "hip_high": 2.962676438493669,
+      "elbow_bottom": 83.15518212926418,
+      "chest_range": 0.28094954980216275,
+      "hand_bottom": 0.22526603296338
+    },
+    {
+      "selection_id": "ba32db71b5a7851a",
+      "subject_id": "subject_002",
+      "body_scale": 0.39241017766909053,
+      "hip_low": 0.6303108724030121,
+      "hip_high": 2.958717007285654,
+      "elbow_bottom": 68.80899512439602,
+      "chest_range": 0.2794379204004445,
+      "hand_bottom": 0.20419724383721105
+    },
+    {
+      "selection_id": "d6057d738930c5af",
+      "subject_id": "subject_018",
+      "body_scale": 0.4366539252554327,
+      "hip_low": -2.552171766951529,
+      "hip_high": 1.7112796826848466,
+      "elbow_bottom": 71.3270651594286,
+      "chest_range": 0.2713267974685429,
+      "hand_bottom": 0.17267528936552493
+    },
+    {
+      "selection_id": "ecfac1817eab0843",
+      "subject_id": "subject_018",
+      "body_scale": 0.43654142445772015,
+      "hip_low": -3.2807208380792687,
+      "hip_high": 1.1689013229651632,
+      "elbow_bottom": 70.67356487872581,
+      "chest_range": 0.2920996594365183,
+      "hand_bottom": 0.17949872649245352
+    },
+    {
+      "selection_id": "a546c24e71fc8872",
+      "subject_id": "subject_006",
+      "body_scale": 0.6290985807587162,
+      "hip_low": -0.8000815798172249,
+      "hip_high": 1.0688252512005465,
+      "elbow_bottom": 100.11179223775366,
+      "chest_range": 0.22024983519265082,
+      "hand_bottom": 0.173253743587042
+    },
+    {
+      "selection_id": "ffc4a36115e8dff1",
+      "subject_id": "subject_012",
+      "body_scale": 0.6373531312460993,
+      "hip_low": -3.116255088830048,
+      "hip_high": -0.15883789584789465,
+      "elbow_bottom": 58.50800859384577,
+      "chest_range": 0.25812963906206754,
+      "hand_bottom": 0.053092525938135376
+    }
+  ],
+  "version": "pushup-common-2.0",
+  "counter": {
+    "top_fraction": 0.75,
+    "down_fraction": 0.6,
+    "min_amplitude_fraction": 0.25,
+    "min_amplitude_floor": 8.0,
+    "dwell_s": 0.08,
+    "min_rep_s": 0.65,
+    "max_rep_s": 20.0,
+    "missing_reset_s": 0.4,
+    "signal": "elbow_deg_smooth",
+    "reference_top_deg": 160.347125890582,
+    "reference_bottom_deg": 71.0003150190772,
+    "top_enter_deg": 138.0104231727058,
+    "down_enter_deg": 124.60840154198007,
+    "min_amplitude_deg": 22.336702717876197
+  },
+  "counter_training": [
+    {
+      "selection_id": "ad630da89e3bc94a",
+      "subject_id": "subject_006",
+      "top_deg": 153.84300055825025,
+      "bottom_deg": 96.90465874575725,
+      "source_sha256": "8940613690fd0d031650f2a606f370642edc043d5dd9042c070b998e1144c702"
+    },
+    {
+      "selection_id": "3e018e2eb7b65a63",
+      "subject_id": "subject_012",
+      "top_deg": 168.3186364523769,
+      "bottom_deg": 75.78132812930326,
+      "source_sha256": "53ffc16c2090adcab6ecf680c1561e80e3aaa387c3f20e2165d2943b851dea25"
+    },
+    {
+      "selection_id": "ee13bb65f785e7c6",
+      "subject_id": "subject_015",
+      "top_deg": 167.27524394494188,
+      "bottom_deg": 69.11185185934983,
+      "source_sha256": "882e6a18b8a0b3c7692b99d7f78c5cfc08bb28f9644632cace9b5e9cd5272f28"
+    },
+    {
+      "selection_id": "e208b7a3e224635e",
+      "subject_id": "subject_015",
+      "top_deg": 174.14516680119968,
+      "bottom_deg": 61.5103578758687,
+      "source_sha256": "882e6a18b8a0b3c7692b99d7f78c5cfc08bb28f9644632cace9b5e9cd5272f28"
+    },
+    {
+      "selection_id": "f9a75ef7248fb5be",
+      "subject_id": "subject_002",
+      "top_deg": 161.56302735181805,
+      "bottom_deg": 83.15518212926418,
+      "source_sha256": "2f4780fbbe7c628051043d3cbc36b0b13c1ab29996d7c69fd9f90180c66181fa"
+    },
+    {
+      "selection_id": "ba32db71b5a7851a",
+      "subject_id": "subject_002",
+      "top_deg": 152.15474186692563,
+      "bottom_deg": 68.80899512439602,
+      "source_sha256": "2f4780fbbe7c628051043d3cbc36b0b13c1ab29996d7c69fd9f90180c66181fa"
+    },
+    {
+      "selection_id": "d6057d738930c5af",
+      "subject_id": "subject_018",
+      "top_deg": 148.48941948095333,
+      "bottom_deg": 71.3270651594286,
+      "source_sha256": "c19242117db5201e438e6dd68ecbdae7258a6e3620a39d18341e342fa675f8a7"
+    },
+    {
+      "selection_id": "ecfac1817eab0843",
+      "subject_id": "subject_018",
+      "top_deg": 159.13122442934593,
+      "bottom_deg": 70.67356487872581,
+      "source_sha256": "c19242117db5201e438e6dd68ecbdae7258a6e3620a39d18341e342fa675f8a7"
+    },
+    {
+      "selection_id": "a546c24e71fc8872",
+      "subject_id": "subject_006",
+      "top_deg": 153.53878596470085,
+      "bottom_deg": 100.11179223775366,
+      "source_sha256": "8940613690fd0d031650f2a606f370642edc043d5dd9042c070b998e1144c702"
+    },
+    {
+      "selection_id": "ffc4a36115e8dff1",
+      "subject_id": "subject_012",
+      "top_deg": 166.3912068915577,
+      "bottom_deg": 58.50800859384577,
+      "source_sha256": "53ffc16c2090adcab6ecf680c1561e80e3aaa387c3f20e2165d2943b851dea25"
+    }
+  ],
+  "pipeline_config": {
+    "cfg": {
+      "target_fps": 15,
+      "max_width": 960,
+      "visibility_min": 0.5,
+      "presence_min": 0.5,
+      "ema_tau_s": 0.08,
+      "missing_reset_s": 0.4,
+      "feedback_hold_s": 0.25,
+      "release_ratio": 0.6
+    },
+    "common": {
+      "coverage": 0.8,
+      "bottom_window_s": 0.15
+    },
+    "multi": {
+      "result_hold_s": 2.5
+    },
+    "v3": {
+      "exit_knee_deg": 120.0,
+      "exit_hold_s": 0.25,
+      "exit_resume_knee_deg": 150.0,
+      "exit_resume_horizontal": 0.5
+    }
+  },
+  "inference_contract": "Single side-view clip. No personal normal clip, label or calibration interval.",
+  "counter_note": "Weighted median training upper/lower positions; movement gates are separate from form compliance. All gates are frozen.",
+  "extraction_model_sha256": "5134a3aad27a58b93da0088d431f366da362b44e3ccfbe3462b3827a839011b1",
+  "extraction_config": {
+    "fps": 15,
+    "max_width": 960,
+    "mode": "VIDEO",
+    "min_detection": 0.5
+  },
+  "mediapipe_version": "0.10.32",
+  "model_id": "bcd336890a294228fba459473b6bd7cf7cbdf0c73ca5602d00ec8cde8a9ff1d3"
+}

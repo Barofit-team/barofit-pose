@@ -1,0 +1,22 @@
+[
+  {
+    "case": "P1",
+    "frames": 230,
+    "match": true
+  },
+  {
+    "case": "P2",
+    "frames": 231,
+    "match": true
+  },
+  {
+    "case": "P3",
+    "frames": 397,
+    "match": true
+  },
+  {
+    "case": "P4",
+    "frames": 553,
+    "match": true
+  }
+]

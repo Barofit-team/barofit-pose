@@ -1,0 +1,27 @@
+[
+  {
+    "case": "E1_shoulder_shift",
+    "frames": 165,
+    "match": true
+  },
+  {
+    "case": "E2_knee_bend",
+    "frames": 390,
+    "match": true
+  },
+  {
+    "case": "E3_labeled_knee_error",
+    "frames": 192,
+    "match": true
+  },
+  {
+    "case": "E4_normal_control",
+    "frames": 270,
+    "match": true
+  },
+  {
+    "case": "E5_extended_arm",
+    "frames": 105,
+    "match": true
+  }
+]

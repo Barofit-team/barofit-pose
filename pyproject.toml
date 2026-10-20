@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "barofit-pose-analysis"
+version = "0.1.0"
+description = "Barofit push-up and plank analysis references"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "pandas>=2.2,<3"]
+
+[project.optional-dependencies]
+video = ["mediapipe==0.10.32", "opencv-python-headless>=4.10,<5"]
+
+[tool.setuptools.packages.find]
+include = ["analysis*"]
+
+[tool.setuptools.package-data]
+"analysis.pushup" = ["reference.json"]
