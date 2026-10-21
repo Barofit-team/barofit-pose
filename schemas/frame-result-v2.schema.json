@@ -1,0 +1,466 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Barofit realtime frame result v2",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "2.0"
+    },
+    "type": {
+      "const": "frame.result"
+    },
+    "exercise": {
+      "enum": [
+        "pushup",
+        "plank",
+        "bird_dog"
+      ]
+    },
+    "engineVersion": {
+      "type": "string"
+    },
+    "timestampMs": {
+      "type": "number",
+      "minimum": 0
+    },
+    "ignored": {
+      "type": "boolean"
+    },
+    "ignoredReason": {
+      "enum": [
+        null,
+        "finished",
+        "non_monotonic_timestamp"
+      ]
+    },
+    "tracking": {
+      "enum": [
+        "tracking",
+        "selecting_side",
+        "tracking_unavailable"
+      ]
+    },
+    "side": {
+      "enum": [
+        null,
+        "left",
+        "right"
+      ]
+    },
+    "count": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "holdSeconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "observedSeconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "measurementBasis": {
+      "type": "object"
+    },
+    "phase": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "items": {
+      "type": "object",
+      "additionalProperties": {
+        "enum": [
+          "within_reference",
+          "warning",
+          "tracking_unavailable",
+          "pending_feedback",
+          "body_unavailable",
+          "body_deviation",
+          "interrupted",
+          "unknown",
+          "not_applicable",
+          "disabled",
+          "not_supported"
+        ]
+      }
+    },
+    "codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "currentCodes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lastRepetition": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "number": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1
+            },
+            "timestampMs": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "items": {
+              "type": "object",
+              "additionalProperties": {
+                "enum": [
+                  "within_reference",
+                  "warning",
+                  "tracking_unavailable",
+                  "pending_feedback",
+                  "body_unavailable",
+                  "body_deviation",
+                  "interrupted",
+                  "unknown",
+                  "not_applicable",
+                  "disabled",
+                  "not_supported"
+                ]
+              }
+            },
+            "codes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "metrics": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "number",
+            "timestampMs",
+            "items",
+            "codes",
+            "metrics"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "details": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "type",
+    "exercise",
+    "engineVersion",
+    "timestampMs",
+    "ignored",
+    "ignoredReason",
+    "tracking",
+    "side",
+    "count",
+    "holdSeconds",
+    "observedSeconds",
+    "measurementBasis",
+    "phase",
+    "items",
+    "codes",
+    "currentCodes",
+    "lastRepetition",
+    "metrics",
+    "events",
+    "details"
+  ],
+  "additionalProperties": false,
+  "oneOf": [
+    {
+      "properties": {
+        "exercise": {
+          "const": "pushup"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_attempt",
+            "holdSeconds": null,
+            "observedSeconds": null
+          }
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "observedSeconds": {
+          "type": "null"
+        },
+        "phase": {
+          "type": "null"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "diagnostics": {
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "hipStatus": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "ignored": {
+                "const": false
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "details": {
+                "required": [
+                  "diagnostics",
+                  "hipStatus"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "plank"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": null,
+            "holdSeconds": "all_required_items_compliant",
+            "observedSeconds": "continuous_sample_intervals"
+          }
+        },
+        "lastRepetition": {
+          "type": "null"
+        },
+        "count": {
+          "type": "null"
+        },
+        "phase": {
+          "type": "null"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "raw": {
+              "type": "object"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "ignored": {
+                "const": false
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "details": {
+                "required": [
+                  "raw"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "bird_dog"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "one_leg_out_and_back",
+            "holdSeconds": "observed_holding",
+            "observedSeconds": "continuous_sample_intervals"
+          }
+        },
+        "lastRepetition": {
+          "type": "null"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "sideCounts": {
+              "type": "object",
+              "required": [
+                "left",
+                "right"
+              ],
+              "properties": {
+                "left": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "right": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "additionalProperties": false
+            },
+            "holdingSides": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "left",
+                  "right"
+                ]
+              }
+            },
+            "body": {
+              "type": "object"
+            },
+            "enginePhase": {
+              "type": "string"
+            },
+            "referenceStatus": {
+              "type": "string"
+            },
+            "experimental": {
+              "type": "boolean"
+            },
+            "thresholdBasis": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "ignored": {
+                "const": false
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "details": {
+                "required": [
+                  "sideCounts",
+                  "holdingSides",
+                  "body",
+                  "enginePhase",
+                  "referenceStatus",
+                  "experimental",
+                  "thresholdBasis"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "ignored": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "ignoredReason": {
+            "enum": [
+              "finished",
+              "non_monotonic_timestamp"
+            ]
+          },
+          "items": {
+            "maxProperties": 0
+          },
+          "codes": {
+            "maxItems": 0
+          },
+          "currentCodes": {
+            "maxItems": 0
+          },
+          "lastRepetition": {
+            "type": "null"
+          },
+          "events": {
+            "maxItems": 0
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "ignoredReason": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}

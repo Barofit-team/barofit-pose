@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "2.0",
+  "type": "frame.result",
+  "exercise": "plank",
+  "engineVersion": "plank-multi-0.2-js-1.2-valid-hold",
+  "timestampMs": 0,
+  "ignored": false,
+  "ignoredReason": null,
+  "tracking": "tracking_unavailable",
+  "side": null,
+  "count": null,
+  "holdSeconds": 0,
+  "observedSeconds": 0,
+  "measurementBasis": {
+    "count": null,
+    "holdSeconds": "all_required_items_compliant",
+    "observedSeconds": "continuous_sample_intervals"
+  },
+  "phase": null,
+  "items": {
+    "hip": "tracking_unavailable",
+    "shoulder": "tracking_unavailable",
+    "knee": "tracking_unavailable"
+  },
+  "codes": [],
+  "currentCodes": [],
+  "lastRepetition": null,
+  "metrics": {
+    "hip_offset_pct": null,
+    "hip_angle_deg": null,
+    "shoulder_deviation_deg": null,
+    "knee_deg": null,
+    "elbow_deg": null
+  },
+  "events": [],
+  "details": {
+    "raw": {
+      "time_s": 0,
+      "side": null,
+      "hip_state": "UNOBSERVABLE",
+      "hip_offset_pct": null,
+      "hip_angle_deg": null,
+      "shoulder_state": "UNOBSERVABLE",
+      "knee_state": "UNOBSERVABLE",
+      "shoulder_filtered_deg": null,
+      "knee_filtered_deg": null,
+      "warning_codes": "",
+      "shoulder_deviation_deg": null,
+      "knee_deg": null,
+      "elbow_deg": null,
+      "shoulder_valid": false,
+      "knee_valid": false,
+      "elbow_valid": false,
+      "shoulder_elbow_dx_px": null
+    }
+  }
+}

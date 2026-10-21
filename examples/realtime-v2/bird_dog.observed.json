@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "2.0",
+  "type": "frame.result",
+  "exercise": "bird_dog",
+  "engineVersion": "bird-dog-prototype-1.0",
+  "timestampMs": 0,
+  "ignored": false,
+  "ignoredReason": null,
+  "tracking": "tracking",
+  "side": null,
+  "count": 0,
+  "holdSeconds": 0,
+  "observedSeconds": 0,
+  "measurementBasis": {
+    "count": "one_leg_out_and_back",
+    "holdSeconds": "observed_holding",
+    "observedSeconds": "continuous_sample_intervals"
+  },
+  "phase": "preparation",
+  "items": {
+    "left_leg_high": "not_applicable",
+    "left_knee_bent": "not_applicable",
+    "left_arm_high": "not_applicable",
+    "left_arm_low": "not_applicable",
+    "left_elbow_bent": "not_applicable",
+    "left_hand_alignment": "within_reference",
+    "left_support_knee_alignment": "within_reference",
+    "right_leg_high": "not_applicable",
+    "right_knee_bent": "not_applicable",
+    "right_arm_high": "not_applicable",
+    "right_arm_low": "not_applicable",
+    "right_elbow_bent": "not_applicable",
+    "right_hand_alignment": "within_reference",
+    "right_support_knee_alignment": "within_reference",
+    "same_side_pair": "not_applicable",
+    "body_movement": "not_applicable",
+    "lumbar_neutral": "not_supported",
+    "axial_rotation": "not_supported"
+  },
+  "codes": [],
+  "currentCodes": [],
+  "lastRepetition": null,
+  "metrics": {
+    "left": {
+      "length": 200,
+      "trunk_deg": 0,
+      "reach_ratio": 0,
+      "arm_active": false,
+      "support_arm": true,
+      "support_leg": true,
+      "thigh_alignment_deg": -90,
+      "leg_alignment_deg": -53.13010235415598,
+      "knee_angle_filtered_deg": 90,
+      "arm_alignment_deg": -90,
+      "arm_floor_deg": -90,
+      "elbow_angle_filtered_deg": 180,
+      "hand_offset_ratio": 0,
+      "knee_offset_ratio": 0,
+      "arm_speed_ratio_s": null,
+      "knee_speed_deg_s": null,
+      "phase": "preparation",
+      "reach_speed_ratio_s": 0,
+      "quadruped": true
+    },
+    "right": {
+      "length": 200,
+      "trunk_deg": 0,
+      "reach_ratio": 0,
+      "arm_active": false,
+      "support_arm": true,
+      "support_leg": true,
+      "thigh_alignment_deg": -90,
+      "leg_alignment_deg": -53.13010235415598,
+      "knee_angle_filtered_deg": 90,
+      "arm_alignment_deg": -90,
+      "arm_floor_deg": -90,
+      "elbow_angle_filtered_deg": 180,
+      "hand_offset_ratio": 0,
+      "knee_offset_ratio": 0,
+      "arm_speed_ratio_s": null,
+      "knee_speed_deg_s": null,
+      "phase": "preparation",
+      "reach_speed_ratio_s": 0,
+      "quadruped": true
+    }
+  },
+  "events": [
+    {
+      "type": "phase.changed",
+      "t": 0,
+      "phase": "preparation",
+      "movementPhase": "preparation"
+    },
+    {
+      "type": "feedback.changed",
+      "t": 0,
+      "codes": []
+    }
+  ],
+  "details": {
+    "sideCounts": {
+      "left": 0,
+      "right": 0
+    },
+    "holdingSides": [],
+    "body": {
+      "reference_ready": false,
+      "reference_kind": "within_hold_window",
+      "side": null,
+      "anchor": null,
+      "perpendicular_shift_ratio": null,
+      "trunk_change_deg": null
+    },
+    "referenceStatus": "not_required",
+    "experimental": true,
+    "thresholdBasis": "engineering_candidates_not_clinically_validated",
+    "enginePhase": "preparation"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "2.0",
+  "type": "set.completed",
+  "exercise": "pushup",
+  "engineVersion": "pushup-apk-1.3",
+  "timestampMs": 30000,
+  "summary": {
+    "schemaVersion": "2.0",
+    "exercise": "pushup",
+    "engineVersion": "pushup-apk-1.3",
+    "count": 10,
+    "holdSeconds": null,
+    "observedSeconds": null,
+    "gapSeconds": null,
+    "items": {
+      "hip": {
+        "aggregationBasis": "repetition",
+        "unit": "repetitions",
+        "compliant": 7,
+        "warning": 2,
+        "unknown": 1,
+        "notApplicable": 0,
+        "evaluated": 9,
+        "compliancePct": 77.77777777777777
+      },
+      "elbow": {
+        "aggregationBasis": "repetition",
+        "unit": "repetitions",
+        "compliant": 6,
+        "warning": 3,
+        "unknown": 1,
+        "notApplicable": 0,
+        "evaluated": 9,
+        "compliancePct": 66.66666666666667
+      }
+    },
+    "details": {}
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "2.0",
+  "type": "set.completed",
+  "exercise": "bird_dog",
+  "engineVersion": "bird-dog-prototype-1.0",
+  "timestampMs": 30000,
+  "summary": {
+    "schemaVersion": "2.0",
+    "exercise": "bird_dog",
+    "engineVersion": "bird-dog-prototype-1.0",
+    "count": 4,
+    "holdSeconds": 12,
+    "observedSeconds": 30,
+    "gapSeconds": 0,
+    "items": {
+      "left_leg_high": {
+        "aggregationBasis": "time",
+        "unit": "seconds",
+        "compliant": 5,
+        "warning": 1,
+        "unknown": 2,
+        "notApplicable": 22,
+        "evaluated": 6,
+        "compliancePct": 83.33333333333333
+      },
+      "right_knee_bent": {
+        "aggregationBasis": "time",
+        "unit": "seconds",
+        "compliant": 6,
+        "warning": 0,
+        "unknown": 2,
+        "notApplicable": 22,
+        "evaluated": 6,
+        "compliancePct": 100.0
+      }
+    },
+    "details": {
+      "sideCounts": {
+        "left": 2,
+        "right": 2
+      }
+    }
+  }
+}

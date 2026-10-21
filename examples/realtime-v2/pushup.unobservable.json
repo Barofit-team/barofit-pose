@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "2.0",
+  "type": "frame.result",
+  "exercise": "pushup",
+  "engineVersion": "pushup-apk-1.3",
+  "timestampMs": 0,
+  "ignored": false,
+  "ignoredReason": null,
+  "tracking": "tracking_unavailable",
+  "side": null,
+  "count": 0,
+  "holdSeconds": null,
+  "observedSeconds": null,
+  "measurementBasis": {
+    "count": "completed_attempt",
+    "holdSeconds": null,
+    "observedSeconds": null
+  },
+  "phase": null,
+  "items": {
+    "hip": "tracking_unavailable"
+  },
+  "codes": [],
+  "currentCodes": [],
+  "lastRepetition": null,
+  "metrics": {},
+  "events": [],
+  "details": {
+    "diagnostics": {
+      "left": {
+        "ready": false,
+        "quality": 0,
+        "reasons": [
+          "shoulder:missing",
+          "elbow:missing",
+          "wrist:missing",
+          "hip:missing",
+          "ankle:missing"
+        ],
+        "joints": {
+          "shoulder": {
+            "id": 11,
+            "visibility": null,
+            "presence": null,
+            "ok": false,
+            "reason": "missing"
+          },
+          "elbow": {
+            "id": 13,
+            "visibility": null,
+            "presence": null,
+            "ok": false,
+            "reason": "missing"
+          },
+          "wrist": {
+            "id": 15,
+            "visibility": null,
+            "presence": null,
+            "ok": false,
+            "reason": "missing"
+          },
+          "hip": {
+            "id": 23,
+            "visibility": null,
+            "presence": null,
+            "ok": false,
+            "reason": "missing"
+          },
+          "ankle": {
+            "id": 27,
+            "visibility": null,
+            "presence": null,
+            "ok": false,
+            "reason": "missing"
+          }
+        },
+        "features": {
+          "elbow": null,
+          "hip": null,
+          "chest": null,
+          "hand": null,
+          "body": null,
+          "horizontal": null,
+          "quality": 0,
+          "score": 0
+        }
+      },
+      "right": {
+        "ready": false,
+        "quality": 0,
+        "reasons": [
+          "shoulder:missing",
+          "elbow:missing",
+          "wrist:missing",
+          "hip:missing",
+          "ankle:missing"
+        ],
+        "joints": {
+          "shoulder": {
+            "id": 12,
+            "visibility": null,
+            "presence": null,
+            "ok": false,
+            "reason": "missing"
+          },
+          "elbow": {
+            "id": 14,
+            "visibility": null,
+            "presence": null,
+            "ok": false,
+            "reason": "missing"
+          },
+          "wrist": {
+            "id": 16,
+            "visibility": null,
+            "presence": null,
+            "ok": false,
+            "reason": "missing"
+          },
+          "hip": {
+            "id": 24,
+            "visibility": null,
+            "presence": null,
+            "ok": false,
+            "reason": "missing"
+          },
+          "ankle": {
+            "id": 28,
+            "visibility": null,
+            "presence": null,
+            "ok": false,
+            "reason": "missing"
+          }
+        },
+        "features": {
+          "elbow": null,
+          "hip": null,
+          "chest": null,
+          "hand": null,
+          "body": null,
+          "horizontal": null,
+          "quality": 0,
+          "score": 0
+        }
+      }
+    },
+    "hipStatus": null
+  }
+}

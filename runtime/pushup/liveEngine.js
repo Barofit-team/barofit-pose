@@ -32,8 +32,9 @@ export function inspectSide(packet,side,settings=config){
 
 export function trackingMessage(result){
   if(result.tracking==='selecting_side')return '푸시업 준비 위치에서 관절이 안정적으로 보이는 쪽을 확인하고 있어요.';
-  const side=result.side??['left','right'].sort((a,b)=>(result.diagnostics?.[b]?.quality??0)-(result.diagnostics?.[a]?.quality??0))[0];
-  const r=result.diagnostics?.[side]?.reasons?.[0];
+  const diagnostics=result.details?.diagnostics??result.diagnostics;
+  const side=result.side??['left','right'].sort((a,b)=>(diagnostics?.[b]?.quality??0)-(diagnostics?.[a]?.quality??0))[0];
+  const r=diagnostics?.[side]?.reasons?.[0];
   if(!r)return '관절을 다시 확인하고 있어요.';
   const [joint,reason]=r.split(':');
   if(LABEL[joint])return `${sideLabel(side)} ${LABEL[joint]} ${reason==='outside_image'?'좌표가 화면 밖으로 추정돼요':'추적 신뢰도가 낮아요'}.`;

@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "2.0",
+  "type": "frame.result",
+  "exercise": "pushup",
+  "engineVersion": "pushup-apk-1.3",
+  "timestampMs": 1000,
+  "ignored": false,
+  "ignoredReason": null,
+  "tracking": "tracking",
+  "side": "left",
+  "count": 0,
+  "holdSeconds": null,
+  "observedSeconds": null,
+  "measurementBasis": {
+    "count": "completed_attempt",
+    "holdSeconds": null,
+    "observedSeconds": null
+  },
+  "phase": null,
+  "items": {
+    "hip": "within_reference"
+  },
+  "codes": [],
+  "currentCodes": [],
+  "lastRepetition": null,
+  "metrics": {
+    "elbow": 80.35637375877043,
+    "hip": -5.205661406464844,
+    "chest": 0.08016107678413391,
+    "hand": -0.15330620852950022,
+    "body": 0.3938982065617471,
+    "horizontal": 0.9943447519088269,
+    "quality": 0.9917358338832856,
+    "score": 2.9917358338832853,
+    "t": 1,
+    "hipStatus": "within_reference",
+    "valid": true
+  },
+  "events": [
+    {
+      "type": "side.selected",
+      "t": 1,
+      "side": "left",
+      "reason": "stable_required_joints"
+    },
+    {
+      "type": "tracking.changed",
+      "t": 1,
+      "status": "tracking"
+    }
+  ],
+  "details": {
+    "diagnostics": {
+      "left": {
+        "ready": true,
+        "quality": 0.9842718362808227,
+        "reasons": [],
+        "joints": {
+          "shoulder": {
+            "id": 11,
+            "visibility": 0.9996647238731384,
+            "presence": 0.998847484588623,
+            "ok": true,
+            "reason": null
+          },
+          "elbow": {
+            "id": 13,
+            "visibility": 0.9909629225730896,
+            "presence": 0.9993342757225037,
+            "ok": true,
+            "reason": null
+          },
+          "wrist": {
+            "id": 15,
+            "visibility": 0.9726232886314392,
+            "presence": 0.9994943141937256,
+            "ok": true,
+            "reason": null
+          },
+          "hip": {
+            "id": 23,
+            "visibility": 0.9972782135009766,
+            "presence": 0.9985976815223694,
+            "ok": true,
+            "reason": null
+          },
+          "ankle": {
+            "id": 27,
+            "visibility": 0.9616472721099854,
+            "presence": 0.9989081621170044,
+            "ok": true,
+            "reason": null
+          }
+        },
+        "features": {
+          "elbow": 80.35637375877043,
+          "hip": -5.205661406464844,
+          "chest": 0.08016107678413391,
+          "hand": -0.15330620852950022,
+          "body": 0.3938982065617471,
+          "horizontal": 0.9943447519088269,
+          "quality": 0.9917358338832856,
+          "score": 2.9917358338832853
+        }
+      },
+      "right": {
+        "ready": false,
+        "quality": 0.661401891708374,
+        "reasons": [
+          "elbow:low_visibility",
+          "wrist:low_visibility"
+        ],
+        "joints": {
+          "shoulder": {
+            "id": 12,
+            "visibility": 0.996595025062561,
+            "presence": 0.9952161312103271,
+            "ok": true,
+            "reason": null
+          },
+          "elbow": {
+            "id": 14,
+            "visibility": 0.2756519019603729,
+            "presence": 0.9988288283348083,
+            "ok": false,
+            "reason": "low_visibility"
+          },
+          "wrist": {
+            "id": 16,
+            "visibility": 0.29400834441185,
+            "presence": 0.9993114471435547,
+            "ok": false,
+            "reason": "low_visibility"
+          },
+          "hip": {
+            "id": 24,
+            "visibility": 0.9966764450073242,
+            "presence": 0.9975894689559937,
+            "ok": true,
+            "reason": null
+          },
+          "ankle": {
+            "id": 28,
+            "visibility": 0.7454566359519958,
+            "presence": 0.9984623193740845,
+            "ok": true,
+            "reason": null
+          }
+        },
+        "features": {
+          "elbow": null,
+          "hip": -4.7903582120947,
+          "chest": null,
+          "hand": null,
+          "body": 0.37776453916366715,
+          "horizontal": 0.9905065769095143,
+          "quality": 0.8297796547412872,
+          "score": 1.8297796547412872
+        }
+      }
+    },
+    "hipStatus": "within_reference"
+  }
+}

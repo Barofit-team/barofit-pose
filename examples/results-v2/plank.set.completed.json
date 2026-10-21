@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "2.0",
+  "type": "set.completed",
+  "exercise": "plank",
+  "engineVersion": "plank-multi-0.2-js-1.2-valid-hold",
+  "timestampMs": 30000,
+  "summary": {
+    "schemaVersion": "2.0",
+    "exercise": "plank",
+    "engineVersion": "plank-multi-0.2-js-1.2-valid-hold",
+    "count": null,
+    "holdSeconds": 18,
+    "observedSeconds": 30,
+    "gapSeconds": 0,
+    "items": {
+      "hip": {
+        "aggregationBasis": "time",
+        "unit": "seconds",
+        "compliant": 20,
+        "warning": 5,
+        "unknown": 5,
+        "notApplicable": 0,
+        "evaluated": 25,
+        "compliancePct": 80.0
+      },
+      "shoulder": {
+        "aggregationBasis": "time",
+        "unit": "seconds",
+        "compliant": 25,
+        "warning": 0,
+        "unknown": 5,
+        "notApplicable": 0,
+        "evaluated": 25,
+        "compliancePct": 100.0
+      },
+      "knee": {
+        "aggregationBasis": "time",
+        "unit": "seconds",
+        "compliant": 24,
+        "warning": 1,
+        "unknown": 5,
+        "notApplicable": 0,
+        "evaluated": 25,
+        "compliancePct": 96.0
+      }
+    },
+    "details": {}
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Barofit set completed v2",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "2.0"
+    },
+    "type": {
+      "const": "set.completed"
+    },
+    "exercise": {
+      "enum": [
+        "pushup",
+        "plank",
+        "bird_dog"
+      ]
+    },
+    "engineVersion": {
+      "type": "string"
+    },
+    "timestampMs": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "summary": {
+      "$ref": "#/$defs/summary"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "type",
+    "exercise",
+    "engineVersion",
+    "timestampMs",
+    "summary"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "item": {
+      "type": "object",
+      "properties": {
+        "aggregationBasis": {
+          "enum": [
+            "repetition",
+            "time"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "repetitions",
+            "seconds"
+          ]
+        },
+        "compliant": {
+          "type": "number",
+          "minimum": 0
+        },
+        "warning": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unknown": {
+          "type": "number",
+          "minimum": 0
+        },
+        "notApplicable": {
+          "type": "number",
+          "minimum": 0
+        },
+        "evaluated": {
+          "type": "number",
+          "minimum": 0
+        },
+        "compliancePct": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "aggregationBasis",
+        "unit",
+        "compliant",
+        "warning",
+        "unknown",
+        "notApplicable",
+        "evaluated",
+        "compliancePct"
+      ],
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "properties": {
+            "aggregationBasis": {
+              "const": "repetition"
+            },
+            "unit": {
+              "const": "repetitions"
+            },
+            "compliant": {
+              "type": "integer"
+            },
+            "warning": {
+              "type": "integer"
+            },
+            "unknown": {
+              "type": "integer"
+            },
+            "notApplicable": {
+              "type": "integer"
+            },
+            "evaluated": {
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "properties": {
+            "aggregationBasis": {
+              "const": "time"
+            },
+            "unit": {
+              "const": "seconds"
+            }
+          }
+        }
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "evaluated": {
+                "const": 0
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "compliancePct": {
+                "type": "null"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "compliancePct": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": "2.0"
+        },
+        "exercise": {
+          "enum": [
+            "pushup",
+            "plank",
+            "bird_dog"
+          ]
+        },
+        "engineVersion": {
+          "type": "string"
+        },
+        "count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "holdSeconds": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "observedSeconds": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "gapSeconds": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "items": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/item"
+          }
+        },
+        "details": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "exercise",
+        "engineVersion",
+        "count",
+        "holdSeconds",
+        "observedSeconds",
+        "gapSeconds",
+        "items",
+        "details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "exercise": {
+          "const": "pushup"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "pushup"
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "observedSeconds": {
+              "type": "null"
+            },
+            "gapSeconds": {
+              "type": "null"
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "plank"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "plank"
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "time"
+                  }
+                }
+              }
+            },
+            "count": {
+              "type": "null"
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "bird_dog"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "bird_dog"
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "time"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

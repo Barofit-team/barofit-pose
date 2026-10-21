@@ -1,4 +1,6 @@
-# 입력·출력 규격 v1.0
+# 입력·출력 규격
+
+앱·웹 실시간 반환은 [실시간 결과 v2](realtime-contract-v2.md), 세트 종료는 [세트 결과 v2](result-contract-v2.md)를 사용합니다. 입력 규격은 유지합니다. Python 연구 출력과 내부 원본 엔진은 별도입니다.
 
 ## 1. 입력 — 모든 운동 동일
 
@@ -31,47 +33,20 @@
 
 ## 2. 공통 프레임 출력
 
-| 필드 | 의미 |
-|---|---|
-| `schemaVersion` | `1.0` — 객체 형식 버전 |
-| `exercise` | `pushup`, `plank`, 향후 `squat` |
-| `engineVersion` | 판정 구현 버전 |
-| `timestampMs` | 입력 프레임 시각 |
-| `ignored` | 중복/역순 등으로 처리하지 않은 결과인지 |
-| `tracking` | `tracking`, `selecting_side`, `tracking_unavailable` |
-| `side` | 실제 판정에 쓰는 `left`, `right`, 아직 미선택이면 null |
-| `count` | 푸시업 누적 움직임 횟수. 플랭크는 null |
-| `holdSeconds` | 향후 유지 시간. 현재는 null(미구현) |
-| `codes` | 현재 표시 가능한 피드백 코드 배열 |
-| `items` | 항목별 판정 객체. 아직 회차 평가가 없으면 null일 수 있음 |
-| `events` | 해당 프레임에서 새로 발생한 이벤트. 플랭크 Python은 현재 빈 배열 |
-| `metrics` | 계산한 수치. 계산 불가 값은 null |
-
-`tracking`은 일부 판정 가능 여부를 나타냅니다. 전 항목 정상/준비 완료를 뜻하지 않습니다.
-`codes: []`만 보고 정상이라고 표시하지 마세요. `tracking`과 `items`를 함께 확인해야 합니다.
-`ignored: true` 결과로 기존 화면 값을 덮어쓰지 않습니다.
-
-| 항목 상태 | 의미 |
-|---|---|
-| `within_reference` | 평가 가능한 범위에서 기준 충족 |
-| `warning` | 기준 미충족 |
-| `tracking_unavailable` | 필요한 좌표가 없어 평가 불가 |
-| `pending_feedback` | 워밍업 또는 평가 대기 |
-| `body_unavailable` | 몸통 기준을 얻지 못해 손 위치 평가 보류 |
-| `body_deviation` | 몸통 정렬 이탈 때문에 손 위치 평가 보류 |
-| `interrupted` | 회차 피드백 확정 전에 중단/종료 |
-
-평가 불가·대기·보류를 준수나 미준수에 넣지 않습니다. 준수율 분모는 평가 가능한 회차/시간만 사용합니다.
+[실시간 결과 v2](realtime-contract-v2.md)의 필드 표를 기준으로 합니다.
+`PushupAnalyzer`, `PlankAnalyzer`, `BirdDogAnalyzer`의 JS 공개 반환을 통일했습니다.
+현재 판정은 `items`, 최근 회차 평가는 `lastRepetition`, 운동별 추가 데이터는 `details`입니다.
+`ignored` 결과는 화면에 적용하지 않으며, 항목별 평가 불가 상태를 정상으로 바꾸지 않습니다.
 
 ## 3. 운동별 차이
 
 ### 푸시업
 
-`items` 키: `hip`, `elbow`, `chest`, `hand`, `return`.
+`lastRepetition.items` 키: `hip`, `elbow`, `chest`, `hand`, `return`. 현재 관측은 `items.hip`.
 회차 판정은 카운트 후 0.6초 대기 뒤 확정됩니다. 따라서 카운트와 피드백 이벤트는 같은 프레임에 발생하지 않을 수 있습니다.
-`hipStatus`는 현재 프레임의 골반 상태이며 `items.hip`은 최근 회차 평가입니다.
+`details.hipStatus`는 원본 골반 상태이며 `items.hip`은 공통 상태로 표현한 현재 골반 판정입니다. 최근 회차의 골반 판정은 `lastRepetition.items.hip`입니다.
 `metrics`에는 `t`(초), `elbow`(도), `hip`(%), `chest`, `hand`, `body`, `horizontal` 등이 있습니다.
-`diagnostics`는 좌우 관절별 신뢰도·누락 원인을 포함하는 진단용 값입니다.
+`details.diagnostics`는 좌우 관절별 신뢰도·누락 원인을 포함하는 진단용 값입니다.
 
 | 이벤트 | 주요 데이터 |
 |---|---|
@@ -81,11 +56,11 @@
 | `tracking.changed` / `tracking.blocked` / `tracking.recovered` | 관측 상태 변화 |
 | `side.selected` / `side.changed` / `side.released` | 판정할 좌우 변경 |
 | `frame.gap` | 프레임 시간 간격 초과 |
-| `set.completed` | `count`, 항목별 `evaluable/compliant/warning/unknown/compliance_pct` |
+| `set.completed` | v2 공통 이벤트: `timestampMs`, `summary` ([세부 규격](result-contract-v2.md)) |
 
 **원본 이벤트의 `t`, `*_s`는 초입니다. 공통 프레임의 `timestampMs`와 단위가 다릅니다.**
 일부 `side.released`에는 아직 시간/좌우가 없을 수 있으므로 null을 처리해야 합니다.
-`set.completed`의 통계 단위는 회차이며 분모 0이면 `compliance_pct`는 null입니다.
+푸쉬업 세트 집계는 `summary.items` 아래에 있으며 `aggregationBasis: repetition`, `unit: repetitions`입니다. `compliancePct`는 0~100, 분모 0이면 null입니다. 세트 종료 이벤트는 `t` 대신 `timestampMs`(밀리초)를 사용합니다.
 종료 직전 확정 대기 중인 회차는 `interrupted`→unknown으로 집계됩니다. 종료가 미래 프레임을 만들어내지는 않습니다.
 
 ### 플랭크
@@ -95,13 +70,13 @@
 거리 비율은 %, 각도는 도입니다. 팔꿈치 각도는 기록만 하고 판정하지 않습니다.
 `raw`에는 원본 v0.2 결과가 있습니다. 원본의 `HIP_HIGH`를 공통 `codes`에서만 `HIP_RAISE`로 표기합니다.
 `raw`의 `WARMUP/UNOBSERVABLE/NO_WARNING/NO_HIP_WARNING`은 어댑터에서 위 공통 상태로 변환합니다.
-Python 어댑터는 프레임 판정만 제공합니다. JS `PlankAnalyzer`는 프레임 판정과 세트 종료 집계를 제공합니다.
-`count`, `holdSeconds`는 null입니다. 준비/운동/종료 자동 감지는 아직 없습니다.
+Python·JS `PlankAnalyzer` 모두 프레임 판정과 세트 종료 집계를 제공합니다.
+`count`는 null입니다. `holdSeconds`는 [플랭크 관측 유지 시간](PLANK_HOLD.md)을 누적합니다. 자동 세트 시작·종료는 수행하지 않습니다.
 `observedSeconds`는 0.25초 이하로 연속된 샘플의 시간 합이며 실제 운동 유지 시간이 아닙니다.
 `gapSeconds`는 그보다 긴 샘플 공백의 합입니다. 명시적 일시정지는 두 값 모두에서 제외합니다.
-`summary().items`의 각 항목은 `compliant_s`, `warning_s`, `unknown_s`, `evaluable_s`, `compliance_pct`를 갖습니다.
+`summary().items`의 각 항목은 `aggregationBasis: time`, `unit: seconds`와 `compliant`, `warning`, `unknown`, `notApplicable`, `evaluated`, `compliancePct`를 갖습니다.
 양 끝 프레임에서 같은 쪽으로 평가 가능할 때만 직전 프레임의 판정에 시간 간격을 배분합니다. 나머지는 unknown입니다.
-`compliance_pct = compliant_s / evaluable_s * 100`, 평가 시간 0이면 null입니다.
+`compliancePct = compliant / evaluated * 100`, 평가 시간 0이면 null입니다. 버드독도 같은 공통 세트 구조와 시간 기준 항목 집계를 사용합니다. 상세 내용은 [세트 결과 JSON v2](result-contract-v2.md)를 참고하세요.
 
 ## 4. 생명주기와 앱 책임
 
@@ -114,8 +89,8 @@ Python 어댑터는 프레임 판정만 제공합니다. JS `PlankAnalyzer`는 �
 → 세트 종료 처리 / 결과 저장
 ```
 
-- JS 푸시업·플랭크: `pushFrame`, `breakContinuity(reason)`, `finish`. `finish()` 재호출은 빈 배열을 반환합니다.
-- Python 플랭크: `push_frame`, `break_continuity`. 새 영상은 새 인스턴스를 만듭니다.
+- JS 푸쉬업·플랭크·버드독: `pushFrame`, `breakContinuity(reason)`, `summary`, `finish`. `finish()` 재호출은 빈 배열을 반환합니다.
+- Python 플랭크·버드독: `push_frame`, `break_continuity`, `summary`, `finish`. 새 영상은 새 인스턴스를 만듭니다.
 - 중복/역순 프레임은 JS에서 ignored, Python 플랭크에서 ValueError. 이 차이는 보존했습니다.
 - 카메라 프레임은 순서대로 처리하고 오래된 결과는 앱에서 버립니다. 준비 중 카운트 차단은 별도 상태 관리가 필요합니다.
 - 골격 그리기·카메라 권한·실제 TTS 재생·세트 ID·재전송/중복 방지·백엔드 저장은 이 함수의 역할이 아닙니다.

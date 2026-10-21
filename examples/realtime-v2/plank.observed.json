@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "2.0",
+  "type": "frame.result",
+  "exercise": "plank",
+  "engineVersion": "plank-multi-0.2-js-1.2-valid-hold",
+  "timestampMs": 400,
+  "ignored": false,
+  "ignoredReason": null,
+  "tracking": "tracking",
+  "side": "right",
+  "count": null,
+  "holdSeconds": 0,
+  "observedSeconds": 0.4,
+  "measurementBasis": {
+    "count": null,
+    "holdSeconds": "all_required_items_compliant",
+    "observedSeconds": "continuous_sample_intervals"
+  },
+  "phase": null,
+  "items": {
+    "hip": "within_reference",
+    "shoulder": "within_reference",
+    "knee": "within_reference"
+  },
+  "codes": [],
+  "currentCodes": [],
+  "lastRepetition": null,
+  "metrics": {
+    "hip_offset_pct": -4.070222391051808,
+    "hip_angle_deg": 173.55281559797692,
+    "shoulder_deviation_deg": 12.962089374311777,
+    "knee_deg": 171.45952045671768,
+    "elbow_deg": 74.30463283310284
+  },
+  "events": [],
+  "details": {
+    "raw": {
+      "time_s": 0.4,
+      "side": "right",
+      "hip_state": "NO_HIP_WARNING",
+      "hip_offset_pct": -4.070222391051808,
+      "hip_angle_deg": 173.55281559797692,
+      "shoulder_state": "NO_WARNING",
+      "knee_state": "NO_WARNING",
+      "shoulder_filtered_deg": 11.322173685099614,
+      "knee_filtered_deg": 174.23941582472997,
+      "warning_codes": "",
+      "shoulder_deviation_deg": 12.962089374311777,
+      "knee_deg": 171.45952045671768,
+      "elbow_deg": 74.30463283310284,
+      "shoulder_valid": true,
+      "knee_valid": true,
+      "elbow_valid": true,
+      "shoulder_elbow_dx_px": -22.862205505371094
+    }
+  }
+}

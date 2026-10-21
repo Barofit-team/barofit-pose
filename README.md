@@ -10,9 +10,11 @@
 | 푸시업 | 기존 통합 카운트 v3 보존 | APK v1.3 엔진 보존 | 움직임 카운트, 골반·팔꿈치·상체 이동·손 위치·복귀 피드백 |
 | 플랭크 | 측면 v0.2 보존 | JavaScript 이식 및 웹 리플레이 | 골반 정렬, 어깨–팔꿈치 정렬, 무릎 펴기. 팔꿈치 각도는 기록만 함 |
 | 스쿼트 | 담당자 추가 예정 | 담당자 추가 예정 | [운동 추가 안내](docs/ADDING_EXERCISE.md) |
+| 버드독 | 1차 프로토타입 v1.0 | Python과 동일 규칙 / 웹 반영 | 준비·유지·복귀, 횟수·유지 시간, 팔·다리 정렬. [입출력·기준·검증](docs/BIRD_DOG_V1.md) |
 
-플랭크 항목별 평가 시간·준수율 집계를 지원합니다. 실제 유지 시간과 준비/운동/종료 자동 감지는 아직 구현하지 않았습니다.
-`holdSeconds: null`은 미구현을 뜻하며 0초로 해석하지 않습니다.
+플랭크는 기준을 충족한 자세의 유지 시간과 항목별 준수율을 제공합니다. 준비/시작/종료 등 서비스 흐름은 별도로 관리합니다.
+
+프론트 연동: [실시간 결과 v2](docs/realtime-contract-v2.md) · [세트 종료 결과 v2](docs/result-contract-v2.md). 푸쉬업·플랭크·버드독의 JS 공개 Analyzer에 적용합니다. 운동별 판정 의미와 측정 단위는 각 규격에 명시했습니다.
 
 ## 구조
 
@@ -71,7 +73,7 @@ python -m examples.analyze_landmarks pushup data/clip.npz results/pushup --side 
 ```
 
 NPZ는 `poses(N,33,5)`, `times(N)`(초), `dims(N,2)`(너비·높이), `indices(N)`를 포함합니다.
-출력: 플랭크는 `frames.jsonl`, 푸시업은 프레임·회차·움직임 CSV와 `summary.json`.
+출력: 세 운동 모두 `summary.json`·`events.json`. 플랭크·버드독은 `frames.jsonl`, 푸쉬업은 프레임·회차·움직임 CSV도 저장합니다.
 
 ### 원본 영상에서 추출
 
@@ -115,3 +117,7 @@ APK에서 사용한 Android 관절 추출 라이브러리 소스는 `examples/re
 
 초기 버전은 팀 내부 코드 공유용입니다. npm/PyPI 공개 배포나 FastAPI 서비스는 포함하지 않습니다.
 외부 코드·모델·데이터의 권리는 각각의 원 출처에 따릅니다. [출처 안내](docs/SOURCES.md) 참고.
+
+## 세트 결과 규격
+
+푸쉬업·플랭크·버드독은 [세트 결과 JSON v2](docs/result-contract-v2.md)를 사용합니다. 항목별 `compliancePct`는 0~100이며 집계 단위는 `aggregationBasis`로 구분합니다. 프레임 판정과 카운트 로직은 유지됩니다.

@@ -8,23 +8,92 @@ export interface PoseFrame {
   landmarks: Landmark[];
 }
 export type ItemStatus = 'within_reference' | 'warning' | 'tracking_unavailable' |
-  'pending_feedback' | 'body_unavailable' | 'body_deviation' | 'interrupted';
-export interface FrameResult {
-  schemaVersion: '1.0';
-  exercise: string;
+  'pending_feedback' | 'body_unavailable' | 'body_deviation' | 'interrupted' |
+  'unknown' | 'not_applicable' | 'disabled' | 'not_supported';
+/** Common app-facing snapshot. Exercise is the discriminator; v1 research outputs are separate. */
+export interface FrameResultBase {
+  schemaVersion: '2.0';
+  type: 'frame.result';
   engineVersion: string;
   timestampMs: number;
   ignored: boolean;
+  ignoredReason: 'finished' | 'non_monotonic_timestamp' | null;
   tracking: 'tracking' | 'selecting_side' | 'tracking_unavailable';
   side: 'left' | 'right' | null;
   count: number | null;
-  /** Reserved. Automatic plank hold timer is not implemented. */
   holdSeconds: number | null;
-  /** Plank only: continuous sample time, not actual exercise hold time. */
-  observedSeconds?: number;
+  observedSeconds: number | null;
+  measurementBasis: {
+    count: 'completed_attempt' | 'one_leg_out_and_back' | null;
+    holdSeconds: 'all_required_items_compliant' | 'observed_holding' | null;
+    observedSeconds: 'continuous_sample_intervals' | null;
+  };
+  /** Engine movement stage; null where not exposed. Not frontend session lifecycle. */
+  phase: string | null;
+  /** Current observation ONLY. No entry means not emitted, never automatically compliant. */
+  items: Record<string, ItemStatus>;
+  /** Existing display candidates, possibly mixing current and recent-repetition feedback. Not a TTS command. */
   codes: string[];
-  items: Record<string, ItemStatus> | null;
-  /** Existing push-up event timestamps t/start_s/bottom_s/end_s are in seconds. */
-  events: Array<Record<string, unknown>>;
-  metrics: Record<string, unknown> | null;
+  currentCodes: string[];
+  /** Last repetition while the original engine's feedback display window is active; otherwise null. */
+  lastRepetition: {
+    number: number | null; timestampMs: number | null;
+    items: Record<string, ItemStatus>; codes: string[]; metrics: Record<string, unknown>;
+  } | null;
+  metrics: Record<string, unknown>;
+  /** Legacy engine events unchanged. Their t/start_s/end_s fields are seconds. */
+  events: Array<{type: string; [key: string]: unknown}>;
+}
+export interface PushupFrameResult extends FrameResultBase {
+  exercise: 'pushup';
+  holdSeconds: null; observedSeconds: null; phase: null;
+  details: {diagnostics?: unknown; hipStatus?: string | null};
+}
+export interface PlankFrameResult extends FrameResultBase {
+  exercise: 'plank'; count: null; phase: null; lastRepetition: null;
+  details: {raw?: Record<string, unknown>};
+}
+export interface BirdDogFrameResult extends FrameResultBase {
+  exercise: 'bird_dog'; lastRepetition: null;
+  details: {
+    sideCounts?: {left: number; right: number};
+    holdingSides?: Array<'left' | 'right'>;
+    body?: Record<string, unknown>;
+    enginePhase?: string;
+    referenceStatus?: string; experimental?: boolean; thresholdBasis?: string;
+  };
+}
+export type FrameResult = PushupFrameResult | PlankFrameResult | BirdDogFrameResult;
+
+/** Set-result v2 unchanged. Non-terminal engine event payloads retain their v1 contracts. */
+export interface ItemSummary {
+  aggregationBasis: 'repetition' | 'time';
+  unit: 'repetitions' | 'seconds';
+  compliant: number;
+  warning: number;
+  unknown: number;
+  notApplicable: number;
+  evaluated: number;
+  /** 0–100 inclusive; null when evaluated === 0. */
+  compliancePct: number | null;
+}
+export interface SetSummary {
+  schemaVersion: '2.0';
+  exercise: string;
+  engineVersion: string;
+  count: number | null;
+  holdSeconds: number | null;
+  observedSeconds: number | null;
+  gapSeconds: number | null;
+  items: Record<string, ItemSummary>;
+  details: Record<string, unknown>;
+}
+export interface SetCompleted {
+  schemaVersion: '2.0';
+  type: 'set.completed';
+  exercise: string;
+  engineVersion: string;
+  /** Same time origin as input PoseFrame, milliseconds; null before the first frame. */
+  timestampMs: number | null;
+  summary: SetSummary;
 }

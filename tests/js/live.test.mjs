@@ -48,7 +48,7 @@ test('common adapter preserves raw engine results and handles empty landmarks',(
     const a=wrapper.pushFrame(p),b=raw.pushFrame(p);
     assert.equal(a.count,b.count);assert.equal(a.side,b.side);
     assert.deepEqual(a.events,JSON.parse(JSON.stringify(b.events)));
-    assert.equal(a.schemaVersion,'1.0');assert.equal(a.holdSeconds,null);
+    assert.equal(a.schemaVersion,'2.0');assert.equal(a.holdSeconds,null);
   }
   assert.equal(wrapper.pushFrame({...packet(6),landmarks:[]}).tracking,'tracking_unavailable');
   assert.equal(wrapper.pushFrame(packet(1)).ignored,true);

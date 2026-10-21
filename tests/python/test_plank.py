@@ -42,10 +42,13 @@ class Rules(unittest.TestCase):
     def test_missing_pose_is_unknown_not_normal(self):
         e=PlankAnalyzer()
         for i in range(30):e.push_frame(dict(timestampMs=i*100,width=1000,height=1000,landmarks=pose().tolist()))
+        before=e.summary()['holdSeconds']
         result=e.push_frame(dict(timestampMs=3000,width=1000,height=1000,landmarks=[]))
         self.assertEqual(result['tracking'],'tracking_unavailable')
         self.assertEqual(set(result['items'].values()),{'tracking_unavailable'})
-        self.assertIsNone(result['holdSeconds'])
+        self.assertEqual(result['holdSeconds'],before)
+        self.assertGreater(before,0)
+        self.assertLess(before,2.9)
         json.dumps(result,allow_nan=False)
 
     def test_reselection_and_gap_reset(self):
