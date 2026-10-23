@@ -1,6 +1,6 @@
 # 세트 결과 JSON v2
 
-푸쉬업·플랭크·버드독의 공개 Analyzer `summary()`와 `finish()`에 적용한다.
+푸쉬업·플랭크·버드독·레그 레이즈의 공개 Analyzer `summary()`와 `finish()`에 적용한다.
 판정 임계값, 관절 계산, 카운트 조건, 상태 전이, 시간 집계 방식은 유지한다.
 
 ## 공통 구조
@@ -75,3 +75,9 @@ const result = events.find(e => e.type === 'set.completed');
 ## JSON Schema
 
 검사 파일: [set-completed-v2.schema.json](../schemas/set-completed-v2.schema.json). `evaluated = compliant + warning`과 준수율 산술 관계, 봉투·summary의 engineVersion 일치는 별도 검증한다. JSON Schema는 필드·형식·단위 조합·범위를 검사한다.
+
+## 레그 레이즈 추가 · 2026-10-23
+
+`exercise=leg_raise`의 항목은 `knee_extension`, `lowering_control`, `lumbar_contact`이며 모두 `aggregationBasis=repetition`, `unit=repetitions`이다. 허리 접촉은 완료 회차마다 `unknown`에 집계하고 `evaluated=0`, `compliancePct=null`을 유지한다. `details.repetitions`에 시작·최고점·끝 시각, 하강 시간·각속도·무릎 각도를 보존한다. [기준과 사용법](LEG_RAISE_V01.md).
+
+템포 관측값은 실시간 `metrics.tempo`, 회차 `lastRepetition.metrics.tempo`, 세트 `summary.details.repetitions[].metrics.tempo`에 저장한다. 카운트·판정·준수율은 유지한다. [필드와 측정 방법](LEG_RAISE_TEMPO.md).

@@ -13,7 +13,8 @@
       "enum": [
         "pushup",
         "plank",
-        "bird_dog"
+        "bird_dog",
+        "leg_raise"
       ]
     },
     "engineVersion": {
@@ -418,6 +419,31 @@
           }
         }
       ]
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "leg_raise"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_raise_lower_attempt",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "details": {
+          "type": "object",
+          "maxProperties": 0
+        }
+      }
     }
   ],
   "allOf": [

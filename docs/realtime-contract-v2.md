@@ -1,6 +1,6 @@
 # 실시간 결과 규격 v2
 
-앱·웹에서 사용하는 `runtime/`의 `PushupAnalyzer`, `PlankAnalyzer`, `BirdDogAnalyzer.pushFrame()` 규격이다. 판정 엔진은 그대로 두고 반환 객체를 변환한다. 세트 종료 결과 v2는 변경하지 않았다.
+앱·웹에서 사용하는 `runtime/`의 `PushupAnalyzer`, `PlankAnalyzer`, `BirdDogAnalyzer`, `LegRaiseAnalyzer.pushFrame()` 규격이다. 판정 엔진은 그대로 두고 반환 객체를 변환한다. 세트 종료 결과 v2는 변경하지 않았다.
 
 ## 설계 원칙
 
@@ -83,7 +83,7 @@ TypeScript의 [discriminated union](https://www.typescriptlang.org/docs/handbook
 - 정상·관절 미검출·평가 대기·중복 프레임·일시정지 후 재개·종료 후 입력에서 같은 최상위 구조인지 확인한다.
 - 반환 변경 전후의 카운트·경고·수치·세트 집계가 동일한지 비교한다.
 
-현재 스쿼트·런지에 이 규격을 적용했다는 의미는 아니다. 이번 적용 대상은 세 가지 JS Analyzer다. Python `analysis/`와 내부 엔진의 원본 출력은 연구·비교용으로 보존했다. 프론트는 원본 엔진 대신 공개 Analyzer를 사용한다.
+현재 스쿼트·런지에 이 규격을 적용했다는 의미는 아니다. 레그 레이즈를 포함한 JS 공개 Analyzer에 적용한다. Python `analysis/`와 내부 엔진의 원본 출력은 연구·비교용으로 보존했다. 프론트는 원본 엔진 대신 공개 Analyzer를 사용한다.
 
 ## 파일 / 이전 규격에서 이동한 필드
 
@@ -103,3 +103,9 @@ TypeScript의 [discriminated union](https://www.typescriptlang.org/docs/handbook
 | 버드독 sideCounts / holdingSides / body | details의 같은 이름 |
 
 기존 APK·배포된 사이트는 별도 번들이므로 자동으로 업데이트되지 않는다. 새 모듈을 가져갈 때 소비 코드도 함께 바꿔야 한다. 이 변경은 반환 규격 변경이므로 v1과 호환되는 형식이라고 취급하지 않는다.
+
+## 레그 레이즈 추가 · 2026-10-23
+
+`LegRaiseAnalyzer`는 `exercise=leg_raise`, `measurementBasis.count=completed_raise_lower_attempt`를 반환한다. `knee_extension`은 현재 관측, `lowering_control`은 회차 완료 후 `lastRepetition`에 평가된다. `lumbar_contact`는 `not_supported`이며 정상 상태로 표시하지 않는다. 유지 시간은 `null`이다. [기준과 측정값](LEG_RAISE_V01.md).
+
+템포 관측값은 실시간 `metrics.tempo`, 회차 `lastRepetition.metrics.tempo`, 세트 `summary.details.repetitions[].metrics.tempo`에 저장한다. 카운트·판정·준수율은 유지한다. [필드와 측정 방법](LEG_RAISE_TEMPO.md).

@@ -1,6 +1,7 @@
 import {jsonSafe, validateFrame} from './frame.js';
 
 export const MEASUREMENT_BASIS=Object.freeze({
+  leg_raise:{count:'completed_raise_lower_attempt',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
   pushup:{count:'completed_attempt',holdSeconds:null,observedSeconds:null},
   plank:{count:null,holdSeconds:'all_required_items_compliant',observedSeconds:'continuous_sample_intervals'},
   bird_dog:{count:'one_leg_out_and_back',holdSeconds:'observed_holding',observedSeconds:'continuous_sample_intervals'}
