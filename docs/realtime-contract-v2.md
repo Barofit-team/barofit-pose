@@ -109,3 +109,7 @@ TypeScript의 [discriminated union](https://www.typescriptlang.org/docs/handbook
 `LegRaiseAnalyzer`는 `exercise=leg_raise`, `measurementBasis.count=completed_raise_lower_attempt`를 반환한다. `knee_extension`은 현재 관측, `lowering_control`은 회차 완료 후 `lastRepetition`에 평가된다. `lumbar_contact`는 `not_supported`이며 정상 상태로 표시하지 않는다. 유지 시간은 `null`이다. [기준과 측정값](LEG_RAISE_V01.md).
 
 템포 관측값은 실시간 `metrics.tempo`, 회차 `lastRepetition.metrics.tempo`, 세트 `summary.details.repetitions[].metrics.tempo`에 저장한다. 카운트·판정·준수율은 유지한다. [필드와 측정 방법](LEG_RAISE_TEMPO.md).
+
+## 글루트 브리지 · 2026-10-23
+
+`GluteBridgeAnalyzer`는 공통 v2 규격을 사용합니다. `exercise=glute_bridge`, `count`는 상승 후 복귀한 시도 수, `holdSeconds=null`입니다. 항목별 준수율은 회차 기준 0–100이며 미평가는 null입니다. 템포는 `metrics.tempo`, 회차별 하강 근거는 `metrics.loweringEvidence`에 기록합니다. [사용법·판정·측정값](GLUTE_BRIDGE.md).

@@ -14,7 +14,8 @@
         "pushup",
         "plank",
         "bird_dog",
-        "leg_raise"
+        "leg_raise",
+        "glute_bridge"
       ]
     },
     "engineVersion": {
@@ -170,7 +171,8 @@
             "pushup",
             "plank",
             "bird_dog",
-            "leg_raise"
+            "leg_raise",
+            "glute_bridge"
           ]
         },
         "engineVersion": {
@@ -319,6 +321,36 @@
           "properties": {
             "exercise": {
               "const": "leg_raise"
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "glute_bridge"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "glute_bridge"
             },
             "holdSeconds": {
               "type": "null"

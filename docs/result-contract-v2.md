@@ -81,3 +81,7 @@ const result = events.find(e => e.type === 'set.completed');
 `exercise=leg_raise`의 항목은 `knee_extension`, `lowering_control`, `lumbar_contact`이며 모두 `aggregationBasis=repetition`, `unit=repetitions`이다. 허리 접촉은 완료 회차마다 `unknown`에 집계하고 `evaluated=0`, `compliancePct=null`을 유지한다. `details.repetitions`에 시작·최고점·끝 시각, 하강 시간·각속도·무릎 각도를 보존한다. [기준과 사용법](LEG_RAISE_V01.md).
 
 템포 관측값은 실시간 `metrics.tempo`, 회차 `lastRepetition.metrics.tempo`, 세트 `summary.details.repetitions[].metrics.tempo`에 저장한다. 카운트·판정·준수율은 유지한다. [필드와 측정 방법](LEG_RAISE_TEMPO.md).
+
+## 글루트 브리지 · 2026-10-23
+
+`GluteBridgeAnalyzer`는 공통 v2 규격을 사용합니다. `exercise=glute_bridge`, `count`는 상승 후 복귀한 시도 수, `holdSeconds=null`입니다. 항목별 준수율은 회차 기준 0–100이며 미평가는 null입니다. 템포는 `metrics.tempo`, 회차별 하강 근거는 `metrics.loweringEvidence`에 기록합니다. [사용법·판정·측정값](GLUTE_BRIDGE.md).

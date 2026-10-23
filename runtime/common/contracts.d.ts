@@ -24,7 +24,7 @@ export interface FrameResultBase {
   holdSeconds: number | null;
   observedSeconds: number | null;
   measurementBasis: {
-    count: 'completed_attempt' | 'one_leg_out_and_back' | 'completed_raise_lower_attempt' | null;
+    count: 'completed_attempt' | 'one_leg_out_and_back' | 'completed_raise_lower_attempt' | 'completed_bridge_raise_lower_attempt' | null;
     holdSeconds: 'all_required_items_compliant' | 'observed_holding' | null;
     observedSeconds: 'continuous_sample_intervals' | 'continuous_visible_intervals' | null;
   };
@@ -66,7 +66,10 @@ export interface BirdDogFrameResult extends FrameResultBase {
 export interface LegRaiseFrameResult extends FrameResultBase {
   exercise: 'leg_raise'; count: number; holdSeconds: null; details: Record<string, never>;
 }
-export type FrameResult = PushupFrameResult | PlankFrameResult | BirdDogFrameResult | LegRaiseFrameResult;
+export interface GluteBridgeFrameResult extends FrameResultBase {
+  exercise: 'glute_bridge'; count: number; holdSeconds: null; details: Record<string, never>;
+}
+export type FrameResult = PushupFrameResult | PlankFrameResult | BirdDogFrameResult | LegRaiseFrameResult | GluteBridgeFrameResult;
 
 /** Set-result v2 unchanged. Non-terminal engine event payloads retain their v1 contracts. */
 export interface ItemSummary {
