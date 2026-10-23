@@ -121,4 +121,4 @@ APK에서 사용한 Android 관절 추출 라이브러리 소스는 `examples/re
 
 ## 세트 결과 규격
 
-푸쉬업·플랭크·버드독·레그 레이즈은 [세트 결과 JSON v2](docs/result-contract-v2.md)를 사용합니다. 항목별 `compliancePct`는 0~100이며 집계 단위는 `aggregationBasis`로 구분합니다. 프레임 판정과 카운트 로직은 유지됩니다.
+푸쉬업·플랭크·버드독·레그 레이즈는 [세트 결과 JSON v2](docs/result-contract-v2.md)를 사용합니다. 항목별 `compliancePct`는 0~100이며 집계 단위는 `aggregationBasis`로 구분합니다. 프레임 판정과 카운트 로직은 유지됩니다.
