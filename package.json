@@ -9,7 +9,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node --test tests/js/engine.test.mjs tests/js/live.test.mjs tests/js/plank.test.mjs tests/js/squat.test.mjs tests/js/bird_dog.test.mjs tests/js/bird_dog_v1.test.mjs tests/js/result_contract.test.mjs tests/js/realtime_contract.test.mjs tests/js/leg_raise.test.mjs tests/js/leg_raise_tempo.test.mjs tests/js/glute_bridge.test.mjs",
+    "test": "node --test tests/js/engine.test.mjs tests/js/live.test.mjs tests/js/plank.test.mjs tests/js/squat.test.mjs tests/js/bird_dog.test.mjs tests/js/bird_dog_v1.test.mjs tests/js/result_contract.test.mjs tests/js/realtime_contract.test.mjs tests/js/jumping_jack.test.mjs tests/js/movenet_adapter.test.mjs tests/js/movenet_pushup.test.mjs tests/js/pushup_activity.test.mjs tests/js/leg_raise.test.mjs tests/js/leg_raise_tempo.test.mjs tests/js/glute_bridge.test.mjs tests/js/superman.test.mjs",
     "demo": "node examples/pushup.mjs"
   }
 }

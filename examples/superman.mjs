@@ -1,0 +1,10 @@
+import fs from 'node:fs';import readline from 'node:readline';import path from 'node:path';
+import {SupermanAnalyzer} from '../runtime/index.js';
+const [input,output]=process.argv.slice(2);
+if(!input||!output)throw new Error('Usage: node examples/superman.mjs landmarks.jsonl output-directory');
+fs.mkdirSync(output,{recursive:true});const analyzer=new SupermanAnalyzer();
+const stream=fs.createWriteStream(path.join(output,'frames.jsonl'));
+for await(const line of readline.createInterface({input:fs.createReadStream(input),crlfDelay:Infinity}))if(line.trim())stream.write(JSON.stringify(analyzer.pushFrame(JSON.parse(line)))+'\n');
+await new Promise((resolve,reject)=>{stream.on('error',reject);stream.end(resolve);});
+fs.writeFileSync(path.join(output,'set_completed.json'),JSON.stringify(analyzer.finish()[0],null,2));
+console.log(JSON.stringify(analyzer.summary(),null,2));

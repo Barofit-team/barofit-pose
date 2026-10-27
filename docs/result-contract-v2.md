@@ -1,6 +1,6 @@
 # 세트 결과 JSON v2
 
-푸쉬업·플랭크·버드독·레그 레이즈의 공개 Analyzer `summary()`와 `finish()`에 적용한다.
+푸쉬업·플랭크·버드독·점핑잭·레그 레이즈의 공개 Analyzer `summary()`와 `finish()`에 적용한다.
 판정 임계값, 관절 계산, 카운트 조건, 상태 전이, 시간 집계 방식은 유지한다.
 
 ## 공통 구조
@@ -76,12 +76,21 @@ const result = events.find(e => e.type === 'set.completed');
 
 검사 파일: [set-completed-v2.schema.json](../schemas/set-completed-v2.schema.json). `evaluated = compliant + warning`과 준수율 산술 관계, 봉투·summary의 engineVersion 일치는 별도 검증한다. JSON Schema는 필드·형식·단위 조합·범위를 검사한다.
 
+
+## 점핑잭 추가 · 2026-10-21
+
+`JumpingJackAnalyzer`도 같은 v2 봉투를 사용한다. `exercise=jumping_jack`, `count`는 다리 벌리기→모으기 시도 수, `holdSeconds=null`이다. 항목은 `arm_raise`, `leg_open`, `coordination`, `return`, `torso`이며 세트 준수율은 회차 기준 0–100이다. 현재 판정과 최근 회차 판정은 기존처럼 분리한다. [상세 기준과 사용법](JUMPING_JACK_V01.md). 기존 운동의 의미와 판정 규칙은 변경하지 않았다.
+
 ## 레그 레이즈 추가 · 2026-10-23
 
 `exercise=leg_raise`의 항목은 `knee_extension`, `lowering_control`, `lumbar_contact`이며 모두 `aggregationBasis=repetition`, `unit=repetitions`이다. 허리 접촉은 완료 회차마다 `unknown`에 집계하고 `evaluated=0`, `compliancePct=null`을 유지한다. `details.repetitions`에 시작·최고점·끝 시각, 하강 시간·각속도·무릎 각도를 보존한다. [기준과 사용법](LEG_RAISE_V01.md).
 
 템포 관측값은 실시간 `metrics.tempo`, 회차 `lastRepetition.metrics.tempo`, 세트 `summary.details.repetitions[].metrics.tempo`에 저장한다. 카운트·판정·준수율은 유지한다. [필드와 측정 방법](LEG_RAISE_TEMPO.md).
 
-## 글루트 브리지 · 2026-10-23
+## 글루트 브리지
 
-`GluteBridgeAnalyzer`는 공통 v2 규격을 사용합니다. `exercise=glute_bridge`, `count`는 상승 후 복귀한 시도 수, `holdSeconds=null`입니다. 항목별 준수율은 회차 기준 0–100이며 미평가는 null입니다. 템포는 `metrics.tempo`, 회차별 하강 근거는 `metrics.loweringEvidence`에 기록합니다. [사용법·판정·측정값](GLUTE_BRIDGE.md).
+`exercise: glute_bridge`, `count`는 상승·복귀 시도 수, `holdSeconds`는 null입니다. 항목은 회차 기준이며 `compliancePct`는 0–100 또는 null입니다. 실시간 `measurementBasis.count`는 `completed_bridge_raise_lower_attempt`입니다. 상세 항목·관측 템포·미지원 항목은 [글루트 브리지 기준](GLUTE_BRIDGE_V01.md)에 정리했습니다.
+
+## 수퍼맨 추가
+
+`exercise: "superman"` 분기를 추가합니다. 공통 필드의 의미와 기존 운동 분기는 유지합니다. `count`는 상승·복귀 완료 횟수, `holdSeconds`는 상승을 관측한 뒤 들린 상태에서 정지한 시간입니다. 자세 준수 시간과 구분합니다. 판정 항목은 `knee_extension`, `arm_extension`, `movement_control`이며 세트 집계는 `aggregationBasis: "repetition"`, `unit: "repetitions"`, `compliancePct: 0–100 또는 null`입니다. [세부 정의](SUPERMAN_V01.md)를 참고하세요.

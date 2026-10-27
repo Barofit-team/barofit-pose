@@ -14,8 +14,10 @@
         "pushup",
         "plank",
         "bird_dog",
+        "jumping_jack",
         "leg_raise",
-        "glute_bridge"
+        "glute_bridge",
+        "superman"
       ]
     },
     "engineVersion": {
@@ -171,8 +173,10 @@
             "pushup",
             "plank",
             "bird_dog",
+            "jumping_jack",
             "leg_raise",
-            "glute_bridge"
+            "glute_bridge",
+            "superman"
           ]
         },
         "engineVersion": {
@@ -315,6 +319,36 @@
     {
       "properties": {
         "exercise": {
+          "const": "jumping_jack"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "jumping_jack"
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
           "const": "leg_raise"
         },
         "summary": {
@@ -354,6 +388,37 @@
             },
             "holdSeconds": {
               "type": "null"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "superman"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "superman"
+            },
+            "holdSeconds": {
+              "type": "number",
+              "minimum": 0
             },
             "count": {
               "type": "integer",

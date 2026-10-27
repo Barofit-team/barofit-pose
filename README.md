@@ -9,16 +9,20 @@
 |---|---|---|---|
 | 푸시업 | 기존 통합 카운트 v3 보존 | APK v1.3 엔진 보존 | 움직임 카운트, 골반·팔꿈치·상체 이동·손 위치·복귀 피드백 |
 | 플랭크 | 측면 v0.2 보존 | JavaScript 이식 및 웹 리플레이 | 골반 정렬, 어깨–팔꿈치 정렬, 무릎 펴기. 팔꿈치 각도는 기록만 함 |
+| 점핑잭 | 영상 추출 후 공통 JS 엔진 호출 | 정면 v0.1 | 시도 카운트, 팔·다리·협응·복귀·몸통. [기준·검증](docs/JUMPING_JACK_V01.md) |
 | 레그 레이즈 | 영상 추출 후 공통 JS 엔진 호출 | 측면 v0.1.1 | 올림–내림 카운트, 무릎 펴기·하강 속도, 상승·하강·정지 시간. [기준](docs/LEG_RAISE_V01.md) · [템포](docs/LEG_RAISE_TEMPO.md) |
 | 글루트 브리지 | 영상 추출 후 공통 JS 엔진 호출 | 측면 v0.4 | 상승–복귀 카운트, 골반 상승·발 위치·하강 속도, 구간 속도 및 템포. [사용법·검증](docs/GLUTE_BRIDGE.md) |
+| 수퍼맨 | 영상 추출 후 공통 JS 엔진 호출 | 측면·사선 v0.3 | 팔 굽힘과 카운트 분리, 무릎·속도 피드백, 종료 구분. [최신 검증](docs/SUPERMAN_V03.md) |
 | 스쿼트 | 담당자 추가 예정 | 담당자 추가 예정 | [운동 추가 안내](docs/ADDING_EXERCISE.md) |
 | 버드독 | 1차 프로토타입 v1.0 | Python과 동일 규칙 / 웹 반영 | 준비·유지·복귀, 횟수·유지 시간, 팔·다리 정렬. [입출력·기준·검증](docs/BIRD_DOG_V1.md) |
 
 플랭크는 기준을 충족한 자세의 유지 시간과 항목별 준수율을 제공합니다. 준비/시작/종료 등 서비스 흐름은 별도로 관리합니다.
 
-프론트 연동: [실시간 결과 v2](docs/realtime-contract-v2.md) · [세트 종료 결과 v2](docs/result-contract-v2.md). 푸쉬업·플랭크·버드독·레그 레이즈의 JS 공개 Analyzer에 적용합니다. 운동별 판정 의미와 측정 단위는 각 규격에 명시했습니다.
+프론트 연동: [실시간 결과 v2](docs/realtime-contract-v2.md) · [세트 종료 결과 v2](docs/result-contract-v2.md). 푸쉬업·플랭크·버드독·점핑잭·레그 레이즈·글루트 브리지·수퍼맨의 JS 공개 Analyzer에 적용합니다. 운동별 판정 의미와 측정 단위는 각 규격에 명시했습니다.
 
 ## 구조
+
+관절 추출기 교체 실험: [MoveNet Lightning 연결·4종 운동 비교](docs/MOVENET_TRANSFER_20261021.md). 기본 MediaPipe는 유지하며, 비교용 입력 어댑터와 별도 실행 예제를 제공한다.
 
 ```text
 analysis/                 Python 검증 코드
@@ -122,4 +126,14 @@ APK에서 사용한 Android 관절 추출 라이브러리 소스는 `examples/re
 
 ## 세트 결과 규격
 
-푸쉬업·플랭크·버드독·레그 레이즈는 [세트 결과 JSON v2](docs/result-contract-v2.md)를 사용합니다. 항목별 `compliancePct`는 0~100이며 집계 단위는 `aggregationBasis`로 구분합니다. 프레임 판정과 카운트 로직은 유지됩니다.
+푸쉬업·플랭크·버드독·점핑잭·레그 레이즈·글루트 브리지·수퍼맨은 [세트 결과 JSON v2](docs/result-contract-v2.md)를 사용합니다. 항목별 `compliancePct`는 0~100이며 집계 단위는 `aggregationBasis`로 구분합니다. 프레임 판정과 카운트 로직은 유지됩니다.
+
+## MoveNet 선택형 비교
+
+기본 MediaPipe 경로는 유지합니다. [MoveNet 푸시업 연결 보완](docs/MOVENET_PUSHUP_FIX_20261021.md)은 신뢰도0.3, 부분 관절 누락, 수정 전후 결과와 사용법을 정리합니다.
+
+푸시업 종료 동작의 추가 카운트를 막는 [공통 수행 상태 구분](docs/PUSHUP_ACTIVITY_20261021.md)을 두 모델 실행 경로에 적용했습니다. 작은 움직임 기준과 자세 평가 기준은 유지합니다.
+
+## 수퍼맨
+
+`SupermanAnalyzer`는 엎드린 양팔·양다리 들기/복귀를 카운트하고 무릎·팔 펴짐 및 반복 속도를 평가합니다. 실시간·세트 종료 v2를 사용합니다. [판정 근거](docs/SUPERMAN_V01.md), [팔 굽힘·종료 분리 검증](docs/SUPERMAN_V03.md), [JSONL 실행 예제](examples/superman.mjs)를 참고하세요.

@@ -24,8 +24,8 @@ export interface FrameResultBase {
   holdSeconds: number | null;
   observedSeconds: number | null;
   measurementBasis: {
-    count: 'completed_attempt' | 'one_leg_out_and_back' | 'completed_raise_lower_attempt' | 'completed_bridge_raise_lower_attempt' | null;
-    holdSeconds: 'all_required_items_compliant' | 'observed_holding' | null;
+    count: 'completed_attempt' | 'one_leg_out_and_back' | 'completed_open_close_attempt' | 'completed_raise_lower_attempt' | 'completed_bridge_raise_lower_attempt' | 'completed_superman_raise_lower_attempt' | null;
+    holdSeconds: 'all_required_items_compliant' | 'observed_holding' | 'observed_raised_still' | null;
     observedSeconds: 'continuous_sample_intervals' | 'continuous_visible_intervals' | null;
   };
   /** Engine movement stage; null where not exposed. Not frontend session lifecycle. */
@@ -63,13 +63,16 @@ export interface BirdDogFrameResult extends FrameResultBase {
     referenceStatus?: string; experimental?: boolean; thresholdBasis?: string;
   };
 }
+export interface JumpingJackFrameResult extends FrameResultBase {
+  exercise: 'jumping_jack'; count: number; holdSeconds: null; details: Record<string, never>;
+}
 export interface LegRaiseFrameResult extends FrameResultBase {
   exercise: 'leg_raise'; count: number; holdSeconds: null; details: Record<string, never>;
 }
 export interface GluteBridgeFrameResult extends FrameResultBase {
   exercise: 'glute_bridge'; count: number; holdSeconds: null; details: Record<string, never>;
 }
-export type FrameResult = PushupFrameResult | PlankFrameResult | BirdDogFrameResult | LegRaiseFrameResult | GluteBridgeFrameResult;
+export type FrameResult = PushupFrameResult | PlankFrameResult | BirdDogFrameResult | JumpingJackFrameResult | LegRaiseFrameResult | GluteBridgeFrameResult | SupermanFrameResult;
 
 /** Set-result v2 unchanged. Non-terminal engine event payloads retain their v1 contracts. */
 export interface ItemSummary {
@@ -102,4 +105,8 @@ export interface SetCompleted {
   /** Same time origin as input PoseFrame, milliseconds; null before the first frame. */
   timestampMs: number | null;
   summary: SetSummary;
+}
+
+export interface SupermanFrameResult extends FrameResultBase {
+ exercise: 'superman'; count: number; holdSeconds: number; details: Record<string, never>;
 }

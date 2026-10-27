@@ -1,0 +1,437 @@
+[
+  {
+    "id": "xhit_normal",
+    "count": 1,
+    "holdSeconds": 2.7530000000000014,
+    "tracking": 0.9733333333333334,
+    "side": "left",
+    "reps": [
+      {
+        "t": 9.76,
+        "d": 7.341,
+        "knee": 165.46705667574525,
+        "elbow": 153.84937421772554,
+        "codes": []
+      }
+    ],
+    "warnings": {
+      "KNEE_BENT": 0,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 0
+    }
+  },
+  {
+    "id": "xhit_close",
+    "count": 1,
+    "holdSeconds": 0.5,
+    "tracking": 0.6018518518518519,
+    "side": "left",
+    "reps": [
+      {
+        "t": 8.842,
+        "d": 2.419,
+        "knee": 165.93664437186234,
+        "elbow": 177.4242552553129,
+        "codes": []
+      }
+    ],
+    "warnings": {
+      "KNEE_BENT": 0,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 0
+    }
+  },
+  {
+    "id": "colossus_normal",
+    "count": 4,
+    "holdSeconds": 5.423000000000004,
+    "tracking": 1,
+    "side": "left",
+    "reps": [
+      {
+        "t": 2.669,
+        "d": 2.419,
+        "knee": 166.5815853660308,
+        "elbow": 179.1129145909706,
+        "codes": []
+      },
+      {
+        "t": 7.925,
+        "d": 3.587,
+        "knee": 167.58728874196308,
+        "elbow": 178.13655522412245,
+        "codes": []
+      },
+      {
+        "t": 13.18,
+        "d": 3.921,
+        "knee": 167.97944351505552,
+        "elbow": 177.34110211131372,
+        "codes": []
+      },
+      {
+        "t": 18.852,
+        "d": 4.921,
+        "knee": 167.26247451824534,
+        "elbow": 175.87966748076897,
+        "codes": []
+      }
+    ],
+    "warnings": {
+      "KNEE_BENT": 0,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 0
+    }
+  },
+  {
+    "id": "colossus_knee",
+    "count": 3,
+    "holdSeconds": 0.25,
+    "tracking": 1,
+    "side": "left",
+    "reps": [
+      {
+        "t": 4.338,
+        "d": 2.503,
+        "knee": 80.47922064907327,
+        "elbow": 176.01802205859786,
+        "codes": [
+          "KNEE_BENT"
+        ]
+      },
+      {
+        "t": 7.174,
+        "d": 2.753,
+        "knee": 87.72001960359442,
+        "elbow": 165.44963221027322,
+        "codes": [
+          "KNEE_BENT"
+        ]
+      },
+      {
+        "t": 10.427,
+        "d": 2.085,
+        "knee": 88.63222760803689,
+        "elbow": 175.78036322362811,
+        "codes": [
+          "KNEE_BENT"
+        ]
+      }
+    ],
+    "warnings": {
+      "KNEE_BENT": 107,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 0
+    }
+  },
+  {
+    "id": "colossus_fast",
+    "count": 8,
+    "holdSeconds": 0,
+    "tracking": 0.9761904761904762,
+    "side": "left",
+    "reps": [
+      {
+        "t": 1.251,
+        "d": 0.917,
+        "knee": 153.61339625398202,
+        "elbow": 173.47007228686397,
+        "codes": [
+          "MOVEMENT_FAST"
+        ]
+      },
+      {
+        "t": 2.419,
+        "d": 0.834,
+        "knee": 155.6289672835373,
+        "elbow": 174.05415825519384,
+        "codes": [
+          "MOVEMENT_FAST"
+        ]
+      },
+      {
+        "t": 3.67,
+        "d": 0.917,
+        "knee": 150.88901380464256,
+        "elbow": 174.16882765006494,
+        "codes": [
+          "KNEE_BENT",
+          "MOVEMENT_FAST"
+        ]
+      },
+      {
+        "t": 4.838,
+        "d": 0.917,
+        "knee": 153.47349947160205,
+        "elbow": 173.1204137378449,
+        "codes": [
+          "KNEE_BENT",
+          "MOVEMENT_FAST"
+        ]
+      },
+      {
+        "t": 6.006,
+        "d": 0.918,
+        "knee": 153.85746469113272,
+        "elbow": 170.950606336117,
+        "codes": [
+          "MOVEMENT_FAST"
+        ]
+      },
+      {
+        "t": 7.257,
+        "d": 0.917,
+        "knee": 151.91626283153636,
+        "elbow": 157.6004925882197,
+        "codes": [
+          "MOVEMENT_FAST"
+        ]
+      },
+      {
+        "t": 8.508,
+        "d": 0.917,
+        "knee": 153.35943394942478,
+        "elbow": 158.03070560396677,
+        "codes": [
+          "MOVEMENT_FAST"
+        ]
+      },
+      {
+        "t": 9.76,
+        "d": 1.001,
+        "knee": 153.833133613359,
+        "elbow": 168.66832289512774,
+        "codes": [
+          "MOVEMENT_FAST"
+        ]
+      }
+    ],
+    "warnings": {
+      "KNEE_BENT": 29,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 108
+    }
+  },
+  {
+    "id": "wellgood_shrug",
+    "count": 0,
+    "holdSeconds": 0,
+    "tracking": 1,
+    "side": "right",
+    "reps": [],
+    "warnings": {
+      "KNEE_BENT": 0,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 0
+    }
+  },
+  {
+    "id": "wellgood_high",
+    "count": 2,
+    "holdSeconds": 0.9179999999999998,
+    "tracking": 1,
+    "side": "right",
+    "reps": [
+      {
+        "t": 3.504,
+        "d": 3.254,
+        "knee": 166.0522542921022,
+        "elbow": 165.9780027020169,
+        "codes": []
+      },
+      {
+        "t": 5.422,
+        "d": 1.168,
+        "knee": 158.93585643302205,
+        "elbow": null,
+        "codes": [
+          "MOVEMENT_FAST"
+        ]
+      }
+    ],
+    "warnings": {
+      "KNEE_BENT": 0,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 19
+    }
+  },
+  {
+    "id": "wellgood_apart",
+    "count": 0,
+    "holdSeconds": 0,
+    "tracking": 0.8666666666666667,
+    "side": "right",
+    "reps": [],
+    "warnings": {
+      "KNEE_BENT": 0,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 0
+    }
+  },
+  {
+    "id": "wellgood_normal1",
+    "count": 0,
+    "holdSeconds": 0,
+    "tracking": 0.45,
+    "side": "right",
+    "reps": [],
+    "warnings": {
+      "KNEE_BENT": 0,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 0
+    }
+  },
+  {
+    "id": "wellgood_normal2",
+    "count": 1,
+    "holdSeconds": 0,
+    "tracking": 0.8854166666666666,
+    "side": "right",
+    "reps": [
+      {
+        "t": 4.421,
+        "d": 2.502,
+        "knee": 167.22333218913488,
+        "elbow": 159.02077988292433,
+        "codes": []
+      }
+    ],
+    "warnings": {
+      "KNEE_BENT": 0,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 0
+    }
+  },
+  {
+    "id": "wellgood_normal3",
+    "count": 0,
+    "holdSeconds": 0,
+    "tracking": 1,
+    "side": "right",
+    "reps": [],
+    "warnings": {
+      "KNEE_BENT": 0,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 0
+    }
+  },
+  {
+    "id": "fitfather_normal",
+    "count": 3,
+    "holdSeconds": 2.8690000000000007,
+    "tracking": 1,
+    "side": "right",
+    "reps": [
+      {
+        "t": 7.14,
+        "d": 3.937,
+        "knee": 155.08875407643202,
+        "elbow": null,
+        "codes": []
+      },
+      {
+        "t": 11.211,
+        "d": 3.27,
+        "knee": 161.97695710304606,
+        "elbow": null,
+        "codes": []
+      },
+      {
+        "t": 12.88,
+        "d": 0.935,
+        "knee": 157.32704529709804,
+        "elbow": 136.0829289576485,
+        "codes": [
+          "MOVEMENT_FAST"
+        ]
+      }
+    ],
+    "warnings": {
+      "KNEE_BENT": 0,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 17
+    }
+  },
+  {
+    "id": "fitfather_second",
+    "count": 1,
+    "holdSeconds": 1.2679999999999998,
+    "tracking": 0.7764705882352941,
+    "side": "right",
+    "reps": [
+      {
+        "t": 11.078,
+        "d": 2.803,
+        "knee": 159.0449762554166,
+        "elbow": null,
+        "codes": []
+      }
+    ],
+    "warnings": {
+      "KNEE_BENT": 8,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 0
+    }
+  },
+  {
+    "id": "douglas_variant",
+    "count": 0,
+    "holdSeconds": 0,
+    "tracking": 0,
+    "reps": [],
+    "warnings": {
+      "KNEE_BENT": 0,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 0
+    }
+  },
+  {
+    "id": "fitfather_clean",
+    "count": 2,
+    "holdSeconds": 2.7360000000000007,
+    "tracking": 1,
+    "side": "right",
+    "reps": [
+      {
+        "t": 7.14,
+        "d": 3.937,
+        "knee": 155.08875407643202,
+        "elbow": null,
+        "codes": []
+      },
+      {
+        "t": 11.078,
+        "d": 3.137,
+        "knee": 162.0674070574306,
+        "elbow": null,
+        "codes": []
+      }
+    ],
+    "warnings": {
+      "KNEE_BENT": 0,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 0
+    }
+  },
+  {
+    "id": "xhit_clean",
+    "count": 1,
+    "holdSeconds": 2.7530000000000014,
+    "tracking": 0.9782608695652174,
+    "side": "left",
+    "reps": [
+      {
+        "t": 9.76,
+        "d": 7.341,
+        "knee": 165.46705667574525,
+        "elbow": 153.84937421772554,
+        "codes": []
+      }
+    ],
+    "warnings": {
+      "KNEE_BENT": 0,
+      "ELBOW_BENT": 0,
+      "MOVEMENT_FAST": 0
+    }
+  }
+]

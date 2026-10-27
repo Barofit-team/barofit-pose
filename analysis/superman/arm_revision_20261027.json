@@ -1,0 +1,2118 @@
+{
+  "version": "superman-0.3.0",
+  "date": "2026-10-27",
+  "schema": {
+    "frameResultsValidated": 5016,
+    "setResultsValidated": 27,
+    "schema": "Draft2020-12 / v2",
+    "errors": 0
+  },
+  "cases": [
+    {
+      "id": "xhit_normal",
+      "sourceUrl": "https://www.youtube.com/watch?v=z6PJMT2y8GQ",
+      "start": 9,
+      "end": 21.5,
+      "before": {
+        "count": 1,
+        "holdSeconds": 2.7530000000000014,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 1,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 1,
+        "holdSeconds": 2.7530000000000014,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 1,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "xhit_close",
+      "sourceUrl": "https://www.youtube.com/watch?v=z6PJMT2y8GQ",
+      "start": 21.5,
+      "end": 30.5,
+      "before": {
+        "count": 1,
+        "holdSeconds": 0.5,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 1,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 1,
+        "holdSeconds": 0.5,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "colossus_normal",
+      "sourceUrl": "https://www.youtube.com/watch?v=UXUGfiNL1lI",
+      "start": 5.5,
+      "end": 24.5,
+      "before": {
+        "count": 4,
+        "holdSeconds": 5.423000000000004,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 4,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 4,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 4,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 4,
+        "holdSeconds": 5.423000000000004,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 4,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 4,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 4,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "colossus_knee",
+      "sourceUrl": "https://www.youtube.com/watch?v=UXUGfiNL1lI",
+      "start": 52,
+      "end": 63.5,
+      "before": {
+        "count": 3,
+        "holdSeconds": 0.25,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 3,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 0
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 3,
+        "holdSeconds": 0.25,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 3,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 0
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 2,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 33.333333333333336
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "colossus_fast",
+      "sourceUrl": "https://www.youtube.com/watch?v=UXUGfiNL1lI",
+      "start": 63.5,
+      "end": 74,
+      "before": {
+        "count": 8,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 6,
+            "warning": 2,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 75
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 8,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 8,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 0
+          }
+        }
+      },
+      "after": {
+        "count": 8,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 6,
+            "warning": 2,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 75
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 7,
+            "warning": 1,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 87.5
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 8,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "wellgood_shrug",
+      "sourceUrl": "https://www.youtube.com/watch?v=ATly_pW0i6g",
+      "start": 33,
+      "end": 39,
+      "before": {
+        "count": 0,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          }
+        }
+      },
+      "after": {
+        "count": 0,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          }
+        }
+      }
+    },
+    {
+      "id": "wellgood_high",
+      "sourceUrl": "https://www.youtube.com/watch?v=ATly_pW0i6g",
+      "start": 40,
+      "end": 47,
+      "before": {
+        "count": 1,
+        "holdSeconds": 0.9179999999999998,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 2,
+        "holdSeconds": 0.9179999999999998,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 1,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 1,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 50
+          }
+        }
+      }
+    },
+    {
+      "id": "wellgood_apart",
+      "sourceUrl": "https://www.youtube.com/watch?v=ATly_pW0i6g",
+      "start": 48,
+      "end": 53,
+      "before": {
+        "count": 0,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          }
+        }
+      },
+      "after": {
+        "count": 0,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          }
+        }
+      }
+    },
+    {
+      "id": "wellgood_normal1",
+      "sourceUrl": "https://www.youtube.com/watch?v=ATly_pW0i6g",
+      "start": 57,
+      "end": 62,
+      "before": {
+        "count": 0,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          }
+        }
+      },
+      "after": {
+        "count": 0,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          }
+        }
+      }
+    },
+    {
+      "id": "wellgood_normal2",
+      "sourceUrl": "https://www.youtube.com/watch?v=ATly_pW0i6g",
+      "start": 62,
+      "end": 70,
+      "before": {
+        "count": 1,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 1,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "wellgood_normal3",
+      "sourceUrl": "https://www.youtube.com/watch?v=ATly_pW0i6g",
+      "start": 71,
+      "end": 85,
+      "before": {
+        "count": 0,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          }
+        }
+      },
+      "after": {
+        "count": 0,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          }
+        }
+      }
+    },
+    {
+      "id": "fitfather_normal",
+      "sourceUrl": "https://www.youtube.com/watch?v=cZxtPxeR2H8",
+      "start": 83,
+      "end": 97,
+      "before": {
+        "count": 2,
+        "holdSeconds": 2.7360000000000007,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 2,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 2,
+        "holdSeconds": 2.7360000000000007,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 2,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "fitfather_second",
+      "sourceUrl": "https://www.youtube.com/watch?v=cZxtPxeR2H8",
+      "start": 107,
+      "end": 124,
+      "before": {
+        "count": 1,
+        "holdSeconds": 1.2019999999999997,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 1,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 1,
+        "holdSeconds": 1.2679999999999998,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 1,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "douglas_variant",
+      "sourceUrl": "https://www.youtube.com/watch?v=YXbpJ1L8W50",
+      "start": 6,
+      "end": 35,
+      "before": {
+        "count": 0,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          }
+        }
+      },
+      "after": {
+        "count": 0,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          }
+        }
+      }
+    },
+    {
+      "id": "fitfather_clean",
+      "sourceUrl": "https://www.youtube.com/watch?v=cZxtPxeR2H8",
+      "start": 83,
+      "end": 94.8,
+      "before": {
+        "count": 2,
+        "holdSeconds": 2.7360000000000007,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 2,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 2,
+        "holdSeconds": 2.7360000000000007,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 2,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "xhit_clean",
+      "sourceUrl": "https://www.youtube.com/watch?v=z6PJMT2y8GQ",
+      "start": 9,
+      "end": 20.5,
+      "before": {
+        "count": 1,
+        "holdSeconds": 2.7530000000000014,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 1,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 1,
+        "holdSeconds": 2.7530000000000014,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 1,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "doctorjo_normal",
+      "sourceUrl": "https://www.youtube.com/watch?v=PKQlXa3qdJo",
+      "start": 11.5,
+      "end": 23,
+      "before": {
+        "count": 3,
+        "holdSeconds": 2.5020000000000007,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 3,
+        "holdSeconds": 2.5020000000000007,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "purephysio_normal",
+      "sourceUrl": "https://www.youtube.com/watch?v=TQIXrUy_Y2E",
+      "start": 27,
+      "end": 46,
+      "before": {
+        "count": 4,
+        "holdSeconds": 2.6660000000000004,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 4,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 0
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 4,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 4,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 4,
+        "holdSeconds": 2.6660000000000004,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 4,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 0
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 4,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 4,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "xhit_exit",
+      "sourceUrl": "https://www.youtube.com/watch?v=z6PJMT2y8GQ",
+      "start": 9,
+      "end": 40,
+      "before": {
+        "count": 2,
+        "holdSeconds": 3.2540000000000022,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 2,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 2,
+        "holdSeconds": 3.2540000000000022,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 1,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "fitfather_exit",
+      "sourceUrl": "https://www.youtube.com/watch?v=cZxtPxeR2H8",
+      "start": 83,
+      "end": 105,
+      "before": {
+        "count": 2,
+        "holdSeconds": 2.7360000000000007,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 2,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 2,
+        "holdSeconds": 2.7360000000000007,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 2,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "fitnl_normal",
+      "sourceUrl": "https://www.youtube.com/watch?v=g0Kr9Wd3CeQ",
+      "start": 0,
+      "end": 15.8,
+      "before": {
+        "count": 1,
+        "holdSeconds": 8.080000000000005,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 1,
+        "holdSeconds": 8.080000000000005,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "egor_normal",
+      "sourceUrl": "https://www.youtube.com/watch?v=FoCbmtjqo0Y",
+      "start": 0,
+      "end": 15.8,
+      "before": {
+        "count": 8,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 8,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 8,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 8,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 0
+          }
+        }
+      },
+      "after": {
+        "count": 8,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 8,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 8,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 8,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "cb_normal",
+      "sourceUrl": "https://www.youtube.com/watch?v=1C6m4oE3nIY",
+      "start": 0,
+      "end": 10.7,
+      "before": {
+        "count": 5,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 5,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 5,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 5,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 5,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 5,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 5,
+            "compliancePct": 0
+          }
+        }
+      },
+      "after": {
+        "count": 5,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 5,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 5,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 5,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 5,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 5,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 5,
+            "compliancePct": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "press_variant",
+      "sourceUrl": "https://www.youtube.com/watch?v=GfO4Tf9ondI",
+      "start": 0,
+      "end": 23.8,
+      "before": {
+        "count": 0,
+        "holdSeconds": 0.667,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          }
+        }
+      },
+      "after": {
+        "count": 8,
+        "holdSeconds": 9.143000000000013,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 7,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 12.5
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 1,
+            "unknown": 7,
+            "notApplicable": 0,
+            "evaluated": 1,
+            "compliancePct": 0
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 8,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 8,
+            "compliancePct": 100
+          }
+        }
+      }
+    },
+    {
+      "id": "bent_rs_variant",
+      "sourceUrl": "https://www.youtube.com/watch?v=v7gLi5Ssd8c",
+      "start": 0,
+      "end": 7.9,
+      "before": {
+        "count": 0,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          }
+        }
+      },
+      "after": {
+        "count": 3,
+        "holdSeconds": 0,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 3,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 0
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 1,
+            "warning": 2,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 33.333333333333336
+          }
+        }
+      }
+    },
+    {
+      "id": "bent_nuyu_variant",
+      "sourceUrl": "https://www.youtube.com/watch?v=rDocznSgurc",
+      "start": 3.9,
+      "end": 16.9,
+      "before": {
+        "count": 3,
+        "holdSeconds": 0.067,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 2,
+            "unknown": 1,
+            "notApplicable": 0,
+            "evaluated": 2,
+            "compliancePct": 0
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 2,
+            "warning": 1,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 66.66666666666667
+          }
+        }
+      },
+      "after": {
+        "count": 4,
+        "holdSeconds": 0.067,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 4,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 0,
+            "warning": 0,
+            "unknown": 4,
+            "notApplicable": 0,
+            "evaluated": 0,
+            "compliancePct": null
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 1,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 4,
+            "compliancePct": 75
+          }
+        }
+      }
+    },
+    {
+      "id": "darebee_normal",
+      "sourceUrl": "https://www.youtube.com/watch?v=67rgxYNKbZY",
+      "start": 0,
+      "end": 13.9,
+      "before": {
+        "count": 3,
+        "holdSeconds": 5.673000000000003,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          }
+        }
+      },
+      "after": {
+        "count": 3,
+        "holdSeconds": 5.673000000000003,
+        "items": {
+          "knee_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          },
+          "arm_extension": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          },
+          "movement_control": {
+            "aggregationBasis": "repetition",
+            "unit": "repetitions",
+            "compliant": 3,
+            "warning": 0,
+            "unknown": 0,
+            "notApplicable": 0,
+            "evaluated": 3,
+            "compliancePct": 100
+          }
+        }
+      }
+    }
+  ]
+}

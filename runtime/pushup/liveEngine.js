@@ -1,5 +1,6 @@
 import config from './config.js';
 import {PushupEngine,features} from './engine.js';
+import {PushupActivityGate} from './activity.js';
 
 export const JOINT_IDS={left:{shoulder:11,elbow:13,wrist:15,hip:23,ankle:27},right:{shoulder:12,elbow:14,wrist:16,hip:24,ankle:28}};
 export const SIDE_POLICY={acquire_s:1.0,lost_s:1.0,max_gap_s:0.4,min_horizontal:0.5,min_body:0.15,min_chest_body:0.02};
@@ -33,6 +34,7 @@ export function inspectSide(packet,side,settings=config){
 export function trackingMessage(result){
   if(result.tracking==='selecting_side')return '푸시업 준비 위치에서 관절이 안정적으로 보이는 쪽을 확인하고 있어요.';
   const diagnostics=result.details?.diagnostics??result.diagnostics;
+  if(diagnostics?.activity?.allow===false)return '푸시업 수행 자세를 다시 잡아 주세요.';
   const side=result.side??['left','right'].sort((a,b)=>(diagnostics?.[b]?.quality??0)-(diagnostics?.[a]?.quality??0))[0];
   const r=diagnostics?.[side]?.reasons?.[0];
   if(!r)return '관절을 다시 확인하고 있어요.';
@@ -47,15 +49,37 @@ export class LivePushupEngine {
     this.settings=settings;this.core=new PushupEngine({side:'left',settings});
     this.side=null;this.lastTime=null;this.goodSince={left:null,right:null};this.lostSince=null;
     this.blocked=false;this.closed=false;
+    this.activity=new PushupActivityGate(settings);
   }
   get count(){return this.core.count;}
   breakContinuity(reason='pause'){
     const events=this.core.breakContinuity();
     if(this.side)events.push({type:'side.released',t:this.lastTime,side:this.side,reason});
     this.side=null;this.goodSince={left:null,right:null};this.lostSince=null;this.blocked=false;
+    if(reason!=='frame_gap')this.activity.reset();
     return events;
   }
   finish(){if(this.closed)return [];this.closed=true;return this.core.finish();}
+  activityResult(packet,events,diagnostics){
+    const activity=this.activity.step(packet,this.side);diagnostics.activity=activity;
+    if(activity.interrupt){
+      events.push(...this.core.breakContinuity());
+      events.push({type:'motion.reset',t:packet.timestampMs/1000,reason:'outside_pushup_context'});
+    }
+    if(activity.changed)events.push({type:'activity.changed',t:packet.timestampMs/1000,state:activity.state,reason:activity.reason});
+    if(!activity.allow){
+      // Suppress counting immediately, but retain the candidate until exit is
+      // confirmed. A one-frame knee glitch must not erase a real repetition.
+      // Missing frames remain unknown in rating coverage, never normal posture.
+      if(!activity.confirmed){
+        const t=packet.timestampMs/1000;this.core.hipState(NaN,t);
+        this.core.rows.push({t,elbow:NaN,hip:NaN,chest:NaN,hand:NaN,body:NaN,horizontal:NaN,quality:0,hipStatus:'tracking_unavailable',valid:false});
+        this.core.rows=this.core.rows.filter(r=>t-r.t<=this.settings.motion.max_s+this.settings.motion.feedback_wait_s+2);
+      }
+      return {events,count:this.count,side:this.side,tracking:'tracking_unavailable',codes:[],items:null,hipStatus:'tracking_unavailable',diagnostics};
+    }
+    return null;
+  }
   pushFrame(packet){
     const t=packet.timestampMs/1000;
     if(this.closed||!Number.isFinite(t)||this.lastTime!==null&&t<=this.lastTime)return {ignored:true,events:[],count:this.count};
@@ -77,6 +101,7 @@ export class LivePushupEngine {
         events.push({type:'side.selected',t,side:this.side,reason:'stable_required_joints'});
       }else return {events,count:this.count,side:null,tracking:Object.values(diagnostics).some(d=>d.ready)?'selecting_side':'tracking_unavailable',codes:[],diagnostics};
     }
+    const inactive=this.activityResult(packet,events,diagnostics);if(inactive)return inactive;
     if(!diagnostics[this.side].ready){
       if(this.lostSince===null)this.lostSince=t;
       // Never bridge a partial repetition over missing geometry or a side change.
