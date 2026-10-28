@@ -1,0 +1,4241 @@
+[
+  {
+    "id": "chris_correct",
+    "group": "original",
+    "count": 1,
+    "countSame": true,
+    "frames": 68,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 3533,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 2467,
+          "endMs": 3533,
+          "durationMs": 3400,
+          "descentSeconds": 2.334,
+          "ascentSeconds": 1.066,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 79.17424756984448,
+          "minElbowDeg": 95.06181407196325,
+          "maxHipDeg": 99.9449633631803,
+          "bottomHeadForward": 0.4898578414027669,
+          "returnOverheadDeg": 118.37619525003502,
+          "referenceOverheadDeg": 158.6436791981249
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 3533,
+        "items": {
+          "pike_shape": "unknown",
+          "head_path": "within_reference",
+          "press_return": "unknown"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 2467,
+          "endMs": 3533,
+          "durationMs": 3400,
+          "descentSeconds": 2.334,
+          "ascentSeconds": 1.066,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 79.17424756984448,
+          "minElbowDeg": 95.06181407196325,
+          "maxHipDeg": 99.9449633631803,
+          "bottomHeadForward": 0.4898578414027669,
+          "returnOverheadDeg": 118.37619525003502,
+          "referenceOverheadDeg": 158.6436791981249,
+          "pathAssessmentComplete": false,
+          "pathAssessmentEndMs": 3867,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.6592059307101192,
+          "headTravelDown": 0.575216162405772,
+          "headTravelRatio": 1.1460142704493388,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 12.738690156746546,
+          "shoulderTravelForward": 0.4648058679113136,
+          "shoulderTravelDown": 0.36818003698442514,
+          "returnShoulderRise": 0.39378715166580325,
+          "returnHipRise": 0.3550090764227751,
+          "returnHipRiseRatio": 0.9015252908100515,
+          "returnBackwardDistance": 0.4761264004337165,
+          "returnBackwardRatio": 1.2090958235168434,
+          "startHipDeg": 82.69649169200142,
+          "settledHipDeg": 83.76857520003513,
+          "settledOverheadDeg": 126.59204963023586,
+          "startHipHeight": 1.5143079201599097,
+          "bottomHipHeight": 1.1068359710354096,
+          "settledHipHeight": 1.4618450474581848,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "tracking_interrupted_before_return_confirmation",
+          "pathAssessmentInterrupted": true
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "chris_hip_good",
+    "group": "original",
+    "count": 2,
+    "countSame": true,
+    "frames": 161,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 4667,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 3533,
+          "endMs": 4667,
+          "durationMs": 4534,
+          "descentSeconds": 3.4,
+          "ascentSeconds": 1.134,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 82.51733096777322,
+          "minElbowDeg": 76.72940292310231,
+          "maxHipDeg": 88.74561735262841,
+          "bottomHeadForward": 0.6053818253103017,
+          "returnOverheadDeg": 116.7223433408469,
+          "referenceOverheadDeg": 122.74649526151121
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 10000,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 5533,
+          "bottomMs": 8867,
+          "endMs": 10000,
+          "durationMs": 4467,
+          "descentSeconds": 3.334,
+          "ascentSeconds": 1.133,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 90.14881618729514,
+          "minElbowDeg": 80.47067944206636,
+          "maxHipDeg": 91.04633345677055,
+          "bottomHeadForward": 0.5336579473685068,
+          "returnOverheadDeg": 116.41648283685257,
+          "referenceOverheadDeg": 125.01557396352283
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 4667,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 3533,
+          "endMs": 4667,
+          "durationMs": 4534,
+          "descentSeconds": 3.4,
+          "ascentSeconds": 1.134,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 82.51733096777322,
+          "minElbowDeg": 76.72940292310231,
+          "maxHipDeg": 88.74561735262841,
+          "bottomHeadForward": 0.6053818253103017,
+          "returnOverheadDeg": 116.7223433408469,
+          "referenceOverheadDeg": 122.74649526151121,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 5267,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.5767496265902984,
+          "headTravelDown": 0.7238565680023089,
+          "headTravelRatio": 0.7967733555032945,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 21.293631351665063,
+          "shoulderTravelForward": 0.41260345851811814,
+          "shoulderTravelDown": 0.5387208799639789,
+          "returnShoulderRise": 0.5347129406795306,
+          "returnHipRise": 0.3311084742592463,
+          "returnHipRiseRatio": 0.6192265963087837,
+          "returnBackwardDistance": 0.5801326734770959,
+          "returnBackwardRatio": 1.0849422733997132,
+          "startHipDeg": 85.87370422061498,
+          "settledHipDeg": 82.65478378687285,
+          "settledOverheadDeg": 123.43648175853897,
+          "startHipHeight": 1.5426593312028538,
+          "bottomHipHeight": 1.2164218596348648,
+          "settledHipHeight": 1.547530333894111,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 10000,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 5533,
+          "bottomMs": 8867,
+          "endMs": 10000,
+          "durationMs": 4467,
+          "descentSeconds": 3.334,
+          "ascentSeconds": 1.133,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 90.14881618729514,
+          "minElbowDeg": 80.47067944206636,
+          "maxHipDeg": 91.04633345677055,
+          "bottomHeadForward": 0.5336579473685068,
+          "returnOverheadDeg": 116.41648283685257,
+          "referenceOverheadDeg": 125.01557396352283,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 10333,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.7543884854996058,
+          "headTravelDown": 0.7310333203622592,
+          "headTravelRatio": 1.0319481540537345,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 19.338823222499087,
+          "shoulderTravelForward": 0.5915576332442953,
+          "shoulderTravelDown": 0.49124050158587995,
+          "returnShoulderRise": 0.5012988477611778,
+          "returnHipRise": 0.33595389681583976,
+          "returnHipRiseRatio": 0.670166904065757,
+          "returnBackwardDistance": 0.5618440947255882,
+          "returnBackwardRatio": 1.1207767526991295,
+          "startHipDeg": 80.74776943992914,
+          "settledHipDeg": 82.36698068733008,
+          "settledOverheadDeg": 121.88846942938565,
+          "startHipHeight": 1.5306998227489623,
+          "bottomHipHeight": 1.1733275968727235,
+          "settledHipHeight": 1.5092814936885632,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "chris_hip_low",
+    "group": "original",
+    "count": 2,
+    "countSame": true,
+    "frames": 161,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 4867,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "warning"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW",
+          "PRESS_OUT"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 3533,
+          "endMs": 4867,
+          "durationMs": 4734,
+          "descentSeconds": 3.4,
+          "ascentSeconds": 1.334,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 95.21829182646444,
+          "minElbowDeg": 73.8034797427385,
+          "maxHipDeg": 119.84862801150557,
+          "bottomHeadForward": 0.5934591221766912,
+          "returnOverheadDeg": 104.81209795640946,
+          "referenceOverheadDeg": 128.6495443451317
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 10267,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 5533,
+          "bottomMs": 8667,
+          "endMs": 10267,
+          "durationMs": 4734,
+          "descentSeconds": 3.134,
+          "ascentSeconds": 1.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 96.51026642237265,
+          "minElbowDeg": 74.85999907063218,
+          "maxHipDeg": 114.17427472056036,
+          "bottomHeadForward": 0.5676832480977629,
+          "returnOverheadDeg": 109.52104031553687,
+          "referenceOverheadDeg": 128.6495443451317
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 4867,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 3533,
+          "endMs": 4867,
+          "durationMs": 4734,
+          "descentSeconds": 3.4,
+          "ascentSeconds": 1.334,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 95.21829182646444,
+          "minElbowDeg": 73.8034797427385,
+          "maxHipDeg": 119.84862801150557,
+          "bottomHeadForward": 0.5934591221766912,
+          "returnOverheadDeg": 104.81209795640946,
+          "referenceOverheadDeg": 128.6495443451317,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 5467,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.8047107268115232,
+          "headTravelDown": 0.7546575373108448,
+          "headTravelRatio": 1.0663257001037032,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 19.515667329546417,
+          "shoulderTravelForward": 0.6094535855033084,
+          "shoulderTravelDown": 0.5340775121787001,
+          "returnShoulderRise": 0.5844396275006075,
+          "returnHipRise": 0.4712703227637711,
+          "returnHipRiseRatio": 0.8063627115416317,
+          "returnBackwardDistance": 0.5727381771668045,
+          "returnBackwardRatio": 0.9799783420165313,
+          "startHipDeg": 90.63724203467358,
+          "settledHipDeg": 97.11113489484228,
+          "settledOverheadDeg": 116.43381220013096,
+          "startHipHeight": 1.4583934713885074,
+          "bottomHipHeight": 0.9402490741081897,
+          "settledHipHeight": 1.4115193968719608,
+          "hipOpenedDuringMovement": true,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 10267,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 5533,
+          "bottomMs": 8667,
+          "endMs": 10267,
+          "durationMs": 4734,
+          "descentSeconds": 3.134,
+          "ascentSeconds": 1.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 96.51026642237265,
+          "minElbowDeg": 74.85999907063218,
+          "maxHipDeg": 114.17427472056036,
+          "bottomHeadForward": 0.5676832480977629,
+          "returnOverheadDeg": 109.52104031553687,
+          "referenceOverheadDeg": 128.6495443451317,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 10333,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.8450612696627404,
+          "headTravelDown": 0.8223905616317158,
+          "headTravelRatio": 1.0275668387852646,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 18.525094820163773,
+          "shoulderTravelForward": 0.5711816734384005,
+          "shoulderTravelDown": 0.5645398012649988,
+          "returnShoulderRise": 0.582344166499282,
+          "returnHipRise": 0.448413318458052,
+          "returnHipRiseRatio": 0.770014270347473,
+          "returnBackwardDistance": 0.48037815860221367,
+          "returnBackwardRatio": 0.8249042168482097,
+          "startHipDeg": 95.1792159378466,
+          "settledHipDeg": 99.67910478180264,
+          "settledOverheadDeg": 110.79398804262404,
+          "startHipHeight": 1.4357554323187092,
+          "bottomHipHeight": 0.9596266628280831,
+          "settledHipHeight": 1.408039981286135,
+          "hipOpenedDuringMovement": true,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 67,
+    "currentAfter": 8
+  },
+  {
+    "id": "chris_normal",
+    "group": "original",
+    "count": 1,
+    "countSame": true,
+    "frames": 102,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 5467,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 400,
+          "bottomMs": 4267,
+          "endMs": 5467,
+          "durationMs": 5067,
+          "descentSeconds": 3.867,
+          "ascentSeconds": 1.2,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 89.5766872351837,
+          "minElbowDeg": 83.33324023591848,
+          "maxHipDeg": 98.62020992834779,
+          "bottomHeadForward": 0.6052583577555029,
+          "returnOverheadDeg": 119.35480327959763,
+          "referenceOverheadDeg": 132.10425557830544
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 5467,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 400,
+          "bottomMs": 4267,
+          "endMs": 5467,
+          "durationMs": 5067,
+          "descentSeconds": 3.867,
+          "ascentSeconds": 1.2,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 89.5766872351837,
+          "minElbowDeg": 83.33324023591848,
+          "maxHipDeg": 98.62020992834779,
+          "bottomHeadForward": 0.6052583577555029,
+          "returnOverheadDeg": 119.35480327959763,
+          "referenceOverheadDeg": 132.10425557830544,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 6067,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.8504992694091039,
+          "headTravelDown": 0.6618124299791233,
+          "headTravelRatio": 1.2851062187452913,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 29.44030842467939,
+          "shoulderTravelForward": 0.6394973375492017,
+          "shoulderTravelDown": 0.4406862255649391,
+          "returnShoulderRise": 0.38759485091401213,
+          "returnHipRise": 0.34049920859614846,
+          "returnHipRiseRatio": 0.8784926006968244,
+          "returnBackwardDistance": 0.6299454820433212,
+          "returnBackwardRatio": 1.625267932630701,
+          "startHipDeg": 82.23614746552059,
+          "settledHipDeg": 78.36993934782949,
+          "settledOverheadDeg": 128.6054159877856,
+          "startHipHeight": 1.6220417836186527,
+          "bottomHipHeight": 1.2523912612292434,
+          "settledHipHeight": 1.5928904698253918,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "chris_out",
+    "group": "original",
+    "count": 0,
+    "countSame": true,
+    "frames": 110,
+    "before": [],
+    "after": [],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "chris_out_complete",
+    "group": "original",
+    "count": 1,
+    "countSame": true,
+    "frames": 120,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 5867,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "warning"
+        },
+        "codes": [
+          "PRESS_OUT"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 333,
+          "bottomMs": 3733,
+          "endMs": 5867,
+          "durationMs": 5534,
+          "descentSeconds": 3.4,
+          "ascentSeconds": 2.134,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 79.46588475546442,
+          "minElbowDeg": 82.21743720384994,
+          "maxHipDeg": 108.55409199173111,
+          "bottomHeadForward": 0.5732191055176712,
+          "returnOverheadDeg": 92.14500049503151,
+          "referenceOverheadDeg": 110.95268498663002
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 5867,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "warning"
+        },
+        "codes": [
+          "PRESS_OUT"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 333,
+          "bottomMs": 3733,
+          "endMs": 5867,
+          "durationMs": 5534,
+          "descentSeconds": 3.4,
+          "ascentSeconds": 2.134,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 79.46588475546442,
+          "minElbowDeg": 82.21743720384994,
+          "maxHipDeg": 108.55409199173111,
+          "bottomHeadForward": 0.5732191055176712,
+          "returnOverheadDeg": 92.14500049503151,
+          "referenceOverheadDeg": 110.95268498663002,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 6467,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.29283896684812133,
+          "headTravelDown": 0.7300635951882877,
+          "headTravelRatio": 0.4011143259000559,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 15.221247463925854,
+          "shoulderTravelForward": 0.26002945251953147,
+          "shoulderTravelDown": 0.5210660791746735,
+          "returnShoulderRise": 0.6065470493018221,
+          "returnHipRise": 0.27260816283408484,
+          "returnHipRiseRatio": 0.4494427318505231,
+          "returnBackwardDistance": 0.3789397547495692,
+          "returnBackwardRatio": 0.6247491520826871,
+          "startHipDeg": 99.30046356496919,
+          "settledHipDeg": 100.36811862858083,
+          "settledOverheadDeg": 99.4020309213373,
+          "startHipHeight": 1.37803211293115,
+          "bottomHipHeight": 1.097854483789999,
+          "settledHipHeight": 1.370462646624084,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 8
+  },
+  {
+    "id": "chris_out_good",
+    "group": "original",
+    "count": 0,
+    "countSame": true,
+    "frames": 110,
+    "before": [],
+    "after": [],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "chris_out_good_complete",
+    "group": "original",
+    "count": 1,
+    "countSame": true,
+    "frames": 120,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 7200,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 333,
+          "bottomMs": 5200,
+          "endMs": 7200,
+          "durationMs": 6867,
+          "descentSeconds": 4.867,
+          "ascentSeconds": 2,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 95.44878590881672,
+          "minElbowDeg": 75.9662640235494,
+          "maxHipDeg": 89.00658387359506,
+          "bottomHeadForward": 0.6007193409808769,
+          "returnOverheadDeg": 118.87355434440202,
+          "referenceOverheadDeg": 122.60256039051355
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 7200,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 333,
+          "bottomMs": 5200,
+          "endMs": 7200,
+          "durationMs": 6867,
+          "descentSeconds": 4.867,
+          "ascentSeconds": 2,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 95.44878590881672,
+          "minElbowDeg": 75.9662640235494,
+          "maxHipDeg": 89.00658387359506,
+          "bottomHeadForward": 0.6007193409808769,
+          "returnOverheadDeg": 118.87355434440202,
+          "referenceOverheadDeg": 122.60256039051355,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 7800,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.4126931327064722,
+          "headTravelDown": 0.7631560911331948,
+          "headTravelRatio": 0.5407715898508687,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 21.275852026847957,
+          "shoulderTravelForward": 0.3300101659320327,
+          "shoulderTravelDown": 0.5531496934130399,
+          "returnShoulderRise": 0.5494087567483307,
+          "returnHipRise": 0.3591245368471474,
+          "returnHipRiseRatio": 0.6536563759424254,
+          "returnBackwardDistance": 0.5673381753976042,
+          "returnBackwardRatio": 1.032634024174257,
+          "startHipDeg": 88.24426257942672,
+          "settledHipDeg": 82.78091352377342,
+          "settledOverheadDeg": 123.86316030130884,
+          "startHipHeight": 1.5503343699300884,
+          "bottomHipHeight": 1.1784787855744765,
+          "settledHipHeight": 1.537603322421624,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "chris_setup",
+    "group": "original",
+    "count": 0,
+    "countSame": true,
+    "frames": 75,
+    "before": [],
+    "after": [],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "chris_wrong",
+    "group": "original",
+    "count": 1,
+    "countSame": true,
+    "frames": 60,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 3267,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 2333,
+          "endMs": 3267,
+          "durationMs": 3134,
+          "descentSeconds": 2.2,
+          "ascentSeconds": 0.934,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 78.79928400023914,
+          "minElbowDeg": 92.79559759103216,
+          "maxHipDeg": 100.90497587506702,
+          "bottomHeadForward": 0.4487318969426692,
+          "returnOverheadDeg": 125.49974754051786,
+          "referenceOverheadDeg": 127.33976765702452
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 3267,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 2333,
+          "endMs": 3267,
+          "durationMs": 3134,
+          "descentSeconds": 2.2,
+          "ascentSeconds": 0.934,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 78.79928400023914,
+          "minElbowDeg": 92.79559759103216,
+          "maxHipDeg": 100.90497587506702,
+          "bottomHeadForward": 0.4487318969426692,
+          "returnOverheadDeg": 125.49974754051786,
+          "referenceOverheadDeg": 127.33976765702452,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 3867,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.5578652947607592,
+          "headTravelDown": 0.6129553364709178,
+          "headTravelRatio": 0.9101238892423406,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 15.8463600756147,
+          "shoulderTravelForward": 0.4231897365956966,
+          "shoulderTravelDown": 0.40211384608001044,
+          "returnShoulderRise": 0.2468259602078201,
+          "returnHipRise": 0.37404056932928764,
+          "returnHipRiseRatio": 1.5154020631150655,
+          "returnBackwardDistance": 0.9629091208730515,
+          "returnBackwardRatio": 3.901166311932143,
+          "startHipDeg": 87.64158831329034,
+          "settledHipDeg": 60.0758121169229,
+          "settledOverheadDeg": 161.02208302600755,
+          "startHipHeight": 1.528129079316379,
+          "bottomHipHeight": 1.1650764965274514,
+          "settledHipHeight": 1.539117065856739,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "family_head",
+    "group": "original",
+    "count": 1,
+    "countSame": true,
+    "frames": 79,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 3520,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 1040,
+          "bottomMs": 2560,
+          "endMs": 3520,
+          "durationMs": 2480,
+          "descentSeconds": 1.52,
+          "ascentSeconds": 0.96,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 95.23835213570412,
+          "minElbowDeg": 77.68809274822247,
+          "maxHipDeg": 76.73706482852467,
+          "bottomHeadForward": 0.06459982092361427,
+          "returnOverheadDeg": 138.43495110461197,
+          "referenceOverheadDeg": 144.22808186323076
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 3520,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 1040,
+          "bottomMs": 2560,
+          "endMs": 3520,
+          "durationMs": 2480,
+          "descentSeconds": 1.52,
+          "ascentSeconds": 0.96,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 95.23835213570412,
+          "minElbowDeg": 77.68809274822247,
+          "maxHipDeg": 76.73706482852467,
+          "bottomHeadForward": 0.06459982092361427,
+          "returnOverheadDeg": 138.43495110461197,
+          "referenceOverheadDeg": 144.22808186323076,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 3760,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.39672271884129484,
+          "headTravelDown": 0.4676106429614833,
+          "headTravelRatio": 0.8484039548988036,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 43.169683246435476,
+          "shoulderTravelForward": 0.36462340878975835,
+          "shoulderTravelDown": 0.38324117790975754,
+          "returnShoulderRise": 0.3251569507430284,
+          "returnHipRise": 0.22971061016482675,
+          "returnHipRiseRatio": 0.706460709635474,
+          "returnBackwardDistance": 0.47457541247682616,
+          "returnBackwardRatio": 1.459527195689208,
+          "startHipDeg": 60.6098091330005,
+          "settledHipDeg": 66.90822966838378,
+          "settledOverheadDeg": 141.3352095606654,
+          "startHipHeight": 1.5879109932852105,
+          "bottomHipHeight": 1.194986292668722,
+          "settledHipHeight": 1.4246969028335488,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      }
+    ],
+    "currentBefore": 20,
+    "currentAfter": 13
+  },
+  {
+    "id": "family_head_complete",
+    "group": "original",
+    "count": 2,
+    "countSame": true,
+    "frames": 84,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 3520,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 1040,
+          "bottomMs": 2560,
+          "endMs": 3520,
+          "durationMs": 2480,
+          "descentSeconds": 1.52,
+          "ascentSeconds": 0.96,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 95.23835213570412,
+          "minElbowDeg": 77.68809274822247,
+          "maxHipDeg": 76.73706482852467,
+          "bottomHeadForward": 0.06459982092361427,
+          "returnOverheadDeg": 138.43495110461197,
+          "referenceOverheadDeg": 144.22808186323076
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 6320,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 3760,
+          "bottomMs": 5360,
+          "endMs": 6320,
+          "durationMs": 2560,
+          "descentSeconds": 1.6,
+          "ascentSeconds": 0.96,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 100.8194777342394,
+          "minElbowDeg": 77.03349293869067,
+          "maxHipDeg": 75.26164777396166,
+          "bottomHeadForward": 0.07448836504276317,
+          "returnOverheadDeg": 139.65165927960848,
+          "referenceOverheadDeg": 144.22808186323076
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 3520,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 1040,
+          "bottomMs": 2560,
+          "endMs": 3520,
+          "durationMs": 2480,
+          "descentSeconds": 1.52,
+          "ascentSeconds": 0.96,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 95.23835213570412,
+          "minElbowDeg": 77.68809274822247,
+          "maxHipDeg": 76.73706482852467,
+          "bottomHeadForward": 0.06459982092361427,
+          "returnOverheadDeg": 138.43495110461197,
+          "referenceOverheadDeg": 144.22808186323076,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 3760,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.39672271884129484,
+          "headTravelDown": 0.4676106429614833,
+          "headTravelRatio": 0.8484039548988036,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 43.169683246435476,
+          "shoulderTravelForward": 0.36462340878975835,
+          "shoulderTravelDown": 0.38324117790975754,
+          "returnShoulderRise": 0.3251569507430284,
+          "returnHipRise": 0.22971061016482675,
+          "returnHipRiseRatio": 0.706460709635474,
+          "returnBackwardDistance": 0.47457541247682616,
+          "returnBackwardRatio": 1.459527195689208,
+          "startHipDeg": 60.6098091330005,
+          "settledHipDeg": 66.90822966838378,
+          "settledOverheadDeg": 141.3352095606654,
+          "startHipHeight": 1.5879109932852105,
+          "bottomHipHeight": 1.194986292668722,
+          "settledHipHeight": 1.4246969028335488,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 6320,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 3760,
+          "bottomMs": 5360,
+          "endMs": 6320,
+          "durationMs": 2560,
+          "descentSeconds": 1.6,
+          "ascentSeconds": 0.96,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 100.8194777342394,
+          "minElbowDeg": 77.03349293869067,
+          "maxHipDeg": 75.26164777396166,
+          "bottomHeadForward": 0.07448836504276317,
+          "returnOverheadDeg": 139.65165927960848,
+          "referenceOverheadDeg": 144.22808186323076,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 6640,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.38905167780816846,
+          "headTravelDown": 0.45592055760861266,
+          "headTravelRatio": 0.8533321678864761,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 41.97512927948545,
+          "shoulderTravelForward": 0.42693203463757046,
+          "shoulderTravelDown": 0.34619880742970943,
+          "returnShoulderRise": 0.34287527163220477,
+          "returnHipRise": 0.2465550609801357,
+          "returnHipRiseRatio": 0.7190809060287386,
+          "returnBackwardDistance": 0.44643556128276995,
+          "returnBackwardRatio": 1.3020348745407693,
+          "startHipDeg": 65.91697850465069,
+          "settledHipDeg": 67.75890188596122,
+          "settledOverheadDeg": 142.10011751710113,
+          "startHipHeight": 1.5138973782152239,
+          "bottomHipHeight": 1.2413205609628417,
+          "settledHipHeight": 1.4878756219429774,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      }
+    ],
+    "currentBefore": 21,
+    "currentAfter": 12
+  },
+  {
+    "id": "family_hip",
+    "group": "original",
+    "count": 2,
+    "countSame": true,
+    "frames": 86,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 3520,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 1120,
+          "bottomMs": 2560,
+          "endMs": 3520,
+          "durationMs": 2400,
+          "descentSeconds": 1.44,
+          "ascentSeconds": 0.96,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 92.19761538649716,
+          "minElbowDeg": 78.44202266615419,
+          "maxHipDeg": 87.95458505529942,
+          "bottomHeadForward": 0.6936874635357726,
+          "returnOverheadDeg": 123.3287467626321,
+          "referenceOverheadDeg": 127.77648489015891
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 6400,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 3920,
+          "bottomMs": 5360,
+          "endMs": 6400,
+          "durationMs": 2480,
+          "descentSeconds": 1.44,
+          "ascentSeconds": 1.04,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 95.81507601480425,
+          "minElbowDeg": 76.62904197856423,
+          "maxHipDeg": 86.90066358222928,
+          "bottomHeadForward": 0.7577236839696176,
+          "returnOverheadDeg": 118.33550915974949,
+          "referenceOverheadDeg": 127.77648489015891
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 3520,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 1120,
+          "bottomMs": 2560,
+          "endMs": 3520,
+          "durationMs": 2400,
+          "descentSeconds": 1.44,
+          "ascentSeconds": 0.96,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 92.19761538649716,
+          "minElbowDeg": 78.44202266615419,
+          "maxHipDeg": 87.95458505529942,
+          "bottomHeadForward": 0.6936874635357726,
+          "returnOverheadDeg": 123.3287467626321,
+          "referenceOverheadDeg": 127.77648489015891,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 3920,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.10446211949276574,
+          "headTravelDown": 1.1047662206568492,
+          "headTravelRatio": 0.09455585945654349,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 34.16593716529876,
+          "shoulderTravelForward": 0.36409196343341005,
+          "shoulderTravelDown": 0.531335383282158,
+          "returnShoulderRise": 0.4404651188657208,
+          "returnHipRise": 0.20448257856961316,
+          "returnHipRiseRatio": 0.4642423879016655,
+          "returnBackwardDistance": 0.5474638245505625,
+          "returnBackwardRatio": 1.2429220864534816,
+          "startHipDeg": 87.95458505529942,
+          "settledHipDeg": 79.62336417896664,
+          "settledOverheadDeg": 125.6151443520582,
+          "startHipHeight": 1.5649879782493625,
+          "bottomHipHeight": 1.2757948644642194,
+          "settledHipHeight": 1.4802774430338326,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 6400,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 3920,
+          "bottomMs": 5360,
+          "endMs": 6400,
+          "durationMs": 2480,
+          "descentSeconds": 1.44,
+          "ascentSeconds": 1.04,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 95.81507601480425,
+          "minElbowDeg": 76.62904197856423,
+          "maxHipDeg": 86.90066358222928,
+          "bottomHeadForward": 0.7577236839696176,
+          "returnOverheadDeg": 118.33550915974949,
+          "referenceOverheadDeg": 127.77648489015891,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 6640,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.5511973626709936,
+          "headTravelDown": 0.7394374958524806,
+          "headTravelRatio": 0.7454279310457887,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 32.27649927904329,
+          "shoulderTravelForward": 0.5643172217166263,
+          "shoulderTravelDown": 0.5001657350508885,
+          "returnShoulderRise": 0.5258434253012104,
+          "returnHipRise": 0.27911308201800056,
+          "returnHipRiseRatio": 0.5307912366844193,
+          "returnBackwardDistance": 0.5777329988991731,
+          "returnBackwardRatio": 1.09867875322058,
+          "startHipDeg": 80.55120918724995,
+          "settledHipDeg": 79.75731846217491,
+          "settledOverheadDeg": 123.07572022222958,
+          "startHipHeight": 1.5132119657588416,
+          "bottomHipHeight": 1.2471535990187723,
+          "settledHipHeight": 1.5262666810367729,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "nick_head",
+    "group": "original",
+    "count": 2,
+    "countSame": true,
+    "frames": 93,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 2533,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 133,
+          "bottomMs": 1267,
+          "endMs": 2533,
+          "durationMs": 2400,
+          "descentSeconds": 1.134,
+          "ascentSeconds": 1.266,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 53.124400079524406,
+          "minElbowDeg": 117.2951582546919,
+          "maxHipDeg": 60.580472311439486,
+          "bottomHeadForward": -0.32002354090779866,
+          "returnOverheadDeg": 147.03344338905285,
+          "referenceOverheadDeg": 150.529399427834
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 5267,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 2933,
+          "bottomMs": 4667,
+          "endMs": 5267,
+          "durationMs": 2334,
+          "descentSeconds": 1.734,
+          "ascentSeconds": 0.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 34.671086056424116,
+          "minElbowDeg": 129.5191670238028,
+          "maxHipDeg": 58.74874089368471,
+          "bottomHeadForward": -0.3293637559734248,
+          "returnOverheadDeg": 153.95604140464286,
+          "referenceOverheadDeg": 156.55071416008585
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 2533,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 133,
+          "bottomMs": 1267,
+          "endMs": 2533,
+          "durationMs": 2400,
+          "descentSeconds": 1.134,
+          "ascentSeconds": 1.266,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 53.124400079524406,
+          "minElbowDeg": 117.2951582546919,
+          "maxHipDeg": 60.580472311439486,
+          "bottomHeadForward": -0.32002354090779866,
+          "returnOverheadDeg": 147.03344338905285,
+          "referenceOverheadDeg": 150.529399427834,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 2933,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": -0.12063144838002895,
+          "headTravelDown": 0.405699113293714,
+          "headTravelRatio": -0.29734215438793776,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 65.68900589684907,
+          "shoulderTravelForward": 0.11888017283759592,
+          "shoulderTravelDown": 0.3641313054790748,
+          "returnShoulderRise": 0.3486633825786398,
+          "returnHipRise": 0.15871561580284776,
+          "returnHipRiseRatio": 0.4552115987317653,
+          "returnBackwardDistance": 0.09877062640425896,
+          "returnBackwardRatio": 0.28328362351610464,
+          "startHipDeg": 57.50965000453683,
+          "settledHipDeg": 56.565530185231346,
+          "settledOverheadDeg": 140.4067927220449,
+          "startHipHeight": 1.3746059209875159,
+          "bottomHipHeight": 1.175202906328488,
+          "settledHipHeight": 1.3339185221313357,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 5267,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 2933,
+          "bottomMs": 4667,
+          "endMs": 5267,
+          "durationMs": 2334,
+          "descentSeconds": 1.734,
+          "ascentSeconds": 0.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 34.671086056424116,
+          "minElbowDeg": 129.5191670238028,
+          "maxHipDeg": 58.74874089368471,
+          "bottomHeadForward": -0.3293637559734248,
+          "returnOverheadDeg": 153.95604140464286,
+          "referenceOverheadDeg": 156.55071416008585,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 5867,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": -0.17983259906807647,
+          "headTravelDown": 0.46454851978604006,
+          "headTravelRatio": -0.38711262959335885,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 59.0100751320369,
+          "shoulderTravelForward": 0.07312446795517913,
+          "shoulderTravelDown": 0.3620452006866722,
+          "returnShoulderRise": 0.35444628728498545,
+          "returnHipRise": 0.10839702514932914,
+          "returnHipRiseRatio": 0.30582073797312676,
+          "returnBackwardDistance": 0.09307329548271492,
+          "returnBackwardRatio": 0.26258786964773934,
+          "startHipDeg": 56.69919601112881,
+          "settledHipDeg": 56.66386090684424,
+          "settledOverheadDeg": 141.13845002389166,
+          "startHipHeight": 1.3277762623261102,
+          "bottomHipHeight": 1.185567705207495,
+          "settledHipHeight": 1.2939647303568242,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      }
+    ],
+    "currentBefore": 14,
+    "currentAfter": 17
+  },
+  {
+    "id": "nick_normal",
+    "group": "original",
+    "count": 2,
+    "countSame": true,
+    "frames": 105,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 3200,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 133,
+          "bottomMs": 2067,
+          "endMs": 3200,
+          "durationMs": 3067,
+          "descentSeconds": 1.934,
+          "ascentSeconds": 1.133,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 94.84370438034748,
+          "minElbowDeg": 76.28124754178819,
+          "maxHipDeg": 73.65675301350917,
+          "bottomHeadForward": 0.6168963090276778,
+          "returnOverheadDeg": 152.35403550891075,
+          "referenceOverheadDeg": 152.8483102858825
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 6733,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 3533,
+          "bottomMs": 5267,
+          "endMs": 6733,
+          "durationMs": 3200,
+          "descentSeconds": 1.734,
+          "ascentSeconds": 1.466,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 92.57813300372645,
+          "minElbowDeg": 77.80903560021646,
+          "maxHipDeg": 73.64942107439468,
+          "bottomHeadForward": 0.5808554289368166,
+          "returnOverheadDeg": 151.57022085039353,
+          "referenceOverheadDeg": 154.94969068968246
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 3200,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 133,
+          "bottomMs": 2067,
+          "endMs": 3200,
+          "durationMs": 3067,
+          "descentSeconds": 1.934,
+          "ascentSeconds": 1.133,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 94.84370438034748,
+          "minElbowDeg": 76.28124754178819,
+          "maxHipDeg": 73.65675301350917,
+          "bottomHeadForward": 0.6168963090276778,
+          "returnOverheadDeg": 152.35403550891075,
+          "referenceOverheadDeg": 152.8483102858825,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 3533,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 1.0239746826807279,
+          "headTravelDown": 0.4264545992551444,
+          "headTravelRatio": 2.4011341054105784,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 24.520747801023234,
+          "shoulderTravelForward": 0.7022369082618862,
+          "shoulderTravelDown": 0.35727009854487446,
+          "returnShoulderRise": 0.36272141232637967,
+          "returnHipRise": 0.3016724476314785,
+          "returnHipRiseRatio": 0.8316918642785587,
+          "returnBackwardDistance": 0.684970912919626,
+          "returnBackwardRatio": 1.88842149826899,
+          "startHipDeg": 52.7585195100936,
+          "settledHipDeg": 50.80966363520535,
+          "settledOverheadDeg": 154.94969068968246,
+          "startHipHeight": 1.3665160462950852,
+          "bottomHipHeight": 1.1406941021107395,
+          "settledHipHeight": 1.442366549742218,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 6733,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 3533,
+          "bottomMs": 5267,
+          "endMs": 6733,
+          "durationMs": 3200,
+          "descentSeconds": 1.734,
+          "ascentSeconds": 1.466,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 92.57813300372645,
+          "minElbowDeg": 77.80903560021646,
+          "maxHipDeg": 73.64942107439468,
+          "bottomHeadForward": 0.5808554289368166,
+          "returnOverheadDeg": 151.57022085039353,
+          "referenceOverheadDeg": 154.94969068968246,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 6933,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 1.0329109864830048,
+          "headTravelDown": 0.4069446170243086,
+          "headTravelRatio": 2.5382102214201407,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 26.64862659114096,
+          "shoulderTravelForward": 0.6536065811897113,
+          "shoulderTravelDown": 0.33569316033397706,
+          "returnShoulderRise": 0.3507918691850495,
+          "returnHipRise": 0.29199823151939186,
+          "returnHipRiseRatio": 0.8323973762497817,
+          "returnBackwardDistance": 0.6161963353600866,
+          "returnBackwardRatio": 1.7565867099246564,
+          "startHipDeg": 50.80966363520535,
+          "settledHipDeg": 51.41343077668702,
+          "settledOverheadDeg": 153.57822309646664,
+          "startHipHeight": 1.399742796986417,
+          "bottomHipHeight": 1.129448651874526,
+          "settledHipHeight": 1.4214468833939178,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "nick_out",
+    "group": "original",
+    "count": 2,
+    "countSame": true,
+    "frames": 89,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 2800,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "warning"
+        },
+        "codes": [
+          "PRESS_OUT"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 200,
+          "bottomMs": 1867,
+          "endMs": 2800,
+          "durationMs": 2600,
+          "descentSeconds": 1.667,
+          "ascentSeconds": 0.933,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 102.96496464151554,
+          "minElbowDeg": 65.84403806503511,
+          "maxHipDeg": 82.2225445968172,
+          "bottomHeadForward": 0.5527774826466836,
+          "returnOverheadDeg": 103.71737427605379,
+          "referenceOverheadDeg": 151.40060487547618
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 4800,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "warning"
+        },
+        "codes": [
+          "PRESS_OUT"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 2867,
+          "bottomMs": 3933,
+          "endMs": 4800,
+          "durationMs": 1933,
+          "descentSeconds": 1.066,
+          "ascentSeconds": 0.867,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 94.71271834575082,
+          "minElbowDeg": 65.54395342143583,
+          "maxHipDeg": 83.80108158121324,
+          "bottomHeadForward": 0.5814033644096447,
+          "returnOverheadDeg": 101.49002499318847,
+          "referenceOverheadDeg": 151.40060487547618
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 2800,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "warning"
+        },
+        "codes": [
+          "PRESS_OUT"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 200,
+          "bottomMs": 1867,
+          "endMs": 2800,
+          "durationMs": 2600,
+          "descentSeconds": 1.667,
+          "ascentSeconds": 0.933,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 102.96496464151554,
+          "minElbowDeg": 65.84403806503511,
+          "maxHipDeg": 82.2225445968172,
+          "bottomHeadForward": 0.5527774826466836,
+          "returnOverheadDeg": 103.71737427605379,
+          "referenceOverheadDeg": 151.40060487547618,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 2867,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.8755663484168845,
+          "headTravelDown": 0.4561776096475249,
+          "headTravelRatio": 1.9193540627594787,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 22.10131689748949,
+          "shoulderTravelForward": 0.6618924189186347,
+          "shoulderTravelDown": 0.4099655516757651,
+          "returnShoulderRise": 0.593641317427688,
+          "returnHipRise": 0.28456643276928073,
+          "returnHipRiseRatio": 0.47935752518429453,
+          "returnBackwardDistance": 0.15194373578428869,
+          "returnBackwardRatio": 0.25595208979502526,
+          "startHipDeg": 50.31471921976819,
+          "settledHipDeg": 81.97178049256011,
+          "settledOverheadDeg": 104.13474222863688,
+          "startHipHeight": 1.3133028743689792,
+          "bottomHipHeight": 0.9963548613353783,
+          "settledHipHeight": 1.280921294104659,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 4800,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "warning"
+        },
+        "codes": [
+          "PRESS_OUT"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 2867,
+          "bottomMs": 3933,
+          "endMs": 4800,
+          "durationMs": 1933,
+          "descentSeconds": 1.066,
+          "ascentSeconds": 0.867,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 94.71271834575082,
+          "minElbowDeg": 65.54395342143583,
+          "maxHipDeg": 83.80108158121324,
+          "bottomHeadForward": 0.5814033644096447,
+          "returnOverheadDeg": 101.49002499318847,
+          "referenceOverheadDeg": 151.40060487547618,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 5400,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.17709451039104412,
+          "headTravelDown": 0.6979962506766599,
+          "headTravelRatio": 0.25371842645195164,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 22.15449210360369,
+          "shoulderTravelForward": 0.17064426019173592,
+          "shoulderTravelDown": 0.6252496015749962,
+          "returnShoulderRise": 0.5241780218156789,
+          "returnHipRise": 0.30142791694643,
+          "returnHipRiseRatio": 0.5750487513809261,
+          "returnBackwardDistance": 0.4536540936290079,
+          "returnBackwardRatio": 0.8654580595684153,
+          "startHipDeg": 82.05457770858945,
+          "settledHipDeg": 66.64481124478051,
+          "settledOverheadDeg": 132.08205277880722,
+          "startHipHeight": 1.3149122769402453,
+          "bottomHipHeight": 1.0385571746943059,
+          "settledHipHeight": 1.3399850916407359,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 6
+  },
+  {
+    "id": "puregym_normal",
+    "group": "original",
+    "count": 1,
+    "countSame": true,
+    "frames": 50,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 3200,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 560,
+          "bottomMs": 2640,
+          "endMs": 3200,
+          "durationMs": 2640,
+          "descentSeconds": 2.08,
+          "ascentSeconds": 0.56,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 46.18732812506748,
+          "minElbowDeg": 125.612499039707,
+          "maxHipDeg": 92.73081499146826,
+          "bottomHeadForward": 0.1821887776405716,
+          "returnOverheadDeg": 119.5332529386287,
+          "referenceOverheadDeg": 129.68250544993236
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 3200,
+        "items": {
+          "pike_shape": "unknown",
+          "head_path": "within_reference",
+          "press_return": "unknown"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 560,
+          "bottomMs": 2640,
+          "endMs": 3200,
+          "durationMs": 2640,
+          "descentSeconds": 2.08,
+          "ascentSeconds": 0.56,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 46.18732812506748,
+          "minElbowDeg": 125.612499039707,
+          "maxHipDeg": 92.73081499146826,
+          "bottomHeadForward": 0.1821887776405716,
+          "returnOverheadDeg": 119.5332529386287,
+          "referenceOverheadDeg": 129.68250544993236,
+          "pathAssessmentComplete": false,
+          "pathAssessmentEndMs": 3680,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.306073408693172,
+          "headTravelDown": 0.38490564267652916,
+          "headTravelRatio": 0.7951907552324273,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 20.831351650650408,
+          "shoulderTravelForward": 0.34489519693647985,
+          "shoulderTravelDown": 0.32476317974382746,
+          "returnShoulderRise": 0.36608266587041277,
+          "returnHipRise": 0.2508569906322313,
+          "returnHipRiseRatio": 0.6852468418185923,
+          "returnBackwardDistance": 0.3323095854295596,
+          "returnBackwardRatio": 0.9077446610028558,
+          "startHipDeg": 81.9974933286678,
+          "settledHipDeg": 83.70978677241506,
+          "settledOverheadDeg": 128.44013674290522,
+          "startHipHeight": 1.1059066492187324,
+          "bottomHipHeight": 0.8793718489400875,
+          "settledHipHeight": 1.1302288395723188,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "tracking_interrupted_before_return_confirmation",
+          "pathAssessmentInterrupted": true
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "puregym_second",
+    "group": "original",
+    "count": 1,
+    "countSame": true,
+    "frames": 44,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 3280,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 400,
+          "bottomMs": 2480,
+          "endMs": 3280,
+          "durationMs": 2880,
+          "descentSeconds": 2.08,
+          "ascentSeconds": 0.8,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 59.09699616080927,
+          "minElbowDeg": 111.0687886455941,
+          "maxHipDeg": 100.2624964481175,
+          "bottomHeadForward": 0.31550606746064364,
+          "returnOverheadDeg": 111.96363712271545,
+          "referenceOverheadDeg": 130.0467913084876
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 3280,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 400,
+          "bottomMs": 2480,
+          "endMs": 3280,
+          "durationMs": 2880,
+          "descentSeconds": 2.08,
+          "ascentSeconds": 0.8,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 59.09699616080927,
+          "minElbowDeg": 111.0687886455941,
+          "maxHipDeg": 100.2624964481175,
+          "bottomHeadForward": 0.31550606746064364,
+          "returnOverheadDeg": 111.96363712271545,
+          "referenceOverheadDeg": 130.0467913084876,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 3440,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.5200890357145828,
+          "headTravelDown": 0.4220522990196042,
+          "headTravelRatio": 1.232285754449651,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 14.55367163319513,
+          "shoulderTravelForward": 0.4390096393063426,
+          "shoulderTravelDown": 0.40165375860622465,
+          "returnShoulderRise": 0.4563923701544873,
+          "returnHipRise": 0.2839545839447337,
+          "returnHipRiseRatio": 0.6221720662170931,
+          "returnBackwardDistance": 0.2500286555076757,
+          "returnBackwardRatio": 0.547837062707779,
+          "startHipDeg": 82.69352544316358,
+          "settledHipDeg": 93.8269680797141,
+          "settledOverheadDeg": 112.66661225565699,
+          "startHipHeight": 1.1171274069035297,
+          "bottomHipHeight": 0.8026705887606187,
+          "settledHipHeight": 1.0866251727053524,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "chris_new_low",
+    "group": "external",
+    "count": 2,
+    "countSame": true,
+    "frames": 149,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 4867,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "warning"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW",
+          "PRESS_OUT"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 3467,
+          "endMs": 4867,
+          "durationMs": 4734,
+          "descentSeconds": 3.334,
+          "ascentSeconds": 1.4,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 97.48450613594694,
+          "minElbowDeg": 72.75652988348718,
+          "maxHipDeg": 120.25555938623884,
+          "bottomHeadForward": 0.5947992747838415,
+          "returnOverheadDeg": 104.22869940040613,
+          "referenceOverheadDeg": 125.89350627191571
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 9800,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 5400,
+          "bottomMs": 8667,
+          "endMs": 9800,
+          "durationMs": 4400,
+          "descentSeconds": 3.267,
+          "ascentSeconds": 1.133,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 98.55783879122713,
+          "minElbowDeg": 71.75329102671857,
+          "maxHipDeg": 113.63488490876095,
+          "bottomHeadForward": 0.563184981373907,
+          "returnOverheadDeg": 126.01361719894825,
+          "referenceOverheadDeg": 125.89350627191571
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 4867,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 3467,
+          "endMs": 4867,
+          "durationMs": 4734,
+          "descentSeconds": 3.334,
+          "ascentSeconds": 1.4,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 97.48450613594694,
+          "minElbowDeg": 72.75652988348718,
+          "maxHipDeg": 120.25555938623884,
+          "bottomHeadForward": 0.5947992747838415,
+          "returnOverheadDeg": 104.22869940040613,
+          "referenceOverheadDeg": 125.89350627191571,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 5400,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.8264474950965872,
+          "headTravelDown": 0.7761174122661605,
+          "headTravelRatio": 1.0648485422888136,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 19.736938109054375,
+          "shoulderTravelForward": 0.6321851147113091,
+          "shoulderTravelDown": 0.5369156856313325,
+          "returnShoulderRise": 0.6044266014629013,
+          "returnHipRise": 0.5213789966562096,
+          "returnHipRiseRatio": 0.8626010096086265,
+          "returnBackwardDistance": 0.5874460975188577,
+          "returnBackwardRatio": 0.9719064251921649,
+          "startHipDeg": 91.84909953483518,
+          "settledHipDeg": 94.9093635802311,
+          "settledOverheadDeg": 116.8640144215151,
+          "startHipHeight": 1.4822187683484143,
+          "bottomHipHeight": 0.9922502593130501,
+          "settledHipHeight": 1.5136292559692597,
+          "hipOpenedDuringMovement": true,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 9800,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 5400,
+          "bottomMs": 8667,
+          "endMs": 9800,
+          "durationMs": 4400,
+          "descentSeconds": 3.267,
+          "ascentSeconds": 1.133,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 98.55783879122713,
+          "minElbowDeg": 71.75329102671857,
+          "maxHipDeg": 113.63488490876095,
+          "bottomHeadForward": 0.563184981373907,
+          "returnOverheadDeg": 126.01361719894825,
+          "referenceOverheadDeg": 125.89350627191571,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 9867,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.8319213371919,
+          "headTravelDown": 0.7983064229580752,
+          "headTravelRatio": 1.0421077837621133,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 18.9791396039103,
+          "shoulderTravelForward": 0.5562432769959894,
+          "shoulderTravelDown": 0.5389693844174981,
+          "returnShoulderRise": 0.30946595696087054,
+          "returnHipRise": 0.17847294192536378,
+          "returnHipRiseRatio": 0.5767126816728673,
+          "returnBackwardDistance": 0.5881899905112883,
+          "returnBackwardRatio": 1.9006613725388222,
+          "startHipDeg": 94.77549178949579,
+          "settledHipDeg": 86.70630141366321,
+          "settledOverheadDeg": 127.03929035942365,
+          "startHipHeight": 1.4104357826740364,
+          "bottomHipHeight": 0.9840828197858967,
+          "settledHipHeight": 1.1625557617112605,
+          "hipOpenedDuringMovement": true,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 58,
+    "currentAfter": 3
+  },
+  {
+    "id": "chris_new_normal",
+    "group": "external",
+    "count": 1,
+    "countSame": true,
+    "frames": 80,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 4400,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 3200,
+          "endMs": 4400,
+          "durationMs": 4267,
+          "descentSeconds": 3.067,
+          "ascentSeconds": 1.2,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 64.9317869449416,
+          "minElbowDeg": 100.08620195020067,
+          "maxHipDeg": 82.09802759886394,
+          "bottomHeadForward": 0.46008735328421196,
+          "returnOverheadDeg": 124.36441876242742,
+          "referenceOverheadDeg": 132.95729043856917
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 4400,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 3200,
+          "endMs": 4400,
+          "durationMs": 4267,
+          "descentSeconds": 3.067,
+          "ascentSeconds": 1.2,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 64.9317869449416,
+          "minElbowDeg": 100.08620195020067,
+          "maxHipDeg": 82.09802759886394,
+          "bottomHeadForward": 0.46008735328421196,
+          "returnOverheadDeg": 124.36441876242742,
+          "referenceOverheadDeg": 132.95729043856917,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 5000,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.5930035337663131,
+          "headTravelDown": 0.37564176941371075,
+          "headTravelRatio": 1.5786410938587938,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 24.015286088937057,
+          "shoulderTravelForward": 0.39792835172591345,
+          "shoulderTravelDown": 0.2811334531159646,
+          "returnShoulderRise": 0.2943543917054039,
+          "returnHipRise": 0.24161686070496646,
+          "returnHipRiseRatio": 0.8208366089091061,
+          "returnBackwardDistance": 0.5245531967527398,
+          "returnBackwardRatio": 1.7820464431110774,
+          "startHipDeg": 74.25497376834112,
+          "settledHipDeg": 71.97549932301665,
+          "settledOverheadDeg": 136.45223389665992,
+          "startHipHeight": 1.5633985079920838,
+          "bottomHipHeight": 1.3238805519541466,
+          "settledHipHeight": 1.565497412659113,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "matt_head",
+    "group": "external",
+    "count": 2,
+    "countSame": true,
+    "frames": 65,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 2267,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 800,
+          "bottomMs": 1667,
+          "endMs": 2267,
+          "durationMs": 1467,
+          "descentSeconds": 0.867,
+          "ascentSeconds": 0.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 88.4583884320313,
+          "minElbowDeg": 79.20073976572009,
+          "maxHipDeg": 86.32918020494797,
+          "bottomHeadForward": 0.31283920326422904,
+          "returnOverheadDeg": 126.5913843450181,
+          "referenceOverheadDeg": 144.1235713635444
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 3600,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 2400,
+          "bottomMs": 3000,
+          "endMs": 3600,
+          "durationMs": 1200,
+          "descentSeconds": 0.6,
+          "ascentSeconds": 0.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 81.07263366103953,
+          "minElbowDeg": 80.37113882467722,
+          "maxHipDeg": 84.93334339942075,
+          "bottomHeadForward": 0.3265568395937075,
+          "returnOverheadDeg": 129.5733301113785,
+          "referenceOverheadDeg": 144.1235713635444
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 2267,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 800,
+          "bottomMs": 1667,
+          "endMs": 2267,
+          "durationMs": 1467,
+          "descentSeconds": 0.867,
+          "ascentSeconds": 0.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 88.4583884320313,
+          "minElbowDeg": 79.20073976572009,
+          "maxHipDeg": 86.32918020494797,
+          "bottomHeadForward": 0.31283920326422904,
+          "returnOverheadDeg": 126.5913843450181,
+          "referenceOverheadDeg": 144.1235713635444,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 2400,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.38427811804078005,
+          "headTravelDown": 0.5319403405919231,
+          "headTravelRatio": 0.7224083016775338,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 46.360025665848305,
+          "shoulderTravelForward": 0.4117996517520515,
+          "shoulderTravelDown": 0.375374319894238,
+          "returnShoulderRise": 0.4246183081707834,
+          "returnHipRise": 0.1773834862683481,
+          "returnHipRiseRatio": 0.41774808776498557,
+          "returnBackwardDistance": 0.2601601801943246,
+          "returnBackwardRatio": 0.6126918580479271,
+          "startHipDeg": 70.41732325350542,
+          "settledHipDeg": 86.79258484729412,
+          "settledOverheadDeg": 127.38226114268072,
+          "startHipHeight": 1.5371724074967243,
+          "bottomHipHeight": 1.3021184247058872,
+          "settledHipHeight": 1.4795019109742353,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 3600,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 2400,
+          "bottomMs": 3000,
+          "endMs": 3600,
+          "durationMs": 1200,
+          "descentSeconds": 0.6,
+          "ascentSeconds": 0.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 81.07263366103953,
+          "minElbowDeg": 80.37113882467722,
+          "maxHipDeg": 84.93334339942075,
+          "bottomHeadForward": 0.3265568395937075,
+          "returnOverheadDeg": 129.5733301113785,
+          "referenceOverheadDeg": 144.1235713635444,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 4000,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.1679058631423904,
+          "headTravelDown": 0.5311208484127068,
+          "headTravelRatio": 0.31613495053750806,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 50.72403334494028,
+          "shoulderTravelForward": 0.2069002763774856,
+          "shoulderTravelDown": 0.3865072334352283,
+          "returnShoulderRise": 0.34557478014038157,
+          "returnHipRise": 0.1343345379794405,
+          "returnHipRiseRatio": 0.3887278403964267,
+          "returnBackwardDistance": 0.35556653830668683,
+          "returnBackwardRatio": 1.0289134472204435,
+          "startHipDeg": 84.93334339942075,
+          "settledHipDeg": 80.50631785583184,
+          "settledOverheadDeg": 134.90332075823815,
+          "startHipHeight": 1.439529189273461,
+          "bottomHipHeight": 1.248439683556625,
+          "settledHipHeight": 1.3827742215360654,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 5
+  },
+  {
+    "id": "matt_normal",
+    "group": "external",
+    "count": 2,
+    "countSame": true,
+    "frames": 114,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 3333,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 867,
+          "bottomMs": 2533,
+          "endMs": 3333,
+          "durationMs": 2466,
+          "descentSeconds": 1.666,
+          "ascentSeconds": 0.8,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 78.24363323571129,
+          "minElbowDeg": 89.33507117133266,
+          "maxHipDeg": 104.51336409171576,
+          "bottomHeadForward": 0.8610768179691483,
+          "returnOverheadDeg": 135.3733955814458,
+          "referenceOverheadDeg": 119.32328550659277
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 6200,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 3667,
+          "bottomMs": 5200,
+          "endMs": 6200,
+          "durationMs": 2533,
+          "descentSeconds": 1.533,
+          "ascentSeconds": 1,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 83.83336877909983,
+          "minElbowDeg": 87.34612229710305,
+          "maxHipDeg": 86.01821006675453,
+          "bottomHeadForward": 0.7318810117981522,
+          "returnOverheadDeg": 144.4555222612696,
+          "referenceOverheadDeg": 141.1119329426545
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 3333,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 867,
+          "bottomMs": 2533,
+          "endMs": 3333,
+          "durationMs": 2466,
+          "descentSeconds": 1.666,
+          "ascentSeconds": 0.8,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 78.24363323571129,
+          "minElbowDeg": 89.33507117133266,
+          "maxHipDeg": 104.51336409171576,
+          "bottomHeadForward": 0.8610768179691483,
+          "returnOverheadDeg": 135.3733955814458,
+          "referenceOverheadDeg": 119.32328550659277,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 3667,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.6491104101967475,
+          "headTravelDown": 0.6279074082580917,
+          "headTravelRatio": 1.0337677206221791,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 26.83045321992986,
+          "shoulderTravelForward": 0.5913693333779727,
+          "shoulderTravelDown": 0.42048031250614026,
+          "returnShoulderRise": 0.2994815891829279,
+          "returnHipRise": 0.41797977682261434,
+          "returnHipRiseRatio": 1.3956777041386206,
+          "returnBackwardDistance": 0.7544642805793609,
+          "returnBackwardRatio": 2.5192342629066347,
+          "startHipDeg": 94.67613086724478,
+          "settledHipDeg": 71.36906447675526,
+          "settledOverheadDeg": 141.1119329426545,
+          "startHipHeight": 1.4681114006831062,
+          "bottomHipHeight": 1.1808161254705902,
+          "settledHipHeight": 1.5987959022932046,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 6200,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 3667,
+          "bottomMs": 5200,
+          "endMs": 6200,
+          "durationMs": 2533,
+          "descentSeconds": 1.533,
+          "ascentSeconds": 1,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 83.83336877909983,
+          "minElbowDeg": 87.34612229710305,
+          "maxHipDeg": 86.01821006675453,
+          "bottomHeadForward": 0.7318810117981522,
+          "returnOverheadDeg": 144.4555222612696,
+          "referenceOverheadDeg": 141.1119329426545,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 6667,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.8005888913567353,
+          "headTravelDown": 0.3950032587985341,
+          "headTravelRatio": 2.0267905986189962,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 34.83257175029287,
+          "shoulderTravelForward": 0.5869662839868199,
+          "shoulderTravelDown": 0.25805710102012513,
+          "returnShoulderRise": 0.2643528905856557,
+          "returnHipRise": 0.24668716150643455,
+          "returnHipRiseRatio": 0.9331736867333512,
+          "returnBackwardDistance": 0.5998413342192842,
+          "returnBackwardRatio": 2.269093153815632,
+          "startHipDeg": 71.57973444788199,
+          "settledHipDeg": 69.29837367639092,
+          "settledOverheadDeg": 144.8340092446464,
+          "startHipHeight": 1.430384373389596,
+          "bottomHipHeight": 1.1968979572788714,
+          "settledHipHeight": 1.443585118785306,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "matt_out",
+    "group": "external",
+    "count": 2,
+    "countSame": true,
+    "frames": 77,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 2600,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "warning"
+        },
+        "codes": [
+          "PRESS_OUT"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 133,
+          "bottomMs": 2067,
+          "endMs": 2600,
+          "durationMs": 2467,
+          "descentSeconds": 1.934,
+          "ascentSeconds": 0.533,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 77.50660272147898,
+          "minElbowDeg": 87.09633025450701,
+          "maxHipDeg": 97.65329947261023,
+          "bottomHeadForward": 0.759257435226356,
+          "returnOverheadDeg": 102.06308064990816,
+          "referenceOverheadDeg": 133.89230146815555
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 4533,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "right",
+          "startMs": 2800,
+          "bottomMs": 3733,
+          "endMs": 4533,
+          "durationMs": 1733,
+          "descentSeconds": 0.933,
+          "ascentSeconds": 0.8,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 85.06438048508501,
+          "minElbowDeg": 77.59897598340628,
+          "maxHipDeg": 95.1827422611301,
+          "bottomHeadForward": 0.7140885432427638,
+          "returnOverheadDeg": 118.49352786811885,
+          "referenceOverheadDeg": 133.89230146815555
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 2600,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "warning"
+        },
+        "codes": [
+          "PRESS_OUT"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 133,
+          "bottomMs": 2067,
+          "endMs": 2600,
+          "durationMs": 2467,
+          "descentSeconds": 1.934,
+          "ascentSeconds": 0.533,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 77.50660272147898,
+          "minElbowDeg": 87.09633025450701,
+          "maxHipDeg": 97.65329947261023,
+          "bottomHeadForward": 0.759257435226356,
+          "returnOverheadDeg": 102.06308064990816,
+          "referenceOverheadDeg": 133.89230146815555,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 2800,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.6604698184903781,
+          "headTravelDown": 0.3979732745434155,
+          "headTravelRatio": 1.6595833457613909,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 28.28185572409038,
+          "shoulderTravelForward": 0.5253549645313518,
+          "shoulderTravelDown": 0.3102130406667878,
+          "returnShoulderRise": 0.459531171990732,
+          "returnHipRise": 0.18830334674063987,
+          "returnHipRiseRatio": 0.4097727384301095,
+          "returnBackwardDistance": 0.30055924201957,
+          "returnBackwardRatio": 0.6540562650353386,
+          "startHipDeg": 75.74275054058234,
+          "settledHipDeg": 95.2395535211181,
+          "settledOverheadDeg": 105.45200050000493,
+          "startHipHeight": 1.4872278929938159,
+          "bottomHipHeight": 1.2001707419483634,
+          "settledHipHeight": 1.3884740886890032,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 4533,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "warning"
+        },
+        "codes": [
+          "PRESS_OUT"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 2800,
+          "bottomMs": 3733,
+          "endMs": 4533,
+          "durationMs": 1733,
+          "descentSeconds": 0.933,
+          "ascentSeconds": 0.8,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 85.06438048508501,
+          "minElbowDeg": 77.59897598340628,
+          "maxHipDeg": 95.1827422611301,
+          "bottomHeadForward": 0.7140885432427638,
+          "returnOverheadDeg": 118.49352786811885,
+          "referenceOverheadDeg": 133.89230146815555,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 5067,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.11135775559936445,
+          "headTravelDown": 0.7508682022430633,
+          "headTravelRatio": 0.14830532877368652,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 36.2639087028387,
+          "shoulderTravelForward": 0.2864591669717137,
+          "shoulderTravelDown": 0.535148771227386,
+          "returnShoulderRise": 0.4420345504585762,
+          "returnHipRise": 0.16867994670800024,
+          "returnHipRiseRatio": 0.3815990096995993,
+          "returnBackwardDistance": 0.47631748679784647,
+          "returnBackwardRatio": 1.0775571418652783,
+          "startHipDeg": 95.0605586352178,
+          "settledHipDeg": 90.06015173593431,
+          "settledOverheadDeg": 119.16449194415024,
+          "startHipHeight": 1.4067756749669758,
+          "bottomHipHeight": 1.2030962460505554,
+          "settledHipHeight": 1.3717761927585557,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "tiffany_normal",
+    "group": "external",
+    "count": 4,
+    "countSame": true,
+    "frames": 311,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 3453,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 100,
+          "bottomMs": 2352,
+          "endMs": 3453,
+          "durationMs": 3353,
+          "descentSeconds": 2.252,
+          "ascentSeconds": 1.101,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 71.42784206367888,
+          "minElbowDeg": 92.32987273346124,
+          "maxHipDeg": 98.47719924698573,
+          "bottomHeadForward": -0.010759956221147227,
+          "returnOverheadDeg": 155.7234360334323,
+          "referenceOverheadDeg": 162.67769970465403
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 7107,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 4003.9999999999995,
+          "bottomMs": 6056,
+          "endMs": 7107,
+          "durationMs": 3103.0000000000005,
+          "descentSeconds": 2.0520000000000005,
+          "ascentSeconds": 1.051,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 82.78992590531205,
+          "minElbowDeg": 84.09833909025717,
+          "maxHipDeg": 99.7430649624647,
+          "bottomHeadForward": 0.02458114204289661,
+          "returnOverheadDeg": 152.87801101898378,
+          "referenceOverheadDeg": 174.2530956422977
+        }
+      },
+      {
+        "number": 3,
+        "timestampMs": 10711,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 7558,
+          "bottomMs": 9710,
+          "endMs": 10711,
+          "durationMs": 3153,
+          "descentSeconds": 2.152,
+          "ascentSeconds": 1.001,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 71.64525961078671,
+          "minElbowDeg": 96.55765378978454,
+          "maxHipDeg": 100.7118943654283,
+          "bottomHeadForward": -0.08528489573302046,
+          "returnOverheadDeg": 143.36313463045553,
+          "referenceOverheadDeg": 174.2530956422977
+        }
+      },
+      {
+        "number": 4,
+        "timestampMs": 14615,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 11311,
+          "bottomMs": 13463,
+          "endMs": 14615,
+          "durationMs": 3304,
+          "descentSeconds": 2.152,
+          "ascentSeconds": 1.152,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 72.51152869993163,
+          "minElbowDeg": 96.90170152401413,
+          "maxHipDeg": 98.41641433599243,
+          "bottomHeadForward": -0.13172483230363158,
+          "returnOverheadDeg": 152.6394386239147,
+          "referenceOverheadDeg": 174.9845238096546
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 3453,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "unknown"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 100,
+          "bottomMs": 2352,
+          "endMs": 3453,
+          "durationMs": 3353,
+          "descentSeconds": 2.252,
+          "ascentSeconds": 1.101,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 71.42784206367888,
+          "minElbowDeg": 92.32987273346124,
+          "maxHipDeg": 98.47719924698573,
+          "bottomHeadForward": -0.010759956221147227,
+          "returnOverheadDeg": 155.7234360334323,
+          "referenceOverheadDeg": 162.67769970465403,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 4003.9999999999995,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.3616400979331286,
+          "headTravelDown": 0.3541480897164244,
+          "headTravelRatio": 1.0211550151878646,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 57.009283226833844,
+          "shoulderTravelForward": 0.47170786607521414,
+          "shoulderTravelDown": 0.24511476984723102,
+          "returnShoulderRise": 0.15432416994961284,
+          "returnHipRise": 0.20032963508293378,
+          "returnHipRiseRatio": null,
+          "returnBackwardDistance": 0.563925636799775,
+          "returnBackwardRatio": null,
+          "startHipDeg": 76.24642235132592,
+          "settledHipDeg": 73.49834837505216,
+          "settledOverheadDeg": 170.91216165047936,
+          "startHipHeight": 1.3403628506138818,
+          "bottomHipHeight": 1.1071396211862778,
+          "settledHipHeight": 1.3074692562692116,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "insufficient_visible_rise"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 7107,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 4003.9999999999995,
+          "bottomMs": 6056,
+          "endMs": 7107,
+          "durationMs": 3103.0000000000005,
+          "descentSeconds": 2.0520000000000005,
+          "ascentSeconds": 1.051,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 82.78992590531205,
+          "minElbowDeg": 84.09833909025717,
+          "maxHipDeg": 99.7430649624647,
+          "bottomHeadForward": 0.02458114204289661,
+          "returnOverheadDeg": 152.87801101898378,
+          "referenceOverheadDeg": 174.2530956422977,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 7558,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.7589422976023346,
+          "headTravelDown": 0.22446045341003124,
+          "headTravelRatio": 3.381184908398733,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 63.1482210548088,
+          "shoulderTravelForward": 0.5533408646089121,
+          "shoulderTravelDown": 0.17522049514110893,
+          "returnShoulderRise": 0.21906760531969505,
+          "returnHipRise": 0.2282119155753437,
+          "returnHipRiseRatio": 1.0417419556045449,
+          "returnBackwardDistance": 0.4897938563728137,
+          "returnBackwardRatio": 2.2358114320829676,
+          "startHipDeg": 70.75294229191617,
+          "settledHipDeg": 77.71900565517245,
+          "settledOverheadDeg": 164.58474856085058,
+          "startHipHeight": 1.3572840906222186,
+          "bottomHipHeight": 1.1152087892709956,
+          "settledHipHeight": 1.3434207048463394,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 3,
+        "timestampMs": 10711,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 7558,
+          "bottomMs": 9710,
+          "endMs": 10711,
+          "durationMs": 3153,
+          "descentSeconds": 2.152,
+          "ascentSeconds": 1.001,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 71.64525961078671,
+          "minElbowDeg": 96.55765378978454,
+          "maxHipDeg": 100.7118943654283,
+          "bottomHeadForward": -0.08528489573302046,
+          "returnOverheadDeg": 143.36313463045553,
+          "referenceOverheadDeg": 174.2530956422977,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 11311,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.6133676282212249,
+          "headTravelDown": 0.2237800296376607,
+          "headTravelRatio": 2.7409399722324426,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 57.492656111450124,
+          "shoulderTravelForward": 0.49833282979296767,
+          "shoulderTravelDown": 0.17000453723515552,
+          "returnShoulderRise": 0.2011053960747805,
+          "returnHipRise": 0.2040491539449132,
+          "returnHipRiseRatio": 1.014637886041795,
+          "returnBackwardDistance": 0.484191607464984,
+          "returnBackwardRatio": 2.407650997514451,
+          "startHipDeg": 77.23848824808175,
+          "settledHipDeg": 79.4754808472434,
+          "settledOverheadDeg": 163.1744303226874,
+          "startHipHeight": 1.3246787608516153,
+          "bottomHipHeight": 1.114283712687877,
+          "settledHipHeight": 1.3183328666327903,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 4,
+        "timestampMs": 14615,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 11311,
+          "bottomMs": 13463,
+          "endMs": 14615,
+          "durationMs": 3304,
+          "descentSeconds": 2.152,
+          "ascentSeconds": 1.152,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 72.51152869993163,
+          "minElbowDeg": 96.90170152401413,
+          "maxHipDeg": 98.41641433599243,
+          "bottomHeadForward": -0.13172483230363158,
+          "returnOverheadDeg": 152.6394386239147,
+          "referenceOverheadDeg": 174.9845238096546,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 14865,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.6096871592452475,
+          "headTravelDown": 0.23733241297925944,
+          "headTravelRatio": 2.5689165318456872,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 57.358154417536845,
+          "shoulderTravelForward": 0.5161537379662965,
+          "shoulderTravelDown": 0.1925265174634352,
+          "returnShoulderRise": 0.22548870318926328,
+          "returnHipRise": 0.20217713605217869,
+          "returnHipRiseRatio": 0.8966175830213627,
+          "returnBackwardDistance": 0.43604287574978184,
+          "returnBackwardRatio": 1.9337681648015446,
+          "startHipDeg": 76.55032554880984,
+          "settledHipDeg": 82.14995117157667,
+          "settledOverheadDeg": 159.35471065578147,
+          "startHipHeight": 1.3534195679931214,
+          "bottomHipHeight": 1.1464004640988066,
+          "settledHipHeight": 1.3485776001509853,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 68,
+    "currentAfter": 0
+  },
+  {
+    "id": "trevor_normal",
+    "group": "external",
+    "count": 6,
+    "countSame": true,
+    "frames": 191,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 2000,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 533,
+          "bottomMs": 1467,
+          "endMs": 2000,
+          "durationMs": 1467,
+          "descentSeconds": 0.934,
+          "ascentSeconds": 0.533,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 61.75868943366022,
+          "minElbowDeg": 110.15081465920149,
+          "maxHipDeg": 103.14406181736824,
+          "bottomHeadForward": -0.2648350960889243,
+          "returnOverheadDeg": 133.0107779082902,
+          "referenceOverheadDeg": 145.2048524084719
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 3867,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 2400,
+          "bottomMs": 3267,
+          "endMs": 3867,
+          "durationMs": 1467,
+          "descentSeconds": 0.867,
+          "ascentSeconds": 0.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 61.4778996760208,
+          "minElbowDeg": 108.16967979905945,
+          "maxHipDeg": 107.02711552642086,
+          "bottomHeadForward": -0.1924111770940278,
+          "returnOverheadDeg": 131.43707368304803,
+          "referenceOverheadDeg": 145.2048524084719
+        }
+      },
+      {
+        "number": 3,
+        "timestampMs": 5800,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 4267,
+          "bottomMs": 5267,
+          "endMs": 5800,
+          "durationMs": 1533,
+          "descentSeconds": 1,
+          "ascentSeconds": 0.533,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 69.50879313794654,
+          "minElbowDeg": 99.9498627101798,
+          "maxHipDeg": 108.48270797157895,
+          "bottomHeadForward": -0.17435262969074608,
+          "returnOverheadDeg": 131.01514987495273,
+          "referenceOverheadDeg": 145.2048524084719
+        }
+      },
+      {
+        "number": 4,
+        "timestampMs": 7733,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 6267,
+          "bottomMs": 7133,
+          "endMs": 7733,
+          "durationMs": 1466,
+          "descentSeconds": 0.866,
+          "ascentSeconds": 0.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 63.479672787716225,
+          "minElbowDeg": 108.31237246650196,
+          "maxHipDeg": 110.01870849550474,
+          "bottomHeadForward": -0.17907913493346597,
+          "returnOverheadDeg": 131.93874559419632,
+          "referenceOverheadDeg": 145.2048524084719
+        }
+      },
+      {
+        "number": 5,
+        "timestampMs": 9333,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 8000,
+          "bottomMs": 8733,
+          "endMs": 9333,
+          "durationMs": 1333,
+          "descentSeconds": 0.733,
+          "ascentSeconds": 0.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 62.29590220488886,
+          "minElbowDeg": 108.89513782848469,
+          "maxHipDeg": 111.94076102115285,
+          "bottomHeadForward": -0.15878595243109248,
+          "returnOverheadDeg": 134.19380593213626,
+          "referenceOverheadDeg": 145.2048524084719
+        }
+      },
+      {
+        "number": 6,
+        "timestampMs": 11267,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 9733,
+          "bottomMs": 10600,
+          "endMs": 11267,
+          "durationMs": 1534,
+          "descentSeconds": 0.867,
+          "ascentSeconds": 0.667,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 71.38519337015029,
+          "minElbowDeg": 98.91071143216772,
+          "maxHipDeg": 108.95201541560557,
+          "bottomHeadForward": -0.16651730763739703,
+          "returnOverheadDeg": 131.42353510790218,
+          "referenceOverheadDeg": 145.2048524084719
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 2000,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 533,
+          "bottomMs": 1467,
+          "endMs": 2000,
+          "durationMs": 1467,
+          "descentSeconds": 0.934,
+          "ascentSeconds": 0.533,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 61.75868943366022,
+          "minElbowDeg": 110.15081465920149,
+          "maxHipDeg": 103.14406181736824,
+          "bottomHeadForward": -0.2648350960889243,
+          "returnOverheadDeg": 133.0107779082902,
+          "referenceOverheadDeg": 145.2048524084719,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 2400,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.06279549524508732,
+          "headTravelDown": 0.4769348719537918,
+          "headTravelRatio": 0.1316647176329168,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 70.06309891763932,
+          "shoulderTravelForward": 0.10807318646025382,
+          "shoulderTravelDown": 0.30208813456158323,
+          "returnShoulderRise": 0.30500805809885634,
+          "returnHipRise": 0.10930288527309528,
+          "returnHipRiseRatio": 0.3583606477625226,
+          "returnBackwardDistance": 0.09443029962158728,
+          "returnBackwardRatio": 0.30959936012897543,
+          "startHipDeg": 96.84338566826386,
+          "settledHipDeg": 97.87660562755342,
+          "settledOverheadDeg": 131.79756520828823,
+          "startHipHeight": 1.0709768507150332,
+          "bottomHipHeight": 0.9425953324409289,
+          "settledHipHeight": 1.0518982177140241,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 3867,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 2400,
+          "bottomMs": 3267,
+          "endMs": 3867,
+          "durationMs": 1467,
+          "descentSeconds": 0.867,
+          "ascentSeconds": 0.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 61.4778996760208,
+          "minElbowDeg": 108.16967979905945,
+          "maxHipDeg": 107.02711552642086,
+          "bottomHeadForward": -0.1924111770940278,
+          "returnOverheadDeg": 131.43707368304803,
+          "referenceOverheadDeg": 145.2048524084719,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 4267,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.1409811090870188,
+          "headTravelDown": 0.46545233306479816,
+          "headTravelRatio": 0.3028905412477373,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 67.2559581509347,
+          "shoulderTravelForward": 0.15509674380962524,
+          "shoulderTravelDown": 0.30330981219519904,
+          "returnShoulderRise": 0.2837937310423736,
+          "returnHipRise": 0.13531734632510983,
+          "returnHipRiseRatio": 0.4768158402516137,
+          "returnBackwardDistance": 0.15787816675273258,
+          "returnBackwardRatio": 0.5563130875824723,
+          "startHipDeg": 99.06087585216797,
+          "settledHipDeg": 99.12060375283454,
+          "settledOverheadDeg": 133.02339271941946,
+          "startHipHeight": 1.0353091526615055,
+          "bottomHipHeight": 0.8919863416475997,
+          "settledHipHeight": 1.0273036879727095,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      },
+      {
+        "number": 3,
+        "timestampMs": 5800,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 4267,
+          "bottomMs": 5267,
+          "endMs": 5800,
+          "durationMs": 1533,
+          "descentSeconds": 1,
+          "ascentSeconds": 0.533,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 69.50879313794654,
+          "minElbowDeg": 99.9498627101798,
+          "maxHipDeg": 108.48270797157895,
+          "bottomHeadForward": -0.17435262969074608,
+          "returnOverheadDeg": 131.01514987495273,
+          "referenceOverheadDeg": 145.2048524084719,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 6267,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.14855052646655603,
+          "headTravelDown": 0.46763698358466305,
+          "headTravelRatio": 0.317662057709475,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 70.61170598526935,
+          "shoulderTravelForward": 0.16626384233902003,
+          "shoulderTravelDown": 0.28792718868350664,
+          "returnShoulderRise": 0.2908921280965009,
+          "returnHipRise": 0.10877847762847559,
+          "returnHipRiseRatio": 0.37394782162131696,
+          "returnBackwardDistance": 0.18663465582690675,
+          "returnBackwardRatio": 0.6415940405406652,
+          "startHipDeg": 99.12060375283454,
+          "settledHipDeg": 99.03820997908603,
+          "settledOverheadDeg": 133.96839115555642,
+          "startHipHeight": 1.0223553530472436,
+          "bottomHipHeight": 0.9079788163670935,
+          "settledHipHeight": 1.0167572939955691,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      },
+      {
+        "number": 4,
+        "timestampMs": 7733,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 6267,
+          "bottomMs": 7133,
+          "endMs": 7733,
+          "durationMs": 1466,
+          "descentSeconds": 0.866,
+          "ascentSeconds": 0.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 63.479672787716225,
+          "minElbowDeg": 108.31237246650196,
+          "maxHipDeg": 110.01870849550474,
+          "bottomHeadForward": -0.17907913493346597,
+          "returnOverheadDeg": 131.93874559419632,
+          "referenceOverheadDeg": 145.2048524084719,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 8000,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.11692459676267969,
+          "headTravelDown": 0.4835070852273909,
+          "headTravelRatio": 0.2418260255849005,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 67.21421634821222,
+          "shoulderTravelForward": 0.18513520855445542,
+          "shoulderTravelDown": 0.2986892249894757,
+          "returnShoulderRise": 0.2907331808177105,
+          "returnHipRise": 0.10181153767546736,
+          "returnHipRiseRatio": 0.35018891682440306,
+          "returnBackwardDistance": 0.17590792368421493,
+          "returnBackwardRatio": 0.6050493555274968,
+          "startHipDeg": 100.426254018885,
+          "settledHipDeg": 102.04586029787598,
+          "settledOverheadDeg": 131.79656065279218,
+          "startHipHeight": 1.0689020749132792,
+          "bottomHipHeight": 0.9309891407419009,
+          "settledHipHeight": 1.0328006784173682,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      },
+      {
+        "number": 5,
+        "timestampMs": 9333,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 8000,
+          "bottomMs": 8733,
+          "endMs": 9333,
+          "durationMs": 1333,
+          "descentSeconds": 0.733,
+          "ascentSeconds": 0.6,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 62.29590220488886,
+          "minElbowDeg": 108.89513782848469,
+          "maxHipDeg": 111.94076102115285,
+          "bottomHeadForward": -0.15878595243109248,
+          "returnOverheadDeg": 134.19380593213626,
+          "referenceOverheadDeg": 145.2048524084719,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 9733,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.10209552635767719,
+          "headTravelDown": 0.4821448724791465,
+          "headTravelRatio": 0.21175279917986262,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 67.05646667688578,
+          "shoulderTravelForward": 0.17113704338460095,
+          "shoulderTravelDown": 0.27517701636902425,
+          "returnShoulderRise": 0.285246919425003,
+          "returnHipRise": 0.13741613202618674,
+          "returnHipRiseRatio": 0.4817444910647532,
+          "returnBackwardDistance": 0.19319274595059915,
+          "returnBackwardRatio": 0.6772824973536421,
+          "startHipDeg": 103.9733239910103,
+          "settledHipDeg": 98.07905845047625,
+          "settledOverheadDeg": 133.6505841686014,
+          "startHipHeight": 1.005506321989732,
+          "bottomHipHeight": 0.9017474519830485,
+          "settledHipHeight": 1.0391635840092353,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      },
+      {
+        "number": 6,
+        "timestampMs": 11267,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "right",
+          "startMs": 9733,
+          "bottomMs": 10600,
+          "endMs": 11267,
+          "durationMs": 1534,
+          "descentSeconds": 0.867,
+          "ascentSeconds": 0.667,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 71.38519337015029,
+          "minElbowDeg": 98.91071143216772,
+          "maxHipDeg": 108.95201541560557,
+          "bottomHeadForward": -0.16651730763739703,
+          "returnOverheadDeg": 131.42353510790218,
+          "referenceOverheadDeg": 145.2048524084719,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 11733,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.13898333224986853,
+          "headTravelDown": 0.46406210815661914,
+          "headTravelRatio": 0.2994929553760554,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 70.55380320745434,
+          "shoulderTravelForward": 0.18396779862536755,
+          "shoulderTravelDown": 0.29690666253726994,
+          "returnShoulderRise": 0.2884436917513574,
+          "returnHipRise": 0.12262054029721736,
+          "returnHipRiseRatio": 0.42511084070757915,
+          "returnBackwardDistance": 0.18265821192585413,
+          "returnBackwardRatio": 0.6332543132311179,
+          "startHipDeg": 98.44373206475937,
+          "settledHipDeg": 98.50980842926207,
+          "settledOverheadDeg": 132.77210792369812,
+          "startHipHeight": 1.045150867537173,
+          "bottomHipHeight": 0.9195131206977416,
+          "settledHipHeight": 1.042133660994959,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      }
+    ],
+    "currentBefore": 44,
+    "currentAfter": 18
+  },
+  {
+    "id": "tykato_head",
+    "group": "external",
+    "count": 0,
+    "countSame": true,
+    "frames": 68,
+    "before": [],
+    "after": [],
+    "currentBefore": 0,
+    "currentAfter": 0
+  },
+  {
+    "id": "tykato_head_complete",
+    "group": "external",
+    "count": 2,
+    "countSame": true,
+    "frames": 105,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 2333,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 533,
+          "bottomMs": 1600,
+          "endMs": 2333,
+          "durationMs": 1800,
+          "descentSeconds": 1.067,
+          "ascentSeconds": 0.733,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 104.90433754173173,
+          "minElbowDeg": 63.35547067255674,
+          "maxHipDeg": 112.28599805675334,
+          "bottomHeadForward": -0.15404118567687894,
+          "returnOverheadDeg": 115.62236658169171,
+          "referenceOverheadDeg": 131.7811198114589
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 4933,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW",
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 3067,
+          "bottomMs": 3933,
+          "endMs": 4933,
+          "durationMs": 1866,
+          "descentSeconds": 0.866,
+          "ascentSeconds": 1,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 115.36415204599257,
+          "minElbowDeg": 63.65312883146681,
+          "maxHipDeg": 114.59693087447255,
+          "bottomHeadForward": -0.20304845872783256,
+          "returnOverheadDeg": 111.50710251754407,
+          "referenceOverheadDeg": 131.7811198114589
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 2333,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 533,
+          "bottomMs": 1600,
+          "endMs": 2333,
+          "durationMs": 1800,
+          "descentSeconds": 1.067,
+          "ascentSeconds": 0.733,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 104.90433754173173,
+          "minElbowDeg": 63.35547067255674,
+          "maxHipDeg": 112.28599805675334,
+          "bottomHeadForward": -0.15404118567687894,
+          "returnOverheadDeg": 115.62236658169171,
+          "referenceOverheadDeg": 131.7811198114589,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 2933,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.06272766999095669,
+          "headTravelDown": 0.35836463458751355,
+          "headTravelRatio": 0.17503867272828907,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 67.44992927039138,
+          "shoulderTravelForward": 0.08506493828764145,
+          "shoulderTravelDown": 0.4946341888645294,
+          "returnShoulderRise": 0.527215709880372,
+          "returnHipRise": 0.29256983008749793,
+          "returnHipRiseRatio": 0.5549338242479223,
+          "returnBackwardDistance": 0.12976113961936042,
+          "returnBackwardRatio": 0.24612532818645314,
+          "startHipDeg": 110.7837299067041,
+          "settledHipDeg": 108.40136226471944,
+          "settledOverheadDeg": 122.43564779148707,
+          "startHipHeight": 1.2252504453278734,
+          "bottomHipHeight": 0.9554784455649905,
+          "settledHipHeight": 1.2480482756524884,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 4933,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW",
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 3067,
+          "bottomMs": 3933,
+          "endMs": 4933,
+          "durationMs": 1866,
+          "descentSeconds": 0.866,
+          "ascentSeconds": 1,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 115.36415204599257,
+          "minElbowDeg": 63.65312883146681,
+          "maxHipDeg": 114.59693087447255,
+          "bottomHeadForward": -0.20304845872783256,
+          "returnOverheadDeg": 111.50710251754407,
+          "referenceOverheadDeg": 131.7811198114589,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 5533,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.06538916117037094,
+          "headTravelDown": 0.3744001276501799,
+          "headTravelRatio": 0.17465047776764434,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 62.12717077944472,
+          "shoulderTravelForward": -0.04100434835890798,
+          "shoulderTravelDown": 0.5325200660124434,
+          "returnShoulderRise": 0.6350633962587371,
+          "returnHipRise": 0.3122092804155535,
+          "returnHipRiseRatio": 0.4916190765439005,
+          "returnBackwardDistance": -0.013619471626248492,
+          "returnBackwardRatio": -0.021445845732068702,
+          "startHipDeg": 111.38144732020517,
+          "settledHipDeg": 111.08786263105793,
+          "settledOverheadDeg": 113.70386027422012,
+          "startHipHeight": 1.2270827806364575,
+          "bottomHipHeight": 0.9150981864167206,
+          "settledHipHeight": 1.227307466832274,
+          "hipOpenedDuringMovement": true,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      }
+    ],
+    "currentBefore": 13,
+    "currentAfter": 17
+  },
+  {
+    "id": "tykato_head_reps",
+    "group": "external",
+    "count": 1,
+    "countSame": true,
+    "frames": 69,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 2333,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 533,
+          "bottomMs": 1600,
+          "endMs": 2333,
+          "durationMs": 1800,
+          "descentSeconds": 1.067,
+          "ascentSeconds": 0.733,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 104.90433754173173,
+          "minElbowDeg": 63.35547067255674,
+          "maxHipDeg": 112.28599805675334,
+          "bottomHeadForward": -0.15404118567687894,
+          "returnOverheadDeg": 115.62236658169171,
+          "referenceOverheadDeg": 131.7811198114589
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 2333,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "warning",
+          "press_return": "unknown"
+        },
+        "codes": [
+          "HEAD_PATH_BACK"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 533,
+          "bottomMs": 1600,
+          "endMs": 2333,
+          "durationMs": 1800,
+          "descentSeconds": 1.067,
+          "ascentSeconds": 0.733,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 104.90433754173173,
+          "minElbowDeg": 63.35547067255674,
+          "maxHipDeg": 112.28599805675334,
+          "bottomHeadForward": -0.15404118567687894,
+          "returnOverheadDeg": 115.62236658169171,
+          "referenceOverheadDeg": 131.7811198114589,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 2933,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 0.06272766999095669,
+          "headTravelDown": 0.35836463458751355,
+          "headTravelRatio": 0.17503867272828907,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 67.44992927039138,
+          "shoulderTravelForward": 0.08506493828764145,
+          "shoulderTravelDown": 0.4946341888645294,
+          "returnShoulderRise": 0.527215709880372,
+          "returnHipRise": 0.29256983008749793,
+          "returnHipRiseRatio": 0.5549338242479223,
+          "returnBackwardDistance": 0.12976113961936042,
+          "returnBackwardRatio": 0.24612532818645314,
+          "startHipDeg": 110.7837299067041,
+          "settledHipDeg": 108.40136226471944,
+          "settledOverheadDeg": 122.43564779148707,
+          "startHipHeight": 1.2252504453278734,
+          "bottomHipHeight": 0.9554784455649905,
+          "settledHipHeight": 1.2480482756524884,
+          "hipOpenedDuringMovement": false,
+          "pressReturnAssessmentReason": "head_path_confound"
+        }
+      }
+    ],
+    "currentBefore": 12,
+    "currentAfter": 9
+  },
+  {
+    "id": "tykato_normal",
+    "group": "external",
+    "count": 6,
+    "countSame": true,
+    "frames": 281,
+    "before": [
+      {
+        "number": 1,
+        "timestampMs": 2333,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 1400,
+          "endMs": 2333,
+          "durationMs": 2200,
+          "descentSeconds": 1.267,
+          "ascentSeconds": 0.933,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 84.9088107117449,
+          "minElbowDeg": 80.5716687902875,
+          "maxHipDeg": 136.78134696162536,
+          "bottomHeadForward": 0.531420141701909,
+          "returnOverheadDeg": 121.44982666991042,
+          "referenceOverheadDeg": 145.308444978907
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 5400,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 2600,
+          "bottomMs": 4333,
+          "endMs": 5400,
+          "durationMs": 2800,
+          "descentSeconds": 1.733,
+          "ascentSeconds": 1.067,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 88.08318561274152,
+          "minElbowDeg": 83.44877681081059,
+          "maxHipDeg": 137.01865552182431,
+          "bottomHeadForward": 0.498573373596225,
+          "returnOverheadDeg": 127.87628552455469,
+          "referenceOverheadDeg": 163.59605829915458
+        }
+      },
+      {
+        "number": 3,
+        "timestampMs": 8333,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 5600,
+          "bottomMs": 7400,
+          "endMs": 8333,
+          "durationMs": 2733,
+          "descentSeconds": 1.8,
+          "ascentSeconds": 0.933,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 84.9009618139477,
+          "minElbowDeg": 84.90395588001681,
+          "maxHipDeg": 136.01957618060808,
+          "bottomHeadForward": 0.4557088160311113,
+          "returnOverheadDeg": 127.28300431559575,
+          "referenceOverheadDeg": 168.9192342193524
+        }
+      },
+      {
+        "number": 4,
+        "timestampMs": 11400,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 8600,
+          "bottomMs": 10400,
+          "endMs": 11400,
+          "durationMs": 2800,
+          "descentSeconds": 1.8,
+          "ascentSeconds": 1,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 81.29356856646902,
+          "minElbowDeg": 87.38393595189308,
+          "maxHipDeg": 137.6518630637294,
+          "bottomHeadForward": 0.4453740898083079,
+          "returnOverheadDeg": 124.75431123115996,
+          "referenceOverheadDeg": 168.9192342193524
+        }
+      },
+      {
+        "number": 5,
+        "timestampMs": 14533,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 11733,
+          "bottomMs": 13533,
+          "endMs": 14533,
+          "durationMs": 2800,
+          "descentSeconds": 1.8,
+          "ascentSeconds": 1,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 75.97632117487875,
+          "minElbowDeg": 91.57139280364287,
+          "maxHipDeg": 138.71457973476095,
+          "bottomHeadForward": 0.43159557572119855,
+          "returnOverheadDeg": 116.63611569191255,
+          "referenceOverheadDeg": 168.9192342193524
+        }
+      },
+      {
+        "number": 6,
+        "timestampMs": 17600,
+        "items": {
+          "pike_shape": "warning",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [
+          "PIKE_HIPS_LOW"
+        ],
+        "metrics": {
+          "side": "left",
+          "startMs": 14867,
+          "bottomMs": 16533,
+          "endMs": 17600,
+          "durationMs": 2733,
+          "descentSeconds": 1.666,
+          "ascentSeconds": 1.067,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 77.34379143840961,
+          "minElbowDeg": 92.26381854669445,
+          "maxHipDeg": 134.92580254410996,
+          "bottomHeadForward": 0.4117954404544864,
+          "returnOverheadDeg": 120.5892053934777,
+          "referenceOverheadDeg": 168.9192342193524
+        }
+      }
+    ],
+    "after": [
+      {
+        "number": 1,
+        "timestampMs": 2333,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 133,
+          "bottomMs": 1400,
+          "endMs": 2333,
+          "durationMs": 2200,
+          "descentSeconds": 1.267,
+          "ascentSeconds": 0.933,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 84.9088107117449,
+          "minElbowDeg": 80.5716687902875,
+          "maxHipDeg": 136.78134696162536,
+          "bottomHeadForward": 0.531420141701909,
+          "returnOverheadDeg": 121.44982666991042,
+          "referenceOverheadDeg": 145.308444978907,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 2600,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 1.2089640221523408,
+          "headTravelDown": 0.6287793585556399,
+          "headTravelRatio": 1.922715823447886,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 14.74017542566721,
+          "shoulderTravelForward": 0.9000745056141588,
+          "shoulderTravelDown": 0.4046968981680651,
+          "returnShoulderRise": 0.431117160680096,
+          "returnHipRise": 0.559000936259736,
+          "returnHipRiseRatio": 1.2966334612565662,
+          "returnBackwardDistance": 0.8169688145391161,
+          "returnBackwardRatio": 1.895004163718121,
+          "startHipDeg": 100.51131880598004,
+          "settledHipDeg": 100.51675959673783,
+          "settledOverheadDeg": 144.9365485487843,
+          "startHipHeight": 1.3098824689451327,
+          "bottomHipHeight": 0.7630554718507313,
+          "settledHipHeight": 1.3220564081104673,
+          "hipOpenedDuringMovement": true,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 2,
+        "timestampMs": 5400,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 2600,
+          "bottomMs": 4333,
+          "endMs": 5400,
+          "durationMs": 2800,
+          "descentSeconds": 1.733,
+          "ascentSeconds": 1.067,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 88.08318561274152,
+          "minElbowDeg": 83.44877681081059,
+          "maxHipDeg": 137.01865552182431,
+          "bottomHeadForward": 0.498573373596225,
+          "returnOverheadDeg": 127.87628552455469,
+          "referenceOverheadDeg": 163.59605829915458,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 5600,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 1.1675330591325788,
+          "headTravelDown": 0.4926931968946294,
+          "headTravelRatio": 2.369695921298209,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 18.25983957208274,
+          "shoulderTravelForward": 0.8947882354728258,
+          "shoulderTravelDown": 0.31678197391511753,
+          "returnShoulderRise": 0.31201353761815087,
+          "returnHipRise": 0.5151828830714938,
+          "returnHipRiseRatio": 1.651155546019885,
+          "returnBackwardDistance": 0.8906270012902833,
+          "returnBackwardRatio": 2.854449868070316,
+          "startHipDeg": 95.70495433013326,
+          "settledHipDeg": 97.85217067372596,
+          "settledOverheadDeg": 150.80602935584582,
+          "startHipHeight": 1.3363774014360719,
+          "bottomHipHeight": 0.7862799614967518,
+          "settledHipHeight": 1.3014628445682457,
+          "hipOpenedDuringMovement": true,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 3,
+        "timestampMs": 8333,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 5600,
+          "bottomMs": 7400,
+          "endMs": 8333,
+          "durationMs": 2733,
+          "descentSeconds": 1.8,
+          "ascentSeconds": 0.933,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 84.9009618139477,
+          "minElbowDeg": 84.90395588001681,
+          "maxHipDeg": 136.01957618060808,
+          "bottomHeadForward": 0.4557088160311113,
+          "returnOverheadDeg": 127.28300431559575,
+          "referenceOverheadDeg": 168.9192342193524,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 8600,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 1.166592466385039,
+          "headTravelDown": 0.5018215441342467,
+          "headTravelRatio": 2.3247157879553964,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 17.57767347193292,
+          "shoulderTravelForward": 0.9354744226747386,
+          "shoulderTravelDown": 0.2874553458584028,
+          "returnShoulderRise": 0.3039674180883011,
+          "returnHipRise": 0.5462636489911564,
+          "returnHipRiseRatio": 1.7971125077374888,
+          "returnBackwardDistance": 0.8771687757769508,
+          "returnBackwardRatio": 2.88573288970773,
+          "startHipDeg": 93.11709095167902,
+          "settledHipDeg": 95.51016212869062,
+          "settledOverheadDeg": 153.23052214063543,
+          "startHipHeight": 1.3295641439411388,
+          "bottomHipHeight": 0.7650418034571987,
+          "settledHipHeight": 1.3113054524483552,
+          "hipOpenedDuringMovement": true,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 4,
+        "timestampMs": 11400,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 8600,
+          "bottomMs": 10400,
+          "endMs": 11400,
+          "durationMs": 2800,
+          "descentSeconds": 1.8,
+          "ascentSeconds": 1,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 81.29356856646902,
+          "minElbowDeg": 87.38393595189308,
+          "maxHipDeg": 137.6518630637294,
+          "bottomHeadForward": 0.4453740898083079,
+          "returnOverheadDeg": 124.75431123115996,
+          "referenceOverheadDeg": 168.9192342193524,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 11733,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 1.1321074371339035,
+          "headTravelDown": 0.4680062860682139,
+          "headTravelRatio": 2.419000493871345,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 14.443154763295697,
+          "shoulderTravelForward": 0.9550501550550387,
+          "shoulderTravelDown": 0.2650685297584714,
+          "returnShoulderRise": 0.29162515736008976,
+          "returnHipRise": 0.5381794583166375,
+          "returnHipRiseRatio": 1.8454493541930954,
+          "returnBackwardDistance": 0.9587064039171065,
+          "returnBackwardRatio": 3.2874612485277646,
+          "startHipDeg": 92.53643799805359,
+          "settledHipDeg": 94.84123348215039,
+          "settledOverheadDeg": 154.1665360956037,
+          "startHipHeight": 1.3125940275661854,
+          "bottomHipHeight": 0.7456852401745777,
+          "settledHipHeight": 1.2838646984912152,
+          "hipOpenedDuringMovement": true,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 5,
+        "timestampMs": 14533,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 11733,
+          "bottomMs": 13533,
+          "endMs": 14533,
+          "durationMs": 2800,
+          "descentSeconds": 1.8,
+          "ascentSeconds": 1,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 75.97632117487875,
+          "minElbowDeg": 91.57139280364287,
+          "maxHipDeg": 138.71457973476095,
+          "bottomHeadForward": 0.43159557572119855,
+          "returnOverheadDeg": 116.63611569191255,
+          "referenceOverheadDeg": 168.9192342193524,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 14867,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 1.1912326724306888,
+          "headTravelDown": 0.43933239792448664,
+          "headTravelRatio": 2.71146102144609,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 16.139581116489627,
+          "shoulderTravelForward": 0.9732561617902832,
+          "shoulderTravelDown": 0.23039503234964065,
+          "returnShoulderRise": 0.2881486468701797,
+          "returnHipRise": 0.4807442104847578,
+          "returnHipRiseRatio": 1.6683896166319623,
+          "returnBackwardDistance": 0.8331450560452779,
+          "returnBackwardRatio": 2.891372439519512,
+          "startHipDeg": 92.7626113139691,
+          "settledHipDeg": 97.43489594279767,
+          "settledOverheadDeg": 147.65938316440744,
+          "startHipHeight": 1.3357511849806123,
+          "bottomHipHeight": 0.7872820764505483,
+          "settledHipHeight": 1.268026286935306,
+          "hipOpenedDuringMovement": true,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      },
+      {
+        "number": 6,
+        "timestampMs": 17600,
+        "items": {
+          "pike_shape": "within_reference",
+          "head_path": "within_reference",
+          "press_return": "within_reference"
+        },
+        "codes": [],
+        "metrics": {
+          "side": "left",
+          "startMs": 14867,
+          "bottomMs": 16533,
+          "endMs": 17600,
+          "durationMs": 2733,
+          "descentSeconds": 1.666,
+          "ascentSeconds": 1.067,
+          "tempoBasis": "phase_elapsed_including_pauses",
+          "elbowExcursionDeg": 77.34379143840961,
+          "minElbowDeg": 92.26381854669445,
+          "maxHipDeg": 134.92580254410996,
+          "bottomHeadForward": 0.4117954404544864,
+          "returnOverheadDeg": 120.5892053934777,
+          "referenceOverheadDeg": 168.9192342193524,
+          "pathAssessmentComplete": true,
+          "pathAssessmentEndMs": 17800,
+          "pathBasis": "wrist_relative_fixed_start_axis_and_torso_length",
+          "headTravelForward": 1.129863443843642,
+          "headTravelDown": 0.45319104140414107,
+          "headTravelRatio": 2.493128373285884,
+          "headPathCoverage": 1,
+          "bottomForearmTiltDeg": 13.86654903718984,
+          "shoulderTravelForward": 0.9392244441257683,
+          "shoulderTravelDown": 0.25026300781996047,
+          "returnShoulderRise": 0.3347084842613175,
+          "returnHipRise": 0.4799154225954708,
+          "returnHipRiseRatio": 1.433831065425834,
+          "returnBackwardDistance": 0.7543677599163152,
+          "returnBackwardRatio": 2.25380531234863,
+          "startHipDeg": 94.09347586948103,
+          "settledHipDeg": 101.93660330254683,
+          "settledOverheadDeg": 139.98710696503508,
+          "startHipHeight": 1.2930286187612052,
+          "bottomHipHeight": 0.7956508764411406,
+          "settledHipHeight": 1.2755662990366115,
+          "hipOpenedDuringMovement": true,
+          "pressReturnAssessmentReason": "evaluated"
+        }
+      }
+    ],
+    "currentBefore": 129,
+    "currentAfter": 0
+  }
+]

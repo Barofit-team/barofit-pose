@@ -1,0 +1,35 @@
+{
+  "engineVersion": "pike-pushup-0.2.0",
+  "clips": 29,
+  "frames": 3227,
+  "allFrameCountsPhasesAndCountEventsUnchanged": true,
+  "schemasUnchanged": true,
+  "schemaErrors": 0,
+  "primaryClips": 21,
+  "primaryRepetitions": 45,
+  "normalSourceRepetitions": 28,
+  "normalWarningBefore": 16,
+  "normalWarningAfter": 6,
+  "normalWithoutSourceConflictRepetitions": 22,
+  "normalWithoutSourceConflictWarningBefore": 10,
+  "normalWithoutSourceConflictWarningAfter": 0,
+  "targetResults": {
+    "HEAD_PATH_BACK": {
+      "total": 8,
+      "before": 6,
+      "after": 8
+    },
+    "PRESS_OUT": {
+      "total": 5,
+      "before": 4,
+      "after": 5
+    },
+    "PIKE_HIPS_LOW": {
+      "total": 4,
+      "before": 4,
+      "after": 4
+    }
+  },
+  "pressReturnUnknown": 17,
+  "regressionScope": "Previously reviewed clips reused for development/regression, not independent validation. Same participant and possible reused footage in Chris low-pike clips."
+}

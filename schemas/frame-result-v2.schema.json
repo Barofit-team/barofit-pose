@@ -17,7 +17,8 @@
         "jumping_jack",
         "leg_raise",
         "glute_bridge",
-        "superman"
+        "superman",
+        "pike_pushup"
       ]
     },
     "engineVersion": {
@@ -513,6 +514,31 @@
         "holdSeconds": {
           "type": "number",
           "minimum": 0
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "details": {
+          "type": "object",
+          "maxProperties": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "pike_pushup"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_pike_lower_raise_attempt",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "holdSeconds": {
+          "type": "null"
         },
         "count": {
           "type": "integer",

@@ -94,3 +94,8 @@ const result = events.find(e => e.type === 'set.completed');
 ## 수퍼맨 추가
 
 `exercise: "superman"` 분기를 추가합니다. 공통 필드의 의미와 기존 운동 분기는 유지합니다. `count`는 상승·복귀 완료 횟수, `holdSeconds`는 상승을 관측한 뒤 들린 상태에서 정지한 시간입니다. 자세 준수 시간과 구분합니다. 판정 항목은 `knee_extension`, `arm_extension`, `movement_control`이며 세트 집계는 `aggregationBasis: "repetition"`, `unit: "repetitions"`, `compliancePct: 0–100 또는 null`입니다. [세부 정의](SUPERMAN_V01.md)를 참고하세요.
+
+
+### 파이크 푸시업
+
+`exercise: pike_pushup`은 회차 기반 운동입니다. `count`는 완료된 하강–상승 시도, `holdSeconds`는 null입니다. 항목은 `pike_shape`, `head_path`, `press_return`이며, 세트 준수율은 회차 기준 0~100입니다. 미평가 항목은 분모에서 제외하고 평가 0회면 null입니다. [최신 판정·검증](PIKE_PUSHUP_V02.md) · [입출력·실행 방법](PIKE_PUSHUP_V01.md)을 참고하십시오.

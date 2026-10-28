@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {PikePushupAnalyzer} from '../runtime/index.js';
+const [input,output]=process.argv.slice(2);
+if(!input||!output)throw new Error('Usage: node examples/pike-pushup.mjs landmarks.jsonl output-directory');
+fs.mkdirSync(output,{recursive:true});
+const analyzer=new PikePushupAnalyzer();
+const frames=fs.readFileSync(input,'utf8').split(/\r?\n/).filter(x=>x.trim()).map(x=>analyzer.pushFrame(JSON.parse(x)));
+fs.writeFileSync(path.join(output,'frames.jsonl'),frames.map(x=>JSON.stringify(x)).join('\n')+'\n');
+const event=analyzer.finish()[0];
+fs.writeFileSync(path.join(output,'set_completed.json'),JSON.stringify(event,null,2));
+console.log(JSON.stringify(event,null,2));

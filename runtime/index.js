@@ -13,3 +13,5 @@ export {GluteBridgeAnalyzer,GLUTE_BRIDGE_VERSION,GLUTE_BRIDGE_CONFIG} from './gl
 
 export {SupermanAnalyzer,SUPERMAN_CONFIG,SUPERMAN_VERSION} from './superman/analyzer.js';
 export {supermanMetrics} from './superman/metrics.js';
+
+export {PikePushupAnalyzer,PIKE_PUSHUP_CONFIG,PIKE_PUSHUP_VERSION,PIKE_PUSHUP_TEXT} from './pike_pushup/analyzer.js';

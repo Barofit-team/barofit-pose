@@ -1,0 +1,222 @@
+[
+  {
+    "id": "nick_normal",
+    "expectedCount": 2,
+    "targetCode": null,
+    "primaryEvaluation": true,
+    "actualCount": 2,
+    "repCodes": [
+      [],
+      []
+    ],
+    "currentWarningFrames": 0
+  },
+  {
+    "id": "nick_head",
+    "expectedCount": 2,
+    "targetCode": "HEAD_PATH_BACK",
+    "primaryEvaluation": true,
+    "actualCount": 2,
+    "repCodes": [
+      [
+        "HEAD_PATH_BACK"
+      ],
+      [
+        "HEAD_PATH_BACK"
+      ]
+    ],
+    "currentWarningFrames": 14
+  },
+  {
+    "id": "nick_out",
+    "expectedCount": 2,
+    "targetCode": "PRESS_OUT",
+    "primaryEvaluation": true,
+    "actualCount": 2,
+    "repCodes": [
+      [
+        "PRESS_OUT"
+      ],
+      [
+        "PRESS_OUT"
+      ]
+    ],
+    "currentWarningFrames": 0
+  },
+  {
+    "id": "chris_normal",
+    "expectedCount": 1,
+    "targetCode": null,
+    "primaryEvaluation": true,
+    "actualCount": 1,
+    "repCodes": [
+      []
+    ],
+    "currentWarningFrames": 0
+  },
+  {
+    "id": "chris_wrong",
+    "expectedCount": null,
+    "targetCode": null,
+    "primaryEvaluation": false,
+    "actualCount": 1,
+    "repCodes": [
+      []
+    ],
+    "currentWarningFrames": 0
+  },
+  {
+    "id": "chris_correct",
+    "expectedCount": 1,
+    "targetCode": null,
+    "primaryEvaluation": true,
+    "actualCount": 1,
+    "repCodes": [
+      []
+    ],
+    "currentWarningFrames": 0
+  },
+  {
+    "id": "family_hip",
+    "expectedCount": null,
+    "targetCode": null,
+    "primaryEvaluation": false,
+    "actualCount": 2,
+    "repCodes": [
+      [],
+      []
+    ],
+    "currentWarningFrames": 0
+  },
+  {
+    "id": "family_head",
+    "expectedCount": null,
+    "targetCode": null,
+    "primaryEvaluation": false,
+    "actualCount": 1,
+    "repCodes": [
+      [
+        "HEAD_PATH_BACK"
+      ]
+    ],
+    "currentWarningFrames": 20
+  },
+  {
+    "id": "chris_setup",
+    "expectedCount": null,
+    "targetCode": null,
+    "primaryEvaluation": false,
+    "actualCount": 0,
+    "repCodes": [],
+    "currentWarningFrames": 0
+  },
+  {
+    "id": "chris_hip_low",
+    "expectedCount": 2,
+    "targetCode": "PIKE_HIPS_LOW",
+    "primaryEvaluation": true,
+    "actualCount": 2,
+    "repCodes": [
+      [
+        "PIKE_HIPS_LOW",
+        "PRESS_OUT"
+      ],
+      [
+        "PIKE_HIPS_LOW"
+      ]
+    ],
+    "currentWarningFrames": 67
+  },
+  {
+    "id": "chris_hip_good",
+    "expectedCount": 2,
+    "targetCode": null,
+    "primaryEvaluation": true,
+    "actualCount": 2,
+    "repCodes": [
+      [],
+      []
+    ],
+    "currentWarningFrames": 0
+  },
+  {
+    "id": "chris_out",
+    "expectedCount": null,
+    "targetCode": null,
+    "primaryEvaluation": false,
+    "actualCount": 0,
+    "repCodes": [],
+    "currentWarningFrames": 0
+  },
+  {
+    "id": "chris_out_good",
+    "expectedCount": null,
+    "targetCode": null,
+    "primaryEvaluation": false,
+    "actualCount": 0,
+    "repCodes": [],
+    "currentWarningFrames": 0
+  },
+  {
+    "id": "chris_out_complete",
+    "expectedCount": 1,
+    "targetCode": "PRESS_OUT",
+    "primaryEvaluation": true,
+    "actualCount": 1,
+    "repCodes": [
+      [
+        "PRESS_OUT"
+      ]
+    ],
+    "currentWarningFrames": 0
+  },
+  {
+    "id": "chris_out_good_complete",
+    "expectedCount": 1,
+    "targetCode": null,
+    "primaryEvaluation": true,
+    "actualCount": 1,
+    "repCodes": [
+      []
+    ],
+    "currentWarningFrames": 0
+  },
+  {
+    "id": "family_head_complete",
+    "expectedCount": 2,
+    "targetCode": "HEAD_PATH_BACK",
+    "primaryEvaluation": true,
+    "actualCount": 2,
+    "repCodes": [
+      [
+        "HEAD_PATH_BACK"
+      ],
+      [
+        "HEAD_PATH_BACK"
+      ]
+    ],
+    "currentWarningFrames": 21
+  },
+  {
+    "id": "puregym_normal",
+    "expectedCount": 1,
+    "targetCode": null,
+    "primaryEvaluation": true,
+    "actualCount": 1,
+    "repCodes": [
+      []
+    ],
+    "currentWarningFrames": 0
+  },
+  {
+    "id": "puregym_second",
+    "expectedCount": 1,
+    "targetCode": null,
+    "primaryEvaluation": true,
+    "actualCount": 1,
+    "repCodes": [
+      []
+    ],
+    "currentWarningFrames": 0
+  }
+]

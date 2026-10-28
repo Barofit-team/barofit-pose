@@ -1,0 +1,177 @@
+[
+  {
+    "id": "tykato_normal",
+    "source": "tykato",
+    "start": 0,
+    "end": 18.7,
+    "reference": "source normal demonstration",
+    "expectedCount": 6,
+    "targetCodes": [],
+    "sourceUrl": "https://www.youtube.com/watch?v=Uffy7G8LLXg",
+    "channel": "Tykato Fitness",
+    "license": "No explicit redistribution licence; local review only",
+    "sourceSha256": "ad723eace8c3b38d926713e83275570ff0a65a3a4e40bf9ae36e18f3a258153a",
+    "frames": 281,
+    "evaluationUse": "Originally fixed-v0.1 external review; reused for v0.2 development/regression, not held-out."
+  },
+  {
+    "id": "tykato_head",
+    "source": "tykato",
+    "start": 35,
+    "end": 39.5,
+    "reference": "static neck position explanation; not a repetition",
+    "expectedCount": 0,
+    "targetCodes": [],
+    "sourceUrl": "https://www.youtube.com/watch?v=Uffy7G8LLXg",
+    "channel": "Tykato Fitness",
+    "license": "No explicit redistribution licence; local review only",
+    "sourceSha256": "cc033031d2525577cf2c0f7b8e93a8444c86650c10790e2f76c8504c0f5a934e",
+    "frames": 68,
+    "evaluationUse": "Originally fixed-v0.1 external review; reused for v0.2 development/regression, not held-out."
+  },
+  {
+    "id": "tykato_head_reps",
+    "source": "tykato",
+    "start": 39.5,
+    "end": 44.1,
+    "reference": "source red X wrong head path; small inset correct demonstration retained",
+    "expectedCount": 2,
+    "targetCodes": [
+      "HEAD_PATH_BACK"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=Uffy7G8LLXg",
+    "channel": "Tykato Fitness",
+    "license": "No explicit redistribution licence; local review only",
+    "sourceSha256": "a0bfab85d75f8ea0256bf2f5c016c19eaf4b44afafcb3604a4df391c14950f74",
+    "frames": 69,
+    "evaluationUse": "Originally fixed-v0.1 external review; reused for v0.2 development/regression, not held-out."
+  },
+  {
+    "id": "matt_normal",
+    "source": "matt",
+    "start": 169.2,
+    "end": 176.8,
+    "reference": "source correct diagonal press demonstration",
+    "expectedCount": 2,
+    "targetCodes": [],
+    "sourceUrl": "https://www.youtube.com/watch?v=WSzN0o9kHNg",
+    "channel": "MattButtersThenics",
+    "license": "No explicit redistribution licence; local review only",
+    "sourceSha256": "fcebf3748061e1ef947e1dfeda9b27f4ec0b5bf7723dd530f145952c2d6d990f",
+    "frames": 114,
+    "evaluationUse": "Originally fixed-v0.1 external review; reused for v0.2 development/regression, not held-out."
+  },
+  {
+    "id": "matt_head",
+    "source": "matt",
+    "start": 176.8,
+    "end": 181.1,
+    "reference": "source incorrect straight down/up; red X",
+    "expectedCount": 2,
+    "targetCodes": [
+      "HEAD_PATH_BACK"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=WSzN0o9kHNg",
+    "channel": "MattButtersThenics",
+    "license": "No explicit redistribution licence; local review only",
+    "sourceSha256": "8b127dd2d0a7cd0918057a35142dec61db2f908431df0d025a389a0e89c41abf",
+    "frames": 65,
+    "evaluationUse": "Originally fixed-v0.1 external review; reused for v0.2 development/regression, not held-out."
+  },
+  {
+    "id": "matt_out",
+    "source": "matt",
+    "start": 181.1,
+    "end": 186.2,
+    "reference": "source incorrect forward ascent demonstration",
+    "expectedCount": 2,
+    "targetCodes": [
+      "PRESS_OUT"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=WSzN0o9kHNg",
+    "channel": "MattButtersThenics",
+    "license": "No explicit redistribution licence; local review only",
+    "sourceSha256": "7edd58338ae99b2b479de1e2ff41ab7d07cdb325c6e49caae5b962cd78b92533",
+    "frames": 77,
+    "evaluationUse": "Originally fixed-v0.1 external review; reused for v0.2 development/regression, not held-out."
+  },
+  {
+    "id": "trevor_normal",
+    "source": "trevor",
+    "start": 9.1,
+    "end": 21.8,
+    "reference": "source movement library correct floor pike; slight oblique",
+    "expectedCount": 6,
+    "targetCodes": [],
+    "sourceUrl": "https://www.youtube.com/watch?v=M3Q7qCBmoaY",
+    "channel": "Trevor Kashey Nutrition",
+    "license": "No explicit redistribution licence; local review only",
+    "sourceSha256": "ea0bd575f2ce4ac7060c3f1b5b8d6f4715c0f4f889f2d79c7a07e32f4f003c76",
+    "frames": 191,
+    "evaluationUse": "Originally fixed-v0.1 external review; reused for v0.2 development/regression, not held-out."
+  },
+  {
+    "id": "chris_new_normal",
+    "source": "chris_new",
+    "start": 109,
+    "end": 114.3,
+    "reference": "source forehead target correct floor demonstration; previously used participant, possible reused footage",
+    "expectedCount": 1,
+    "targetCodes": [],
+    "sourceUrl": "https://www.youtube.com/watch?v=nKQ45xBMGIs",
+    "channel": "Chris Calisthenics",
+    "license": "No explicit redistribution licence; local review only",
+    "sourceSha256": "5b7ca9d78a50c45a834adcaead888663e03264d81d1932cce71ca23fb949f57d",
+    "frames": 80,
+    "evaluationUse": "Originally fixed-v0.1 external review; reused for v0.2 development/regression, not held-out."
+  },
+  {
+    "id": "chris_new_low",
+    "source": "chris_new",
+    "start": 114.5,
+    "end": 124.4,
+    "reference": "source No pike position red X; low parallettes; previous participant, potentially reused footage",
+    "expectedCount": 2,
+    "targetCodes": [
+      "PIKE_HIPS_LOW"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=nKQ45xBMGIs",
+    "channel": "Chris Calisthenics",
+    "license": "No explicit redistribution licence; local review only",
+    "sourceSha256": "95797dc26db635b0d4d7dc100033a50983cb7f144e72a5c16dbadb85565b8c4c",
+    "frames": 149,
+    "evaluationUse": "Originally fixed-v0.1 external review; reused for v0.2 development/regression, not held-out."
+  },
+  {
+    "id": "tykato_head_complete",
+    "source": "tykato",
+    "start": 39.5,
+    "end": 46.5,
+    "reference": "source red X head path; full return retained; correct demonstration inset retained",
+    "expectedCount": 2,
+    "targetCodes": [
+      "HEAD_PATH_BACK"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=Uffy7G8LLXg",
+    "channel": "Tykato Fitness",
+    "license": "No explicit redistribution licence; local review only",
+    "sourceSha256": "b1c82363fc6909154232862db9b3bb4cad404f4232e1b46b45e9c81ff15a1049",
+    "frames": 105,
+    "evaluationUse": "Originally fixed-v0.1 external review; reused for v0.2 development/regression, not held-out."
+  },
+  {
+    "id": "tiffany_normal",
+    "source": "tiffany",
+    "start": 0,
+    "end": 15.7,
+    "reference": "source floor pike demonstration; side/slight oblique",
+    "expectedCount": 4,
+    "targetCodes": [],
+    "sourceUrl": "https://www.youtube.com/watch?v=OnRgUNWlzBY",
+    "channel": "The Setup - Golf Performance by Tiffany",
+    "license": "No explicit redistribution licence; local review only",
+    "sourceSha256": "e27ebd9eb96369bff58838d1b031ae52c76b868bbd377dd2f7702467947ce784",
+    "frames": 311,
+    "evaluationUse": "Originally fixed-v0.1 external review; reused for v0.2 development/regression, not held-out."
+  }
+]
