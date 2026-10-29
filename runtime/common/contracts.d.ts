@@ -24,7 +24,7 @@ export interface FrameResultBase {
   holdSeconds: number | null;
   observedSeconds: number | null;
   measurementBasis: {
-    count: 'completed_attempt' | 'one_leg_out_and_back' | 'completed_open_close_attempt' | 'completed_raise_lower_attempt' | 'completed_bridge_raise_lower_attempt' | 'completed_superman_raise_lower_attempt' | 'completed_pike_lower_raise_attempt' | null;
+    count: 'completed_squat_attempt' | 'completed_attempt' | 'one_leg_out_and_back' | 'completed_open_close_attempt' | 'completed_raise_lower_attempt' | 'completed_bridge_raise_lower_attempt' | 'completed_superman_raise_lower_attempt' | 'completed_pike_lower_raise_attempt' | null;
     holdSeconds: 'all_required_items_compliant' | 'observed_holding' | 'observed_raised_still' | null;
     observedSeconds: 'continuous_sample_intervals' | 'continuous_visible_intervals' | null;
   };
@@ -72,7 +72,11 @@ export interface LegRaiseFrameResult extends FrameResultBase {
 export interface GluteBridgeFrameResult extends FrameResultBase {
   exercise: 'glute_bridge'; count: number; holdSeconds: null; details: Record<string, never>;
 }
-export type FrameResult = PushupFrameResult | PlankFrameResult | BirdDogFrameResult | JumpingJackFrameResult | LegRaiseFrameResult | GluteBridgeFrameResult | SupermanFrameResult | PikePushupFrameResult;
+export interface SquatFrameResult extends FrameResultBase {
+  exercise: 'squat'; count: number; holdSeconds: null;
+  details: {state?: string; raw?: Record<string,unknown>; sourceCommit?: string; experimental?: boolean; selectionMode?: string};
+}
+export type FrameResult = SquatFrameResult | PushupFrameResult | PlankFrameResult | BirdDogFrameResult | JumpingJackFrameResult | LegRaiseFrameResult | GluteBridgeFrameResult | SupermanFrameResult | PikePushupFrameResult;
 
 /** Set-result v2 unchanged. Non-terminal engine event payloads retain their v1 contracts. */
 export interface ItemSummary {

@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {PushupAnalyzer,PlankAnalyzer,BirdDogAnalyzer} from '../../runtime/index.js';
+import {PushupAnalyzer,PlankAnalyzer,BirdDogAnalyzer,SquatAnalyzer} from '../../runtime/index.js';
 import {trackingMessage} from '../../runtime/pushup/liveEngine.js';
 import {frameResult} from '../../runtime/common/realtime.js';
-const classes=[PushupAnalyzer,PlankAnalyzer,BirdDogAnalyzer];
+const classes=[PushupAnalyzer,PlankAnalyzer,BirdDogAnalyzer,SquatAnalyzer];
 const frame=t=>({timestampMs:t,width:1000,height:600,landmarks:[]});
 
 test('all runtime snapshots have identical keys, including rejected frames and finish-before-first-frame',()=>{

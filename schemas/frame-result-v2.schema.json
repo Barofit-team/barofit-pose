@@ -18,7 +18,8 @@
         "leg_raise",
         "glute_bridge",
         "superman",
-        "pike_pushup"
+        "pike_pushup",
+        "squat"
       ]
     },
     "engineVersion": {
@@ -547,6 +548,27 @@
         "details": {
           "type": "object",
           "maxProperties": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "squat"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_squat_attempt",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_sample_intervals"
+          }
         }
       }
     }

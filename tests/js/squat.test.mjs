@@ -53,8 +53,8 @@ test('fixed side counts completed attempts, shallow is feedback and does not rej
   const e=new SquatAnalyzer({side:'left'});
   const {r}=feed(e,[...repeat(170),...repeat(120),...repeat(170)]);
   assert.equal(r.count,1);
-  assert.equal(e.summary().items.depth.warning_reps,1);
-  assert.equal(e.summary().items.depth.compliance_pct,0);
+  assert.equal(e.summary().items.depth.warning,1);
+  assert.equal(e.summary().items.depth.compliancePct,0);
 });
 test('automatic side requires standing preparation, locks despite transient quality changes',()=>{
   const e=new SquatAnalyzer();
@@ -106,7 +106,7 @@ test('gaps, pause, duplicate frames and finish preserve counts and valid time ac
   assert.equal(e.pushFrame(frame(20)).ignored,true);
   assert.equal(r.count,0);
   const summary=e.summary();
-  const {compliant_s,warning_s,unknown_s}=summary.items.trunk;
+  const {compliant:compliant_s,warning:warning_s,unknown:unknown_s}=summary.items.trunk;
   assert(Math.abs(compliant_s+warning_s+unknown_s-summary.observedSeconds)<1e-9);
   assert.equal(e.finish().length,1);assert.deepEqual(e.finish(),[]);
   assert.equal(e.pushFrame(frame(21)).ignored,true);
@@ -115,7 +115,29 @@ test('all missing landmarks are unavailable, not a normal posture',()=>{
   const e=new SquatAnalyzer();
   const r=e.pushFrame({...frame(0),landmarks:[]});
   assert.equal(r.tracking,'tracking_unavailable');assert.equal(r.count,0);
-  assert.equal(r.items.depth,'tracking_unavailable');
-  assert.equal(e.summary().items.depth.compliance_pct,null);
+  assert.equal(r.items.trunk,'tracking_unavailable');assert.equal(r.lastRepetition,null);
+  assert.equal(e.summary().items.depth.compliancePct,null);
   assert.throws(()=>new SquatAnalyzer({side:'front'}),/side/);
+});
+
+// Compare serialization against the unchanged raw adapter on identical causal input.
+test('v2 preserves all squat counts, events, metrics and mixed-basis totals',()=>{
+ const a=new SquatAnalyzer({side:'left'}),b=new SquatAnalyzer({side:'left'});
+ const output=[];let t=0;
+ for(const knee of [...repeat(170),...repeat(120),...repeat(170),...repeat(90),...repeat(170)]){
+  const f=frame(t),angle=frame(t,{left:knee,right:knee});t+=.05;
+  const r=a.pushFrame(angle),old=b._pushFrameLegacy(angle);output.push(r);
+  assert.equal(r.count,old.count);assert.equal(r.phase,old.state);
+  assert.deepEqual(r.codes,old.codes);assert.deepEqual(r.events,old.events);assert.deepEqual(r.metrics,old.metrics);
+  assert.deepEqual(a.summary(),b.summary());
+  assert.deepEqual(r.items,{trunk:old.items.trunk});
+  const rep=old.events.find(e=>e.type==='rep.completed');
+  assert.equal(r.lastRepetition?.items.depth??null,rep?.depth_state??null);
+  assert(!r.currentCodes.includes('SQUAT_SHALLOW'));
+ }
+ const s=a.summary();assert.equal(s.count,2);assert.equal(s.items.depth.compliancePct,50);
+ assert.equal(s.items.depth.aggregationBasis,'repetition');assert.equal(s.items.trunk.aggregationBasis,'time');
+ assert.equal(s.details.reps.length,2);
+ const end=a.finish().at(-1);assert.equal(end.timestampMs,a.lastTime*1000);assert.deepEqual(end.summary,s);
+ assert.equal(a.pushFrame(frame(20)).ignoredReason,'finished');
 });

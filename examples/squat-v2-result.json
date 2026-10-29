@@ -1,0 +1,150 @@
+{
+  "frame": {
+    "schemaVersion": "2.0",
+    "type": "frame.result",
+    "exercise": "squat",
+    "engineVersion": "squat-experimental-0.1-js-1.0",
+    "timestampMs": 1150.0000000000005,
+    "ignored": false,
+    "ignoredReason": null,
+    "tracking": "tracking",
+    "side": "left",
+    "count": 1,
+    "holdSeconds": null,
+    "observedSeconds": 1.1500000000000004,
+    "measurementBasis": {
+      "count": "completed_squat_attempt",
+      "holdSeconds": null,
+      "observedSeconds": "continuous_sample_intervals"
+    },
+    "phase": "READY",
+    "items": {
+      "trunk": "within_reference"
+    },
+    "codes": [
+      "SQUAT_SHALLOW"
+    ],
+    "currentCodes": [],
+    "lastRepetition": {
+      "number": 1,
+      "timestampMs": 1150.0000000000005,
+      "items": {
+        "depth": "warning"
+      },
+      "codes": [
+        "SQUAT_SHALLOW"
+      ],
+      "metrics": {
+        "min_knee_deg": 119.99999999999999,
+        "start_s": 0.49999999999999994,
+        "end_s": 1.1500000000000004
+      }
+    },
+    "metrics": {
+      "knee_deg": 170.00000000000003,
+      "hip_deg": 180,
+      "elbow_deg": 180,
+      "trunk_deg": 0
+    },
+    "events": [
+      {
+        "type": "rep.completed",
+        "t": 1.1500000000000004,
+        "rep": 1,
+        "start_s": 0.49999999999999994,
+        "end_s": 1.1500000000000004,
+        "min_knee_deg": 119.99999999999999,
+        "depth_state": "warning"
+      },
+      {
+        "type": "feedback.changed",
+        "t": 1.1500000000000004,
+        "codes": [
+          "SQUAT_SHALLOW"
+        ]
+      }
+    ],
+    "details": {
+      "sourceCommit": "54c56ab77c27d9e4b40314bc945519cca645607a",
+      "experimental": true,
+      "state": "READY",
+      "selectionMode": "fixed",
+      "raw": {
+        "count": 1,
+        "state": "READY",
+        "codes": [
+          "SQUAT_SHALLOW"
+        ],
+        "events": [
+          {
+            "rep": 1,
+            "start_s": 0.49999999999999994,
+            "end_s": 1.1500000000000004,
+            "min_knee_deg": 119.99999999999999,
+            "depth_state": "warning"
+          }
+        ],
+        "depth_state": "warning",
+        "trunk_state": "within_reference"
+      }
+    }
+  },
+  "set": {
+    "schemaVersion": "2.0",
+    "type": "set.completed",
+    "exercise": "squat",
+    "engineVersion": "squat-experimental-0.1-js-1.0",
+    "timestampMs": 2449.999999999999,
+    "summary": {
+      "schemaVersion": "2.0",
+      "exercise": "squat",
+      "engineVersion": "squat-experimental-0.1-js-1.0",
+      "count": 2,
+      "holdSeconds": null,
+      "observedSeconds": 2.4499999999999993,
+      "gapSeconds": 0,
+      "items": {
+        "depth": {
+          "aggregationBasis": "repetition",
+          "unit": "repetitions",
+          "compliant": 1,
+          "warning": 1,
+          "unknown": 0,
+          "notApplicable": 0,
+          "evaluated": 2,
+          "compliancePct": 50
+        },
+        "trunk": {
+          "aggregationBasis": "time",
+          "unit": "seconds",
+          "compliant": 2.4499999999999993,
+          "warning": 0,
+          "unknown": 0,
+          "notApplicable": 0,
+          "evaluated": 2.4499999999999993,
+          "compliancePct": 100
+        }
+      },
+      "details": {
+        "reps": [
+          {
+            "rep": 1,
+            "start_s": 0.49999999999999994,
+            "end_s": 1.1500000000000004,
+            "min_knee_deg": 119.99999999999999,
+            "depth_state": "warning"
+          },
+          {
+            "rep": 2,
+            "start_s": 1.5000000000000007,
+            "end_s": 2.1500000000000004,
+            "min_knee_deg": 90,
+            "depth_state": "within_reference"
+          }
+        ],
+        "experimental": true,
+        "sourceCommit": "54c56ab77c27d9e4b40314bc945519cca645607a"
+      }
+    }
+  }
+}

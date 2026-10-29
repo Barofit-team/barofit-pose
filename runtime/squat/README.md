@@ -24,3 +24,11 @@ const events = analyzer.finish();
 ```text
 node --test tests/js/squat.test.mjs
 ```
+
+## 스쿼트 반환 규격 · 2026-10-28
+
+- 실시간: `frame.result` v2. `items.trunk`와 `currentCodes`는 현재 몸통 판정입니다. 완료 회차의 깊이는 `lastRepetition.items.depth`에 반환하며 완료 프레임 이후에는 null입니다.
+- 종료: `set.completed` v2의 `summary.items`. `depth`는 회차 기준, `trunk`는 시간 기준입니다.
+- 준수율: `compliancePct` 0~100, 미평가는 분모 제외, 평가 데이터가 없으면 null입니다.
+- 원본 회차 목록은 `summary.details.reps`, 출처와 실험 상태는 `details`에 보존합니다. 종료 `timestampMs`는 밀리초이며 내부 이벤트의 `t`는 기존 초 단위입니다.
+- 판정 수식·임계값·카운트·시간 누적 조건은 유지했습니다.

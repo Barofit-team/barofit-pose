@@ -1,6 +1,7 @@
 import {jsonSafe, validateFrame} from './frame.js';
 
 export const MEASUREMENT_BASIS=Object.freeze({
+  squat:{count:'completed_squat_attempt',holdSeconds:null,observedSeconds:'continuous_sample_intervals'},
   pike_pushup:{count:'completed_pike_lower_raise_attempt',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
   superman:{count:'completed_superman_raise_lower_attempt',holdSeconds:'observed_raised_still',observedSeconds:'continuous_visible_intervals'},
   glute_bridge:{count:'completed_bridge_raise_lower_attempt',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},

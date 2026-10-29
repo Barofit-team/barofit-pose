@@ -1,4 +1,6 @@
 import {SquatRule,DEFAULT_CONFIG,IDS,metrics,SQUAT_SOURCE_COMMIT} from './engine.js';
+import {itemResult,setSummary,setCompleted} from '../common/result.js';
+import {pushRealtime} from '../common/realtime.js';
 import {validateFrame,jsonSafe} from '../common/frame.js';
 
 export const SQUAT_VERSION='squat-experimental-0.1-js-1.0';
@@ -83,6 +85,20 @@ export class SquatAnalyzer {
     this.pendingEvents.push(event);return [event];
   }
   pushFrame(frame){
+    const r=pushRealtime(this,frame,'squat',SQUAT_VERSION);
+    if(!r.ignored){
+      r.phase=r.details.state;
+      // Depth is a completed-repetition assessment, not current standing posture.
+      const rep=r.events.find(e=>e.type==='rep.completed');
+      r.items={trunk:r.items.trunk};
+      r.currentCodes=r.codes.filter(c=>c!=='SQUAT_SHALLOW');
+      r.lastRepetition=rep?{number:rep.rep,timestampMs:rep.t*1000,
+        items:{depth:rep.depth_state},codes:rep.depth_state==='warning'?['SQUAT_SHALLOW']:[],
+        metrics:{min_knee_deg:rep.min_knee_deg,start_s:rep.start_s,end_s:rep.end_s}}:null;
+    }
+    return r;
+  }
+  _pushFrameLegacy(frame){
     validateFrame(frame);
     const t=frame.timestampMs/1000;
     if(this.closed||this.lastTime!==null&&t<=this.lastTime)return {ignored:true,events:[]};
@@ -133,20 +149,15 @@ export class SquatAnalyzer {
   }
   summary(){
     const reps=this.rule.reps.map(r=>({...r})),warning=reps.filter(r=>r.depth_state==='warning').length;
-    const evaluable_s=this.trunkTotals.compliant_s+this.trunkTotals.warning_s;
-    return jsonSafe({schemaVersion:'1.0',exercise:'squat',engineVersion:SQUAT_VERSION,experimental:true,
-      sourceCommit:SQUAT_SOURCE_COMMIT,count:this.rule.count,holdSeconds:null,
-      observedSeconds:this.observedSeconds,gapSeconds:this.gapSeconds,reps,
-      items:{
-        depth:{evaluable_reps:reps.length,compliant_reps:reps.length-warning,warning_reps:warning,
-          compliance_pct:reps.length?100*(reps.length-warning)/reps.length:null},
-        trunk:{...this.trunkTotals,evaluable_s,
-          compliance_pct:evaluable_s?100*this.trunkTotals.compliant_s/evaluable_s:null},
-      }});
+    return setSummary({exercise:'squat',engineVersion:SQUAT_VERSION,count:this.rule.count,
+      observedSeconds:this.observedSeconds,gapSeconds:this.gapSeconds,
+      details:{reps,experimental:true,sourceCommit:SQUAT_SOURCE_COMMIT},
+      items:{depth:itemResult('repetition',reps.length-warning,warning),
+        trunk:itemResult('time',this.trunkTotals.compliant_s,this.trunkTotals.warning_s,this.trunkTotals.unknown_s)}});
   }
   finish(){
     if(this.closed)return [];
     this.closed=true;
-    return [{type:'set.completed',t:this.lastTime,...this.summary()}];
+    return [setCompleted(this.summary(),this.lastTime===null?null:this.lastTime*1000)];
   }
 }

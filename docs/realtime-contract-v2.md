@@ -83,7 +83,7 @@ TypeScript의 [discriminated union](https://www.typescriptlang.org/docs/handbook
 - 정상·관절 미검출·평가 대기·중복 프레임·일시정지 후 재개·종료 후 입력에서 같은 최상위 구조인지 확인한다.
 - 반환 변경 전후의 카운트·경고·수치·세트 집계가 동일한지 비교한다.
 
-스쿼트·런지는 이 규격의 적용 범위와 별도로 확인한다. Python `analysis/`와 내부 엔진의 원본 출력은 연구·비교용으로 보존했다. 프론트는 원본 엔진 대신 공개 Analyzer를 사용한다.
+스쿼트 공개 Analyzer는 v2를 적용한다. Python `analysis/`와 내부 엔진의 원본 출력은 연구·비교용으로 보존했다. 프론트는 원본 엔진 대신 공개 Analyzer를 사용한다.
 
 ## 파일 / 이전 규격에서 이동한 필드
 
@@ -127,3 +127,11 @@ TypeScript의 [discriminated union](https://www.typescriptlang.org/docs/handbook
 ### 파이크 푸시업
 
 `exercise: pike_pushup`은 회차 기반 운동입니다. `count`는 완료된 하강–상승 시도, `holdSeconds`는 null입니다. 항목은 `pike_shape`, `head_path`, `press_return`이며, 세트 준수율은 회차 기준 0~100입니다. 미평가 항목은 분모에서 제외하고 평가 0회면 null입니다. [최신 판정·검증](PIKE_PUSHUP_V02.md) · [입출력·실행 방법](PIKE_PUSHUP_V01.md)을 참고하십시오.
+
+## 스쿼트 반환 규격 · 2026-10-28
+
+- 실시간: `frame.result` v2. `items.trunk`와 `currentCodes`는 현재 몸통 판정입니다. 완료 회차의 깊이는 `lastRepetition.items.depth`에 반환하며 완료 프레임 이후에는 null입니다.
+- 종료: `set.completed` v2의 `summary.items`. `depth`는 회차 기준, `trunk`는 시간 기준입니다.
+- 준수율: `compliancePct` 0~100, 미평가는 분모 제외, 평가 데이터가 없으면 null입니다.
+- 원본 회차 목록은 `summary.details.reps`, 출처와 실험 상태는 `details`에 보존합니다. 종료 `timestampMs`는 밀리초이며 내부 이벤트의 `t`는 기존 초 단위입니다.
+- 판정 수식·임계값·카운트·시간 누적 조건은 유지했습니다.

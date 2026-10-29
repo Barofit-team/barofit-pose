@@ -61,7 +61,7 @@ const result = events.find(e => e.type === 'set.completed');
 - 이전 `compliance_pct`(0~100), `compliance`(0~1)를 모두 `compliancePct`(0~100)로 통일했다.
 - 이전의 flattened 세트 종료 결과 대신 `event.summary`를 사용한다.
 - JS 공개 프레임 결과는 [실시간 결과 v2](realtime-contract-v2.md)를 사용한다. `rep.completed` 등 비종료 이벤트 내용은 기존 규격을 유지한다. 해당 이벤트의 `t`, `start_s`, `end_s`는 기존대로 초 단위다. 세트 종료 이벤트의 timestampMs만 밀리초다.
-- 스쿼트와 원시/과거 비교용 엔진은 이번 변환 대상이 아니다. 푸쉬업은 공개 `PushupAnalyzer`를 사용한다. 저수준 `PushupEngine`·`LivePushupEngine` 결과는 기존 규격이다.
+- 원시/과거 비교용 엔진은 변환 대상이 아니다. 푸쉬업은 공개 `PushupAnalyzer`를 사용한다. 저수준 `PushupEngine`·`LivePushupEngine` 결과는 기존 규격이다.
 - Python의 푸쉬업 배치 참조 엔진은 모바일 엔진과 구현이 다르므로 engineVersion으로 구분한다. 출력 구조는 같다.
 - Python 플랭크에는 JS와 같은 시간 집계 출력부를 추가했다. 자세 판정 규칙은 바꾸지 않았다.
 - 테스트 웹의 녹화·사용자 메모 등 외부 보고서 형식은 유지하고, 세 운동 모두 `summary`에 공통 결과를 담는다. ZIP에는 동일 규격의 `set.completed.json`도 별도로 저장한다. 세션 ID·영상 경로는 앱/백엔드가 붙이는 메타데이터다.
@@ -99,3 +99,11 @@ const result = events.find(e => e.type === 'set.completed');
 ### 파이크 푸시업
 
 `exercise: pike_pushup`은 회차 기반 운동입니다. `count`는 완료된 하강–상승 시도, `holdSeconds`는 null입니다. 항목은 `pike_shape`, `head_path`, `press_return`이며, 세트 준수율은 회차 기준 0~100입니다. 미평가 항목은 분모에서 제외하고 평가 0회면 null입니다. [최신 판정·검증](PIKE_PUSHUP_V02.md) · [입출력·실행 방법](PIKE_PUSHUP_V01.md)을 참고하십시오.
+
+## 스쿼트 반환 규격 · 2026-10-28
+
+- 실시간: `frame.result` v2. `items.trunk`와 `currentCodes`는 현재 몸통 판정입니다. 완료 회차의 깊이는 `lastRepetition.items.depth`에 반환하며 완료 프레임 이후에는 null입니다.
+- 종료: `set.completed` v2의 `summary.items`. `depth`는 회차 기준, `trunk`는 시간 기준입니다.
+- 준수율: `compliancePct` 0~100, 미평가는 분모 제외, 평가 데이터가 없으면 null입니다.
+- 원본 회차 목록은 `summary.details.reps`, 출처와 실험 상태는 `details`에 보존합니다. 종료 `timestampMs`는 밀리초이며 내부 이벤트의 `t`는 기존 초 단위입니다.
+- 판정 수식·임계값·카운트·시간 누적 조건은 유지했습니다.
