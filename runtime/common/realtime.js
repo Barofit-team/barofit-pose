@@ -1,6 +1,7 @@
 import {jsonSafe, validateFrame} from './frame.js';
 
 export const MEASUREMENT_BASIS=Object.freeze({
+  mountain_climber:{count:'completed_single_knee_drive_return',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
   lunge:{count:'completed_threshold_cycle',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
   split_squat:{count:'completed_threshold_cycle',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
   bulgarian_split_squat:{count:'completed_threshold_cycle',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},

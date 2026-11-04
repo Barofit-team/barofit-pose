@@ -15,6 +15,7 @@ MediaPipe 관절 좌표를 입력받아 운동 횟수, 유지 시간, 자세 피
 | 글루트 브리지 | `glute_bridge` | `GluteBridgeAnalyzer` | 횟수 |
 | 파이크 푸시업 | `pike_pushup` | `PikePushupAnalyzer` | 횟수 |
 | 수퍼맨 | `superman` | `SupermanAnalyzer` | 횟수·유지 시간 |
+| [마운틴 클라이머](docs/MOUNTAIN_CLIMBER_V01.md) | `mountain_climber` | `MountainClimberAnalyzer` | 한쪽 무릎 왕복 횟수 · 골반 들림 · 회차 기준 준수율 |
 | 런지 | `lunge` | `LungeAnalyzer` | 횟수 |
 | 스플릿 스쿼트 | `split_squat` | `SplitSquatAnalyzer` | 횟수 |
 | 불가리안 스플릿 스쿼트 | `bulgarian_split_squat` | `BulgarianSplitSquatAnalyzer` | 횟수 |
@@ -26,6 +27,8 @@ MediaPipe 관절 좌표를 입력받아 운동 횟수, 유지 시간, 자세 피
 런지부터 데드버그까지 7종은 실험 버전입니다. 합성 입력으로 회차와 중단 처리를 검증했으며, 실기기 정확도는 아직 확인되지 않았습니다.
 
 ## 규격
+
+마운틴 클라이머 v0.5는 전신 측면 영상으로 1차 프로토타입 검증을 마쳤습니다. 지지 다리가 불확실해도 관측된 무릎 왕복은 집계하며, 골반 판정 보류 회차는 준수율의 분모에서 제외합니다.
 
 세트마다 Analyzer 인스턴스를 하나 생성합니다. 입력 프레임의 필드는 다음과 같습니다.
 
@@ -52,7 +55,7 @@ runtime/
   common/            입력 검사, v2 출력 생성, 공통 타입
   cycles/            신규 7종의 관절 측정·회차 판정
   adapters/          MoveNet 입력 어댑터
-  <운동 디렉터리>/   기존 9종의 운동별 판정 엔진
+  <운동 디렉터리>/   운동별 판정 엔진
 schemas/             프레임·세트 종료 결과의 JSON Schema
 analysis/            Python 분석, 관절 추출, 운동별 프로토타입
 examples/            영상 추출·JSONL 재생·앱 연동 예제

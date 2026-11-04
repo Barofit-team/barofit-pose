@@ -16,4 +16,5 @@ export {supermanMetrics} from './superman/metrics.js';
 
 export {PikePushupAnalyzer,PIKE_PUSHUP_CONFIG,PIKE_PUSHUP_VERSION,PIKE_PUSHUP_TEXT} from './pike_pushup/analyzer.js';
 
+export {MountainClimberAnalyzer,CLIMBER_VERSION} from './mountain_climber/analyzer.js';
 export {LungeAnalyzer,SplitSquatAnalyzer,BulgarianSplitSquatAnalyzer,InclinePushupAnalyzer,StandingCalfRaiseAnalyzer,SideLegRaiseAnalyzer,DeadBugAnalyzer} from './cycles/analyzer.js';

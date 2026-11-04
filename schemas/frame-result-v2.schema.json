@@ -26,7 +26,8 @@
         "incline_pushup",
         "standing_calf_raise",
         "side_lying_leg_raise",
-        "dead_bug"
+        "dead_bug",
+        "mountain_climber"
       ]
     },
     "engineVersion": {
@@ -737,6 +738,31 @@
         "measurementBasis": {
           "const": {
             "count": "completed_threshold_cycle",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "details": {
+          "type": "object",
+          "maxProperties": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "mountain_climber"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_single_knee_drive_return",
             "holdSeconds": null,
             "observedSeconds": "continuous_visible_intervals"
           }

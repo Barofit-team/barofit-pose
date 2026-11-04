@@ -26,7 +26,8 @@
         "incline_pushup",
         "standing_calf_raise",
         "side_lying_leg_raise",
-        "dead_bug"
+        "dead_bug",
+        "mountain_climber"
       ]
     },
     "engineVersion": {
@@ -194,7 +195,8 @@
             "incline_pushup",
             "standing_calf_raise",
             "side_lying_leg_raise",
-            "dead_bug"
+            "dead_bug",
+            "mountain_climber"
           ]
         },
         "engineVersion": {
@@ -732,6 +734,36 @@
           "properties": {
             "exercise": {
               "const": "dead_bug"
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "mountain_climber"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "mountain_climber"
             },
             "holdSeconds": {
               "type": "null"
