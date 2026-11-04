@@ -41,6 +41,8 @@ export class LegRaiseAnalyzer {
   }
   resetMotion(){this.phase='not_ready';this.readySince=null;this.low=null;this.peak=null;this.samples=[];this.smoothed=null;this.previousValid=false;this.lostSince=null;this.kneeSince=null;this.tempoTracker.reset();}
   breakContinuity(reason='pause'){
+    if(this.closed)return [];
+    this.resumePending=true;
     this.resetMotion();this.side=null;this.lastRep=null;
     return [{type:'tracking.interrupted',t:this.lastTime===null?null:this.lastTime/1000,reason}];
   }
@@ -48,9 +50,9 @@ export class LegRaiseAnalyzer {
     validateFrame(frame);const t=frame.timestampMs,c=this.config;
     const ignoredReason=this.closed?'finished':this.lastTime!==null&&t<=this.lastTime?'non_monotonic_timestamp':null;
     if(ignoredReason)return frameResult({count:this.count,observedSeconds:this.observedSeconds},frame,{exercise:'leg_raise',engineVersion:LEG_RAISE_VERSION,ignoredReason});
-    const events=[],dt=this.lastTime===null?0:t-this.lastTime;
+    const events=[],dt=this.resumePending||this.lastTime===null?0:t-this.lastTime;
     if(dt>c.maxGapMs){this.gapSeconds+=dt/1000;this.resetMotion();this.lastRep=null;events.push({type:'frame.gap',t:t/1000,gap_s:dt/1000});}
-    this.lastTime=t;
+    this.resumePending=false;this.lastTime=t;
     const sides={left:legRaiseMetrics(frame,'left',c),right:legRaiseMetrics(frame,'right',c)};
     if(!this.side){this.side=Object.keys(sides).filter(k=>sides[k]?.bodyReady).sort((a,b)=>sides[b].quality-sides[a].quality)[0]??null;}
     let m=this.side?sides[this.side]:null;

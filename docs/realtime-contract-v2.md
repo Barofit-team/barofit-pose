@@ -1,6 +1,6 @@
 # 실시간 결과 규격 v2
 
-앱·웹에서 사용하는 `runtime/`의 `PushupAnalyzer`, `PlankAnalyzer`, `BirdDogAnalyzer`, `JumpingJackAnalyzer`, `LegRaiseAnalyzer.pushFrame()` 규격이다. 운동별 판정 의미를 유지하면서 같은 반환 구조를 제공한다.
+[공개 운동 Analyzer 16종](../README.md)에 적용합니다. 신규 7종은 완료한 준비–동작–복귀 사이클을 횟수로 집계하며, 자세 피드백은 회차 기준입니다.
 
 ## 설계 원칙
 

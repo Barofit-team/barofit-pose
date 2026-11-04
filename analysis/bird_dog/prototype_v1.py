@@ -83,6 +83,7 @@ class BirdDogAnalyzer:
                 for s,m in self.motion.items() if m['cycle']]
 
     def break_continuity(self, reason='pause'):
+        self.resume_pending = True
         events = self._interrupt(reason, self.last_t)
         self._reset_motion()
         self.previous = None
@@ -167,13 +168,14 @@ class BirdDogAnalyzer:
         t,p,dims = unpack_frame(frame)
         if self.last_t is not None and t <= self.last_t:
             raise ValueError('Timestamps must increase')
-        dt = t-self.last_t if self.last_t is not None else 0.
+        dt = t-self.last_t if self.last_t is not None and not getattr(self, 'resume_pending', False) else 0.
         events = []
         if dt > self.config.max_gap_seconds or (self.dims is not None and not np.array_equal(dims,self.dims)):
             self.gap_seconds += dt
             events += self.break_continuity('frame_gap_or_dimensions')
             events.append(dict(type='frame.gap',t=t,duration_s=dt))
             dt = 0.
+        self.resume_pending = False
         cfg = self.config
         self.last_t,self.dims = t,dims.copy()
         good = np.isfinite(p[:,[0,1,3,4]]).all(axis=1)

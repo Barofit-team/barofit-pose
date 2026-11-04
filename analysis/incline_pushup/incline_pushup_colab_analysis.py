@@ -133,10 +133,14 @@ def count_reps(elbow_angles, fps):
     if valid.sum() < max(6, int(n * 0.5)):
         return counts, phases, [], 'tracking_unavailable'
 
-    interpolated = np.interp(np.arange(n), np.flatnonzero(valid), angles[valid])
-    padded = np.pad(interpolated, (2, 2), mode='edge')
-    smooth = np.array([np.median(padded[i:i+5]) for i in range(n)])
-    low, high = np.percentile(smooth, [15, 85])
+    # Filter contiguous observations independently so inferred samples cannot
+    # bridge a tracking loss.
+    smooth = np.full(n, np.nan)
+    indices = np.flatnonzero(valid)
+    for run in np.split(indices, np.where(np.diff(indices) > 1)[0] + 1):
+        padded = np.pad(angles[run], (2, 2), mode='edge')
+        smooth[run] = [np.median(padded[i:i+5]) for i in range(len(run))]
+    low, high = np.percentile(smooth[valid], [15, 85])
     amplitude = high - low
     if amplitude < 18:
         phases = ['움직임 부족' if valid[i] else '관절 미인식' for i in range(n)]
@@ -149,6 +153,8 @@ def count_reps(elbow_angles, fps):
     completed = []
     for i, value in enumerate(smooth):
         if not valid[i]:
+            ready = descending = False
+            low_streak = high_streak = 0
             counts[i] = len(completed)
             continue
         if not ready:

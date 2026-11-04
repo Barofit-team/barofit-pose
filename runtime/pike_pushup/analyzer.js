@@ -20,7 +20,9 @@ export class PikePushupAnalyzer{
  constructor(config={}){this.config={...PIKE_PUSHUP_CONFIG,...config};this.closed=false;this.lastTime=null;this.side=null;this.lostSince=null;this.count=0;this.observedSeconds=0;this.gapSeconds=0;this.lastRep=null;this.pendingAssessment=null;this.repetitions=[];this.totals=Object.fromEntries(KEYS.map(k=>[k,{compliant:0,warning:0,unknown:0}]));this.resetMotion();}
  resetMotion(){this.phase='not_ready';this.readySince=null;this.top=null;this.bottom=null;this.samples=[];this.smoothed=null;this.previousValid=false;this.warningSince={};this.referenceOverhead=null;}
  pressOut(overhead){return overhead<this.config.returnOverheadMinDeg;}
- breakContinuity(reason='pause'){this.finalizeAssessment([],false);this.resetMotion();this.side=null;this.lostSince=null;this.lastRep=null;return [{type:'tracking.interrupted',t:this.lastTime===null?null:this.lastTime/1000,reason}];}
+ breakContinuity(reason='pause'){
+    if(this.closed)return [];
+    this.resumePending=true;this.finalizeAssessment([],false);this.resetMotion();this.side=null;this.lostSince=null;this.lastRep=null;return [{type:'tracking.interrupted',t:this.lastTime===null?null:this.lastTime/1000,reason}];}
  complete(sample,events){
   const c=this.config,rows=this.samples,bottomRows=rows.filter(x=>x.elbowDeg<=this.bottom.elbowDeg+12),topRows=rows.filter(x=>x.t>=this.bottom.t&&x.elbowDeg>=sample.elbowDeg-5);
   const head=med(bottomRows.map(x=>x.headForward)),overhead=med(topRows.map(x=>x.overheadDeg));
@@ -53,9 +55,9 @@ export class PikePushupAnalyzer{
   validateFrame(frame);const t=frame.timestampMs,c=this.config;
   const ignoredReason=this.closed?'finished':this.lastTime!==null&&t<=this.lastTime?'non_monotonic_timestamp':null;
   if(ignoredReason)return frameResult({count:this.count,observedSeconds:this.observedSeconds},frame,{exercise:'pike_pushup',engineVersion:PIKE_PUSHUP_VERSION,ignoredReason});
-  const dt=this.lastTime===null?0:t-this.lastTime,events=[];
+  const dt=this.resumePending||this.lastTime===null?0:t-this.lastTime,events=[];
   if(dt>c.maxGapMs){this.finalizeAssessment(events,false);this.gapSeconds+=dt/1000;this.resetMotion();this.lastRep=null;events.push({type:'frame.gap',t:t/1000,gap_s:dt/1000});}
-  this.lastTime=t;
+  this.resumePending=false;this.lastTime=t;
   const sides={left:pikeMetrics(frame,'left',c.visibility),right:pikeMetrics(frame,'right',c.visibility)};
   if(!this.side)this.side=Object.keys(sides).filter(k=>sides[k]?.bodyReady).sort((a,b)=>sides[b].quality-sides[a].quality)[0]??null;
   let m=sides[this.side];

@@ -53,6 +53,8 @@ export class LivePushupEngine {
   }
   get count(){return this.core.count;}
   breakContinuity(reason='pause'){
+    if(this.closed)return [];
+    this.resumePending=reason!=='frame_gap';
     const events=this.core.breakContinuity();
     if(this.side)events.push({type:'side.released',t:this.lastTime,side:this.side,reason});
     this.side=null;this.goodSince={left:null,right:null};this.lostSince=null;this.blocked=false;
@@ -83,7 +85,8 @@ export class LivePushupEngine {
   pushFrame(packet){
     const t=packet.timestampMs/1000;
     if(this.closed||!Number.isFinite(t)||this.lastTime!==null&&t<=this.lastTime)return {ignored:true,events:[],count:this.count};
-    const dt=this.lastTime===null?null:t-this.lastTime;
+    const dt=this.resumePending||this.lastTime===null?null:t-this.lastTime;
+    this.resumePending=false;
     const gap=dt!==null&&dt>SIDE_POLICY.max_gap_s;this.lastTime=t;
     const events=[];
     if(dt!==null&&dt>this.settings.motion.gap_s)events.push({type:'frame.gap',t,gap_s:dt,cycle_reset_gap_s:this.settings.motion.gap_s});
