@@ -3,7 +3,9 @@
 바로핏의 **MediaPipe 관절 추출 연동 + 운동별 자세 판정 모듈**을 관리합니다.
 앱 전체나 FastAPI 서버가 아닙니다. Python으로 판정 기준을 검증하고, 앱·웹용 코드는 별도로 관리합니다.
 
-## 현재 상태
+## 앱 연동 가능 종목 · 9종
+
+아래 9종은 [공개 진입점](runtime/index.js)에서 Analyzer를 가져와 앱과 웹에서 실행할 수 있습니다. MoveNet 푸시업 어댑터는 같은 운동의 다른 입력 경로입니다.
 
 | 운동 | Python 분석 | 앱·웹 JavaScript | 내용 |
 |---|---|---|---|
@@ -14,12 +16,42 @@
 | 글루트 브리지 | 영상 추출 후 공통 JS 엔진 호출 | 측면 v0.4 | 상승–복귀 카운트, 골반 상승·발 위치·하강 속도, 구간 속도 및 템포. [사용법·검증](docs/GLUTE_BRIDGE.md) |
 | 파이크 푸시업 | 영상 추출 후 공통 JS 엔진 호출 | 측면 v0.2 | 하강–복귀 카운트, 역V 유지·머리 경로·복귀 방향. [기준·검증](docs/PIKE_PUSHUP_V02.md) |
 | 수퍼맨 | 영상 추출 후 공통 JS 엔진 호출 | 측면·사선 v0.3 | 팔 굽힘과 카운트 분리, 무릎·속도 피드백, 종료 구분. [최신 검증](docs/SUPERMAN_V03.md) |
-| 스쿼트 | 구현 | 실시간·세트 종료 v2 / 깊이 회차·몸통 시간 준수율 | [규격](runtime/squat/README.md) |
+| 스쿼트 | 구현 | 실시간·세트 종료 v2 | 깊이는 회차별, 몸통은 시간 기준으로 집계합니다.  [규격](runtime/squat/README.md) |
 | 버드독 | 1차 프로토타입 v1.0 | Python과 동일 규칙 / 웹 반영 | 준비·유지·복귀, 횟수·유지 시간, 팔·다리 정렬. [입출력·기준·검증](docs/BIRD_DOG_V1.md) |
 
 플랭크는 기준을 충족한 자세의 유지 시간과 항목별 준수율을 제공합니다. 준비/시작/종료 등 서비스 흐름은 별도로 관리합니다.
 
-프론트 연동: [실시간 결과 v2](docs/realtime-contract-v2.md) · [세트 종료 결과 v2](docs/result-contract-v2.md). 푸쉬업·플랭크·버드독·점핑잭·레그 레이즈·글루트 브리지·수퍼맨·파이크 푸시업의 JS 공개 Analyzer에 적용합니다. 운동별 판정 의미와 측정 단위는 각 규격에 명시했습니다.
+## 분석 단계 종목 · 7종
+
+| 단계 | 종목 | 저장 위치 |
+|---|---|---|
+| Colab 분석 노트북 | 런지, 옆으로 누워 다리 들기 | [런지](analysis/lunge/) · [옆으로 누워 다리 들기](analysis/side_leg_raise/) |
+| 영상 분석 스크립트 | 스탠딩 카프레이즈, 인클라인 푸시업, 불가리안 스플릿 스쿼트, 스플릿 스쿼트 | [카프레이즈](analysis/standing_calf_raise/) · [인클라인 푸시업](analysis/incline_pushup/) · [불가리안 스플릿 스쿼트](analysis/bulgarian_split_squat/) · [스플릿 스쿼트](analysis/split_squat/) |
+| 데이터 준비 | 데드버그 | [데이터 가이드](docs/prototypes/barofit_dead_bug_data_guide.md) · [데이터 목록](analysis/dead_bug/) |
+
+이 7종의 앱 연동에는 공개 Analyzer와 v2 출력 구현이 필요합니다. 분석별 입력 영상과 실행 방법은 [프로토타입 안내](docs/prototypes/CHOIYOUNGSUN_EXERCISE_PROTOTYPES.md)에 정리했습니다.
+
+## 앱 공통 규격
+
+앱은 세트마다 Analyzer를 생성합니다. `pushFrame()`에 같은 카메라 시간축의 밀리초, 영상 크기, MediaPipe 관절 33×5를 전달합니다. 전체 미검출 프레임은 빈 관절 배열로 전달합니다.
+
+| 호출 | 앱에서 사용할 결과 |
+|---|---|
+| `pushFrame(frame)` | `frame.result` v2를 반환합니다. `ignored`면 화면과 음성을 갱신하지 않습니다. 현재 판정은 `items`·`currentCodes`, 최근 완료 회차는 `lastRepetition`에서 읽습니다. |
+| `breakContinuity('pause')` | 일시정지 시 진행 중인 동작을 끊습니다. 세션 타이머는 앱에서 관리합니다. |
+| `summary()` | 현재까지의 세트 집계를 반환합니다. `items.*.aggregationBasis`로 회차·시간 기준을 구분합니다. `compliancePct`는 0~100이며 평가할 데이터가 없으면 `null`입니다. |
+| `finish()` | 이벤트 배열에서 `type === 'set.completed'`인 이벤트의 `summary`를 저장합니다. 다시 호출하면 빈 배열을 반환합니다. |
+
+[실시간 규격](docs/realtime-contract-v2.md) · [세트 종료 규격](docs/result-contract-v2.md) · [JSON Schema](schemas/) · [TypeScript 타입](runtime/common/contracts.d.ts)
+
+## main 검토 결과 · 2026-11-04
+
+`efe7403`에서 기존 JS 테스트 120개와 Python 테스트 48개가 통과했습니다. JS 테스트에서 공개 Analyzer가 반환한 실시간 결과 17,270개와 세트 종료 이벤트 48개를 저장소의 JSON Schema로 검증했습니다. 검증 범위는 저장소 테스트와 합성 입력이며, 실기기·원본 영상에 대한 신규 정확도 측정은 별도입니다.
+
+| 재현 항목 | 결과 및 연동 시 영향 |
+|---|---|
+| 일시정지 후 시간 집계 | 마지막 프레임 5초 뒤에 재개하면 버드독·글루트 브리지·점핑잭·레그 레이즈·파이크 푸시업·수퍼맨은 `gapSeconds`가 5초 늘어납니다. 스쿼트·플랭크는 같은 입력에서 늘지 않고 푸시업은 해당 지표가 `null`입니다. 종목 간 추적 손실 시간을 비교할 때 일시정지 구간이 섞입니다. |
+| 인클라인 푸시업 분석 초안 | 팔꿈치 각도를 170°→80°로 낮춘 뒤 15fps에서 15프레임을 누락시키고 170°로 재개하면 1회가 기록됩니다. 관절 미검출 전후의 움직임이 한 회차로 연결되므로 앱 이식 전 재검증이 필요합니다. |
 
 ## 구조
 
@@ -30,12 +62,12 @@ analysis/                 Python 검증 코드
   common/                 MediaPipe 영상 추출, 공통 입력 처리
   pushup/                 기존 배치 분석 엔진 + 고정 기준 파일
   plank/                  현재 검증된 판정 로직
-  squat/                  스쿼트 담당자 작업 위치
+  squat/                  스쿼트 분석 코드
 runtime/                  앱·웹용 JavaScript 모듈
   common/                 입력 검사와 공통 출력 타입
   pushup/                 판정 엔진, 좌우 선택, 음성 피드백 간격 제어
   plank/                  측면 판정 엔진 + 항목별 시간 집계
-  squat/                  추가 위치 안내
+  squat/                  측면 판정 엔진 + 깊이·몸통 집계
 examples/                 영상 추출·분석·Android 연동·웹 리플레이 예제
 tests/                    자동 검증, 합성 관절 샘플
 docs/                     입출력·판정 기준·검증 기록
@@ -124,10 +156,6 @@ APK에서 사용한 Android 관절 추출 라이브러리 소스는 `examples/re
 
 초기 버전은 팀 내부 코드 공유용입니다. npm/PyPI 공개 배포나 FastAPI 서비스는 포함하지 않습니다.
 외부 코드·모델·데이터의 권리는 각각의 원 출처에 따릅니다. [출처 안내](docs/SOURCES.md) 참고.
-
-## 세트 결과 규격
-
-푸쉬업·플랭크·버드독·점핑잭·레그 레이즈·글루트 브리지·수퍼맨은 [세트 결과 JSON v2](docs/result-contract-v2.md)를 사용합니다. 항목별 `compliancePct`는 0~100이며 집계 단위는 `aggregationBasis`로 구분합니다. 프레임 판정과 카운트 로직은 유지됩니다.
 
 ## MoveNet 선택형 비교
 
