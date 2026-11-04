@@ -1,0 +1,57 @@
+[
+  {
+    "file": "00002796.mp4",
+    "label": "기준 후보: 반대쪽 협응",
+    "sourceLabel": "dead bugs - moving opposite leg",
+    "disk": 0,
+    "offset": 716093428,
+    "compressed": 428843,
+    "size": 431502,
+    "crc": 779699199,
+    "sha256": "22be11eed28b74c14bb2557062e2a3fe42af5e0464d62483a71f2f9b9bcf0750"
+  },
+  {
+    "file": "00001432.mp4",
+    "label": "같은 쪽 팔·다리 후보",
+    "sourceLabel": "dead bugs - moving same side",
+    "disk": 0,
+    "offset": 367891273,
+    "compressed": 214807,
+    "size": 217548,
+    "crc": 725807878,
+    "sha256": "a28b41b37be647cd872f93580a4cbfb1a9b28bd358fdc8c1fdc0d3064f65ea97"
+  },
+  {
+    "file": "00005475.mp4",
+    "label": "다리 펴기 부족 후보",
+    "sourceLabel": "dead bugs - not fully extending legs",
+    "disk": 0,
+    "offset": 1433154297,
+    "compressed": 178823,
+    "size": 181714,
+    "crc": 2984760663,
+    "sha256": "b8fc576ceef4271dfa1f15687d878af8eb94317b51d0d7fda225a188e7ac9924"
+  },
+  {
+    "file": "00001604.mp4",
+    "label": "빠른 속도 후보",
+    "sourceLabel": "dead bugs - too fast",
+    "disk": 0,
+    "offset": 411478506,
+    "compressed": 314124,
+    "size": 316715,
+    "crc": 1042949081,
+    "sha256": "30bc6980a1ed58d40520a7be29f9412009ac500a15bf5877e93c8ea624a4e880"
+  },
+  {
+    "file": "00003091.mp4",
+    "label": "교대가 빠른 후보",
+    "sourceLabel": "dead bugs - start moving opposite leg too early",
+    "disk": 0,
+    "offset": 795435171,
+    "compressed": 614425,
+    "size": 616726,
+    "crc": 969559424,
+    "sha256": "c360f8bfa25350a16a7ebd1ab4df80da7d6b947a49fee38e88901f0cd7faa74f"
+  }
+]
