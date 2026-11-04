@@ -84,7 +84,7 @@ function shortReturn(leg,g,t,high,hipUnknown,reliable=true){
 export class MountainClimberAnalyzer {
   constructor(){this.lastTime=null;this.closed=false;this.reps=[];this.observedSeconds=0;this.gapSeconds=0;this.reset();}
   reset(){this.legs=Object.fromEntries(SIDES.map(s=>[s,fresh()]));this.visible=false;this.hipSince=null;this.lastRep=null;}
-  breakContinuity(reason='pause'){if(this.closed)return [];this.reset();return [{type:'tracking.interrupted',reason,t:this.lastTime===null?null:this.lastTime/1000}];}
+  breakContinuity(reason='pause'){if(this.closed)return [];this.reset();this.resumePending=true;return [{type:'tracking.interrupted',reason,t:this.lastTime===null?null:this.lastTime/1000}];}
   stepLeg(side,m,g,t,high,hipUnknown,events,weakRear){
     let leg=this.legs[side];
     // Planted hands should not teleport between adjacent frames (e.g. an edited camera cut).
@@ -150,7 +150,8 @@ export class MountainClimberAnalyzer {
     const serialize=(payload,ignoredReason=null)=>frameResult({count:this.reps.length,observedSeconds:this.observedSeconds,...payload},frame,
       {exercise:'mountain_climber',engineVersion:CLIMBER_VERSION,ignoredReason});
     if(reason)return serialize({},reason);
-    const dt=this.lastTime===null?0:t-this.lastTime;
+    const dt=this.resumePending || this.lastTime===null?0:t-this.lastTime;
+    this.resumePending=false;
     if(dt>CONFIG.maxGapMs){this.reset();this.gapSeconds+=dt/1000;events.push({type:'frame.gap',t:t/1000,gap_s:dt/1000});}
     this.lastTime=t;
     const geometry=Object.fromEntries(SIDES.map(side=>[side,sideGeometry(frame,side)]));
