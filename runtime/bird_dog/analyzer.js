@@ -39,6 +39,8 @@ export class BirdDogAnalyzer {
     start_s:this.motion[side].cycle.start_s,hold_s:this.motion[side].cycle.hold_s}));}
   breakContinuity(reason='pause'){
     if(this.closed)return [];
+    this.resumePending=true;
+    if(this.closed)return [];
     const events=this.interrupt(reason,this.lastTime);this.resetMotion();this.previous=null;return events;
   }
   state(key,raw,t,unavailable='unknown'){
@@ -97,11 +99,11 @@ export class BirdDogAnalyzer {
     validateFrame(frame);
     const t=frame.timestampMs/1000,c=this.config,dims=[frame.width,frame.height];
     if(this.lastTime!==null&&t<=this.lastTime)return {...this.previous,ignored:true,events:[]};
-    let dt=this.lastTime===null?0:t-this.lastTime,events=[];
+    let dt=this.resumePending||this.lastTime===null?0:t-this.lastTime,events=[];
     if(dt>c.max_gap_seconds||(this.dims&&dims.some((v,i)=>v!==this.dims[i]))){
       this.gapSeconds+=dt;events.push(...this.breakContinuity('frame_gap_or_dimensions'),{type:'frame.gap',t,duration_s:dt});dt=0;
     }
-    this.lastTime=t;this.dims=dims;
+    this.resumePending=false;this.lastTime=t;this.dims=dims;
     const p=frame.landmarks.length?frame.landmarks:Array.from({length:33},()=>Array(5).fill(null));
     const good=p.map(v=>[0,1,3,4].every(i=>Number.isFinite(v[i]))&&v[3]>=c.confidence&&v[4]>=c.confidence&&v[0]>=0&&v[0]<=1&&v[1]>=0&&v[1]<=1);
     const r=-c.camera_roll_deg*Math.PI/180,co=Math.cos(r),si=Math.sin(r);

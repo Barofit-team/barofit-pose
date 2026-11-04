@@ -19,7 +19,14 @@
         "glute_bridge",
         "superman",
         "pike_pushup",
-        "squat"
+        "squat",
+        "lunge",
+        "split_squat",
+        "bulgarian_split_squat",
+        "incline_pushup",
+        "standing_calf_raise",
+        "side_lying_leg_raise",
+        "dead_bug"
       ]
     },
     "engineVersion": {
@@ -569,6 +576,181 @@
             "holdSeconds": null,
             "observedSeconds": "continuous_sample_intervals"
           }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "lunge"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_threshold_cycle",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "details": {
+          "type": "object",
+          "maxProperties": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "split_squat"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_threshold_cycle",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "details": {
+          "type": "object",
+          "maxProperties": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "bulgarian_split_squat"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_threshold_cycle",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "details": {
+          "type": "object",
+          "maxProperties": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "incline_pushup"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_threshold_cycle",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "details": {
+          "type": "object",
+          "maxProperties": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "standing_calf_raise"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_threshold_cycle",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "details": {
+          "type": "object",
+          "maxProperties": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "side_lying_leg_raise"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_threshold_cycle",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "details": {
+          "type": "object",
+          "maxProperties": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "dead_bug"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_threshold_cycle",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "details": {
+          "type": "object",
+          "maxProperties": 0
         }
       }
     }

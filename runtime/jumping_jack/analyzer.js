@@ -36,15 +36,17 @@ export class JumpingJackAnalyzer {
     this.count=0;this.observedSeconds=0;this.gapSeconds=0;this.repetitions=[];this.lastRep=null;
     this.totals=Object.fromEntries(KEYS.map(k=>[k,{compliant:0,warning:0,unknown:0}]));this.resetMotion();}
   resetMotion(){this.phase='not_ready';this.low=null;this.samples=[];this.peak=null;this.trough=null;this.previousMetric=null;this.leanSince=null;}
-  breakContinuity(reason='pause'){this.resetMotion();this.lastRep=null;return [{type:'tracking.interrupted',t:this.lastTime===null?null:this.lastTime/1000,reason}];}
+  breakContinuity(reason='pause'){
+    if(this.closed)return [];
+    this.resumePending=true;this.resetMotion();this.lastRep=null;return [{type:'tracking.interrupted',t:this.lastTime===null?null:this.lastTime/1000,reason}];}
   pushFrame(frame){
     validateFrame(frame);const t=frame.timestampMs,c=this.config;
     const reason=this.closed?'finished':this.lastTime!==null&&t<=this.lastTime?'non_monotonic_timestamp':null;
     if(reason)return frameResult({count:this.count,observedSeconds:this.observedSeconds},frame,{exercise:'jumping_jack',engineVersion:JUMPING_JACK_VERSION,ignoredReason:reason});
     const events=[];let m=jackMetrics(frame,c);
-    if(this.lastTime!==null){const dt=t-this.lastTime;if(dt>c.maxGapMs){this.gapSeconds+=dt/1000;this.resetMotion();this.lastRep=null;events.push({type:'frame.gap',t:t/1000,gap_s:dt/1000});}
+    if(!this.resumePending&&this.lastTime!==null){const dt=t-this.lastTime;if(dt>c.maxGapMs){this.gapSeconds+=dt/1000;this.resetMotion();this.lastRep=null;events.push({type:'frame.gap',t:t/1000,gap_s:dt/1000});}
       else if(m&&this.previousMetric)this.observedSeconds+=dt/1000;}
-    this.lastTime=t;
+    this.resumePending=false;this.lastTime=t;
     const items=Object.fromEntries(KEYS.map(k=>[k,m?'pending_feedback':'tracking_unavailable']));
     const currentCodes=[];
     if(!m){if(this.phase!=='not_ready')events.push({type:'tracking.interrupted',t:t/1000,reason:'required_landmarks'});this.resetMotion();this.lastRep=null;}

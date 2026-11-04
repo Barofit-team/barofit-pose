@@ -23,14 +23,16 @@ export class SupermanAnalyzer{
   this.count=0;this.holdSeconds=0;this.observedSeconds=0;this.gapSeconds=0;this.repetitions=[];this.lastRep=null;
   this.totals=Object.fromEntries(KEYS.map(k=>[k,{compliant:0,warning:0,unknown:0}]));this.resetMotion();}
  resetMotion(){this.phase='not_ready';this.readySince=null;this.low=null;this.peak=null;this.samples=[];this.armSamples=[];this.smoothed=null;this.previousValid=false;this.lostSince=null;this.warningSince={};this.previousHolding=false;this.baselineSamples=[];this.tempoTracker=new TempoTracker({...TEMPO_CONFIG,velocityWindowMs:400,stillSpeedDegS:this.config.holdSpeedDegS,minPauseMs:this.config.holdDwellMs});}
- breakContinuity(reason='pause'){this.resetMotion();this.supportSince=null;this.side=null;this.lastRep=null;return [{type:'tracking.interrupted',t:this.lastTime===null?null:this.lastTime/1000,reason}];}
+ breakContinuity(reason='pause'){
+    if(this.closed)return [];
+    this.resumePending=true;this.resetMotion();this.supportSince=null;this.side=null;this.lastRep=null;return [{type:'tracking.interrupted',t:this.lastTime===null?null:this.lastTime/1000,reason}];}
  pushFrame(frame){
   validateFrame(frame);const t=frame.timestampMs,c=this.config;
   const ignoredReason=this.closed?'finished':this.lastTime!==null&&t<=this.lastTime?'non_monotonic_timestamp':null;
   if(ignoredReason)return frameResult({count:this.count,holdSeconds:this.holdSeconds,observedSeconds:this.observedSeconds},frame,{exercise:'superman',engineVersion:SUPERMAN_VERSION,ignoredReason});
-  const dt=this.lastTime===null?0:t-this.lastTime,events=[];
+  const dt=this.resumePending||this.lastTime===null?0:t-this.lastTime,events=[];
   if(dt>c.maxGapMs){this.gapSeconds+=dt/1000;this.resetMotion();this.supportSince=null;this.lastRep=null;events.push({type:'frame.gap',t:t/1000,gap_s:dt/1000});}
-  this.lastTime=t;
+  this.resumePending=false;this.lastTime=t;
   const sides={left:supermanMetrics(frame,'left',c.visibility),right:supermanMetrics(frame,'right',c.visibility)};
   // Count readiness uses trunk/legs, independently of the elbow assessment.
   const armReady=m=>m?.armBodyDeg!==null&&m?.armBodyDeg>110&&m?.armOut;

@@ -19,7 +19,14 @@
         "glute_bridge",
         "superman",
         "pike_pushup",
-        "squat"
+        "squat",
+        "lunge",
+        "split_squat",
+        "bulgarian_split_squat",
+        "incline_pushup",
+        "standing_calf_raise",
+        "side_lying_leg_raise",
+        "dead_bug"
       ]
     },
     "engineVersion": {
@@ -180,7 +187,14 @@
             "glute_bridge",
             "superman",
             "pike_pushup",
-            "squat"
+            "squat",
+            "lunge",
+            "split_squat",
+            "bulgarian_split_squat",
+            "incline_pushup",
+            "standing_calf_raise",
+            "side_lying_leg_raise",
+            "dead_bug"
           ]
         },
         "engineVersion": {
@@ -522,6 +536,216 @@
                       }
                     }
                   ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "lunge"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "lunge"
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "split_squat"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "split_squat"
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "bulgarian_split_squat"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "bulgarian_split_squat"
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "incline_pushup"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "incline_pushup"
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "standing_calf_raise"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "standing_calf_raise"
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "side_lying_leg_raise"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "side_lying_leg_raise"
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "dead_bug"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "dead_bug"
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
                 }
               }
             }

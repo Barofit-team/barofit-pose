@@ -1,6 +1,13 @@
 import {jsonSafe, validateFrame} from './frame.js';
 
 export const MEASUREMENT_BASIS=Object.freeze({
+  lunge:{count:'completed_threshold_cycle',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
+  split_squat:{count:'completed_threshold_cycle',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
+  bulgarian_split_squat:{count:'completed_threshold_cycle',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
+  incline_pushup:{count:'completed_threshold_cycle',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
+  standing_calf_raise:{count:'completed_threshold_cycle',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
+  side_lying_leg_raise:{count:'completed_threshold_cycle',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
+  dead_bug:{count:'completed_threshold_cycle',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
   squat:{count:'completed_squat_attempt',holdSeconds:null,observedSeconds:'continuous_sample_intervals'},
   pike_pushup:{count:'completed_pike_lower_raise_attempt',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
   superman:{count:'completed_superman_raise_lower_attempt',holdSeconds:'observed_raised_still',observedSeconds:'continuous_visible_intervals'},
