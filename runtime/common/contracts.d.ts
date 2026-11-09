@@ -83,7 +83,8 @@ export interface CycleFrameResult extends FrameResultBase {
 export interface MountainClimberFrameResult extends FrameResultBase {
   exercise: 'mountain_climber'; count: number; holdSeconds: null; details: Record<string, never>;
 }
-export type FrameResult = MountainClimberFrameResult | CycleFrameResult | SquatFrameResult | PushupFrameResult | PlankFrameResult | BirdDogFrameResult | JumpingJackFrameResult | LegRaiseFrameResult | GluteBridgeFrameResult | SupermanFrameResult | PikePushupFrameResult;
+export interface SidePlankFrameResult extends FrameResultBase { exercise: 'side_plank'; count: null; holdSeconds: number; lastRepetition: null; details: Record<string,never>; }
+export type FrameResult = SidePlankFrameResult | MountainClimberFrameResult | CycleFrameResult | SquatFrameResult | PushupFrameResult | PlankFrameResult | BirdDogFrameResult | JumpingJackFrameResult | LegRaiseFrameResult | GluteBridgeFrameResult | SupermanFrameResult | PikePushupFrameResult;
 
 /** Set-result v2 unchanged. Non-terminal engine event payloads retain their v1 contracts. */
 export interface ItemSummary {

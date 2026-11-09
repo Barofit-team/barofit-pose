@@ -27,7 +27,8 @@
         "standing_calf_raise",
         "side_lying_leg_raise",
         "dead_bug",
-        "mountain_climber"
+        "mountain_climber",
+        "side_plank"
       ]
     },
     "engineVersion": {
@@ -196,7 +197,8 @@
             "standing_calf_raise",
             "side_lying_leg_raise",
             "dead_bug",
-            "mountain_climber"
+            "mountain_climber",
+            "side_plank"
           ]
         },
         "engineVersion": {
@@ -780,6 +782,32 @@
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "side_plank"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "side_plank"
+            },
+            "items": {
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "time"
+                  }
+                }
+              }
+            },
+            "count": {
+              "type": "null"
             }
           }
         }

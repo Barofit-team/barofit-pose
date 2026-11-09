@@ -27,7 +27,8 @@
         "standing_calf_raise",
         "side_lying_leg_raise",
         "dead_bug",
-        "mountain_climber"
+        "mountain_climber",
+        "side_plank"
       ]
     },
     "engineVersion": {
@@ -773,6 +774,39 @@
         "count": {
           "type": "integer",
           "minimum": 0
+        },
+        "details": {
+          "type": "object",
+          "maxProperties": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "side_plank"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": null,
+            "holdSeconds": "all_required_items_compliant",
+            "observedSeconds": "continuous_sample_intervals"
+          }
+        },
+        "lastRepetition": {
+          "type": "null"
+        },
+        "count": {
+          "type": "null"
+        },
+        "phase": {
+          "enum": [
+            null,
+            "unobservable",
+            "holding",
+            "stabilizing",
+            "positioning"
+          ]
         },
         "details": {
           "type": "object",

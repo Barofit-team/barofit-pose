@@ -100,3 +100,7 @@ node examples/pushup.mjs results/extracted/frames.jsonl
 ```
 
 촬영 준비 상태: [CameraReadiness 사용법](docs/CAMERA_READINESS.md) — 앱 내부 관절 인식 상태 반환. 기존 운동 결과 v2와 별도 이벤트입니다.
+
+## 사이드 플랭크 · 초기 영상 검증
+
+팔뚝 지지형의 골반·어깨·무릎 판정과 정상 유지 시간 측정을 추가했습니다. 공통 v2 실시간·종료 규격을 사용합니다. 골반 과상승은 정상 영상과 측정 범위가 겹치는 구간을 보류합니다. 자세한 범위와 검증 결과는 [사이드 플랭크 문서](docs/SIDE_PLANK.md)를 참고하세요.

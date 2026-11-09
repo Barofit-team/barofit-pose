@@ -3,6 +3,7 @@ import {PlankRule, HIP_CONFIG} from './engine.js';
 import {validateFrame,jsonSafe} from '../common/frame.js';
 import {timeSummary,setCompleted} from '../common/result.js';
 import {HoldTimer} from './hold.js';
+import {validHoldInterval} from '../common/hold.js';
 export const PLANK_VERSION='plank-multi-0.2-js-1.2-valid-hold';
 const assessed=s=>['within_reference','warning'].includes(s);
 function status(s){return ['NO_WARNING','NO_HIP_WARNING'].includes(s)?'within_reference':
@@ -30,7 +31,7 @@ export class PlankAnalyzer {
       if(dt>HIP_CONFIG.max_gap_s){this.gapSeconds+=dt;events.push({type:'frame.gap',t,gap_s:dt});}
       else {
         this.observedSeconds+=dt;
-        if(this.previous.side===raw.side&&this.previous.holdEligible&&holdEligible)this.validHoldSeconds+=dt;
+        this.validHoldSeconds+=validHoldInterval({previousTime:this.previous.t,time:t,previousEligible:this.previous.holdEligible,eligible:holdEligible,continuous:this.previous.side===raw.side,maxGapSeconds:HIP_CONFIG.max_gap_s});
         for(const [key,totals] of Object.entries(this.totals)){
           const before=this.previous.items[key],now=items[key];
           const eligible=this.previous.side===raw.side&&assessed(before)&&assessed(now);

@@ -19,3 +19,5 @@ export {PikePushupAnalyzer,PIKE_PUSHUP_CONFIG,PIKE_PUSHUP_VERSION,PIKE_PUSHUP_TE
 export {MountainClimberAnalyzer,CLIMBER_VERSION} from './mountain_climber/analyzer.js';
 export {LungeAnalyzer,SplitSquatAnalyzer,BulgarianSplitSquatAnalyzer,InclinePushupAnalyzer,StandingCalfRaiseAnalyzer,SideLegRaiseAnalyzer,DeadBugAnalyzer} from './cycles/analyzer.js';
 export {CameraReadiness,READINESS_PROFILES} from './common/readiness.js';
+
+export {SidePlankAnalyzer,SIDE_PLANK_CONFIG,SIDE_PLANK_VERSION} from './side_plank/analyzer.js';

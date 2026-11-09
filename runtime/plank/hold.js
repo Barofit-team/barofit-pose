@@ -1,7 +1,8 @@
 // Broad side-view forearm-plank observation gate, independent of posture quality.
 // Engineering defaults, not anatomical correctness thresholds or floor-contact detection.
+import {VALID_HOLD_CONFIG} from '../common/hold.js';
 export const HOLD_CONFIG=Object.freeze({minQuality:.5,minHorizontal:.65,minShoulderClearance:.035,
-  minBodyToUpperArm:2,maxForearmVertical:.65,confirmationSeconds:.3,maxGapSeconds:.25});
+  minBodyToUpperArm:2,maxForearmVertical:.65,...VALID_HOLD_CONFIG});
 const norm=v=>Math.hypot(...v),sub=(a,b)=>[a[0]-b[0],a[1]-b[1]];
 export function inspectHold(frame,side){
   const ids=side==='left'?[11,13,15,23,27]:side==='right'?[12,14,16,24,28]:null;

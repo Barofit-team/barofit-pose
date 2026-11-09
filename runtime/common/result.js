@@ -11,7 +11,7 @@ export function itemResult(basis, compliant, warning, unknown = 0, notApplicable
   const evaluated = compliant + warning;
   return {aggregationBasis: basis, unit: basis === 'time' ? 'seconds' : 'repetitions',
     compliant, warning, unknown, notApplicable, evaluated,
-    compliancePct: evaluated ? 100 * compliant / evaluated : null};
+    compliancePct: evaluated ? Math.min(100, 100 * (compliant / evaluated)) : null};
 }
 export function setSummary({exercise, engineVersion, count = null, holdSeconds = null,
   observedSeconds = null, gapSeconds = null, items, details = {}}) {
