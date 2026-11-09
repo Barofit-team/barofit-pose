@@ -98,3 +98,5 @@ python -m pip install -e ".[video]"
 python -m examples.extract_video data/clip.mp4 --model models/pose_landmarker_full.task --output results/extracted
 node examples/pushup.mjs results/extracted/frames.jsonl
 ```
+
+촬영 준비 상태: [CameraReadiness 사용법](docs/CAMERA_READINESS.md) — 앱 내부 관절 인식 상태 반환. 기존 운동 결과 v2와 별도 이벤트입니다.

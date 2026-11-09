@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Camera readiness v1",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "type": {
+      "const": "camera.readiness"
+    },
+    "exercise": {
+      "type": "string"
+    },
+    "timestampMs": {
+      "type": "number",
+      "minimum": 0
+    },
+    "ignored": {
+      "type": "boolean"
+    },
+    "ignoredReason": {
+      "enum": [
+        null,
+        "non_monotonic_timestamp"
+      ]
+    },
+    "status": {
+      "enum": [
+        "no_person",
+        "adjust_camera",
+        "stabilizing",
+        "ready"
+      ]
+    },
+    "ready": {
+      "type": "boolean"
+    },
+    "observable": {
+      "type": "boolean"
+    },
+    "selectedSide": {
+      "enum": [
+        null,
+        "left",
+        "right",
+        "both"
+      ]
+    },
+    "candidateSide": {
+      "enum": [
+        null,
+        "left",
+        "right",
+        "both"
+      ]
+    },
+    "missingLandmarks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outOfFrameLandmarks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reasonCode": {
+      "enum": [
+        null,
+        "STABILIZING",
+        "NO_PERSON",
+        "BODY_OUT_OF_FRAME",
+        "MISSING_LANDMARK",
+        "LOW_VISIBILITY",
+        "LOW_PRESENCE"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "stableForMs": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "type",
+    "exercise",
+    "timestampMs",
+    "ignored",
+    "ignoredReason",
+    "status",
+    "ready",
+    "observable",
+    "selectedSide",
+    "candidateSide",
+    "missingLandmarks",
+    "outOfFrameLandmarks",
+    "reasonCode",
+    "message",
+    "stableForMs"
+  ],
+  "additionalProperties": false
+}

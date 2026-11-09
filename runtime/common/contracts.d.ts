@@ -125,3 +125,16 @@ export interface SupermanFrameResult extends FrameResultBase {
 export interface PikePushupFrameResult extends FrameResultBase {
  exercise: 'pike_pushup'; count: number; holdSeconds: null; details: Record<string, never>;
 }
+
+/** Separate camera observability event; does not alter frame.result / set.completed v2. */
+export interface CameraReadinessResult {
+  schemaVersion: '1.0'; type: 'camera.readiness'; exercise: string; timestampMs: number;
+  ignored: boolean; ignoredReason: 'non_monotonic_timestamp' | null;
+  status: 'no_person' | 'adjust_camera' | 'stabilizing' | 'ready';
+  ready: boolean; observable: boolean;
+  selectedSide: 'left' | 'right' | 'both' | null;
+  candidateSide: 'left' | 'right' | 'both' | null;
+  missingLandmarks: string[]; outOfFrameLandmarks: string[];
+  reasonCode: 'STABILIZING' | 'NO_PERSON' | 'BODY_OUT_OF_FRAME' | 'MISSING_LANDMARK' | 'LOW_VISIBILITY' | 'LOW_PRESENCE' | null;
+  message: string; stableForMs: number;
+}
