@@ -165,3 +165,103 @@ export declare class DeadBugAnalyzer implements BaseExerciseAnalyzer<import('./c
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
+export declare class SidePlankAnalyzer implements BaseExerciseAnalyzer<import('./common/contracts.js').SidePlankFrameResult> {
+  constructor();
+  reset(): void;
+  pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').SidePlankFrameResult;
+  breakContinuity(reason?: 'pause'): unknown;
+  summary(): import('./common/contracts.js').SetSummary;
+  finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
+}
+
+export interface MoveNetPushupOptions {
+  shortGapMs?: number;
+  elbowIndependent?: boolean;
+}
+
+export type MoveNetKeypoint = [number, number, number];
+
+export declare function moveNetLandmarks(keypoints: MoveNetKeypoint[]): import('./common/contracts.js').Landmark[];
+
+export declare class MoveNetPushupAnalyzer extends PushupAnalyzer {
+  constructor(options?: MoveNetPushupOptions);
+  pushKeypoints(packet: {
+    timestampMs: number;
+    width: number;
+    height: number;
+    keypoints: MoveNetKeypoint[];
+  }): import('./common/contracts.js').PushupFrameResult;
+}
+
+export declare class PushupEngine {
+  side: 'left' | 'right' | null;
+  count: number;
+  closed: boolean;
+  constructor(options?: { side?: 'auto' | 'left' | 'right'; settings?: Record<string, unknown> });
+  pushFrame(frame: import('./common/contracts.js').PoseFrame): Record<string, unknown>;
+  pushFeatures(features: Record<string, unknown>): Record<string, unknown>;
+  breakContinuity(): Array<Record<string, unknown>>;
+  finish(): Array<Record<string, unknown>>;
+}
+
+export declare class LivePushupEngine {
+  core: PushupEngine;
+  side: 'left' | 'right' | null;
+  readonly count: number;
+  closed: boolean;
+  constructor(settings?: Record<string, unknown>);
+  pushFrame(packet: import('./common/contracts.js').PoseFrame): Record<string, unknown>;
+  breakContinuity(reason?: string): Array<Record<string, unknown>>;
+  finish(): Array<Record<string, unknown>>;
+}
+
+export declare function inspectSide(
+  packet: import('./common/contracts.js').PoseFrame,
+  side: 'left' | 'right',
+  settings?: Record<string, unknown>,
+): {
+  ready: boolean;
+  quality: number;
+  reasons: string[];
+  joints: Record<string, { id: number; visibility: number | null; presence: number | null; ok: boolean; reason: string | null }>;
+  features: Record<string, number>;
+};
+
+export declare class FeedbackVoice {
+  constructor(options?: { sameMs?: number; gapMs?: number; now?: () => number });
+  cancel(): void;
+  update(
+    result: { tracking?: string; codes?: string[] },
+    enabled: boolean,
+    speakIfIdle: (text: string) => Promise<boolean> | boolean,
+    texts: Record<string, string>,
+  ): Promise<string | null>;
+}
+
+export declare function supermanMetrics(
+  frame: import('./common/contracts.js').PoseFrame,
+  side: 'left' | 'right',
+  visibility?: number,
+): Record<string, unknown> | null;
+
+export declare const PUSHUP_TEXT: Readonly<Record<string, string>>;
+export declare const PLANK_VERSION: string;
+export declare const SQUAT_VERSION: string;
+export declare const BIRD_DOG_VERSION: string;
+export declare const JUMPING_JACK_VERSION: string;
+export declare const JACK_CONFIG: Readonly<Record<string, unknown>>;
+export declare const LEG_RAISE_VERSION: string;
+export declare const LEG_RAISE_CONFIG: Readonly<Record<string, unknown>>;
+export declare const MOVENET_PUSHUP_VERSION: string;
+export declare const GLUTE_BRIDGE_VERSION: string;
+export declare const GLUTE_BRIDGE_CONFIG: Readonly<Record<string, unknown>>;
+export declare const SUPERMAN_CONFIG: Readonly<Record<string, unknown>>;
+export declare const SUPERMAN_VERSION: string;
+export declare const PIKE_PUSHUP_CONFIG: Readonly<Record<string, unknown>>;
+export declare const PIKE_PUSHUP_VERSION: string;
+export declare const PIKE_PUSHUP_TEXT: Readonly<Record<string, string>>;
+export declare const CLIMBER_VERSION: string;
+export declare const SIDE_PLANK_CONFIG: Readonly<Record<string, unknown>>;
+export declare const SIDE_PLANK_VERSION: string;
+
+
