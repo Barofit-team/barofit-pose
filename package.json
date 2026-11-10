@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Barofit on-device pose rules and research references",
   "exports": "./runtime/index.js",
+  "types": "./runtime/index.d.ts",
   "engines": {
     "node": ">=20"
   },
