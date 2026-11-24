@@ -265,3 +265,47 @@ export declare const SIDE_PLANK_CONFIG: Readonly<Record<string, unknown>>;
 export declare const SIDE_PLANK_VERSION: string;
 
 
+
+export declare const PILOT_VERSION: string;
+
+export interface PilotAnalyzerOptions { side?: 'left' | 'right' | null; }
+
+export declare class JumpSquatAnalyzer implements BaseExerciseAnalyzer<import('./common/contracts.js').PilotFrameResult> {
+  constructor(options?: PilotAnalyzerOptions);
+  pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').PilotFrameResult;
+  breakContinuity(reason?: string): Array<Record<string, unknown>>;
+  summary(): import('./common/contracts.js').SetSummary;
+  finish(): Array<import('./common/contracts.js').SetCompleted>;
+}
+
+export declare class ReverseCrunchAnalyzer implements BaseExerciseAnalyzer<import('./common/contracts.js').PilotFrameResult> {
+  constructor(options?: PilotAnalyzerOptions);
+  pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').PilotFrameResult;
+  breakContinuity(reason?: string): Array<Record<string, unknown>>;
+  summary(): import('./common/contracts.js').SetSummary;
+  finish(): Array<import('./common/contracts.js').SetCompleted>;
+}
+
+export declare class FlutterKicksAnalyzer implements BaseExerciseAnalyzer<import('./common/contracts.js').PilotFrameResult> {
+  constructor(options?: {side?: null});
+  pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').PilotFrameResult;
+  breakContinuity(reason?: string): Array<Record<string, unknown>>;
+  summary(): import('./common/contracts.js').SetSummary;
+  finish(): Array<import('./common/contracts.js').SetCompleted>;
+}
+
+export declare class BurpeeAnalyzer implements BaseExerciseAnalyzer<import('./common/contracts.js').PilotFrameResult> {
+  constructor(options?: PilotAnalyzerOptions);
+  pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').PilotFrameResult;
+  breakContinuity(reason?: string): Array<Record<string, unknown>>;
+  summary(): import('./common/contracts.js').SetSummary;
+  finish(): Array<import('./common/contracts.js').SetCompleted>;
+}
+
+export declare class SitupAnalyzer implements BaseExerciseAnalyzer<import('./common/contracts.js').PilotFrameResult> {
+  constructor(options?: PilotAnalyzerOptions);
+  pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').PilotFrameResult;
+  breakContinuity(reason?: string): Array<Record<string, unknown>>;
+  summary(): import('./common/contracts.js').SetSummary;
+  finish(): Array<import('./common/contracts.js').SetCompleted>;
+}

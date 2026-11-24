@@ -1,6 +1,11 @@
 import {jsonSafe, validateFrame} from './frame.js';
 
 export const MEASUREMENT_BASIS=Object.freeze({
+  jump_squat:{count:'completed_crouch_airborne_land_candidate',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
+  reverse_crunch:{count:'completed_knee_tuck_return_candidate',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
+  flutter_kicks:{count:'completed_two_leg_alternations_candidate',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
+  burpee:{count:'completed_stand_floor_stand_candidate',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
+  situp:{count:'completed_torso_raise_return_candidate',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
   mountain_climber:{count:'completed_single_knee_drive_return',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
   lunge:{count:'completed_threshold_cycle',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},
   split_squat:{count:'completed_threshold_cycle',holdSeconds:null,observedSeconds:'continuous_visible_intervals'},

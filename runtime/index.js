@@ -21,3 +21,5 @@ export {LungeAnalyzer,SplitSquatAnalyzer,BulgarianSplitSquatAnalyzer,InclinePush
 export {CameraReadiness,READINESS_PROFILES} from './common/readiness.js';
 
 export {SidePlankAnalyzer,SIDE_PLANK_CONFIG,SIDE_PLANK_VERSION} from './side_plank/analyzer.js';
+
+export {JumpSquatAnalyzer,ReverseCrunchAnalyzer,FlutterKicksAnalyzer,BurpeeAnalyzer,SitupAnalyzer,PILOT_VERSION} from './pilots/analyzer.js';

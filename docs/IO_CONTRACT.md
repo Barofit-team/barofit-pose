@@ -103,3 +103,9 @@ Python·JS `PlankAnalyzer` 모두 프레임 판정과 세트 종료 집계를 �
 Python auto는 전체 영상의 좌표 품질로 한쪽을 선택하고 JS live는 시간 순서대로 선택·재선택하므로
 auto 결과가 무조건 일치한다고 가정하지 않습니다. 이식 비교는 좌우를 고정하고 같은 좌표를 입력합니다.
 Python 레퍼런스는 설정을 모듈 전역에 적용하므로 서로 다른 설정의 동시 서버 요청에 그대로 사용하지 않습니다.
+
+## 6. 추가 5종 실험 JS 분석기
+
+점프 스쿼트·리버스 크런치·플러터킥·버피·싯업도 동일한 입력과 v2 프레임·세트 결과를 사용합니다. TypeScript의 `PilotFrameResult`로 분기합니다. `measurementBasis.count`는 각각 `completed_crouch_airborne_land_candidate`, `completed_knee_tuck_return_candidate`, `completed_two_leg_alternations_candidate`, `completed_stand_floor_stand_candidate`, `completed_torso_raise_return_candidate`입니다.
+
+`items.form`은 unknown, `holdSeconds`는 null입니다. `lastRepetition`은 완료 후 1초 동안 제공하며 중단 시 비웁니다. `details`는 `experimental:true, postureAssessment:'unreviewed'`입니다. 세트 집계의 `details.repetitions`에는 완료 회차를 보존합니다. 모든 누락·중단은 미완료 회차를 취소하고 누적 횟수는 유지합니다. [세부 기준·프론트 책임](FIVE_EXERCISE_RUNTIME.md)을 확인하세요.

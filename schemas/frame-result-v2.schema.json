@@ -28,7 +28,12 @@
         "side_lying_leg_raise",
         "dead_bug",
         "mountain_climber",
-        "side_plank"
+        "side_plank",
+        "jump_squat",
+        "reverse_crunch",
+        "flutter_kicks",
+        "burpee",
+        "situp"
       ]
     },
     "engineVersion": {
@@ -811,6 +816,191 @@
         "details": {
           "type": "object",
           "maxProperties": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "jump_squat"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_crouch_airborne_land_candidate",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "experimental": {
+              "const": true
+            },
+            "postureAssessment": {
+              "const": "unreviewed"
+            }
+          },
+          "required": [
+            "experimental",
+            "postureAssessment"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "reverse_crunch"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_knee_tuck_return_candidate",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "experimental": {
+              "const": true
+            },
+            "postureAssessment": {
+              "const": "unreviewed"
+            }
+          },
+          "required": [
+            "experimental",
+            "postureAssessment"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "flutter_kicks"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_two_leg_alternations_candidate",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "experimental": {
+              "const": true
+            },
+            "postureAssessment": {
+              "const": "unreviewed"
+            }
+          },
+          "required": [
+            "experimental",
+            "postureAssessment"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "burpee"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_stand_floor_stand_candidate",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "experimental": {
+              "const": true
+            },
+            "postureAssessment": {
+              "const": "unreviewed"
+            }
+          },
+          "required": [
+            "experimental",
+            "postureAssessment"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "situp"
+        },
+        "measurementBasis": {
+          "const": {
+            "count": "completed_torso_raise_return_candidate",
+            "holdSeconds": null,
+            "observedSeconds": "continuous_visible_intervals"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "holdSeconds": {
+          "type": "null"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "experimental": {
+              "const": true
+            },
+            "postureAssessment": {
+              "const": "unreviewed"
+            }
+          },
+          "required": [
+            "experimental",
+            "postureAssessment"
+          ],
+          "additionalProperties": false
         }
       }
     }

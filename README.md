@@ -24,6 +24,15 @@ MediaPipe 관절 좌표를 입력받아 운동 횟수, 유지 시간, 자세 피
 | 스탠딩 카프레이즈 | `standing_calf_raise` | `StandingCalfRaiseAnalyzer` | 횟수 |
 | 데드버그 | `dead_bug` | `DeadBugAnalyzer` | 횟수 |
 
+| 사이드 플랭크 | `side_plank` | `SidePlankAnalyzer` | 유지 시간 |
+| 점프 스쿼트 | `jump_squat` | `JumpSquatAnalyzer` | 실험: 굽힘·도약·착지 후보 횟수 |
+| 리버스 크런치 | `reverse_crunch` | `ReverseCrunchAnalyzer` | 실험: 무릎 당김·복귀 후보 횟수 |
+| 플러터킥 | `flutter_kicks` | `FlutterKicksAnalyzer` | 실험: 좌우 교대 2번당 1회 후보 |
+| 버피 | `burpee` | `BurpeeAnalyzer` | 실험: 측면 서기·바닥 자세·복귀 후보 횟수 |
+| 싯업 | `situp` | `SitupAnalyzer` | 실험: 몸통 일으킴·복귀 후보 횟수 |
+
+**JS 분석기는 총 23종입니다.** 추가 5종은 횟수 후보 집계와 중단·재개를 지원하며 자세 평가는 아직 `unknown`입니다. 적용 방법·촬영 범위·시범 재생 결과는 [추가 5종 JS 문서](docs/FIVE_EXERCISE_RUNTIME.md)를 확인하세요.
+
 런지부터 데드버그까지 7종은 실험 버전입니다. 합성 입력으로 회차와 중단 처리를 검증했으며, 실기기 정확도는 아직 확인되지 않았습니다.
 
 ## 규격

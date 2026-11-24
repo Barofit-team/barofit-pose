@@ -1,0 +1,249 @@
+{
+  "date": "2026-11-24",
+  "engineVersion": "five-exercise-pilot-0.1",
+  "mode": "auto",
+  "labels": "unreviewed",
+  "method": "Local MediaPipe full 0.10.32 re-extraction; JS replay. No interpolation. Counts are candidates, not accuracy.",
+  "automated_checks": {
+    "javascript": "188 tests passed (including 28 new tests)",
+    "python": "48 tests passed",
+    "typescript": "TypeScript 7.0.2: npm run test:types, strict nodenext noEmit passed",
+    "schemas": "Both v2 schemas validated against 2064 real-video frame/set payloads"
+  },
+  "clips": [
+    {
+      "exercise": "jump_squat",
+      "clip": "01_prisoner_jump_squat.jsonl",
+      "side": null,
+      "count": 5,
+      "frames": 173,
+      "tracking": 1,
+      "events": [
+        4.133,
+        5.4,
+        6.533,
+        7.733,
+        8.933
+      ],
+      "source_metadata": {
+        "file": "videos/01_prisoner_jump_squat.mp4",
+        "exercise": "jump_squat",
+        "variation": "prisoner_squat_jump",
+        "posture_label": "unreviewed",
+        "source_title": "Prisoner Squat Jump",
+        "source_url": "https://www.dvidshub.net/video/549351/prisoner-squat-jump",
+        "source_id": 549351,
+        "sha256": "7c2074cad9eaa799c9aef42671fbabf3c096202f8220692daec0990d9bdc69b0"
+      },
+      "video_sha256": "7c2074cad9eaa799c9aef42671fbabf3c096202f8220692daec0990d9bdc69b0"
+    },
+    {
+      "exercise": "reverse_crunch",
+      "clip": "01_cross_leg_reverse_crunch.jsonl",
+      "side": null,
+      "count": 3,
+      "frames": 165,
+      "tracking": 1,
+      "events": [
+        2.067,
+        5,
+        8.267
+      ],
+      "source_metadata": {
+        "file": "videos/01_cross_leg_reverse_crunch.mp4",
+        "exercise": "reverse_crunch",
+        "variation": "cross_leg_reverse_crunch",
+        "posture_label": "unreviewed",
+        "source_url": "https://www.dvidshub.net/video/825274/2-minute-cross-leg-reverse-crunch",
+        "credit": "2 Minute Cross Leg Reverse Crunch, SSgt Randall Moose / DVIDS / 301st Fighter Wing",
+        "source_public_domain": true,
+        "clip_from_s": 3.0,
+        "clip_duration_s": 11.0,
+        "sha256": "5c0d8c31c2f856128e08b01f752c11396a00d14911a592370c802306c69c85b0"
+      },
+      "video_sha256": "5c0d8c31c2f856128e08b01f752c11396a00d14911a592370c802306c69c85b0"
+    },
+    {
+      "exercise": "flutter_kicks",
+      "clip": "flutter_oblique.jsonl",
+      "side": null,
+      "count": 6,
+      "frames": 335,
+      "tracking": 0.696,
+      "events": [
+        3.4,
+        4.233,
+        5.067,
+        5.933,
+        6.767,
+        7.8
+      ],
+      "source_metadata": {
+        "file": "videos/flutter_oblique.mp4",
+        "exercise": "flutter_kicks",
+        "view": "oblique",
+        "take_id": "dvids_639942",
+        "posture_label": "unreviewed",
+        "source_url": "https://www.dvidshub.net/video/639942/flutter-kicks",
+        "credit": "CPT Matthew Holfinger / DVIDS",
+        "rights": "Public Domain (source designation; see DVIDS copyright notice)",
+        "crop_xywh": [
+          272,
+          6,
+          512,
+          282
+        ],
+        "sha256": "2a915c661f373c0863ae043839b4de61a4745d430f6b54519da7dc72bbc0aba0"
+      },
+      "video_sha256": "2a915c661f373c0863ae043839b4de61a4745d430f6b54519da7dc72bbc0aba0"
+    },
+    {
+      "exercise": "flutter_kicks",
+      "clip": "flutter_side.jsonl",
+      "side": null,
+      "count": 5,
+      "frames": 335,
+      "tracking": 0.964,
+      "events": [
+        3.333,
+        4.167,
+        5,
+        5.867,
+        6.733
+      ],
+      "source_metadata": {
+        "file": "videos/flutter_side.mp4",
+        "exercise": "flutter_kicks",
+        "view": "side",
+        "take_id": "dvids_639942",
+        "posture_label": "unreviewed",
+        "source_url": "https://www.dvidshub.net/video/639942/flutter-kicks",
+        "credit": "CPT Matthew Holfinger / DVIDS",
+        "rights": "Public Domain (source designation; see DVIDS copyright notice)",
+        "crop_xywh": [
+          266,
+          294,
+          520,
+          282
+        ],
+        "sha256": "5dc5a0e51b009eddc8eb91917589eb08ab59d70b63481a3b61aaba4b3ba7ba1e"
+      },
+      "video_sha256": "5dc5a0e51b009eddc8eb91917589eb08ab59d70b63481a3b61aaba4b3ba7ba1e"
+    },
+    {
+      "exercise": "burpee",
+      "clip": "burpee_front.jsonl",
+      "side": null,
+      "count": 0,
+      "frames": 146,
+      "tracking": 0.39,
+      "events": [],
+      "source_metadata": {
+        "file": "videos/burpee_front.mp4",
+        "exercise": "burpee",
+        "view": "front",
+        "take_id": "dvids_753244_front",
+        "posture_label": "unreviewed",
+        "source_url": "https://www.dvidshub.net/video/753244/burpee",
+        "credit": "CPT Matthew Holfinger / DVIDS",
+        "rights": "Public Domain (source designation; see DVIDS copyright notice)",
+        "source_segment_s": [
+          0,
+          4.85
+        ],
+        "sha256": "a446c8356586926ceef8553cf1909ba6bbf1faddc2231a78e072df3a23e0452d"
+      },
+      "video_sha256": "a446c8356586926ceef8553cf1909ba6bbf1faddc2231a78e072df3a23e0452d"
+    },
+    {
+      "exercise": "burpee",
+      "clip": "burpee_side.jsonl",
+      "side": null,
+      "count": 1,
+      "frames": 178,
+      "tracking": 1,
+      "events": [
+        4.833
+      ],
+      "source_metadata": {
+        "file": "videos/burpee_side.mp4",
+        "exercise": "burpee",
+        "view": "side",
+        "take_id": "dvids_753244_side",
+        "posture_label": "unreviewed",
+        "source_url": "https://www.dvidshub.net/video/753244/burpee",
+        "credit": "CPT Matthew Holfinger / DVIDS",
+        "rights": "Public Domain (source designation; see DVIDS copyright notice)",
+        "source_segment_s": [
+          5.1,
+          null
+        ],
+        "sha256": "9b4c9a231bfa5930dd85d39b0fa29e61ed9f3af335f825adeafc2ecab61e7710"
+      },
+      "video_sha256": "9b4c9a231bfa5930dd85d39b0fa29e61ed9f3af335f825adeafc2ecab61e7710"
+    },
+    {
+      "exercise": "situp",
+      "clip": "situp_repeated.jsonl",
+      "side": null,
+      "count": 10,
+      "frames": 435,
+      "tracking": 1,
+      "events": [
+        1.267,
+        2.6,
+        3.933,
+        5.3,
+        6.6,
+        7.933,
+        9.233,
+        10.533,
+        11.833,
+        13.133
+      ],
+      "source_metadata": {
+        "file": "videos/situp_repeated.mp4",
+        "exercise": "situp",
+        "view": "side",
+        "take_id": "dvids_1016256_repeated",
+        "posture_label": "unreviewed",
+        "source_url": "https://www.dvidshub.net/video/1016256/culture-fitness-sit-ups",
+        "credit": "Travis Burcham, Staff Sgt. Elijah Dority, Joshua DuFrane / DVIDS",
+        "rights": "Public Domain (source designation; see DVIDS copyright notice)",
+        "source_segment_s": [
+          89.5,
+          104
+        ],
+        "sha256": "9d1948bdfdf5327e247d770f2c06407d3ddeaff2d78bc9892210eaa0e0d417c9"
+      },
+      "video_sha256": "9d1948bdfdf5327e247d770f2c06407d3ddeaff2d78bc9892210eaa0e0d417c9"
+    },
+    {
+      "exercise": "situp",
+      "clip": "situp_single.jsonl",
+      "side": null,
+      "count": 1,
+      "frames": 289,
+      "tracking": 0.993,
+      "events": [
+        8.567
+      ],
+      "source_metadata": {
+        "file": "videos/situp_single.mp4",
+        "exercise": "situp",
+        "view": "side",
+        "take_id": "dvids_1016256_single",
+        "posture_label": "unreviewed",
+        "source_url": "https://www.dvidshub.net/video/1016256/culture-fitness-sit-ups",
+        "credit": "Travis Burcham, Staff Sgt. Elijah Dority, Joshua DuFrane / DVIDS",
+        "rights": "Public Domain (source designation; see DVIDS copyright notice)",
+        "source_segment_s": [
+          48,
+          57.6
+        ],
+        "sha256": "5312814821a645fed5ce678b5f40a6cd1542e8df60b9eec62ea8b0931fc5adf6"
+      },
+      "video_sha256": "5312814821a645fed5ce678b5f40a6cd1542e8df60b9eec62ea8b0931fc5adf6"
+    }
+  ]
+}
