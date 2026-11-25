@@ -34,7 +34,7 @@ export declare class PushupAnalyzer implements BaseExerciseAnalyzer<import('./co
   constructor(settings?: Record<string, unknown>);
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').PushupFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -42,7 +42,7 @@ export declare class PlankAnalyzer implements BaseExerciseAnalyzer<import('./com
   constructor();
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').PlankFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -50,7 +50,7 @@ export declare class SquatAnalyzer implements BaseExerciseAnalyzer<import('./com
   constructor(options?: Record<string, unknown>);
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').SquatFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -58,7 +58,7 @@ export declare class BirdDogAnalyzer implements BaseExerciseAnalyzer<import('./c
   constructor(options?: Record<string, unknown>);
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').BirdDogFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -66,7 +66,7 @@ export declare class JumpingJackAnalyzer implements BaseExerciseAnalyzer<import(
   constructor(options?: Record<string, unknown>);
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').JumpingJackFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -74,7 +74,7 @@ export declare class LegRaiseAnalyzer implements BaseExerciseAnalyzer<import('./
   constructor(options?: Record<string, unknown>);
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').LegRaiseFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -82,7 +82,7 @@ export declare class GluteBridgeAnalyzer implements BaseExerciseAnalyzer<import(
   constructor(options?: Record<string, unknown>);
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').GluteBridgeFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -90,7 +90,7 @@ export declare class SupermanAnalyzer implements BaseExerciseAnalyzer<import('./
   constructor(options?: Record<string, unknown>);
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').SupermanFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -98,7 +98,7 @@ export declare class PikePushupAnalyzer implements BaseExerciseAnalyzer<import('
   constructor(options?: Record<string, unknown>);
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').PikePushupFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -106,7 +106,7 @@ export declare class MountainClimberAnalyzer implements BaseExerciseAnalyzer<imp
   constructor(options?: Record<string, unknown>);
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').MountainClimberFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -114,7 +114,7 @@ export declare class LungeAnalyzer implements BaseExerciseAnalyzer<import('./com
   constructor(options?: { side?: 'left' | 'right' | null });
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').CycleFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -122,7 +122,7 @@ export declare class SplitSquatAnalyzer implements BaseExerciseAnalyzer<import('
   constructor(options?: { side?: 'left' | 'right' | null });
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').CycleFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -130,7 +130,7 @@ export declare class BulgarianSplitSquatAnalyzer implements BaseExerciseAnalyzer
   constructor(options?: { side?: 'left' | 'right' | null });
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').CycleFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -138,7 +138,7 @@ export declare class InclinePushupAnalyzer implements BaseExerciseAnalyzer<impor
   constructor(options?: { side?: 'left' | 'right' | null });
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').CycleFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -146,7 +146,7 @@ export declare class StandingCalfRaiseAnalyzer implements BaseExerciseAnalyzer<i
   constructor(options?: { side?: 'left' | 'right' | null });
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').CycleFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -154,7 +154,7 @@ export declare class SideLegRaiseAnalyzer implements BaseExerciseAnalyzer<import
   constructor(options?: { side?: 'left' | 'right' | null });
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').CycleFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -162,7 +162,7 @@ export declare class DeadBugAnalyzer implements BaseExerciseAnalyzer<import('./c
   constructor(options?: { side?: 'left' | 'right' | null });
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').CycleFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -171,7 +171,7 @@ export declare class SidePlankAnalyzer implements BaseExerciseAnalyzer<import('.
   reset(): void;
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').SidePlankFrameResult;
   breakContinuity(reason?: 'pause'): unknown;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & { schemaVersion: string; type: string; exercise: string })>;
 }
 
@@ -275,7 +275,7 @@ export declare class JumpSquatAnalyzer implements BaseExerciseAnalyzer<import('.
   constructor(options?: PilotAnalyzerOptions);
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').PilotFrameResult;
   breakContinuity(reason?: string): Array<Record<string, unknown>>;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted>;
 }
 
@@ -283,7 +283,7 @@ export declare class ReverseCrunchAnalyzer implements BaseExerciseAnalyzer<impor
   constructor(options?: PilotAnalyzerOptions);
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').PilotFrameResult;
   breakContinuity(reason?: string): Array<Record<string, unknown>>;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted>;
 }
 
@@ -291,7 +291,7 @@ export declare class FlutterKicksAnalyzer implements BaseExerciseAnalyzer<import
   constructor(options?: {side?: null});
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').PilotFrameResult;
   breakContinuity(reason?: string): Array<Record<string, unknown>>;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted>;
 }
 
@@ -299,7 +299,7 @@ export declare class BurpeeAnalyzer implements BaseExerciseAnalyzer<import('./co
   constructor(options?: PilotAnalyzerOptions);
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').PilotFrameResult;
   breakContinuity(reason?: string): Array<Record<string, unknown>>;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted>;
 }
 
@@ -307,7 +307,7 @@ export declare class SitupAnalyzer implements BaseExerciseAnalyzer<import('./com
   constructor(options?: PilotAnalyzerOptions);
   pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').PilotFrameResult;
   breakContinuity(reason?: string): Array<Record<string, unknown>>;
-  summary(): import('./common/contracts.js').SetSummary;
+  summary(): import('./common/contracts.js').ReportedSetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted>;
 }
 
@@ -334,3 +334,11 @@ export declare class ExerciseSessionController {
   summary(): import('./common/contracts.js').SetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & {schemaVersion: string; type: string; exercise: string})>;
 }
+
+export declare const ITEM_LABELS: Readonly<Record<string, string>>;
+export declare function itemLabel(id: string): string;
+export declare function workoutReportFields(summary: import('./common/contracts.js').SetSummary): {
+  feedbackCodes: string[];
+  errorCounts: Record<string, number>;
+  trackingAvailablePct: number | null;
+};

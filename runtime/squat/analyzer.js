@@ -1,3 +1,4 @@
+import {installReport} from '../common/report.js';
 import {SquatRule,DEFAULT_CONFIG,IDS,metrics,SQUAT_SOURCE_COMMIT} from './engine.js';
 import {itemResult,setSummary,setCompleted} from '../common/result.js';
 import {pushRealtime} from '../common/realtime.js';
@@ -70,7 +71,7 @@ export class SquatSideSelector {
 
 /** Common per-frame wrapper. No TTS, timer, network, or automatic set transitions. */
 export class SquatAnalyzer {
-  constructor({side=null,config={},sideConfig={}}={}){
+  constructor({side=null,config={},sideConfig={}}={}){installReport(this);
     this.rule=new SquatRule(config);
     this.selector=new SquatSideSelector({...SIDE_CONFIG,...sideConfig,side,standing_deg:this.rule.c.standing_deg});
     this.lastTime=null;this.previous=null;this.closed=false;this.pendingEvents=[];this.discontinuous=false;

@@ -1,3 +1,4 @@
+import {installReport} from '../common/report.js';
 import {validateFrame} from '../common/frame.js';
 import {frameResult} from '../common/realtime.js';
 import {itemResult,setSummary,setCompleted} from '../common/result.js';
@@ -10,7 +11,7 @@ function qualityStatus(rule,value) {
 }
 
 class CycleAnalyzer {
-  constructor(exercise,{side=null}={}) {
+  constructor(exercise,{side=null}={}) {installReport(this);
     if (side!==null && side!=='left' && side!=='right') throw new RangeError('Expected left or right working side');
     this.exercise=exercise;
     this.rule=profiles[exercise];

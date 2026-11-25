@@ -1,3 +1,4 @@
+import {installReport} from '../common/report.js';
 import {validateFrame} from '../common/frame.js';
 import {frameResult} from '../common/realtime.js';
 import {itemResult, setSummary, setCompleted} from '../common/result.js';
@@ -82,7 +83,7 @@ function shortReturn(leg,g,t,high,hipUnknown,reliable=true){
   return null;
 }
 export class MountainClimberAnalyzer {
-  constructor(){this.lastTime=null;this.closed=false;this.reps=[];this.observedSeconds=0;this.gapSeconds=0;this.reset();}
+  constructor(){installReport(this);this.lastTime=null;this.closed=false;this.reps=[];this.observedSeconds=0;this.gapSeconds=0;this.reset();}
   reset(){this.legs=Object.fromEntries(SIDES.map(s=>[s,fresh()]));this.visible=false;this.hipSince=null;this.lastRep=null;}
   breakContinuity(reason='pause'){if(this.closed)return [];this.reset();this.resumePending=true;return [{type:'tracking.interrupted',reason,t:this.lastTime===null?null:this.lastTime/1000}];}
   stepLeg(side,m,g,t,high,hipUnknown,events,weakRear){

@@ -113,3 +113,7 @@ Python 레퍼런스는 설정을 모듈 전역에 적용하므로 서로 다른 
 ## 7. 선택적 세션 제어기
 
 `ExerciseSessionController`는 동일한 PoseFrame을 받아 별도 `session.state` v1을 반환합니다. 실제 측정에 사용된 프레임은 `state.frameResult`에 기존 v2 그대로 포함되며, 대기·중단·카운트다운·watchdog 호출에서는 null입니다. 누적값은 `state.summary`입니다. 기존 Analyzer API와 운동 판정 규칙을 바꾸지 않았습니다. [2초 이탈·5초 재개 규격](POSE_SESSION_RECOVERY.md)을 따릅니다.
+
+## 8. 공통 세트 리포트
+
+JS 분석기의 details.report는 오류 코드 집계·세트 점수·추적률·후반 자세 저하 후보를 제공한다. details.repetitions/sideCounts/sideHoldSeconds/itemLabels도 공통 필드이며 기존 원시 키는 보존한다. 미평가와 관측 부족은 null이고 정상으로 대체하지 않는다. [정의와 연동](SET_REPORT_V1.md)을 따른다.

@@ -1,4 +1,5 @@
 import {jsonSafe} from './frame.js';
+import {reportDetails} from './report.js';
 
 // Serialization only: consume existing accumulators, never classify or gate a motion.
 export const SET_RESULT_VERSION = '2.0';
@@ -15,8 +16,8 @@ export function itemResult(basis, compliant, warning, unknown = 0, notApplicable
 }
 export function setSummary({exercise, engineVersion, count = null, holdSeconds = null,
   observedSeconds = null, gapSeconds = null, items, details = {}}) {
-  return jsonSafe({schemaVersion: SET_RESULT_VERSION, exercise, engineVersion, count, holdSeconds,
-    observedSeconds, gapSeconds, items, details});
+  const summary={schemaVersion:SET_RESULT_VERSION,exercise,engineVersion,count,holdSeconds,observedSeconds,gapSeconds,items,details};
+  return jsonSafe({...summary,details:reportDetails(summary)});
 }
 export function setCompleted(summary, timestampMs = null) {
   return jsonSafe({schemaVersion: SET_RESULT_VERSION, type: 'set.completed',

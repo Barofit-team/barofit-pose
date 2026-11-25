@@ -1,3 +1,4 @@
+import {installReport} from '../common/report.js';
 import {pushRealtime} from '../common/realtime.js';
 import {itemResult,setSummary,setCompleted} from '../common/result.js';
 import {VALID_HOLD_CONFIG,validHoldInterval} from '../common/hold.js';
@@ -28,7 +29,7 @@ export function sidePlankMetrics(frame){
  return {side,observable:true,bodyCandidate,hipOffsetPct,hipClearancePct,shoulderDeviationDeg,kneeDeg:K?angle(H,K,A):null,elbowDeg:angle(S,E,W),stackPct};
 }
 export class SidePlankAnalyzer{
- constructor(){this.closed=false;this.previous=null;this.lastTime=null;this.observedSeconds=0;this.holdSeconds=0;this.gapSeconds=0;this.sideSeconds={left:0,right:0};this.totals=Object.fromEntries(keys.map(k=>[k,{compliant:0,warning:0,unknown:0,notApplicable:0}]));this.reset();}
+ constructor(){installReport(this);this.closed=false;this.previous=null;this.lastTime=null;this.observedSeconds=0;this.holdSeconds=0;this.gapSeconds=0;this.sideSeconds={left:0,right:0};this.totals=Object.fromEntries(keys.map(k=>[k,{compliant:0,warning:0,unknown:0,notApplicable:0}]));this.reset();}
  reset(){this.candidateSide=null;this.since=null;this.pending={};}
  pushFrame(frame){return pushRealtime(this,frame,'side_plank',SIDE_PLANK_VERSION);}
  _pushFrameLegacy(frame){

@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-25",
+  "baseCommit": "49762dd7f16d66f91dcf021820758821c041a83e",
+  "exerciseCount": 23,
+  "checks": {
+    "javascript": {
+      "command": "npm test",
+      "passed": 233,
+      "failed": 0
+    },
+    "python": {
+      "command": "python -m unittest discover -s tests/python -v",
+      "passed": 48,
+      "failed": 0
+    },
+    "typescript": {
+      "command": "npm run test:types",
+      "passed": true
+    },
+    "schemas": {
+      "payloads": 2110,
+      "emptyAndSampledSets": 46,
+      "existingClipPayloads": 2064,
+      "passed": true
+    },
+    "reportPatchApplyCheck": {
+      "baseCommit": "4d859346df28b802cecaa0077389684c2ce2520b",
+      "passed": true
+    }
+  },
+  "scope": {
+    "frontendModified": false,
+    "exerciseRuleThresholdsChanged": false,
+    "reportServiceRemotePRCreated": false
+  },
+  "limitations": [
+    "Demo coordinate replay verifies regression and serialization, not annotated accuracy.",
+    "Posture score and late breakdown candidate have no human-ground-truth accuracy claim.",
+    "Report repository writes returned HTTP 403.",
+    "Java compilation, unit/integration tests, Spotless and infra E2E are unverified; javac/Docker/minikube unavailable and Gradle distribution download failed."
+  ]
+}

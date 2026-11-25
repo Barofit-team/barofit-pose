@@ -1,3 +1,4 @@
+import {withoutReport} from './report_helpers.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -152,9 +153,9 @@ test('all 23 real exercise analyzers preserve completed totals and exclude pause
   const c=new pose.ExerciseSessionController({analyzer:a});
   initial(c);
   const before=c.summary();series(c,500,2500,absent);
-  assert.deepEqual(c.summary(),before,name);
+  assert.deepEqual(withoutReport(c.summary()),withoutReport(before),name);
   series(c,2600,7800);
-  assert.deepEqual(c.summary(),before,name);
+  assert.deepEqual(withoutReport(c.summary()),withoutReport(before),name);
   const r=c.pushFrame(packet(7900));
   const after=c.summary();
   for(const key of ['count','holdSeconds','observedSeconds','gapSeconds'])

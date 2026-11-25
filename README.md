@@ -118,3 +118,7 @@ node examples/pushup.mjs results/extracted/frames.jsonl
 ## 인식 이탈·재인식·자동 재개
 
 `ExerciseSessionController`로 기존 Analyzer를 감싸면 관절 관측 상태, 2초 이탈 확정, 5초 재개 카운트다운, 재이탈 취소를 반환합니다. 완료 횟수·유효 유지 시간은 보존하며 일시정지·카운트다운 중에는 분석기로 프레임을 전달하지 않습니다. [연결 방법과 상태 신호](docs/POSE_SESSION_RECOVERY.md)를 참고하세요. UI·카메라 콜백 연결은 프론트에서 적용해야 합니다.
+
+## 세트 리포트 공통 지표
+
+23종 JS 분석기의 `summary().details.report`에서 오류 코드별 집계·관측 시간 기반 추적률·평가 항목 평균 점수·후반 자세 저하 후보를 제공합니다. 회차와 좌우 정보는 공통 details 필드로 반환하고, 미평가 점수/비교는 null로 유지합니다. 한국어 항목명과 기존 workout 전송 필드 어댑터도 제공합니다. [지표 정의·호환성·하위 연동 범위](docs/SET_REPORT_V1.md)를 확인하세요.

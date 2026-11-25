@@ -1,3 +1,4 @@
+import {installReport} from '../common/report.js';
 import {validateFrame,jsonSafe} from '../common/frame.js';
 import {frameResult} from '../common/realtime.js';
 import {itemResult,setSummary,setCompleted} from '../common/result.js';
@@ -33,7 +34,7 @@ export function legRaiseMetrics(frame,side,config=LEG_RAISE_CONFIG){
 }
 
 export class LegRaiseAnalyzer {
-  constructor(config={}){
+  constructor(config={}){installReport(this);
     this.tempoTracker=new TempoTracker();
     this.config={...LEG_RAISE_CONFIG,...config};this.closed=false;this.lastTime=null;this.side=null;
     this.count=0;this.observedSeconds=0;this.gapSeconds=0;this.repetitions=[];this.lastRep=null;

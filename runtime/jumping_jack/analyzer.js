@@ -1,3 +1,4 @@
+import {installReport} from '../common/report.js';
 import {validateFrame,jsonSafe} from '../common/frame.js';
 import {frameResult} from '../common/realtime.js';
 import {itemResult,setSummary,setCompleted} from '../common/result.js';
@@ -32,7 +33,7 @@ export function jackMetrics(frame,config=JACK_CONFIG){
 
 /** Same public lifecycle and v2 envelope as the existing analyzers. Count is independent of quality. */
 export class JumpingJackAnalyzer {
-  constructor(config={}){this.config={...JACK_CONFIG,...config};this.closed=false;this.lastTime=null;
+  constructor(config={}){installReport(this);this.config={...JACK_CONFIG,...config};this.closed=false;this.lastTime=null;
     this.count=0;this.observedSeconds=0;this.gapSeconds=0;this.repetitions=[];this.lastRep=null;
     this.totals=Object.fromEntries(KEYS.map(k=>[k,{compliant:0,warning:0,unknown:0}]));this.resetMotion();}
   resetMotion(){this.phase='not_ready';this.low=null;this.samples=[];this.peak=null;this.trough=null;this.previousMetric=null;this.leanSince=null;}

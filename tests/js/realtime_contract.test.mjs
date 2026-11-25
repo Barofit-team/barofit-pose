@@ -1,3 +1,4 @@
+import {legacySummary} from './report_helpers.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {PushupAnalyzer,PlankAnalyzer,BirdDogAnalyzer,SquatAnalyzer} from '../../runtime/index.js';
@@ -66,9 +67,9 @@ test('serialization leaves rules, events, metrics, summaries and time accumulati
    assert.equal(a.count,b.count??null);assert.equal(a.holdSeconds,b.holdSeconds??null);
    assert.deepEqual(a.codes,b.codes??[]);assert.deepEqual(a.events,b.events??[]);
    assert.deepEqual(a.metrics,b.metrics??{});
-   assert.deepEqual(adapted.summary(),legacy.summary());
+   assert.deepEqual(legacySummary(adapted.summary()),legacySummary(legacy.summary()));
   }
-  assert.deepEqual(adapted.finish(),legacy.finish());
+  assert.deepEqual(adapted.finish().map(e=>e.summary?{...e,summary:legacySummary(e.summary)}:e),legacy.finish().map(e=>e.summary?{...e,summary:legacySummary(e.summary)}:e));
  }
 });
 

@@ -1,3 +1,4 @@
+import {installReport} from '../common/report.js';
 import {validateFrame,jsonSafe} from '../common/frame.js';
 import {frameResult} from '../common/realtime.js';
 import {itemResult,setSummary,setCompleted} from '../common/result.js';
@@ -17,7 +18,7 @@ const UNSUPPORTED=['lumbar_neutral','elbow_flare','toe_loading'];
 const med=a=>{a=a.filter(Number.isFinite).sort((a,b)=>a-b);return a.length?a[Math.floor(a.length/2)]:null;};
 function sustained(rows,predicate,dwell){let since=null;for(const x of rows){if(predicate(x)){since??=x.t;if(x.t-since>=dwell)return true;}else since=null;}return false;}
 export class PikePushupAnalyzer{
- constructor(config={}){this.config={...PIKE_PUSHUP_CONFIG,...config};this.closed=false;this.lastTime=null;this.side=null;this.lostSince=null;this.count=0;this.observedSeconds=0;this.gapSeconds=0;this.lastRep=null;this.pendingAssessment=null;this.repetitions=[];this.totals=Object.fromEntries(KEYS.map(k=>[k,{compliant:0,warning:0,unknown:0}]));this.resetMotion();}
+ constructor(config={}){installReport(this);this.config={...PIKE_PUSHUP_CONFIG,...config};this.closed=false;this.lastTime=null;this.side=null;this.lostSince=null;this.count=0;this.observedSeconds=0;this.gapSeconds=0;this.lastRep=null;this.pendingAssessment=null;this.repetitions=[];this.totals=Object.fromEntries(KEYS.map(k=>[k,{compliant:0,warning:0,unknown:0}]));this.resetMotion();}
  resetMotion(){this.phase='not_ready';this.readySince=null;this.top=null;this.bottom=null;this.samples=[];this.smoothed=null;this.previousValid=false;this.warningSince={};this.referenceOverhead=null;}
  pressOut(overhead){return overhead<this.config.returnOverheadMinDeg;}
  breakContinuity(reason='pause'){

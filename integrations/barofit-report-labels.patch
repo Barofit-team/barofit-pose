@@ -1,0 +1,263 @@
+diff --git a/docs/POSTURE_LABEL_UPDATE.md b/docs/POSTURE_LABEL_UPDATE.md
+new file mode 100644
+index 0000000..0b2dbf0
+--- /dev/null
++++ b/docs/POSTURE_LABEL_UPDATE.md
+@@ -0,0 +1,19 @@
++# 23종 자세 평가 항목명 보완
++
++GeneratedReportService의 4개 항목 한글 매핑을 pose 공통 라벨 카탈로그 전체로 확장합니다.
++서버 응답 구조·점수 계산·원시 운동 기록은 바꾸지 않습니다. strengths/improvements/nextGoal을
++새로 생성할 때 공통 한국어 이름을 사용하고 미래 미등록 항목은 원시 id를 문장에 노출하지 않습니다.
++
++검증용 카탈로그 스냅샷은 src/test/resources/pose-item-labels.json에 있습니다. 해당 파일의
++원본은 Barofit-team/barofit-pose의 schemas/posture-item-labels.json입니다. 동기화 검사와
++신규 항목을 사용하는 실제 generate 경로의 단위 테스트를 추가했습니다.
++
++생성 완료 리포트는 기존 정책대로 불변입니다. 이 수정이 이미 저장된 리포트 문장을
++소급해서 다시 쓰지는 않습니다.
++
++현재 에이전트 환경에서는 Java 컴파일러(javac), Docker, minikube를 사용할 수 없으며 Gradle
++배포 다운로드도 실패했습니다. ./gradlew spotlessApply test integrationTest spotlessCheck를
++시도했으나 실행 기반이 준비되지 않아 통과 여부를 확인하지 못했습니다. 여러 레포 변경에 대한
++infra E2E도 실행할 수 없습니다. 테스트·포맷 검증 전에는 이 변경을 병합하지 않습니다.
++
++GitHub 이슈 생성과 Git tree 쓰기 모두 연동 권한 오류(403)로 실패했습니다. 따라서 원격 PR 대신 적용 가능한 패치로 공유합니다.
+diff --git a/src/main/java/com/barofit/report/service/GeneratedReportService.java b/src/main/java/com/barofit/report/service/GeneratedReportService.java
+index 76b3493..2f7b522 100644
+--- a/src/main/java/com/barofit/report/service/GeneratedReportService.java
++++ b/src/main/java/com/barofit/report/service/GeneratedReportService.java
+@@ -236,13 +236,7 @@ public class GeneratedReportService {
+   }
+ 
+   private static String itemLabel(String id) {
+-    return switch (id) {
+-      case "pike_shape" -> "파이크 자세";
+-      case "head_path" -> "머리 이동 경로";
+-      case "press_return" -> "밀어 올리고 돌아오는 자세";
+-      case "hip_alignment" -> "골반 정렬";
+-      default -> "자세 평가 항목(" + id + ")";
+-    };
++    return PostureItemLabels.label(id);
+   }
+ 
+   private Generated find(UUID user, UUID session) {
+diff --git a/src/main/java/com/barofit/report/service/PostureItemLabels.java b/src/main/java/com/barofit/report/service/PostureItemLabels.java
+new file mode 100644
+index 0000000..daf5ba5
+--- /dev/null
++++ b/src/main/java/com/barofit/report/service/PostureItemLabels.java
+@@ -0,0 +1,67 @@
++package com.barofit.report.service;
++
++import java.util.Map;
++
++/** Korean labels shared with the pose set-report catalog. */
++final class PostureItemLabels {
++  private PostureItemLabels() {}
++
++  private static final Map<String, String> LABELS =
++      Map.ofEntries(
++          Map.entry("arm_extension", "팔 펴기"),
++          Map.entry("arm_raise", "팔 벌림 높이"),
++          Map.entry("axial_rotation", "몸통 회전"),
++          Map.entry("body_line", "몸통 정렬"),
++          Map.entry("body_movement", "몸통 안정성"),
++          Map.entry("chest", "상체 이동 범위"),
++          Map.entry("coordination", "팔·다리 협응"),
++          Map.entry("depth", "동작 깊이"),
++          Map.entry("elbow", "팔꿈치 굽힘"),
++          Map.entry("elbow_flare", "팔꿈치 벌어짐"),
++          Map.entry("foot_position", "발 위치"),
++          Map.entry("form", "자세 평가"),
++          Map.entry("hand", "손 위치"),
++          Map.entry("head_path", "머리 이동 경로"),
++          Map.entry("hip", "골반 정렬"),
++          Map.entry("hip_alignment", "골반 정렬"),
++          Map.entry("hip_extension", "골반 올리기"),
++          Map.entry("hip_height", "골반 높이"),
++          Map.entry("knee", "무릎 펴기"),
++          Map.entry("knee_extension", "무릎 펴기"),
++          Map.entry("knee_tracking", "무릎 진행 방향"),
++          Map.entry("left_arm_high", "왼쪽 팔 높이"),
++          Map.entry("left_arm_low", "왼쪽 팔 처짐"),
++          Map.entry("left_elbow_bent", "왼쪽 팔꿈치 펴기"),
++          Map.entry("left_hand_alignment", "왼쪽 지지 손 정렬"),
++          Map.entry("left_knee_bent", "왼쪽 무릎 펴기"),
++          Map.entry("left_leg_high", "왼쪽 다리 높이"),
++          Map.entry("left_support_knee_alignment", "왼쪽 지지 무릎 정렬"),
++          Map.entry("leg_open", "다리 벌림"),
++          Map.entry("leg_spread", "다리 벌어짐"),
++          Map.entry("lowering_control", "내려오는 속도 조절"),
++          Map.entry("lumbar_contact", "허리 바닥 접촉"),
++          Map.entry("lumbar_neutral", "허리 중립"),
++          Map.entry("movement_control", "동작 속도 조절"),
++          Map.entry("opposite_arm", "반대쪽 팔 협응"),
++          Map.entry("pike_shape", "파이크 자세"),
++          Map.entry("press_return", "밀어 올리고 돌아오는 자세"),
++          Map.entry("range", "동작 범위"),
++          Map.entry("return", "시작 자세 복귀"),
++          Map.entry("right_arm_high", "오른쪽 팔 높이"),
++          Map.entry("right_arm_low", "오른쪽 팔 처짐"),
++          Map.entry("right_elbow_bent", "오른쪽 팔꿈치 펴기"),
++          Map.entry("right_hand_alignment", "오른쪽 지지 손 정렬"),
++          Map.entry("right_knee_bent", "오른쪽 무릎 펴기"),
++          Map.entry("right_leg_high", "오른쪽 다리 높이"),
++          Map.entry("right_support_knee_alignment", "오른쪽 지지 무릎 정렬"),
++          Map.entry("same_side_pair", "반대쪽 팔·다리 협응"),
++          Map.entry("shoulder", "어깨·팔꿈치 정렬"),
++          Map.entry("shoulder_shrug", "어깨 으쓱임"),
++          Map.entry("toe_loading", "발끝 지지"),
++          Map.entry("torso", "몸통 기울기"),
++          Map.entry("trunk", "몸통 기울기"));
++
++  static String label(String id) {
++    return id == null ? "자세 평가 항목" : LABELS.getOrDefault(id, "자세 평가 항목");
++  }
++}
+diff --git a/src/test/java/com/barofit/report/service/GeneratedReportLabelsTest.java b/src/test/java/com/barofit/report/service/GeneratedReportLabelsTest.java
+new file mode 100644
+index 0000000..653d1cd
+--- /dev/null
++++ b/src/test/java/com/barofit/report/service/GeneratedReportLabelsTest.java
+@@ -0,0 +1,77 @@
++package com.barofit.report.service;
++
++import static org.assertj.core.api.Assertions.assertThat;
++import static org.mockito.ArgumentMatchers.*;
++import static org.mockito.Mockito.*;
++
++import com.barofit.report.repository.ReportRepository.ScoreItem;
++import java.util.List;
++import java.util.UUID;
++import java.util.concurrent.atomic.AtomicReference;
++import org.junit.jupiter.api.Test;
++import org.springframework.jdbc.core.JdbcTemplate;
++import org.springframework.jdbc.core.RowMapper;
++import tools.jackson.databind.ObjectMapper;
++
++class GeneratedReportLabelsTest {
++  @Test
++  void generatedFeedbackUsesKoreanNamesBeyondTheOriginalFourLabels() throws Exception {
++    UUID user = UUID.randomUUID(), session = UUID.randomUUID(), set = UUID.randomUUID();
++    ObjectMapper json = new ObjectMapper();
++    ReportSourceClient sources = mock(ReportSourceClient.class);
++    ReportService reports = mock(ReportService.class);
++    JdbcTemplate jdbc = mock(JdbcTemplate.class);
++    AtomicReference<String> saved = new AtomicReference<>();
++    var source =
++        json.readTree(
++            """
++            {"status":"COMPLETED","startedAt":"2026-11-25T00:00:00Z",
++             "endedAt":"2026-11-25T00:01:00Z","activeDurationSeconds":60,
++             "routineSnapshot":{"name":"테스트","exercises":[
++               {"id":"exercise","exerciseId":"leg_raise","name":"레그 레이즈",
++                "sets":[{"id":"%s"}]}]},
++             "sets":[{"routineSetId":"%s","actualReps":4,"actualDurationSeconds":0,
++                      "errorCounts":{"KNEE_BENT":1}}]}
++            """
++                .formatted(set, set));
++    when(sources.workout(anyString(), eq("Bearer test"))).thenReturn(source);
++    when(reports.scoreItems(user, session))
++        .thenReturn(List.of(new ScoreItem(set, "knee_extension", "repetition", "repetitions", 3, 1)));
++    when(jdbc.query(anyString(), org.mockito.ArgumentMatchers.<RowMapper<String>>any(), eq(user), eq(session)))
++        .thenAnswer(invocation -> saved.get() == null ? List.of() : List.of(saved.get()));
++    when(jdbc.update(anyString(), eq(session), eq(user), anyString()))
++        .thenAnswer(
++            invocation -> {
++              saved.set(invocation.getArgument(3));
++              return 1;
++            });
++    var service = new GeneratedReportService(sources, reports, jdbc, json);
++    var generated = service.generate(user, session, "Bearer test");
++    assertThat(generated.exercises().getFirst().strengths()).contains("무릎 펴기");
++    assertThat(generated.exercises().getFirst().improvements()).contains("무릎 펴기");
++    assertThat(generated.exercises().getFirst().nextGoal()).contains("무릎 펴기");
++    assertThat(generated.exercises().getFirst().errorCounts()).containsEntry("KNEE_BENT", 1L);
++  }
++
++  @Test
++  void allPoseCatalogItemsHaveTheSameKoreanLabel() throws Exception {
++    try (var input = getClass().getResourceAsStream("/pose-item-labels.json")) {
++      assertThat(input).isNotNull();
++      var labels = new ObjectMapper().readTree(input).path("labels");
++      assertThat(labels.size()).isGreaterThan(40);
++      labels.forEachEntry(
++          (id, label) -> assertThat(PostureItemLabels.label(id)).isEqualTo(label.asText()));
++    }
++  }
++
++  @Test
++  void labelsCoverSharedAndSideSpecificItemsAndDoNotExposeUnknownIds() {
++    assertThat(PostureItemLabels.label("hip")).isEqualTo("골반 정렬");
++    assertThat(PostureItemLabels.label("pike_shape")).isEqualTo("파이크 자세");
++    assertThat(PostureItemLabels.label("opposite_arm")).isEqualTo("반대쪽 팔 협응");
++    assertThat(PostureItemLabels.label("left_support_knee_alignment")).isEqualTo("왼쪽 지지 무릎 정렬");
++    assertThat(PostureItemLabels.label("right_elbow_bent")).isEqualTo("오른쪽 팔꿈치 펴기");
++    assertThat(PostureItemLabels.label("unknown_future_id")).isEqualTo("자세 평가 항목");
++    assertThat(PostureItemLabels.label(null)).isEqualTo("자세 평가 항목");
++  }
++}
+diff --git a/src/test/resources/pose-item-labels.json b/src/test/resources/pose-item-labels.json
+new file mode 100644
+index 0000000..9e221d2
+--- /dev/null
++++ b/src/test/resources/pose-item-labels.json
+@@ -0,0 +1,57 @@
++{
++  "schemaVersion": "1.0",
++  "labels": {
++    "hip": "골반 정렬",
++    "elbow": "팔꿈치 굽힘",
++    "chest": "상체 이동 범위",
++    "hand": "손 위치",
++    "return": "시작 자세 복귀",
++    "shoulder": "어깨·팔꿈치 정렬",
++    "knee": "무릎 펴기",
++    "depth": "동작 깊이",
++    "trunk": "몸통 기울기",
++    "range": "동작 범위",
++    "body_line": "몸통 정렬",
++    "knee_extension": "무릎 펴기",
++    "opposite_arm": "반대쪽 팔 협응",
++    "hip_height": "골반 높이",
++    "arm_raise": "팔 벌림 높이",
++    "leg_open": "다리 벌림",
++    "coordination": "팔·다리 협응",
++    "torso": "몸통 기울기",
++    "hip_extension": "골반 올리기",
++    "foot_position": "발 위치",
++    "lowering_control": "내려오는 속도 조절",
++    "lumbar_contact": "허리 바닥 접촉",
++    "lumbar_neutral": "허리 중립",
++    "knee_tracking": "무릎 진행 방향",
++    "arm_extension": "팔 펴기",
++    "movement_control": "동작 속도 조절",
++    "pike_shape": "파이크 자세",
++    "head_path": "머리 이동 경로",
++    "press_return": "밀어 올리고 돌아오는 자세",
++    "hip_alignment": "골반 정렬",
++    "form": "자세 평가",
++    "same_side_pair": "반대쪽 팔·다리 협응",
++    "body_movement": "몸통 안정성",
++    "shoulder_shrug": "어깨 으쓱임",
++    "leg_spread": "다리 벌어짐",
++    "axial_rotation": "몸통 회전",
++    "elbow_flare": "팔꿈치 벌어짐",
++    "toe_loading": "발끝 지지",
++    "left_leg_high": "왼쪽 다리 높이",
++    "left_knee_bent": "왼쪽 무릎 펴기",
++    "left_arm_high": "왼쪽 팔 높이",
++    "left_arm_low": "왼쪽 팔 처짐",
++    "left_elbow_bent": "왼쪽 팔꿈치 펴기",
++    "left_hand_alignment": "왼쪽 지지 손 정렬",
++    "left_support_knee_alignment": "왼쪽 지지 무릎 정렬",
++    "right_leg_high": "오른쪽 다리 높이",
++    "right_knee_bent": "오른쪽 무릎 펴기",
++    "right_arm_high": "오른쪽 팔 높이",
++    "right_arm_low": "오른쪽 팔 처짐",
++    "right_elbow_bent": "오른쪽 팔꿈치 펴기",
++    "right_hand_alignment": "오른쪽 지지 손 정렬",
++    "right_support_knee_alignment": "오른쪽 지지 무릎 정렬"
++  }
++}

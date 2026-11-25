@@ -1,3 +1,4 @@
+import {withoutReport} from './report_helpers.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -165,7 +166,7 @@ test('completed counts and time totals survive a long pause with no countdown fr
     a.breakContinuity('auto_pause');
     const before=a.summary();
     a.pushFrame(frame(id,'rest',t+5000));
-    assert.deepEqual(a.summary(),before,id);
+    assert.deepEqual(withoutReport(a.summary()),withoutReport(before),id);
     const result=run(a,id,stages(id),t+5100);
     assert.equal(result.r.count,2,id);
   }
