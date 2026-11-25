@@ -5,6 +5,7 @@ const full=['shoulder','elbow','wrist','hip','knee','ankle'];
 const side=names=>({mode:'either',joints:names});
 const both=names=>({mode:'both',joints:names});
 export const READINESS_PROFILES=Object.freeze(Object.fromEntries(Object.entries({
+  jump_squat:side(lower),reverse_crunch:side(lower),flutter_kicks:both(['shoulder','hip','ankle']),burpee:side(full),situp:side(lower),
   pushup:side(full),plank:side(full),squat:side(lower),bird_dog:both(full),
   jumping_jack:both(full),leg_raise:side(lower),glute_bridge:side(lower),
   superman:side(full),pike_pushup:side(full),mountain_climber:side(full),

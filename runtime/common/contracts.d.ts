@@ -24,7 +24,7 @@ export interface FrameResultBase {
   holdSeconds: number | null;
   observedSeconds: number | null;
   measurementBasis: {
-    count: 'completed_single_knee_drive_return' | 'completed_threshold_cycle' | 'completed_squat_attempt' | 'completed_attempt' | 'one_leg_out_and_back' | 'completed_open_close_attempt' | 'completed_raise_lower_attempt' | 'completed_bridge_raise_lower_attempt' | 'completed_superman_raise_lower_attempt' | 'completed_pike_lower_raise_attempt' | null;
+    count: 'completed_single_knee_drive_return' | 'completed_threshold_cycle' | 'completed_squat_attempt' | 'completed_attempt' | 'one_leg_out_and_back' | 'completed_open_close_attempt' | 'completed_raise_lower_attempt' | 'completed_bridge_raise_lower_attempt' | 'completed_superman_raise_lower_attempt' | 'completed_pike_lower_raise_attempt' | 'completed_crouch_airborne_land_candidate' | 'completed_knee_tuck_return_candidate' | 'completed_two_leg_alternations_candidate' | 'completed_stand_floor_stand_candidate' | 'completed_torso_raise_return_candidate' | null;
     holdSeconds: 'all_required_items_compliant' | 'observed_holding' | 'observed_raised_still' | null;
     observedSeconds: 'continuous_sample_intervals' | 'continuous_visible_intervals' | null;
   };
@@ -84,7 +84,12 @@ export interface MountainClimberFrameResult extends FrameResultBase {
   exercise: 'mountain_climber'; count: number; holdSeconds: null; details: Record<string, never>;
 }
 export interface SidePlankFrameResult extends FrameResultBase { exercise: 'side_plank'; count: null; holdSeconds: number; lastRepetition: null; details: Record<string,never>; }
-export type FrameResult = SidePlankFrameResult | MountainClimberFrameResult | CycleFrameResult | SquatFrameResult | PushupFrameResult | PlankFrameResult | BirdDogFrameResult | JumpingJackFrameResult | LegRaiseFrameResult | GluteBridgeFrameResult | SupermanFrameResult | PikePushupFrameResult;
+export interface PilotFrameResult extends FrameResultBase {
+  exercise: 'jump_squat' | 'reverse_crunch' | 'flutter_kicks' | 'burpee' | 'situp';
+  count: number; holdSeconds: null;
+  details: {experimental: true; postureAssessment: 'unreviewed'};
+}
+export type FrameResult = PilotFrameResult | SidePlankFrameResult | MountainClimberFrameResult | CycleFrameResult | SquatFrameResult | PushupFrameResult | PlankFrameResult | BirdDogFrameResult | JumpingJackFrameResult | LegRaiseFrameResult | GluteBridgeFrameResult | SupermanFrameResult | PikePushupFrameResult;
 
 /** Set-result v2 unchanged. Non-terminal engine event payloads retain their v1 contracts. */
 export interface ItemSummary {

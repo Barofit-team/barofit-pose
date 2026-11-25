@@ -1,6 +1,6 @@
 # 실시간 결과 규격 v2
 
-[공개 운동 Analyzer 16종](../README.md)에 적용합니다. 신규 7종은 완료한 준비–동작–복귀 사이클을 횟수로 집계하며, 자세 피드백은 회차 기준입니다.
+[공개 운동 Analyzer 23종](../README.md)에 적용합니다. 운동별 집계 의미를 구분하며, 추가 5종 실험 분석기는 자세 평가 없이 자동 횟수 후보만 제공합니다.
 
 ## 설계 원칙
 
@@ -135,3 +135,5 @@ TypeScript의 [discriminated union](https://www.typescriptlang.org/docs/handbook
 - 준수율: `compliancePct` 0~100, 미평가는 분모 제외, 평가 데이터가 없으면 null입니다.
 - 원본 회차 목록은 `summary.details.reps`, 출처와 실험 상태는 `details`에 보존합니다. 종료 `timestampMs`는 밀리초이며 내부 이벤트의 `t`는 기존 초 단위입니다.
 - 판정 수식·임계값·카운트·시간 누적 조건은 유지했습니다.
+
+추가 5종의 운동별 measurementBasis·미평가 처리·중단 정책은 [JS 분석기 문서](FIVE_EXERCISE_RUNTIME.md)를 따릅니다.

@@ -28,7 +28,12 @@
         "side_lying_leg_raise",
         "dead_bug",
         "mountain_climber",
-        "side_plank"
+        "side_plank",
+        "jump_squat",
+        "reverse_crunch",
+        "flutter_kicks",
+        "burpee",
+        "situp"
       ]
     },
     "engineVersion": {
@@ -198,7 +203,12 @@
             "side_lying_leg_raise",
             "dead_bug",
             "mountain_climber",
-            "side_plank"
+            "side_plank",
+            "jump_squat",
+            "reverse_crunch",
+            "flutter_kicks",
+            "burpee",
+            "situp"
           ]
         },
         "engineVersion": {
@@ -808,6 +818,171 @@
             },
             "count": {
               "type": "null"
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "jump_squat"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "jump_squat"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "items": {
+              "required": [
+                "form"
+              ],
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "reverse_crunch"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "reverse_crunch"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "items": {
+              "required": [
+                "form"
+              ],
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "flutter_kicks"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "flutter_kicks"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "items": {
+              "required": [
+                "form"
+              ],
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "burpee"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "burpee"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "items": {
+              "required": [
+                "form"
+              ],
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "exercise": {
+          "const": "situp"
+        },
+        "summary": {
+          "properties": {
+            "exercise": {
+              "const": "situp"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "holdSeconds": {
+              "type": "null"
+            },
+            "items": {
+              "required": [
+                "form"
+              ],
+              "additionalProperties": {
+                "properties": {
+                  "aggregationBasis": {
+                    "const": "repetition"
+                  }
+                }
+              }
             }
           }
         }
