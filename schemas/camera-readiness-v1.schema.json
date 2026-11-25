@@ -84,6 +84,19 @@
     "stableForMs": {
       "type": "number",
       "minimum": 0
+    },
+    "evaluatedSide": {
+      "enum": [
+        "left",
+        "right",
+        "both"
+      ]
+    },
+    "checkedLandmarks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "required": [

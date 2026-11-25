@@ -29,6 +29,10 @@ function onPose(frame) {
 | reasonCode / message | 현재 관측 사유와 기본 한국어 안내 |
 | stableForMs | 현재 후보가 연속 조건을 충족한 시간(ms) |
 | ignored | 역순·중복 프레임. 이전 상태를 반환하며 시간 누적하지 않음 |
+| evaluatedSide | 이번 프레임의 `missingLandmarks`·`outOfFrameLandmarks`를 실제로 만든 평가 쪽(`left`/`right`, 양쪽 운동은 `both`). 준비 완료 쪽(`selectedSide`)·안정성 후보(`candidateSide`)와 다르며 둘이 null이어도 채워짐 |
+| checkedLandmarks | `evaluatedSide`에서 이번 프레임에 실제로 검사한 관절 전체. 프로필 선언을 그대로 돌려주는 값이 아니며 운동별 추가 검사(사이드 플랭크의 반대쪽 어깨)를 포함 |
+
+`evaluatedSide`·`checkedLandmarks`는 판정에 이미 쓰인 내부 평가 결과를 그대로 공개한 메타데이터입니다. 판정 기준·쪽 선택·시간 규칙은 바꾸지 않습니다. 인식된 관절은 `checkedLandmarks`에서 `missingLandmarks`·`outOfFrameLandmarks`를 뺀 것입니다. 관절이 검출되지 않은 프레임(`no_person`)도 평가는 수행되므로 검사 관절 전체가 누락으로 보고되며, `ignored` 프레임은 직전 결과의 두 값을 그대로 반환합니다.
 
 ## 기본 동작
 
