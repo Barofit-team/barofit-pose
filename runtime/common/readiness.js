@@ -6,6 +6,7 @@ const side=names=>({mode:'either',joints:names});
 const both=names=>({mode:'both',joints:names});
 export const READINESS_PROFILES=Object.freeze(Object.fromEntries(Object.entries({
   jump_squat:side(lower),reverse_crunch:side(lower),flutter_kicks:both(['shoulder','hip','ankle']),burpee:side(full),situp:side(lower),
+  side_plank:side(full),
   pushup:side(full),plank:side(full),squat:side(lower),bird_dog:both(full),
   jumping_jack:both(full),leg_raise:side(lower),glute_bridge:side(lower),
   superman:side(full),pike_pushup:side(full),mountain_climber:side(full),
@@ -16,13 +17,14 @@ export const READINESS_PROFILES=Object.freeze(Object.fromEntries(Object.entries(
 
 /** Camera observability only. Never starts an exercise or gates its analyzer. */
 export class CameraReadiness {
-  constructor({exercise,side=null,minVisibility=.5,minPresence=.5,stableMs=1000,lostMs=500,maxGapMs=400}={}) {
+  constructor({exercise,side=null,minVisibility=.5,minPresence=.5,stableMs=1000,lostMs=500,maxGapMs=400,switchToVisibleSide=false}={}) {
     if(!READINESS_PROFILES[exercise])throw new RangeError('Unsupported exercise');
     if(![null,'left','right'].includes(side))throw new RangeError('Invalid side');
     if(READINESS_PROFILES[exercise].mode==='both'&&side!==null)throw new RangeError('Exercise requires both sides');
     if(![minVisibility,minPresence].every(v=>Number.isFinite(v)&&v>=0&&v<=1)||
        ![stableMs,lostMs,maxGapMs].every(v=>Number.isFinite(v)&&v>0))throw new RangeError('Invalid thresholds');
-    Object.assign(this,{exercise,fixedSide:side,minVisibility,minPresence,stableMs,lostMs,maxGapMs});
+    if(typeof switchToVisibleSide!=='boolean')throw new TypeError('switchToVisibleSide must be boolean');
+    Object.assign(this,{exercise,fixedSide:side,minVisibility,minPresence,stableMs,lostMs,maxGapMs,switchToVisibleSide});
     this.lastTime=null;this.reset();
   }
   reset(){this.ready=false;this.selectedSide=null;this.candidate=null;this.since=null;this.lostSince=null;this.dimensions=null;}
@@ -38,6 +40,13 @@ export class CameraReadiness {
       else if(p[4]<this.minPresence)reason='LOW_PRESENCE';
       return {name:side+'_'+name,reason};
     });
+    if(this.exercise==='side_plank'){
+      const other=side==='left'?'right':'left',p=frame.landmarks[other==='left'?11:12];
+      const reason=!p||![p[0],p[1],p[3],p[4]].every(Number.isFinite)?'MISSING_LANDMARK':
+        p[0]<0||p[0]>1||p[1]<0||p[1]>1?'BODY_OUT_OF_FRAME':
+        p[3]<this.minVisibility?'LOW_VISIBILITY':p[4]<this.minPresence?'LOW_PRESENCE':null;
+      entries.push({name:other+'_shoulder',reason});
+    }
     return {side,entries,ok:entries.every(x=>!x.reason),good:entries.filter(x=>!x.reason).length};
   }
   pushFrame(frame){
@@ -51,7 +60,10 @@ export class CameraReadiness {
     const mode=READINESS_PROFILES[this.exercise].mode;
     const options=this.fixedSide?[this.fixedSide==='left'?left:right]:[left,right];
     let pick=mode==='both'?{side:'both',ok:left.ok&&right.ok,entries:[...left.entries,...right.entries]}:
-      options.find(x=>x.side===this.selectedSide)||options.find(x=>x.ok)||options.sort((a,b)=>b.good-a.good)[0];
+      options.find(x=>x.side===this.selectedSide&&(!this.switchToVisibleSide||x.ok))||options.find(x=>x.ok)||options.sort((a,b)=>b.good-a.good)[0];
+    if(this.ready&&this.switchToVisibleSide&&pick.ok&&pick.side!==this.selectedSide){
+      this.ready=false;this.selectedSide=null;this.candidate=null;this.since=null;this.lostSince=null;
+    }
     if(this.ready&&!pick.ok){
       this.lostSince??=t;
       if(t-this.lostSince>=this.lostMs){this.ready=false;this.selectedSide=null;this.candidate=null;this.since=null;

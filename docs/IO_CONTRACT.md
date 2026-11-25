@@ -109,3 +109,7 @@ Python 레퍼런스는 설정을 모듈 전역에 적용하므로 서로 다른 
 점프 스쿼트·리버스 크런치·플러터킥·버피·싯업도 동일한 입력과 v2 프레임·세트 결과를 사용합니다. TypeScript의 `PilotFrameResult`로 분기합니다. `measurementBasis.count`는 각각 `completed_crouch_airborne_land_candidate`, `completed_knee_tuck_return_candidate`, `completed_two_leg_alternations_candidate`, `completed_stand_floor_stand_candidate`, `completed_torso_raise_return_candidate`입니다.
 
 `items.form`은 unknown, `holdSeconds`는 null입니다. `lastRepetition`은 완료 후 1초 동안 제공하며 중단 시 비웁니다. `details`는 `experimental:true, postureAssessment:'unreviewed'`입니다. 세트 집계의 `details.repetitions`에는 완료 회차를 보존합니다. 모든 누락·중단은 미완료 회차를 취소하고 누적 횟수는 유지합니다. [세부 기준·프론트 책임](FIVE_EXERCISE_RUNTIME.md)을 확인하세요.
+
+## 7. 선택적 세션 제어기
+
+`ExerciseSessionController`는 동일한 PoseFrame을 받아 별도 `session.state` v1을 반환합니다. 실제 측정에 사용된 프레임은 `state.frameResult`에 기존 v2 그대로 포함되며, 대기·중단·카운트다운·watchdog 호출에서는 null입니다. 누적값은 `state.summary`입니다. 기존 Analyzer API와 운동 판정 규칙을 바꾸지 않았습니다. [2초 이탈·5초 재개 규격](POSE_SESSION_RECOVERY.md)을 따릅니다.

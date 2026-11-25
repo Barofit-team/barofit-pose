@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Barofit pose session state v1",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "type": {
+      "const": "session.state"
+    },
+    "exercise": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestampMs": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "phase": {
+      "enum": [
+        "waiting_for_pose",
+        "active",
+        "recognition_lost",
+        "auto_paused",
+        "countdown",
+        "manually_paused",
+        "finished"
+      ]
+    },
+    "ignored": {
+      "type": "boolean"
+    },
+    "ignoredReason": {
+      "enum": [
+        null,
+        "finished",
+        "non_monotonic_timestamp"
+      ]
+    },
+    "measurementEnabled": {
+      "type": "boolean"
+    },
+    "recognition": {
+      "type": "object",
+      "properties": {
+        "observable": {
+          "type": "boolean"
+        },
+        "stable": {
+          "type": "boolean"
+        },
+        "side": {
+          "enum": [
+            null,
+            "left",
+            "right",
+            "both"
+          ]
+        },
+        "reasonCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observedAtMs": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "required": [
+        "observable",
+        "stable",
+        "side",
+        "reasonCode",
+        "observedAtMs"
+      ],
+      "additionalProperties": false
+    },
+    "lossDurationMs": {
+      "type": "number",
+      "minimum": 0
+    },
+    "countdownRemainingMs": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "frameResult": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "frame-result-v2.schema.json"
+        }
+      ]
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "summary": {
+      "$ref": "set-completed-v2.schema.json#/$defs/summary"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "type",
+    "exercise",
+    "timestampMs",
+    "phase",
+    "ignored",
+    "ignoredReason",
+    "measurementEnabled",
+    "recognition",
+    "lossDurationMs",
+    "countdownRemainingMs",
+    "frameResult",
+    "events",
+    "summary"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "ignored": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "ignoredReason": {
+            "enum": [
+              "finished",
+              "non_monotonic_timestamp"
+            ]
+          },
+          "measurementEnabled": {
+            "const": false
+          },
+          "frameResult": {
+            "type": "null"
+          },
+          "events": {
+            "maxItems": 0
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "ignoredReason": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "phase": {
+            "not": {
+              "const": "active"
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "measurementEnabled": {
+            "const": false
+          },
+          "frameResult": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}

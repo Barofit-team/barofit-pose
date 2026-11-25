@@ -39,7 +39,7 @@ const events=analyzer.finish();
 - 프레임 공백 >350ms: 미완료 회차와 기준을 버리고 공백 전체를 gapSeconds로 기록합니다.
 - 해상도 변경·사용 측 변경: 미완료 동작과 기준을 다시 설정합니다. 회전·크롭 변경은 앱에서 breakContinuity를 호출해야 합니다.
 - 중복/역순 입력과 finish 이후 입력: ignored이며 내부 누적값을 변경하지 않습니다. finish 재호출은 []입니다.
-- 2초 자동 일시정지, 5초 재개 카운트다운, 운동·휴식 타이머, UI·TTS는 프론트의 세션 제어입니다. 이번 분석기가 이 흐름을 자동 실행하지는 않습니다.
+- Analyzer 자체는 세션 흐름을 실행하지 않습니다. 2초 이탈·5초 재개 흐름은 [ExerciseSessionController](POSE_SESSION_RECOVERY.md)로 연결할 수 있습니다. 카메라 콜백, 운동·휴식 타이머 표시, UI·TTS는 프론트에서 연결합니다.
 - `observedSeconds`는 연속해서 관측 가능한 프레임 사이 시간입니다. 운동 유효 자세 유지 시간이나 세션 총 시간으로 쓰지 않습니다. holdSeconds는 null입니다.
 
 ## 측정과 임계값

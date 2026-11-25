@@ -144,3 +144,31 @@ export interface CameraReadinessResult {
   reasonCode: 'STABILIZING' | 'NO_PERSON' | 'BODY_OUT_OF_FRAME' | 'MISSING_LANDMARK' | 'LOW_VISIBILITY' | 'LOW_PRESENCE' | null;
   message: string; stableForMs: number;
 }
+
+/** Session lifecycle is separate from frame.result movement phase and form assessment. */
+export type SessionPhase = 'waiting_for_pose' | 'active' | 'recognition_lost' |
+  'auto_paused' | 'countdown' | 'manually_paused' | 'finished';
+export interface SessionState {
+  schemaVersion: '1.0';
+  type: 'session.state';
+  exercise: string;
+  timestampMs: number | null;
+  phase: SessionPhase;
+  ignored: boolean;
+  ignoredReason: 'finished' | 'non_monotonic_timestamp' | null;
+  measurementEnabled: boolean;
+  recognition: {
+    observable: boolean;
+    stable: boolean;
+    side: 'left' | 'right' | 'both' | null;
+    reasonCode: string | null;
+    observedAtMs: number | null;
+  };
+  lossDurationMs: number;
+  countdownRemainingMs: number | null;
+  /** Only the current forwarded frame; null during suspension/countdown/ticks. */
+  frameResult: FrameResult | null;
+  /** Session events use timestampMs; forwarded analyzer interruption events keep their original units. */
+  events: Array<{type: string; [key: string]: unknown}>;
+  summary: SetSummary;
+}

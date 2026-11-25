@@ -8,6 +8,7 @@ export interface CameraReadinessOptions {
   stableMs?: number;
   lostMs?: number;
   maxGapMs?: number;
+  switchToVisibleSide?: boolean;
 }
 
 export declare class CameraReadiness {
@@ -308,4 +309,28 @@ export declare class SitupAnalyzer implements BaseExerciseAnalyzer<import('./com
   breakContinuity(reason?: string): Array<Record<string, unknown>>;
   summary(): import('./common/contracts.js').SetSummary;
   finish(): Array<import('./common/contracts.js').SetCompleted>;
+}
+
+
+export interface ExerciseSessionOptions {
+  analyzer: BaseExerciseAnalyzer;
+  exercise?: string;
+  side?: 'left' | 'right' | null;
+  lossMs?: number;
+  countdownMs?: number;
+  stabilizeMs?: number;
+  maxFrameGapMs?: number;
+}
+export declare const SESSION_CONFIG: Readonly<{
+  lossMs: number; countdownMs: number; stabilizeMs: number; maxFrameGapMs: number;
+}>;
+export declare class ExerciseSessionController {
+  constructor(options: ExerciseSessionOptions);
+  pushFrame(frame: import('./common/contracts.js').PoseFrame): import('./common/contracts.js').SessionState;
+  tick(timestampMs: number): import('./common/contracts.js').SessionState;
+  getState(): import('./common/contracts.js').SessionState;
+  pause(reason?: string): import('./common/contracts.js').SessionState;
+  resume(): import('./common/contracts.js').SessionState;
+  summary(): import('./common/contracts.js').SetSummary;
+  finish(): Array<import('./common/contracts.js').SetCompleted | (Record<string, unknown> & {schemaVersion: string; type: string; exercise: string})>;
 }
