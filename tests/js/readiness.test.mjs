@@ -11,3 +11,19 @@ test('empty detections, missing values and outside are distinct',()=>{const g=ne
 test('gap, pause and dimension changes reset stability',()=>{const g=new CameraReadiness({exercise:'plank'});acquire(g);assert.equal(g.pushFrame(frame(2000)).ready,false);g.breakContinuity();assert.equal(g.pushFrame(frame(2100)).stableForMs,0);assert.equal(g.pushFrame({...frame(2200),width:1280}).stableForMs,0);});
 test('duplicate and reversed timestamps cannot advance stability',()=>{const g=new CameraReadiness({exercise:'plank'});g.pushFrame(frame(100));assert.equal(g.pushFrame(frame(100)).ignored,true);assert.equal(g.pushFrame(frame(0)).ignored,true);assert.equal(g.lastTime,100);});
 test('visibility confidence is not person detection accuracy; invalid configs rejected',()=>{assert.throws(()=>new CameraReadiness({exercise:'unknown'}));assert.throws(()=>new CameraReadiness({exercise:'plank',stableMs:NaN}));assert.throws(()=>new CameraReadiness({exercise:'dead_bug',side:'left'}));const g=new CameraReadiness({exercise:'plank',side:'left'});const f=frame(0);f.landmarks[11][4]=0;assert.equal(g.pushFrame(f).reasonCode,'LOW_PRESENCE');});
+test('opt-in visible-side reselection uses a fresh stability dwell without the legacy loss grace',()=>{
+ const g=new CameraReadiness({exercise:'plank',switchToVisibleSide:true});
+ acquire(g);
+ const hidden=[11,13,15,23,25,27];
+ let r=g.pushFrame(frame(1100,hidden));
+ assert.equal(r.observable,true);assert.equal(r.ready,false);assert.equal(r.candidateSide,'right');
+ for(let t=1200;t<=2100;t+=100)r=g.pushFrame(frame(t,hidden));
+ assert.equal(r.ready,true);assert.equal(r.selectedSide,'right');
+});
+test('side plank readiness needs both shoulders and one complete support-side chain',()=>{
+ const g=new CameraReadiness({exercise:'side_plank'});
+ let r=g.pushFrame(frame(0,[11,13,15,23,25,27]));
+ assert.equal(r.observable,false);
+ r=g.pushFrame(frame(100,[13,15,23,25,27]));
+ assert.equal(r.observable,true);assert.equal(r.candidateSide,'right');
+});
