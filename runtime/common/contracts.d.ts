@@ -143,6 +143,10 @@ export interface CameraReadinessResult {
   missingLandmarks: string[]; outOfFrameLandmarks: string[];
   reasonCode: 'STABILIZING' | 'NO_PERSON' | 'BODY_OUT_OF_FRAME' | 'MISSING_LANDMARK' | 'LOW_VISIBILITY' | 'LOW_PRESENCE' | null;
   message: string; stableForMs: number;
+  /** Side whose checks produced missingLandmarks/outOfFrameLandmarks in this frame. Not selectedSide or candidateSide. */
+  evaluatedSide: 'left' | 'right' | 'both';
+  /** Every landmark actually checked for evaluatedSide in this frame, including exercise-specific extras (side_plank opposite shoulder). */
+  checkedLandmarks: string[];
 }
 
 /** Session lifecycle is separate from frame.result movement phase and form assessment. */

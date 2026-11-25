@@ -84,7 +84,9 @@ export class CameraReadiness {
     return this.latest={schemaVersion:'1.0',type:'camera.readiness',exercise:this.exercise,timestampMs:t,
       ignored:false,ignoredReason:null,status,ready:this.ready,observable:pick.ok,
       selectedSide:this.selectedSide,candidateSide:this.candidate,missingLandmarks:missing,
-      outOfFrameLandmarks:outside,reasonCode,message,stableForMs:pick.ok&&this.since!==null?t-this.since:0};
+      outOfFrameLandmarks:outside,reasonCode,message,stableForMs:pick.ok&&this.since!==null?t-this.since:0,
+      // Metadata only: the side and landmark entries of the same `pick` that produced missing/outOfFrame above.
+      evaluatedSide:pick.side,checkedLandmarks:pick.entries.map(x=>x.name)};
   }
 }
 
