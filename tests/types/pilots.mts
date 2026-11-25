@@ -18,3 +18,15 @@ const version:string=PILOT_VERSION;
 void version;
 // @ts-expect-error Flutter kicks requires both legs, not a fixed working side.
 new FlutterKicksAnalyzer({side:'left'});
+
+import {ExerciseSessionController,SESSION_CONFIG,type SessionState} from '../../runtime/index.js';
+const session=new ExerciseSessionController({analyzer:new SitupAnalyzer()});
+const state:SessionState=session.pushFrame(frame);
+const countdown:number|null=state.countdownRemainingMs;
+if(state.frameResult?.exercise==='situp') {
+  const count:number=state.frameResult.count;
+  void count;
+}
+session.tick(100);session.pause('auto_pause');session.resume();session.summary();session.finish();
+new CameraReadiness({exercise:'side_plank',switchToVisibleSide:true});
+void countdown;void SESSION_CONFIG;

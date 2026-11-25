@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-25",
+  "base_pr": 8,
+  "javascript_tests": 209,
+  "new_session_tests": 19,
+  "new_readiness_tests": 2,
+  "python_tests": 48,
+  "typecheck": "TypeScript 7.0.2 strict/noEmit",
+  "schema_snapshots": 2254,
+  "real_analyzer_exercises": 23,
+  "sample_replay_method": "Existing private MediaPipe clip coordinates. Injected 2200ms missing frames and repeated the same pose during stability+5000ms countdown. No video/coordinate data committed. Not a live camera test or an accuracy test.",
+  "clips": [
+    {
+      "exercise": "jump_squat",
+      "clip": "01_prisoner_jump_squat.jsonl",
+      "dropoutInjected": true,
+      "injection": {
+        "atOriginalMs": 3000,
+        "retainedCount": 0,
+        "retainedHoldSeconds": null
+      },
+      "count": 0,
+      "holdSeconds": null,
+      "finalPhase": "active"
+    },
+    {
+      "exercise": "reverse_crunch",
+      "clip": "01_cross_leg_reverse_crunch.jsonl",
+      "dropoutInjected": true,
+      "injection": {
+        "atOriginalMs": 3000,
+        "retainedCount": 0,
+        "retainedHoldSeconds": null
+      },
+      "count": 1,
+      "holdSeconds": null,
+      "finalPhase": "active"
+    },
+    {
+      "exercise": "flutter_kicks",
+      "clip": "flutter_oblique.jsonl",
+      "dropoutInjected": true,
+      "injection": {
+        "atOriginalMs": 3000,
+        "retainedCount": 0,
+        "retainedHoldSeconds": null
+      },
+      "count": 5,
+      "holdSeconds": null,
+      "finalPhase": "recognition_lost"
+    },
+    {
+      "exercise": "flutter_kicks",
+      "clip": "flutter_side.jsonl",
+      "dropoutInjected": true,
+      "injection": {
+        "atOriginalMs": 3000,
+        "retainedCount": 0,
+        "retainedHoldSeconds": null
+      },
+      "count": 5,
+      "holdSeconds": null,
+      "finalPhase": "active"
+    },
+    {
+      "exercise": "burpee",
+      "clip": "burpee_front.jsonl",
+      "dropoutInjected": false,
+      "injection": null,
+      "count": 0,
+      "holdSeconds": null,
+      "finalPhase": "countdown"
+    },
+    {
+      "exercise": "burpee",
+      "clip": "burpee_side.jsonl",
+      "dropoutInjected": true,
+      "injection": {
+        "atOriginalMs": 2967,
+        "retainedCount": 0,
+        "retainedHoldSeconds": null
+      },
+      "count": 0,
+      "holdSeconds": null,
+      "finalPhase": "active"
+    },
+    {
+      "exercise": "situp",
+      "clip": "situp_repeated.jsonl",
+      "dropoutInjected": true,
+      "injection": {
+        "atOriginalMs": 3000,
+        "retainedCount": 1,
+        "retainedHoldSeconds": null
+      },
+      "count": 8,
+      "holdSeconds": null,
+      "finalPhase": "active"
+    },
+    {
+      "exercise": "situp",
+      "clip": "situp_single.jsonl",
+      "dropoutInjected": true,
+      "injection": {
+        "atOriginalMs": 3000,
+        "retainedCount": 0,
+        "retainedHoldSeconds": null
+      },
+      "count": 0,
+      "holdSeconds": null,
+      "finalPhase": "recognition_lost"
+    }
+  ]
+}
