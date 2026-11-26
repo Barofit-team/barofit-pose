@@ -1,3 +1,4 @@
+import {installReport} from '../common/report.js';
 import {pushRealtime} from '../common/realtime.js';
 import {PlankRule, HIP_CONFIG} from './engine.js';
 import {validateFrame,jsonSafe} from '../common/frame.js';
@@ -11,7 +12,7 @@ function status(s){return ['NO_WARNING','NO_HIP_WARNING'].includes(s)?'within_re
 
 /** Per-frame rules plus sample-based evaluation-time accounting. No automatic exercise start detection. */
 export class PlankAnalyzer {
-  constructor(){this.rule=new PlankRule();this.lastTime=null;this.previous=null;this.closed=false;
+  constructor(){installReport(this);this.rule=new PlankRule();this.lastTime=null;this.previous=null;this.closed=false;
     this.holdTimer=new HoldTimer();
     this.validHoldSeconds=0;
     this.observedSeconds=0;this.gapSeconds=0;

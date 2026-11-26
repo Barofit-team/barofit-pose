@@ -1,3 +1,4 @@
+import {installReport} from '../common/report.js';
 import {validateFrame,jsonSafe} from '../common/frame.js';
 import {frameResult} from '../common/realtime.js';
 import {itemResult,setSummary,setCompleted} from '../common/result.js';
@@ -19,7 +20,7 @@ const UNSUPPORTED=['lumbar_neutral','shoulder_shrug','leg_spread'];
 const median=a=>a.length?[...a].sort((a,b)=>a-b)[Math.floor(a.length/2)]:null;
 
 export class SupermanAnalyzer{
- constructor(config={}){this.config={...SUPERMAN_CONFIG,...config};this.closed=false;this.lastTime=null;this.side=null;this.requireReentryStable=false;this.supportSince=null;
+ constructor(config={}){installReport(this);this.config={...SUPERMAN_CONFIG,...config};this.closed=false;this.lastTime=null;this.side=null;this.requireReentryStable=false;this.supportSince=null;
   this.count=0;this.holdSeconds=0;this.observedSeconds=0;this.gapSeconds=0;this.repetitions=[];this.lastRep=null;
   this.totals=Object.fromEntries(KEYS.map(k=>[k,{compliant:0,warning:0,unknown:0}]));this.resetMotion();}
  resetMotion(){this.phase='not_ready';this.readySince=null;this.low=null;this.peak=null;this.samples=[];this.armSamples=[];this.smoothed=null;this.previousValid=false;this.lostSince=null;this.warningSince={};this.previousHolding=false;this.baselineSamples=[];this.tempoTracker=new TempoTracker({...TEMPO_CONFIG,velocityWindowMs:400,stillSpeedDegS:this.config.holdSpeedDegS,minPauseMs:this.config.holdDwellMs});}

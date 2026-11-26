@@ -1,3 +1,4 @@
+import {installReport} from '../common/report.js';
 import {validateFrame} from '../common/frame.js';
 import {frameResult} from '../common/realtime.js';
 import {itemResult,setSummary,setCompleted} from '../common/result.js';
@@ -8,7 +9,7 @@ const EXERCISES=['jump_squat','reverse_crunch','flutter_kicks','burpee','situp']
 
 /** Experimental motion counters. Form scoring and frontend session lifecycle are not inferred. */
 class PilotAnalyzer {
-  constructor(exercise,{side=null}={}) {
+  constructor(exercise,{side=null}={}) {installReport(this);
     if(!EXERCISES.includes(exercise) || ![null,'left','right'].includes(side) ||
        (exercise==='flutter_kicks' && side!==null)) throw new RangeError('Invalid exercise or side');
     Object.assign(this,{exercise,fixedSide:side,version:PILOT_VERSION,count:0,

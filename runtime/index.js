@@ -24,3 +24,5 @@ export {SidePlankAnalyzer,SIDE_PLANK_CONFIG,SIDE_PLANK_VERSION} from './side_pla
 
 export {JumpSquatAnalyzer,ReverseCrunchAnalyzer,FlutterKicksAnalyzer,BurpeeAnalyzer,SitupAnalyzer,PILOT_VERSION} from './pilots/analyzer.js';
 export {ExerciseSessionController,SESSION_CONFIG} from './common/session.js';
+export {workoutReportFields} from './common/report.js';
+export {ITEM_LABELS,itemLabel} from './common/itemLabels.js';

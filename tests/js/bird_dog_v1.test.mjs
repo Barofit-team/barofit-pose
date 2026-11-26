@@ -1,3 +1,4 @@
+import {withoutReportEvents} from './report_helpers.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -25,7 +26,7 @@ test('v1 Python/JavaScript parity: states, every item, events, counts, timers an
     if(row.case!==name){name=row.case;engine=new BirdDogAnalyzer();}
     const actual=row.finish?engine.finish():engine.pushFrame(row.frame);
     const expected=row.finish?row.finish.map(e=>e.type==='set.completed'&&e.schemaVersion!=='2.0'?setCompleted(timeSummary(e.summary),e.t===null?null:e.t*1000):e):frameResult(row.expected,row.frame,{exercise:'bird_dog',engineVersion:row.expected.engineVersion});
-    equivalent(actual,expected,`${name}/${row.frame?.timestampMs??'finish'}`);
+    equivalent(row.finish?withoutReportEvents(actual):actual,row.finish?withoutReportEvents(expected):expected,`${name}/${row.frame?.timestampMs??'finish'}`);
     if(row.frame)frames++;
   }
   console.log(`v1 parity checked ${frames} frames`);

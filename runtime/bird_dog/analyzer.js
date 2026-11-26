@@ -1,3 +1,4 @@
+import {installReport} from '../common/report.js';
 import {pushRealtime} from '../common/realtime.js';
 import {validateFrame, jsonSafe} from '../common/frame.js';
 import {timeSummary,setCompleted} from '../common/result.js';
@@ -19,7 +20,7 @@ const deg=x=>x*180/Math.PI,ptp=a=>Math.max(...a)-Math.min(...a);
 function angle(a,b,c){const u=sub(a,b),v=sub(c,b),d=norm(u)*norm(v);return d>1e-6?deg(Math.acos(Math.max(-1,Math.min(1,dot(u,v)/d)))):null;}
 /** Same causal rules as analysis/bird_dog/prototype_v1.py. No network required. */
 export class BirdDogAnalyzer {
-  constructor(config={}){
+  constructor(config={}){installReport(this);
     this.config={...BIRD_DOG_CONFIG,...config};
     if(!Object.values(this.config).every(Number.isFinite))throw new TypeError('Config must be finite');
     if(this.config.smooth_seconds<=0||this.config.max_gap_seconds<=0)throw new TypeError('Time intervals must be positive');

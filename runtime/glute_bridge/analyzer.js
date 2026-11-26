@@ -1,3 +1,4 @@
+import {installReport} from '../common/report.js';
 import {validateFrame,jsonSafe} from '../common/frame.js';
 import {frameResult} from '../common/realtime.js';
 import {itemResult,setSummary,setCompleted} from '../common/result.js';
@@ -53,7 +54,7 @@ export function gluteBridgeMetrics(frame,side,c=GLUTE_BRIDGE_CONFIG){
   hipHeightRatio:(a[1]-h[1])/(a[1]-k[1]),bodyReady,quality:Math.min(...raw.flatMap(p=>[p[3],p[4]])),landmarkIds:ids};
 }
 export class GluteBridgeAnalyzer {
- constructor(config={}){
+ constructor(config={}){installReport(this);
   this.config={...GLUTE_BRIDGE_CONFIG,...config};this.closed=false;this.lastTime=null;this.side=null;
   this.count=0;this.observedSeconds=0;this.gapSeconds=0;this.repetitions=[];this.lastRep=null;
   this.totals=Object.fromEntries(KEYS.map(k=>[k,{compliant:0,warning:0,unknown:0}]));

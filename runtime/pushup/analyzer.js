@@ -1,3 +1,4 @@
+import {installReport} from '../common/report.js';
 import {pushRealtime} from '../common/realtime.js';
 import {LivePushupEngine} from './liveEngine.js';
 import {validateFrame, jsonSafe} from '../common/frame.js';
@@ -5,7 +6,7 @@ import {pushupSummary, setCompleted} from '../common/result.js';
 
 /** Shared envelope around the unchanged APK v1.3 engine. */
 export class PushupAnalyzer {
-  constructor(settings) {
+  constructor(settings) {installReport(this);
     this.engine = new LivePushupEngine(settings);
     this.lastTimestampMs = null;
   }

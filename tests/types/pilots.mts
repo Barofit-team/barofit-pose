@@ -30,3 +30,16 @@ if(state.frameResult?.exercise==='situp') {
 session.tick(100);session.pause('auto_pause');session.resume();session.summary();session.finish();
 new CameraReadiness({exercise:'side_plank',switchToVisibleSide:true});
 void countdown;void SESSION_CONFIG;
+
+import {workoutReportFields,ITEM_LABELS,type SetReport} from '../../runtime/index.js';
+const report:SetReport=new SitupAnalyzer().summary().details.report;
+const labels:Record<string,string>=new SitupAnalyzer().summary().details.itemLabels;
+const upload=workoutReportFields(session.summary());
+const trackingPct:number|null=upload.trackingAvailablePct;
+void report;void labels;void trackingPct;void ITEM_LABELS;
+
+const legacySummary:import('../../runtime/index.js').SetSummary={
+ schemaVersion:'2.0',exercise:'plank',engineVersion:'legacy',count:null,holdSeconds:0,
+ observedSeconds:0,gapSeconds:0,items:{},details:{},
+};
+void legacySummary;

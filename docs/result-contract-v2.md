@@ -108,3 +108,7 @@ const result = events.find(e => e.type === 'set.completed');
 - 판정 수식·임계값·카운트·시간 누적 조건은 유지했습니다.
 
 추가 5종의 운동별 measurementBasis·미평가 처리·중단 정책은 [JS 분석기 문서](FIVE_EXERCISE_RUNTIME.md)를 따릅니다.
+
+## 세트 리포트 확장
+
+기존 v2 봉투와 items는 유지하며 JS 23종은 details의 repetitions/sideCounts/sideHoldSeconds/itemLabels/report를 공통 제공한다. 원래 엔진 고유 키는 보존한다. report.schemaVersion은 1.0이며 오류 코드 단위, 미평가 점수, 추적률 분모, 후반 비교 기준은 [SET_REPORT_V1.md](SET_REPORT_V1.md)에 정의한다. report 없는 기존 Python/레거시 v2 입력은 스키마에서 계속 허용한다.

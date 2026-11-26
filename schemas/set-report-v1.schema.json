@@ -1,0 +1,233 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Barofit set report v1",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "feedbackCodes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z_]{1,50}$"
+      }
+    },
+    "errorCounts": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[A-Z_]{1,50}$"
+      },
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "errorCountBasis": {
+      "const": "per_code"
+    },
+    "errorCountBasisByCode": {
+      "type": "object",
+      "additionalProperties": {
+        "enum": [
+          "warning_episodes",
+          "completed_repetitions"
+        ]
+      }
+    },
+    "repetitionErrorCounts": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[A-Z_]{1,50}$"
+      },
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "warningEpisodeCounts": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[A-Z_]{1,50}$"
+      },
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "warningSeconds": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0
+      }
+    },
+    "postureScore": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 100
+    },
+    "scoreBasis": {
+      "const": "mean_of_evaluated_item_compliance_pct"
+    },
+    "evaluatedItemCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "trackingAvailablePct": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 100
+    },
+    "tracking": {
+      "type": "object",
+      "properties": {
+        "basis": {
+          "enum": [
+            "analyzer_continuous_intervals",
+            "session_observability_intervals"
+          ]
+        },
+        "totalSeconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "availableSeconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unavailableSeconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "acceptedFrames": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "basis",
+        "totalSeconds",
+        "availableSeconds",
+        "unavailableSeconds",
+        "acceptedFrames"
+      ],
+      "additionalProperties": false
+    },
+    "lateFormBreakdown": {
+      "type": "object",
+      "properties": {
+        "candidate": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "earlyScore": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "lateScore": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "dropPoints": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -100,
+          "maximum": 100
+        },
+        "thresholdPoints": {
+          "const": 15
+        },
+        "comparisonBasis": {
+          "enum": [
+            "repetition_halves",
+            "evaluated_time_halves"
+          ]
+        },
+        "minimumEvaluatedPerItem": {
+          "enum": [
+            3,
+            5
+          ]
+        },
+        "unit": {
+          "enum": [
+            "seconds",
+            "repetitions"
+          ]
+        },
+        "itemIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "reason": {
+          "enum": [
+            "compared",
+            "insufficient_evaluated_data",
+            "incomplete_repetition_records",
+          "tracking_unavailable_at_end"
+          ]
+        }
+      },
+      "required": [
+        "candidate",
+        "earlyScore",
+        "lateScore",
+        "dropPoints",
+        "thresholdPoints",
+        "comparisonBasis",
+        "minimumEvaluatedPerItem",
+        "unit",
+        "itemIds",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "repetitionRecordsComplete": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "feedbackCodes",
+    "errorCounts",
+    "errorCountBasis",
+    "errorCountBasisByCode",
+    "repetitionErrorCounts",
+    "warningEpisodeCounts",
+    "warningSeconds",
+    "postureScore",
+    "scoreBasis",
+    "evaluatedItemCount",
+    "trackingAvailablePct",
+    "tracking",
+    "lateFormBreakdown",
+    "repetitionRecordsComplete"
+  ],
+  "additionalProperties": false
+}

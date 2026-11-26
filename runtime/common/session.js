@@ -1,5 +1,6 @@
 import {validateFrame,jsonSafe} from './frame.js';
 import {CameraReadiness} from './readiness.js';
+import {observeSessionTracking} from './report.js';
 
 export const SESSION_CONFIG=Object.freeze({
   lossMs:2000,countdownMs:5000,stabilizeMs:300,maxFrameGapMs:400,
@@ -31,6 +32,8 @@ export class ExerciseSessionController {
   summary(){return this.analyzer.summary();}
   getState(){return this.snapshot(this.lastTime);}
   snapshot(t,events=[],frameResult=null,ignoredReason=null) {
+    if(ignoredReason===null&&Number.isFinite(t))observeSessionTracking(this.analyzer,t,this.recognition.observable,
+      this.started&&!['manually_paused','countdown','finished'].includes(this.phase));
     return jsonSafe({schemaVersion:'1.0',type:'session.state',exercise:this.exercise,
       timestampMs:t,phase:this.phase,ignored:ignoredReason!==null,ignoredReason,
       measurementEnabled:ignoredReason===null&&this.phase==='active'&&!this.closed,

@@ -112,7 +112,7 @@ export interface SetSummary {
   observedSeconds: number | null;
   gapSeconds: number | null;
   items: Record<string, ItemSummary>;
-  details: Record<string, unknown>;
+  details: Partial<CommonSetDetails> & Record<string, unknown>;
 }
 export interface SetCompleted {
   schemaVersion: '2.0';
@@ -176,3 +176,58 @@ export interface SessionState {
   events: Array<{type: string; [key: string]: unknown}>;
   summary: SetSummary;
 }
+
+export interface RepetitionSummary {
+  number: number;
+  timestampMs: number | null;
+  side: 'left' | 'right' | null;
+  items: Record<string, ItemStatus>;
+  codes: string[];
+  metrics: Record<string, unknown>;
+  [key: string]: unknown;
+}
+export interface SetReport {
+  schemaVersion: '1.0';
+  feedbackCodes: string[];
+  errorCounts: Record<string, number>;
+  errorCountBasis: 'per_code';
+  errorCountBasisByCode: Record<string, 'warning_episodes' | 'completed_repetitions'>;
+  repetitionErrorCounts: Record<string, number>;
+  warningEpisodeCounts: Record<string, number>;
+  warningSeconds: Record<string, number>;
+  postureScore: number | null;
+  scoreBasis: 'mean_of_evaluated_item_compliance_pct';
+  evaluatedItemCount: number;
+  trackingAvailablePct: number | null;
+  tracking: {
+    basis: 'analyzer_continuous_intervals' | 'session_observability_intervals';
+    totalSeconds: number;
+    availableSeconds: number;
+    unavailableSeconds: number;
+    acceptedFrames: number;
+  };
+  lateFormBreakdown: {
+    candidate: boolean | null;
+    earlyScore: number | null;
+    lateScore: number | null;
+    dropPoints: number | null;
+    thresholdPoints: number;
+    comparisonBasis: 'repetition_halves' | 'evaluated_time_halves';
+    minimumEvaluatedPerItem: number;
+    unit: 'seconds' | 'repetitions';
+    itemIds: string[];
+    reason: 'compared' | 'insufficient_evaluated_data' | 'incomplete_repetition_records' | 'tracking_unavailable_at_end';
+  };
+  repetitionRecordsComplete: boolean | null;
+}
+export interface CommonSetDetails {
+  repetitions: RepetitionSummary[];
+  sideCounts: {left: number; right: number} | null;
+  sideHoldSeconds: {left: number; right: number} | null;
+  itemLabels: Record<string, string>;
+  report: SetReport;
+  [key: string]: unknown;
+}
+
+/** All current JS Analyzer implementations provide these additive common details. */
+export interface ReportedSetSummary extends SetSummary { details: CommonSetDetails; }

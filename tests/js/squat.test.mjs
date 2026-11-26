@@ -1,3 +1,4 @@
+import {legacySummary} from './report_helpers.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -129,7 +130,7 @@ test('v2 preserves all squat counts, events, metrics and mixed-basis totals',()=
   const r=a.pushFrame(angle),old=b._pushFrameLegacy(angle);output.push(r);
   assert.equal(r.count,old.count);assert.equal(r.phase,old.state);
   assert.deepEqual(r.codes,old.codes);assert.deepEqual(r.events,old.events);assert.deepEqual(r.metrics,old.metrics);
-  assert.deepEqual(a.summary(),b.summary());
+  assert.deepEqual(legacySummary(a.summary()),legacySummary(b.summary()));
   assert.deepEqual(r.items,{trunk:old.items.trunk});
   const rep=old.events.find(e=>e.type==='rep.completed');
   assert.equal(r.lastRepetition?.items.depth??null,rep?.depth_state??null);
